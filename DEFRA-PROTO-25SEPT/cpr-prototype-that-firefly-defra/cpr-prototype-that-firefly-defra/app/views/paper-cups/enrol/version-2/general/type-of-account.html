@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Create an account to report takeaway cups recycling data" %}
+
+{% set title = "Create an account to report takeaway cups recycling data" %}
+
+{% block pageTitle %}
+    {{title}} - Create an account to report cups recycling data
+{% endblock %}
+
+{% block beforeContent %}
+
+<!--<a class="govuk-back-link" href="./registered-as-a-charity.html">Back</a>-->
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+    <h1 class="govuk-heading-l">
+      Check if you’re a takeaway drinks seller or a takeback scheme
+    </h1>
+    <h2 class="govuk-heading-m">
+      What is a takeaway drinks seller
+    </h2>
+    <p class="govuk-body">
+      You’re a takeaway drinks seller if you fill drinks in takeaway cups and sell them from UK premises.
+    </p>
+    <h2 class="govuk-heading-m">
+      What is a takeback scheme
+    </h2>
+    <p class="govuk-body">
+      As a takeback scheme you support your members, who are takeaway drink sellers. You can support them to:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>check if they need to report data on takeaway cups</li>
+      <li>collect the cups from their premises</li>
+      <li>weigh the cups</li>
+      <li>arrange the recycling</li>
+    </ul>
+    
+    <form method="POST" action="type-of-account_question">
+      <div class="govuk-form-group govuk-!-margin-top-6">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            What type of organisation are you?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cup-seller" name="account-type" type="radio" value="Takeaway drinks seller" {{ checked("account-type", "Takeaway drinks seller") }}>
+              <label class="govuk-label govuk-radios__label" for="cup-seller">
+                Takeaway drinks seller
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="take-back-scheme" name="account-type" type="radio" value="Take-back scheme" {{ checked("account-type", "Take-back scheme") }}>
+              <label class="govuk-label govuk-radios__label" for="take-back-scheme">
+                Takeback scheme
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+      {{ govukButton({
+        text: "Continue"
+      })}}
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

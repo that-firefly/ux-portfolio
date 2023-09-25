@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+  Deposit return scheme
+{% endset%}
+
+{% set serviceName = "Check if your organisation needs to register for the deposit return scheme" %}
+
+{% block pageTitle %}
+Check if your organisation needs to register for the deposit return scheme | {{serviceName}} prototype
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Manufacturing</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Deposit return scheme</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">Check if your organisation needs to register for the deposit return scheme</li>
+    </ol>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukPanel({
+            titleText: "Your organisation does not need to register for the deposit return scheme"
+        }) }}
+
+        <p>Based on your answers, your organisation does not need to register or report its drinks container data for 2023.</p>
+
+        <p>You should check again next year.</p>
+
+        <p><a href="../epr/service-start">Return to GOV.UK</a></p>
+
+    </div>
+</div>
+
+{% endblock %}

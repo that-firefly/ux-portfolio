@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+  Deposit return scheme
+{% endset%}
+
+{% set serviceName = "Check if your organisation needs to register for the deposit return scheme" %}
+
+{% block pageTitle %}
+Check if your organisation needs to register for the deposit return scheme | {{serviceName}} prototype
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Manufacturing</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Deposit return scheme</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">Check if your organisation needs to register for the deposit return scheme</li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="POST" action="question-4">
+
+            {{ govukRadios({
+            classes: "govuk-radios--inline",
+            idPrefix: "obProducerTurnover",
+            name: "obProducerTurnover",
+            fieldset: {
+                legend: {
+                text: "Was your organisation's turnover more than £85,000 in its last financial year?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+                }
+            },
+            items: [
+                {
+                value: "yes",
+                text: "Yes"
+                },
+                {
+                value: "no",
+                text: "No"
+                }
+            ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"
+            })}}
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

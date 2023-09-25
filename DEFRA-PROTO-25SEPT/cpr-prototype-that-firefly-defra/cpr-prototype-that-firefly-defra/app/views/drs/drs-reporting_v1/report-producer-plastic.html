@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+  Deposit return scheme
+{% endset%}
+
+{% block pageTitle %}
+    Report packaging data | {{serviceName}} prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <div id="profile">
+    {% include "includes/account-nav-admin-individual.html" %}
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukBackLink({
+            text: "Back",
+            href: "javascript:history.back()"
+        }) }}
+
+        <span class="govuk-caption-l">Producer data</span>
+        
+        <form method="POST" action="route-reporting-producer-plastic">
+            
+            {% call govukFieldset({
+            legend: {
+                text: "How many PET plastic bottles did you produce between Jan and Mar 2023?",
+                classes: "govuk-fieldset__legend--l"
+            }
+            }) %}
+
+            {{ govukDetails({
+                summaryText: "Which PET plastic bottles do I need to include?",
+                html: '
+                <p>Only include PET plastic bottles that your organisation:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>filled with its own branded drinks and placed on the market in England, Wales or Northern Ireland</li>
+                    <li>imported from outside of the UK and placed on the market in England, Wales or Northern Ireland</li>
+                </ul>
+                '
+            }) }}
+
+            <!-- <p class="govuk-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+
+
+            {{ govukInput({
+                label: {
+                    text: "Individually sold bottles 750ml and under"
+                },
+                classes: "govuk-input--width-10",
+                id: "plasticUnder750",
+                name: "plasticUnder750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+
+            {{ govukInput({
+                label: {
+                    text: "Individually sold bottles above 750ml"
+                },
+                classes: "govuk-input--width-10",
+                id: "plasticOver750",
+                name: "plasticOver750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+
+            {{ govukInput({
+                label: {
+                    text: "Any sized bottles sold in multipacks"
+                },
+                classes: "govuk-input--width-10",
+                id: "plasticMultipacks",
+                name: "plasticMultipacks",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+
+            {% endcall %}
+
+            {{govukButton({
+                text: "Save and continue"
+            })}}
+
+        </form>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+  Deposit return scheme
+{% endset%}
+
+{% block pageTitle %}
+    Report packaging data | {{serviceName}} prototype
+{% endblock %}
+
+{% block beforeContent %}
+  <div id="profile">
+    {% include "includes/account-nav-admin-individual.html" %}
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukBackLink({
+            text: "Back",
+            href: "javascript:history.back()"
+        }) }}
+
+        <span class="govuk-caption-l">Retailer data</span>
+        
+        <form method="POST" action="route-reporting-retailer-glass">
+            
+            {% call govukFieldset({
+            legend: {
+                text: "How many glass bottles did you sell per country between Jan and Mar 2023?",
+                classes: "govuk-fieldset__legend--l"
+            }
+            }) %}
+
+            {{ govukDetails({
+                summaryText: "Which glass bottles do I need to include?",
+                html: '
+                <p>Only include glass bottles that your organisation sold to end consumers in England, Wales or Northern Ireland.</p>
+                '
+            }) }}
+
+            <h1 class="govuk-heading-m">Bottles 750ml and under</h1>
+
+            {{ govukInput({
+                label: {
+                    text: "England"
+                },
+                classes: "govuk-input--width-10",
+                id: "glassEnglandUnder750",
+                name: "glassEnglandUnder750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+            {{ govukInput({
+                label: {
+                    text: "Wales"
+                },
+                classes: "govuk-input--width-10",
+                id: "glassWalesUnder750",
+                name: "glassWalesUnder750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+
+            {{ govukInput({
+                label: {
+                    text: "Northern Ireland"
+                },
+                classes: "govuk-input--width-10",
+                id: "glassIrelandUnder750",
+                name: "glassIrelandUnder750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+
+<br>
+            <h1 class="govuk-heading-m">Bottles above 750ml</h1>
+
+            {{ govukInput({
+                label: {
+                    text: "England"
+                },
+                classes: "govuk-input--width-10",
+                id: "glassEnglandOver750",
+                name: "glassEnglandOver750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+            {{ govukInput({
+                label: {
+                    text: "Wales"
+                },
+                classes: "govuk-input--width-10",
+                id: "glassWalesOver750",
+                name: "glassWalesOver750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}
+
+
+            {{ govukInput({
+                label: {
+                    text: "Northern Ireland"
+                },
+                classes: "govuk-input--width-10",
+                id: "glassIrelandOver750",
+                name: "glassIrelandOver750",
+                suffix: {
+                    text: "bottles"
+                },
+                spellcheck: false
+            }) }}  
+
+            {{ govukDetails({
+                summaryText: "My organisation also sold glass bottles in Scotland",
+                html: '
+                <p>Scotland operates its own deposit return scheme (DRS). You must report any drinks container data for Scotland directly to their scheme administrator.</p>
+                <p><a href="https://depositreturnscheme.zerowastescotland.org.uk/" target="_blank">Find out more about reporting data for Scotland on the Zero Waste Scotland website (opens in new tab)</a>.</p>
+                '
+              }) }}
+
+            {% endcall %}
+
+            {{govukButton({
+                text: "Save and continue"
+            })}}
+
+        </form>
+        
+    </div>
+</div>
+
+{% endblock %}
