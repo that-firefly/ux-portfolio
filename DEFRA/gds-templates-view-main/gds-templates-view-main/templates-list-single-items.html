@@ -1,0 +1,162 @@
+{% extends "layout-back-welsh.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        {% if  data['user'] == "agent"  %}
+            <!-- Agent user -->
+            <h1 class="govuk-heading-l">List of xyz</h1>
+        {% else %}
+            <!-- Individual citizen user -->
+            <h1 class="govuk-heading-l">List of xyz</h1>
+        {% endif %}
+
+
+        {%  if  data['singlelistitems'] != "someitems"  %}
+            <!--  Empty state  -->
+            <div class="govuk-!-margin-top-7">
+                {{ govukButton({ text: "Add an xyz",
+                href: "#" }) }}
+            </div>
+
+            <div class="govuk-!-margin-top-7">
+                {{ govukButton({ text: "Back to task list/continue",
+                                 href: "#",
+                                 classes: "govuk-button--secondary" }) }}
+            </div>
+        {% else %}
+            <!--  1 or more items state  -->
+            <!-- the table of data -->
+            <dl class="govuk-summary-list">
+
+                <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value govuk-!-width-three-quarters">
+                        The first data
+                    </dd>
+                    <dd class="govuk-summary-list__actions width">
+                        <a class="govuk-link" href="#" style="color:#1d70b8;">
+                            Change
+                        </a>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#" style="color:#1d70b8;">
+                            Remove
+                        </a>
+                    </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                        The second data
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#" style="color:#1d70b8;">
+                            Change
+                        </a>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#" style="color:#1d70b8;">
+                            Remove
+                        </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+            {{ govukButton({ text: "Add an xyz",
+            href: "#",
+            classes: "govuk-button--secondary" }) }}
+
+            <div class="govuk-!-margin-top-7">
+                {{ govukButton({ text: "Back to task list/continue",
+                                 href: "#" }) }}
+            </div>
+        {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<!-- EMPTY LIST  TOGGLE  -->
+<form method="post"  action="#" class="for4" style=" float: left; position: relative; bottom:-340px;  ">
+
+    <select style="height:30px;" onchange="window.location.href='?'+this.value">
+
+        <option value="singlelistitems=empty&"
+                {% if  data['singlelistitems'] != "someitems"  %} selected {% endif %}
+        >Empty list / Start state</option>
+
+        <option value="singlelistitems=someitems&"
+                {% if  data['singlelistitems'] == "someitems"  %} selected {% endif %}
+        >Populated list</option>
+
+    </select>
+
+</form>
+<!--  END USER TYPE TOGGLE -->
+
+
+<!-- USER TYPE TOGGLE  -->
+<form method="post"  action="#" class="for4" style=" float: left; position: relative; bottom:-340px;  ">
+
+  <select style="height:30px;" onchange="window.location.href='?'+this.value">
+
+    <option value="user=citizen&"
+            {% if  data['user'] != "agent"  %} selected {% endif %}
+    >User type - Individual</option>
+
+    <option value="user=agent&"
+            {% if  data['user'] == "agent"  %} selected {% endif %}
+    >User type - Agent</option>
+
+  </select>
+
+</form>
+<!--  END USER TYPE TOGGLE -->
+
+
+
+
+<!-- RETURN YEAR TOGGLE  -->
+<form method="post"  action="#" class="for4" style=" float: left; position: relative; bottom:-340px;  ">
+
+  <select style="height:30px;" onchange="window.location.href='?'+this.value">
+
+    <option value="returnStatus=closed&"
+            {% if  data['returnStatus'] != "open"  %} selected {% endif %}
+    >Tax year - Previous</option>
+
+    <option value="returnStatus=open&"
+            {% if  data['returnStatus'] == "open"  %} %} selected {% endif %}
+    >Tax year - Current</option>
+
+  </select>
+
+</form>
+<!--  RETURN YEAR  TOGGLE -->
+
+
+
+{% endblock %}
+
+

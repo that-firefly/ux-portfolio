@@ -1,0 +1,156 @@
+{% extends "layout-back-welsh.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if  data['user'] == "agent"  %}
+        <!-- Agent user -->
+            <h1 class="govuk-heading-l">List of xyz</h1>
+        {% else %}
+        <!-- Individual citizen user -->
+            <h1 class="govuk-heading-l">List of xyz</h1>
+        {% endif %}
+
+
+
+        <!-- the table of data -->
+        <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    First question asked?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-third">
+                    The first data
+                </dd>
+                <dd class="govuk-summary-list__actions width">
+                    <a class="govuk-link" href="#" style="color:#1d70b8;">
+                        Change
+                    </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Second question asked?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    The second data
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#" style="color:#1d70b8;">
+                        Change
+                    </a>
+                </dd>
+            </div>
+
+        </dl>
+
+
+        {%  if  data['dataremoved'] != "true"  %}
+            <!--  Normal state -->
+                <div class="govuk-button-group govuk-!-margin-top-7">
+                    {{ govukButton({ text: "Save and continue",
+                    href: "#" }) }}
+
+                    <p><a href="#">Remove [PLACEHOLDER]</a></p>
+                <div>
+
+        {% else %}
+                <!--  Removed state  -->
+                <div class="govuk-button-group govuk-!-margin-top-7">
+                    {{ govukButton({ text: "Back to the list",
+                    href: "#" }) }}
+
+                    {{ govukButton({ text: "Restore the removed [PLACEHOLDER]",
+                    href: "#",
+                    classes: "govuk-button--secondary" }) }}
+                <div>
+        {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<!-- Removed  TOGGLE  -->
+<form method="post"  action="#" class="for4" style=" float: left; position: relative; bottom:-340px;  ">
+
+    <select style="height:30px;" onchange="window.location.href='?'+this.value">
+
+        <option value="dataremoved=false&"
+                {% if  data['dataremoved'] != "true"  %} selected {% endif %}
+        >Viewing data</option>
+
+        <option value="dataremoved=true&"
+                {% if  data['dataremoved'] == "true"  %} selected {% endif %}
+        >Viewing removed prepop data</option>
+
+    </select>
+
+</form>
+<!--  END USER TYPE TOGGLE -->
+
+
+<!-- USER TYPE TOGGLE  -->
+<form method="post"  action="#" class="for4" style=" float: left; position: relative; bottom:-340px;  ">
+
+    <select style="height:30px;" onchange="window.location.href='?'+this.value">
+
+        <option value="user=citizen&"
+                {% if  data['user'] != "agent"  %} selected {% endif %}
+        >User type - Individual</option>
+
+        <option value="user=agent&"
+                {% if  data['user'] == "agent"  %} selected {% endif %}
+        >User type - Agent</option>
+
+    </select>
+
+</form>
+<!--  END USER TYPE TOGGLE -->
+
+
+
+
+<!-- RETURN YEAR TOGGLE  -->
+<form method="post"  action="#" class="for4" style=" float: left; position: relative; bottom:-340px;  ">
+
+    <select style="height:30px;" onchange="window.location.href='?'+this.value">
+
+        <option value="returnStatus=closed&"
+                {% if  data['returnStatus'] != "open"  %} selected {% endif %}
+        >Tax year - Previous</option>
+
+        <option value="returnStatus=open&"
+                {% if  data['returnStatus'] == "open"  %} %} selected {% endif %}
+        >Tax year - Current</option>
+
+    </select>
+
+</form>
+<!--  RETURN YEAR  TOGGLE -->
+
+
+
+{% endblock %}
+
+
