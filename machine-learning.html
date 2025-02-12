@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Estela Gaspar - UX Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estela Gaspar - UX User Experience Design</title>
     
-    <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./estela-gaspar-ux.css">
-    <script src="./estela-ux.js" defer></script>
-
-    <!-- Google Fonts -->
+    <script src="./estela-ux.js"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-
-        <!-- Navigation -->
+<div class="wrapper">
         <nav>
             <span class="logo">Home</span>
             <span class="hamburger" onclick="toggleMenu()">☰</span>
             <ul class="menu">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="./about.html">About</a></li>
                 <li><a href="./case-studies.html">Case Studies</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#links">Links</a></li>
@@ -31,45 +30,54 @@
             </ul>
         </nav>
 
-        <!-- Banner -->
-        <img class="banner-general" src="./images/banner-header-general.png" 
-             alt="Estela Gaspar's UX Portfolio Banner" title="Estela Gaspar - UX Portfolio">
+    <div class="main-content">
+        <h1> Machine Learning (ML) and <br>Artificial Intelligence (AI) Tools for UX</h1>
 
-        <!-- Portfolio Section -->
-        <div class="main-content-portfolio">
-            <h1 class="display-title">
-                Machine Learning (ML) and <br>Artificial Intelligence (AI) Tools for UX
-            </h1>
-            <p>
-                Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
-                These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.
-            </p>
-            <a href="#" title="Learn how ML/AI improves UX">Read more about ML/AI and UX</a>
-            
-            <p>
-                Example: Analyzing an online review.
-                <img class="port-images" src="./images/machine-learning-1.png" 
-                     alt="Sentiment analysis of an online review" title="Example of sentiment analysis on a review">
-                Quickly extracting key insights and sentiment.
-            </p>
-            
-            <img src="./images/ai-thumb.png" 
-                 alt="AI's impact on UX research" title="The role of AI in UX research">
-
+    <div class="container">
+        <div class="text-content">
             <h2>Visualizing Data from Sentiment Analysis</h2>
-            <p>
-                These insights enable the creation of UX deliverables like empathy maps, user journeys, and graphs that visually explain user experiences.  
+            <p>Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
+            These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.</p>
+            <p>Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
+                These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.</p>
+            <p>Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
+                    These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.</p>
+            <p>Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
+                        These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.</p>
+        </div>
+        <div class="image-content">
+            <img class="port-images" src="./images/machine-learning-1.png" 
+                     alt="Sentiment analysis of an online review" title="Example of sentiment analysis on a review">
+            <p>Example: Analyzing an online review</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="text-content">
+            <h2>Visualizing Data from Sentiment Analysis</h2>
+            <p>These insights enable the creation of UX deliverables like empathy maps, user journeys, and graphs that visually explain user experiences.  
                 While Amazon Comprehend helps detect trends, human interpretation remains key to extracting meaningful insights that drive business value.
             </p>
-
-            <img class="port-images" src="./images/empathy-map.png" 
-                 alt="Empathy map using sentiment analysis insights" title="Empathy map derived from machine learning insights">
+            <p>Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
+                These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.</p>
+                <p>Using tools like AWS Amazon Comprehend to analyze text in real-time and extract key phrases, detect dominant languages, sentiment, and syntax. 
+                    These insights help refine empathy maps and user journey maps, ensuring problem statements are backed by objective data.</p>
         </div>
-
-        <!-- Footer -->
-        <footer>
-            Website coded by Estela Gaspar
-          </footer>
+        <div class="image-content">
+            <img class="port-images" src="./images/empathy-map.png" 
+    alt="Empathy map using sentiment analysis insights" title="Empathy map derived from machine learning insights">
+        </div>
     </div>
+
+</div>
+
+           
+    <div class="footer-banner">
+        <footer>
+              Website coded by Estela Gaspar
+        </footer>
+    </div>
+</div>
 </body>
 </html>

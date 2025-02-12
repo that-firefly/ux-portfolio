@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Estela Gaspar - UX User Experience Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estela Gaspar - UX User Experience Design</title>
     
-    <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./estela-gaspar-ux.css">
     <script src="./estela-ux.js"></script>
-
-    <!-- Google Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-
-        <!-- Navigation -->
+<div class="wrapper">
         <nav>
             <span class="logo">Home</span>
             <span class="hamburger" onclick="toggleMenu()">☰</span>
             <ul class="menu">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="./about.html">About</a></li>
                 <li><a href="./case-studies.html">Case Studies</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#links">Links</a></li>
@@ -31,60 +30,73 @@
             </ul>
         </nav>
 
-        <!-- Banner -->
-        <img class="banner-general" src="./images/banner-header-general.png" 
-             alt="Banner for Estela Gaspar UX Portfolio" 
-             title="Estela Gaspar - UX Portfolio">
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <h1 class="display-title">Case Studies</h1>
-            <p class="strong-typography-smaller">
-                A collection of case studies that tell a story about how I approach UX challenges and collaborate with teammates.
-            </p>
+    <div class="main-content">
+            <h1>Case studies</h1>
 
             <!-- Case Studies -->
             <div class="container">
                 <div class="card-case-studies">
-                    <h2>Machine Learning & AI in UX</h2>
-                    <img src="./images/ai-thumb.png" 
-                         alt="Thumbnail representing AI in UX" 
-                         title="AI and UX case study">
-                    <a href="./machine-learning.html" title="Read more about AI and UX">Read more about ML/AI and UX case study</a>
+                    <h2>AI, ML, UX<br>Artificial Intelligence</h2>
+                    <img src="./images/ai-thumb.png" alt="Thumbnail representing AI in UX" title="AI and UX case study">
+                    <a href="./machine-learning.html" title="Read more about AI and UX">Read more</a>
                 </div>
 
                 <div class="card-case-studies">
-                    <h2>HMRC - His Majesty's Revenue and Customs</h2>
-                    <img src="./images/HMRC-thumb.jpg" 
-                         alt="Thumbnail for HMRC case study" 
-                         title="HMRC-case-study">
-                    <a href="./HMRC-case-study.html" title="Read more about HMRC case study">Read more about HMRC case study</a>
+                    <h2>DEFRA <br> EPR or packaging</h2>
+                    <img src="./images/HMRC-thumb.jpg" alt="Thumbnail for HMRC case study" title="HMRC-case-study">
+                    <a href="./HMRC-case-study.html" title="Read more about HMRC case study">Read more</a>
                 </div>
             </div>
 
             <div class="container">
                 <div class="card-case-studies">
-                    <h2>Redesigning E-commerce UX</h2>
-                    <img src="./images/royal-navy-thumb.jpg" 
-                         alt="Thumbnail for e-commerce UX redesign" 
-                         title="E-commerce UX case study">
-                    <a href="./ecommerce-ux.html" title="Read more about e-commerce UX">Read more about e-commerce UX</a>
+                    <h2>HMRC <br>HM Revenue & Customs</h2>
+                    <img src="./images/royal-navy-thumb.jpg" alt="Thumbnail for e-commerce UX redesign" title="E-commerce UX case study">
+                    <a href="./ecommerce-ux.html" title="Read more about e-commerce UX">Read more</a>
                 </div>
 
                 <div class="card-case-studies">
-                    <h2>Accessibility & Inclusive Design</h2>
-                    <img src="./images/ai-thumb.png" 
-                         alt="Thumbnail for accessibility case study" 
-                         title="Accessibility in UX">
-                    <a href="./accessibility-ux.html" title="Read more about accessibility in UX">Read more about accessibility in UX</a>
+                    <h2>Accessibility <br>Inclusive Design</h2>
+                    <img src="./images/ai-thumb.png" alt="Thumbnail for accessibility case study" title="Accessibility in UX">
+                    <a href="./accessibility-ux.html" title="Read more about accessibility in UX">Read more</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer -->
-        <footer>
-            Website coded by Estela Gaspar
-          </footer>
+            <div class="container">
+                <div class="card-case-studies">
+                    <h2>Royal Navy <br>E-Learning Platform</h2>
+                    <img src="./images/royal-navy-thumb.jpg" alt="Thumbnail for e-commerce UX redesign" title="E-commerce UX case study">
+                    <a href="./ecommerce-ux.html" title="Read more about e-commerce UX">Read more</a>
+                </div>
+
+                <div class="card-case-studies">
+                    <h2>Capita <br>...</h2>
+                    <img src="./images/ai-thumb.png" alt="Thumbnail for accessibility case study" title="Accessibility in UX">
+                    <a href="./accessibility-ux.html" title="Read more about accessibility in UX">Read more</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="card-case-studies">
+                    <h2>Howdens <br>E-commerce</h2>
+                    <img src="./images/royal-navy-thumb.jpg" alt="Thumbnail for e-commerce UX redesign" title="E-commerce UX case study">
+                    <a href="./ecommerce-ux.html" title="Read more about e-commerce UX">Read more</a>
+                </div>
+
+                <div class="card-case-studies">
+                    <h2>BoilerJuice <br>Energy commodities</h2>
+                    <img src="./images/ai-thumb.png" alt="Thumbnail for accessibility case study" title="Accessibility in UX">
+                    <a href="./accessibility-ux.html" title="Read more about accessibility in UX">Read more</a>
+                </div>
+            </div>
     </div>
+    
+
+    <div class="footer-banner">
+        <footer>
+              Website coded by Estela Gaspar
+        </footer>
+    </div>
+</div>
 </body>
 </html>

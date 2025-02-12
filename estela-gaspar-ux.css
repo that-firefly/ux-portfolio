@@ -196,10 +196,11 @@ h2, h4, h5, h6 {
 }
 
 h1 {
+    padding: 20px 0px;
     font-family: "Poppins", serif;
-    font-size: 3em;
-    font-weight: 100;
-    margin: 5px 0px;
+    font-size: 28px;
+    color: #071b4a;
+    font-weight: 900;
 }
 
 .initial-heading {
@@ -210,10 +211,12 @@ h1 {
 p {
     font-family: "Poppins", serif;
     color:  #071b4a;
+    font-size: 1em;
 }
 
 a {
     color: #2C70B2;
+    font-size: 1.5em;
 }
 
 
@@ -249,9 +252,6 @@ a {
     transform: scale(0.96); 
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12); 
 }
-
-
-
 
 
 .cover-alternate-content p {
@@ -302,13 +302,12 @@ svg {
 
 
 .main-content {
-    margin: 0 auto;
-  
-  }
+    margin: 0px auto;
+}
 
-  .container-eg {
+.container-eg {
     margin: 0px 0px 30px 0px;
-  }
+}
 
 
 .cover-alternate-container {
@@ -319,15 +318,15 @@ svg {
     margin-bottom: 0px;
     padding-bottom: 0px;
     width: 90%;
-  }
+}
 
 
 
-  .strong-typography-smaller {
+.strong-typography-smaller {
     margin-bottom: 0px;
     weight: 300;
     font-weight: 400;
-  }
+}
 
 
 
@@ -377,6 +376,38 @@ svg {
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.6;
+}
+
+
+/* Portfolio internal pages */
+
+.main-content {
+    flex-grow: 1;
+}
+.image-content img {
+    margin: 20px;
+    display: flex;
+}
+
+.content-bit {
+    float: left;
+}
+
+.text-content {
+    margin-right: 60px;
+    float: left;
+    width: 40%;
+    text-align: left;
+}
+
+.image-content {
+    float: right;
+    width: 40%;
+}
+
+.image-content img {
+    border: 1px solid #f2f2f2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -442,19 +473,17 @@ img{
 /* Footer start */
 
 .wrapper {
-    min-height: 100vh; /* Ensures the wrapper takes at least 100% of the viewport height */
+    min-height: 100vh; 
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; 
 }
 
-/* Content part of the page */
-.main-content {
-    flex-grow: 1; /* This ensures the content grows to fill the remaining space */
-}
+
+
 
 /* Footer styling */
 .footer-ending {
-    margin-top: auto; /* Push the footer to the bottom of the wrapper */
+    margin-top: auto;
 }
 
 footer {
@@ -489,16 +518,52 @@ footer {
   flex-wrap: wrap;  
 }
 
+
 .card-case-studies {
     width: 30%;
     margin: 60px;
+    padding: 30px 60px 50px 60px;
     text-align: center;
     font-family: "Poppins", serif;
     color: #071b4a;
-    padding: 30px 60px;
-    background-color: #ebeef3;
+    background: linear-gradient(to bottom, #ffebef, #e6f3ff);
     border-radius: 10px;
+    color: #071E55; 
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 
+        background 0.4s ease-in-out, 
+        transform 0.2s ease, 
+        text-decoration 0.2s ease, 
+        box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
+
+.card-case-studies img {
+    padding: 0px 0px 40px 0px;
+  }
+
+
+
+
+.card-case-studies:hover {
+    background: linear-gradient(to bottom,  #FDF5F5,  #FFD1DC);
+    padding-bottom: 50px;
+    text-decoration: underline;
+    transform: scale(1.06);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+.card-case-studies:active {
+    padding-bottom: 50px;
+    transform: scale(0.96); 
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12); 
+}
+
+
+
 
 /* Cards end */
 
@@ -522,7 +587,7 @@ padding: 30px;
 
 
 
-/* Media query start */
+/*////////////////////////////// Media query start */
 
 /* Mobile nav start */
 
@@ -567,7 +632,7 @@ nav .hamburger {
 
 @media (min-width: 1500px)  {
     .initial-heading {
-        font-size: 3em !important;
+        font-size: 2em !important;
       }
 
 
@@ -575,11 +640,15 @@ nav .hamburger {
 
 
 @media (min-width: 960px) {
+
+    
+
     nav .logo {
         display: none;
     }
 
     .display-title {
+        font-family: "Poppins", serif;
         font-size: 6em !important;
     }
 
@@ -595,16 +664,25 @@ nav .hamburger {
 
 @media (min-width: 800px) {
 
+
+    a {
+        font-size: 1em !important;
+    }
+
+    .card-case-studies img {
+        padding: 0px 0px 20px 0px !important;
+      }
+
+
+    .card-case-studies {
+        width: 40% !important;
+        margin: 20px !important;
+        padding: 10px 20px 30px 20px !important;
+    }
+
     .cover-alternate-content.wider {
-        float: left;
-        width: 50% !important;
-        margin-top: 100px !important;
+        width: 90% !important;
     }
-
-    .display-title {
-        font-size: 98px !important;
-    }
-
 
 
     .my-hero {
@@ -618,14 +696,7 @@ nav .hamburger {
         padding: 20px  !important;
     }
     
-    .cover-alternate-content {
-        margin: 0px auto !important;
-    }
-    
-    .cover-alternate-content h2 {
-        color: #ffffff;
-        font-size: 2em !important;
-    }
+  
     
     .strong-typography-smaller {
         padding: 0px !important;
@@ -656,33 +727,35 @@ nav .hamburger {
         float: none !important;
     }
     
-
     
     }
     
 
 @media (min-width: 768px) {
+
+  
+
     nav .menu {
-        display: flex;
-        gap: 20px;
-        align-items: center;
+        display: flex !important;
+        gap: 20px !important;
+        align-items: center !important;
     }
 
     nav .menu li {
-        margin: 0;
+        margin: 0px !important;
     }
 
     nav .hamburger {
-        display: none; 
+        display: none !important; 
     }
 
 
     h1 {
-        font-size: 3.5em !important;
+        font-size: 1.8em !important;
     }
 
     h2 {
-        font-size: 3em !important;
+        font-size: 1.5em !important;
     }
 
     h3 {
@@ -690,7 +763,7 @@ nav .hamburger {
     }
 
     p {
-        font-size: 1.8em !important;
+        font-size: 1em !important;
     }
 
   
@@ -700,6 +773,12 @@ nav .hamburger {
 
 
 @media (min-width: 350px) and (max-width: 428px) {
+
+
+.main-content {
+    margin: 0px 20px  !important;
+}
+
 
 .cover-alternate-container.two, .cover-alternate-container.one .cover-alternate-content h2, .cover-alternate-container.one p, #word-cloud {
   padding: 10px 0px !important;
@@ -764,6 +843,46 @@ h2 {
 
 
 @media (min-width: 350px) and (max-width: 450px) {
+
+.text-content {
+    margin-right: 0px !important;
+}
+
+.content-bit {
+    margin: 0px !important;
+}
+
+.text-content {
+    width: 100%  !important;
+    text-align: center  !important;
+}
+
+.image-content {
+    display: flex !important;
+    width: 100%  !important;
+}
+
+.main-content img {
+    width: 100%  !important;
+}
+
+h1 {
+    margin: 20px 0px !important;
+}
+
+a {
+    font-size: 1em !important;
+}
+
+.card-case-studies img {
+    padding: 0px 0px 10px 0px !important;
+}
+
+.card-case-studies {
+    width: 90% !important;
+    margin: 0px 0px 30px 0px !important;
+    padding: 0px 10px 20px 10px !important;
+}
 
 .display-title {
     font-size: 48px !important;
