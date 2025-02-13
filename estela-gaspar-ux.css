@@ -195,6 +195,11 @@ h2, h4, h5, h6 {
     padding: 30px 0px;
 }
 
+h2 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
 h1 {
     padding: 20px 0px;
     font-family: "Poppins", serif;
@@ -383,6 +388,7 @@ svg {
 
 .main-content {
     flex-grow: 1;
+    width: 90%;
 }
 .image-content img {
     margin: 20px;
@@ -511,54 +517,69 @@ footer {
 /* Footer end */
 
 /* Cards start */
-.container {
-    display: flex;
-  align-items: center; 
-  justify-content: center; 
-  flex-wrap: wrap;  
+
+
+
+
+
+a {
+    text-decoration: none;
 }
 
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: stretch;
+    margin: 20px auto; 
+    gap: 20px; 
+}
+
 .card-case-studies {
-    width: 30%;
-    margin: 60px;
-    padding: 30px 60px 50px 60px;
+    flex: 1 1 calc(45% - 20px); 
+    max-width: 400px; 
+    min-width: 300px;
     text-align: center;
     font-family: "Poppins", serif;
     color: #071b4a;
-    background: linear-gradient(to bottom, #ffebef, #e6f3ff);
+    background: linear-gradient(to bottom, #fdfdfe, #e6f3ff);
     border-radius: 10px;
-    color: #071E55; 
-    text-decoration: none;
-    border: none;
     cursor: pointer;
-    text-align: center;
+    text-decoration: none;
     transition: 
         background 0.4s ease-in-out, 
         transform 0.2s ease, 
-        text-decoration 0.2s ease, 
         box-shadow 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
 }
 
 .card-case-studies img {
-    padding: 0px 0px 40px 0px;
-  }
-
-
-
+    height: auto;
+    margin: 10px auto 20px auto;
+}
 
 .card-case-studies:hover {
-    background: linear-gradient(to bottom,  #FDF5F5,  #FFD1DC);
-    padding-bottom: 50px;
-    text-decoration: underline;
+    background: linear-gradient(to bottom, #FDF5F5, #FFD1DC);
     transform: scale(1.06);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
+
+
+.card-case-studies span {
+    font-size:0.9em; 
+}
+
+.card-case-studies:hover span {
+    color: #ff4081; 
+}
+
+
 
 .card-case-studies:active {
     padding-bottom: 50px;
-    transform: scale(0.96); 
+ 
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12); 
 }
 
@@ -666,18 +687,14 @@ nav .hamburger {
 
 
     a {
-        font-size: 1em !important;
+        font-size: 1.5em !important;
     }
-
-    .card-case-studies img {
-        padding: 0px 0px 20px 0px !important;
-      }
 
 
     .card-case-studies {
-        width: 40% !important;
-        margin: 20px !important;
-        padding: 10px 20px 30px 20px !important;
+        width: 100% !important;
+        margin: 50px !important;
+        padding: 10px 60px 30px 60px !important;
     }
 
     .cover-alternate-content.wider {
@@ -754,9 +771,7 @@ nav .hamburger {
         font-size: 1.8em !important;
     }
 
-    h2 {
-        font-size: 1.5em !important;
-    }
+
 
     h3 {
         font-size: 2em !important;
@@ -822,6 +837,7 @@ h1 {
 
 h2 {
     font-size: 1.2em !important; 
+  
 }
 
 .button-like-eg {
