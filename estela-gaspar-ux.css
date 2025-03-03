@@ -37,10 +37,11 @@ img { border: 0; }
 body {
     font-family: "Poppins", serif;
     margin: 0;
-    padding: 0;
+    padding-top: 60px;
     height: 100vh; 
     background-color: #fefefe;
 }
+
 
 .badge {
     display: inline-block;
@@ -68,14 +69,21 @@ body {
 
 
 /* Navigation start */
+
+
 nav {
     font-family: "Poppins", serif;
-    margin-bottom: 0px;
-    padding: 30px 60px;
+    position: fixed;  
+    
+    top: 0;
+    left: 0;
+    width: 100%;      /* Full width */
     background-color: #ebeef3;
     color: #071b4a;
-    padding: 20px 20px;
+    padding: 15px 20px;
+    z-index: 1000;    /* Ensures it stays above other content */
 }
+
 
 
 nav ul {
@@ -855,7 +863,6 @@ nav .hamburger {
     display: block;
     cursor: pointer;
     font-size: 1.5rem;
-    position: absolute;
     right: 20px;
     top: 15px;
 }
@@ -992,6 +999,38 @@ nav .hamburger {
     display: none !important; 
 }
 
+/* Mobile Menu Styles */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #071b4a;
+    margin: 6px 0;
+}
+
+/* Hide nav links by default on mobile */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ebeef3;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+
 h1 {
     font-size: 2em !important;
     font-weight: 400 !important;
@@ -1085,13 +1124,18 @@ h2.initial-heading {
 
 @media (min-width: 350px) and (max-width: 450px) {
 
-
+.container {
+    max-width: 85% !important;
+    clear: both;
+}
 
 .port-page-internal {
     margin: 0px 0px 0px 0px;
     padding: 0px;
     width: 90%;
 }
+
+
 
 .internal-page-card div {
     padding: 0px;
