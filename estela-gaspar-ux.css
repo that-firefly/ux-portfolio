@@ -682,7 +682,7 @@ footer {
     float: left;
     margin-left: 30px;
     max-width: 30%;
-    clear: both;
+    clear: right;
 }
 
 .interna-div {
