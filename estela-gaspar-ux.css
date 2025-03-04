@@ -610,8 +610,7 @@ footer {
 }
 
 .card-case-studies {
-    width: 90%;
-    margin: 0px 0px 40px auto;
+    margin: 0px 40px 40px 40px;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -967,7 +966,16 @@ h2.initial-heading {
 }
 
 .main-content {
-    margin: 0% 0% 0% 12%;
+    margin: 0% 0% 0% 0%;
+}
+
+.container {
+    max-width: 100% !important;
+    clear: both;
+}
+
+.card-case-studies {
+    width: 100%;
 }
 
 .landingpage-title {
@@ -976,11 +984,6 @@ h2.initial-heading {
 
 h2 {
     font-size: 1.2em;
-}
-
-.container {
-    max-width: 85% !important;
-    clear: both;
 }
 
 .hero-call-action {
