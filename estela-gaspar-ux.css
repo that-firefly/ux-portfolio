@@ -436,11 +436,6 @@ svg {
     margin: 60px;
 }
 
-.main-content {
-    width: 100%;
-    margin: 0 auto;
-    float: left;
-}
 
 .container-eg {
     margin: 0px 0px 30px 0px;
@@ -596,9 +591,9 @@ footer {
 
 .container {
     float: left;
-    margin-left: 10px;
-    max-width: 30%;
+    max-width: 50%;
 }
+
 
 .interna-div {
     display: flex;
@@ -615,7 +610,8 @@ footer {
 }
 
 .card-case-studies {
-    margin: 10px;
+    width: 90%;
+    margin: 0px 0px 40px auto;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -909,9 +905,7 @@ h1 {
 }
 
 
-.main-content {
-    margin: 0px 20px  !important;
-}
+
 
 .cover-alternate-container.two, .cover-alternate-container.one .cover-alternate-content h2, .cover-alternate-container.one p, #word-cloud {
   padding: 10px 0px !important;
@@ -970,6 +964,10 @@ h2.initial-heading {
 
 .my-hero {
     width: 60%;
+}
+
+.main-content {
+    margin: 0% 0% 0% 12%;
 }
 
 .landingpage-title {
