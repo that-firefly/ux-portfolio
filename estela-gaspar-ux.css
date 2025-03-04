@@ -27,11 +27,10 @@ th, td
  vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+h1, h2, h3, h4, h5, h6, th, td, caption, p { font-weight:normal; text-align: center; }
+h1, h2, h3, h4, h5, h6, th, td, caption {padding: 10px;margin: 10px; clear: both; }
 
 img { border: 0; }
-
-
 
 
 body {
@@ -60,12 +59,6 @@ body {
 .badge:hover {
     color: #ffffff;
 }
-
-.internal-div {
-    padding: 30px;
-}
-
-
 
 
 /* Navigation start */
@@ -254,59 +247,46 @@ nav ul li a:hover {
 
 /* Titles end */
 
-h2, h4, h5, h6 {
+h1, h2, h4, h5, h6, p {
+    margin: 10px;
+    text-align: center;
     font-family: "Poppins", serif;
-    font-optical-sizing: auto;
     color: #071b4a;
-    margin: 0px;
-    padding: 30px 0px;
 }
 
-h2 {
+h1 {
     font-size: 2em;
+    font-weight: 600;
+}
+
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 700;
 }
 
 .text-content h2 {
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-size: 2em;
-    font-weight: 400;
-}
-
-
-
-
-h1 {
-    padding: 20px 0px;
-    font-family: "Poppins", serif;
-    font-size: 1.8em;
-    color: #071b4a;
+    font-size: 1.3em;
     font-weight: 400;
 }
 
 .cover-alternate-content.wider > .landingpage-title {
     color: #2e6ba4;
-    margin: 50px auto;
 }
 
-.initial-heading {
-    margin-bottom: 90px;
-    margin: 30px 0px 0px 0px;
-  }
-
-p {
-    font-family: "Poppins", serif;
-    color:  #302f3e;
-    font-size: 1.5em;
+p, a, a:link {
+    font-size: 1em;
+    font-weight: 400;
 }
 
 a, a:active {
     color: #3200cc;
     text-decoration: none;
 }
-
 
 a:hover {
     color: #3F00FF;
@@ -316,6 +296,9 @@ a:hover {
 /* Lists */
 
 ul, ol {
+    text-align: center;
+    font-family: "Poppins", serif;
+    color: #071b4a;
     font-size: 1.5em;
     text-align: left;
     margin: 0px;
@@ -367,11 +350,12 @@ ul li, ol li {
     margin: 20px auto;
 }
 
+
 .button-like-eg {
+    margin: 10px 0px;
+    padding: 10px 20px;
     display: inline-block;
-    margin: 30px 0px;
     background: linear-gradient(to bottom, #FFD1DC, #B3D9FF); 
-    padding: 20px 40px;
     border-radius: 60px;
     font-size: 32px;
     font-weight: 600; 
@@ -422,6 +406,11 @@ ul li, ol li {
 /* Typogrphy end */
 
 
+/* Banner */
+.cover-alternate-content.wider {
+    margin: 0 auto;
+  }
+
 
 /* Content divs start */
 .wrapper {
@@ -447,19 +436,16 @@ svg {
     margin: 60px;
 }
 
-
 .main-content {
-    margin: 0px auto;
+    width: 100%;
+    margin: 0 auto;
+    float: left;
 }
 
 .container-eg {
     margin: 0px 0px 30px 0px;
 }
 
-
-.cover-alternate-container {
-    width: 100%;
-}
 
 .cover-alternate-content .bleed-into-container {
     margin-bottom: 0px;
@@ -468,26 +454,12 @@ svg {
 }
 
 
-
-.strong-typography-smaller {
-    margin-bottom: 0px;
-    weight: 300;
-    font-weight: 400;
-}
-
-
-
-
-.cover-alternate-container.one p {
-    padding: 30px 0px;
-  }
-
 .cover-alternate-container.two {
-background-color: #071E55;
-  padding: 60px;
-  border-radius: 30px;
-  margin: 60px auto;
-  width: 89%;
+    margin: 20px 0px;
+    background-color: #071E55;
+    padding: 30px;
+    border-radius: 5px;
+
 }
 
 
@@ -497,22 +469,14 @@ background-color: #071E55;
 }
   
 
-.cover-alternate-content {
-    margin: 60px 0px 0px 0px;
-}
-
 .cover-alternate-content h2{
     color: #ffffff;
 }
 
 .cover-alternate-container.one .cover-alternate-content h2 {
     color: #071E55;
-  }
-
-  .cover-alternate-content.wider {
-    width: 90%;
-  }
-
+    margin: 0px;
+}
 
 .content {
     max-width: 60%;
@@ -530,9 +494,7 @@ background-color: #071E55;
 
 /* Portfolio internal pages */
 
-.main-content {
-    flex-grow: 1;
-}
+
 .image-content img {
     margin: 20px;
     display: flex;
@@ -585,14 +547,10 @@ background-color: #071E55;
 
 /* Images start */
 
-
-
 img {
-    width: 95%;
+    width: 100%;
     height: auto;
-    margin: 30px 0px;
-    border-radius: 10px;
-    padding: 0px;
+    border-radius: 5px;
 }
 
 .internal-page-card img {
@@ -600,97 +558,46 @@ img {
     float: left;
 }
 
-.big-boy-card {
-    margin: 40px 35px 40px 35px;
-    border-radius: 30px;
-  }
+.cover-alternate-content.wider.left {
+    float: right;
+    width: 50%;
+}
+  
+
+
+.display-title-bottom {
+    margin: 0px;
+}
+
 
 .my-hero {
-    width: 50%;
-    float: right;
-    padding: 60px 60px 60px 60px;
-  }
-
-  .cover-alternate-content.wider.left {
-    float: right;
-    width: 50%;
-  }
-  
-  
-  .my-hero.left {
-    float: left;
-    width: 30%;
-  }
-
-  .footer-ending img {
-    width: 10%;
-    margin: 0px;
-  }
-
-  .display-title-bottom {
-    margin: 0px;
-  }
-
+    width: 20%;
+}
 /* Images end */
 
 /* Footer start */
 
-.wrapper {
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column; 
-}
-
-
 
 
 /* Footer styling */
-.footer-ending {
-    margin-top: auto;
-}
-
-footer {
-    font-family: "Poppins", serif;
-    color: #777777; 
-    text-align: center;
-    padding: 10px 20px;
-    width: 100%;
-}
-
-.footer-ending {
-    margin: 90px 0px;
-  }
 
 
 footer {
     font-family: "Poppins", serif;
+    background-color: #ffffff;
     color: #777777; 
-    text-align: center;
-    margin-top: 60px; 
-    padding: 10px 20px;
-    width: 100%; 
+    padding: 10px;
 }
 
 /* Footer end */
 
 /* Cards start */
-/* .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    align-items: stretch;
-    margin: 20px auto; 
-    gap: 20px;
-    max-width: 30%;
-    float: left;
-    margin-left: 30px;
-} */
+
 
 .container {
     float: left;
-    margin-left: 30px;
+    margin-left: 10px;
     max-width: 30%;
-    clear: right;
 }
 
 .interna-div {
@@ -708,13 +615,9 @@ footer {
 }
 
 .card-case-studies {
-    flex: 1 1 calc(45% - 20px); 
-    max-width: 750px; 
-    min-width: 300px;
-    text-align: center;
-    font-family: "Poppins", serif;
-    color: #071b4a;
-    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
     transition: 
@@ -724,11 +627,6 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-case-studies img {
-    height: auto;
-    margin: 10px auto 20px auto;
-    border-radius: 0px;
-}
 
 .card-case-studies:hover {
     background: linear-gradient(to bottom, #fdfdfe, #e6f3ff);
@@ -854,7 +752,7 @@ nav .menu a {
     padding: 0px 10px;
     color: #071b4a;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: block;
 }
 
@@ -879,7 +777,6 @@ nav .hamburger {
 
 h1.landingpage-title {
     font-size: 2em !important;
-    font-weight: 900 !important;
 }
 
 
@@ -892,8 +789,8 @@ h1.landingpage-title {
 @media (min-width: 960px) {
 
 .cover-alternate-content.wider > .landingpage-title {
-font-size: 6em !important;
-font-weight: 900 !important;
+    margin: 0px;
+    padding: 20px 0px;
 }
 
 nav .logo {
@@ -909,10 +806,6 @@ font-size: 6em !important;
     max-width: 60% !important;
 }
 
-.cover-alternate-container img {
-    width: 60%;
-}
-
 }
 
 
@@ -920,48 +813,18 @@ font-size: 6em !important;
 
 @media (min-width: 800px) {
 
-
-
-.card-case-studies {
-    width: 100% !important;
-    margin-bottom: 90px;
-}
-
-.my-hero {
-    width: 40% !important;
-    float: right !important;
-    padding: 0px !important;
-}
     
 .initial-heading {
-    margin: 60px 0px !important;
-    padding: 20px  !important;
+    margin: 0px !important;
+    padding: 25px  !important;
 }
 
 div.main-button {
     margin: 0px auto;
-    width: 45%;
-    float: left;
-    padding-left: 300px;
+    padding-left: 10%;
 }
     
-.strong-typography-smaller {
-    padding: 0px !important;
-}
     
-.button-like-eg {
-    margin: 0px !important;
-    font-size: 22px !important;
-}
-    
-.cover-alternate-container.one {
-    margin-bottom: 30px !important;
-}
-    
-.cover-alternate-content {
-    width: 80% !important;
-    margin: 0 auto;
-}
     
 .display-title {
     margin: 0 auto !important;
@@ -981,8 +844,8 @@ div.main-button {
 @media (min-width: 768px) {
  
 h1.landingpage-title {
-    font-size: 2em !important;
-    font-weight: 900 !important;
+    font-size: 4em !important;
+    font-weight: 900;
 }
 
 nav .menu {
@@ -1033,12 +896,9 @@ nav .hamburger {
 
 h1 {
     font-size: 2em !important;
-    font-weight: 400 !important;
 }
   
 }
-
-
 
 /*********** Media query 350px to 428px ***********/
 
@@ -1067,14 +927,6 @@ h1 {
     width: 80% !important;
 }
 
-.initial-heading, .my-hero {
-    margin: 0px !important;
-}
-
-.my-hero {
-    padding: 0px !important;
-    float: none !important;
-}
 
 .cover-alternate-content {
     margin: 0px auto !important;
@@ -1085,9 +937,6 @@ h1 {
     margin: 0 auto !important;
 }
 
-.strong-typography-smaller {
-    padding: 0px !important;
-}
 
 
 h2 {
@@ -1105,11 +954,6 @@ h2.initial-heading {
 }
 
 
-
-.footer-ending {
-    margin: 0px !important;
-}
-
 .cover-alternate-content.wider.left {
     float: none !important;
 }
@@ -1124,10 +968,26 @@ h2.initial-heading {
 
 @media (min-width: 350px) and (max-width: 450px) {
 
+.my-hero {
+    width: 60%;
+}
+
+.landingpage-title {
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
 .container {
     max-width: 85% !important;
     clear: both;
 }
+
+.hero-call-action {
+    width: 100%;
+  }
 
 .port-page-internal {
     margin: 0px 0px 0px 0px;
@@ -1155,15 +1015,6 @@ li {
 
 h1.landingpage-title {
     font-size: 2em !important;
-    font-weight: 900 !important;
-}
-
-.cover-alternate-container.one {
-    width: 90%;
-}
-
-.my-hero {
-    padding: 0px !important;
 }
 
  
@@ -1199,11 +1050,6 @@ p {
     width: 100%  !important;
 }
 
-.main-content img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .internal-page-card > .image-eg-small, .internal-page-card img {
     width: 90% !important;
@@ -1220,42 +1066,19 @@ p {
     margin: 0px 0px 30px 0px !important;
 }
 
-.display-title {
-    font-size: 48px !important;
-}
 
-.strong-typography-smaller {
-    padding: 0px;
-}
 
-a.button-like-eg {
-    font-size: 20px !important;
-}
-   
-
-div.cover-alternate-container.two {
-    width: 80%;
-    margin: 10px;
-    padding: 16px;
-}
 
 .cover-alternate-content {
     width: 100%;
     margin: 0px;
 }
 
-.big-boy-card {
-    margin: 10px;
-    width: 87%;
-}
 
-  .main-button {
+.main-button {
     margin-right: 40px;
 }
 
-.cover-alternate-container.one p {
-    padding: 0px !important;
-}
 
 .cover-alternate-content.wider.left {
     float: none !important;
@@ -1263,10 +1086,6 @@ div.cover-alternate-container.two {
 
 .cover-alternate-content.wider.left {
     width: 100%;
-}
-
-.footer-ending img {
-    width: 30%;
 }
 
 }
