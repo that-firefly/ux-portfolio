@@ -254,7 +254,7 @@ h1, h2, h4, h5, h6, p {
 
 h1 {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 
@@ -265,6 +265,8 @@ h2 {
 
 .text-content h2 {
     font-size: 1.5em;
+    text-align: left;
+    padding: 10px 0px 0px 0px;
 }
 
 h3 {
@@ -297,7 +299,7 @@ ul, ol {
     text-align: center;
     font-family: "Poppins", serif;
     color: #071b4a;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: left;
     margin: 0px;
     padding: 0px;
@@ -324,14 +326,97 @@ ol {
     list-style-type: decimal;
 }
 
+ol ::marker {
+    font-weight: bold;
+}
+  
+
 ul {
     list-style-type: disc; 
+    font-size: 1em;
 }
 
 
 ul li, ol li {
     margin-bottom: 10px; 
 }
+
+.grey-idea {
+    background-color: #ebeced;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.skin-idea {
+    background-color: #e2d5d0;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.plum-idea {
+    background-color: #d9d0da;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.sky-idea {
+    background-color: #c3dae9;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.earth-idea {
+    background-color: #d3d2d0;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.mustard-idea {
+    background-color: #ffeaa6;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+
+.green-idea {
+    background-color: #cdffcd;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Lists end */
@@ -502,31 +587,35 @@ svg {
 /* Portfolio internal pages */
 
 
-.image-content img {
-    margin: 20px;
-    display: flex;
-}
 
 .content-bit {
     float: left;
 }
 
 .text-content {
-    margin-right: 60px;
+    margin-left: 30px;
     float: left;
-    width: 40%;
+    width: 60%;
     text-align: left;
 }
 
-.image-content {
-    float: right;
-    width: 40%;
+.text-content p, .text-content h1, .text-content h2, .text-content h3, .text-content ol, .text-content ol li, .text-content ul, .text-content ul li, .text-content li {
+    text-align: left;
+  }
+
+.text-content img {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.image-content img {
-    border: 1px solid #f2f2f2;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
+
+
+.small-text-legend {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #5a5a5a;
 }
 
 
@@ -689,8 +778,6 @@ footer {
     float: left;
 }
 
-
-
 .internal-page-card > .image-eg-small {
     width: 30% !important;
 }
@@ -700,12 +787,12 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    margin: 20px 90px 90px 90px;
+    margin: 20px;
     gap: 20px;
-    padding: 90px;
+    padding: 10px;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 30px;
+    border-radius: 5px;
 }
 
 
@@ -916,6 +1003,7 @@ nav .hamburger {
 
 h1 {
     font-size: 2em !important;
+    font-weight: 600;
 }
   
 }
@@ -1002,7 +1090,7 @@ h2.initial-heading {
 
 
 .main-content {
-    margin: 0% 0% 0% 0%;
+    margin: 10% 0% 0% 0%;
 }
 
 .container {
@@ -1029,7 +1117,7 @@ h2 {
 .port-page-internal {
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    width: 90%;
+    width: 100%;
 }
 
 
@@ -1079,10 +1167,7 @@ p {
     text-align: center  !important;
 }
 
-.image-content {
-    display: flex !important;
-    width: 100%  !important;
-}
+
 
 
 .internal-page-card > .image-eg-small, .internal-page-card img {
@@ -1130,13 +1215,18 @@ p {
         margin-right: 200px;
         position: relative;
         left: -60px;
-        bottom: -30px;
+        bottom: 0px;
     }
 
-    .cover-alternate-content.wider {
-       padding: 10px 60px;
+
+    h1 {
+        font-size: 2em !important;
+        font-weight: 900;
     }
     
 }
 
 /* Media query end */
+
+
+
