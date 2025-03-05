@@ -425,7 +425,7 @@ ul li, ol li {
 /* Containers */
 
 .cover-alternate-content {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -642,6 +642,11 @@ svg {
 }
 
 /* Images start */
+
+.simg {
+    width:50%;
+    height: auto;
+}
 
 img {
     width: 100%;
