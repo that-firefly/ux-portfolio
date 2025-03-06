@@ -42,22 +42,166 @@ body {
 }
 
 
+/* Badges start */
+
 .badge {
+    margin: 0px 5px 5px 0px;
     display: inline-block;
     background-color: #f0f0f0;
     color: #818491;
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 2px 7px;
     border-radius: 12px;
     text-transform: uppercase;
     float: left;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .badge:hover {
     color: #ffffff;
 }
 
+.strawberry-idea {
+    background-color: #FFC0CB;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.orange-idea {
+    background-color: #FAC898;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.lavendar-idea {
+    background-color: #d4c0dc;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.lake-idea {
+    background-color: #c6dedf;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.earth-idea {
+    background-color: #dfc6c8;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.heart-idea {
+    background-color: #ffcdcd;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.gold-idea {
+    background-color: #fff7cd;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.greenfields-idea {
+    background-color: #d8e9c1;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grey-idea {
+    background-color: #ebeced;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.skin-idea {
+    background-color: #e2d5d0;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.plum-idea {
+    background-color: #d9d0da;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+.sky-idea {
+    background-color: #c3dae9;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.earth-idea {
+    background-color: #d3d2d0;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+.mustard-idea {
+    background-color: #ffeaa6;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+
+
+.green-idea {
+    background-color: #cdffcd;
+    color: #555;
+    font-weight: normal;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+/* Badges end */
 
 /* Navigation start */
 
@@ -324,6 +468,7 @@ ul li, ol li {
 
 ol {
     list-style-type: decimal;
+    margin-bottom: 30px;
 }
 
 ol ::marker {
@@ -340,83 +485,6 @@ ul {
 ul li, ol li {
     margin-bottom: 10px; 
 }
-
-.grey-idea {
-    background-color: #ebeced;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-.skin-idea {
-    background-color: #e2d5d0;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-.plum-idea {
-    background-color: #d9d0da;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-
-.sky-idea {
-    background-color: #c3dae9;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-.earth-idea {
-    background-color: #d3d2d0;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-.mustard-idea {
-    background-color: #ffeaa6;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-
-
-.green-idea {
-    background-color: #cdffcd;
-    color: #555;
-    font-weight: normal;
-    padding: 2px 7px;
-    border-radius: 2px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Lists end */
@@ -452,10 +520,18 @@ ul li, ol li {
     padding: 0px 0px 0px 90px;
 }
 
+/* Portfolio case study cards start */
+
 .card-content {
     width: 80%;
     margin: 20px auto;
 }
+
+.card-content p {
+    font-weight: 500;
+}
+
+/* Portfolio case study cards end */
 
 .button-like-eg {
     margin: 10px 0px;
@@ -650,8 +726,13 @@ svg {
 
 img {
     width: 100%;
+    padding: 10px;
     height: auto;
     border-radius: 5px;
+}
+
+.card-content img {
+    width: 70%;
 }
 
 .internal-page-card img {
@@ -718,6 +799,7 @@ footer {
 .card-case-studies {
     margin: 0px 40px 40px 40px;
     padding: 10px;
+    height:500px;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
@@ -726,6 +808,7 @@ footer {
         transform 0.2s ease, 
         box-shadow 0.3s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dadada;
 }
 
 
@@ -733,6 +816,7 @@ footer {
     background: linear-gradient(to bottom, #fdfdfe, #e6f3ff);
     transform: scale(1.06);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border: 1px solid #dadada;
 }
 
 
@@ -794,7 +878,7 @@ footer {
     align-items: stretch;
     margin: 20px;
     gap: 20px;
-    padding: 10px;
+    padding: 30px;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -1232,6 +1316,3 @@ p {
 }
 
 /* Media query end */
-
-
-
