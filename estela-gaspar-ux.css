@@ -42,7 +42,11 @@ body {
 }
 
 
-/* Badges start */
+/* Badges/Labels start */
+
+.labels {
+    margin: 10px;
+}
 
 .badge {
     margin: 0px 5px 5px 0px;
@@ -130,18 +134,6 @@ body {
     border-radius: 2px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .grey-idea {
     background-color: #ebeced;
     color: #555;
@@ -192,7 +184,6 @@ body {
 }
 
 
-
 .green-idea {
     background-color: #cdffcd;
     color: #555;
@@ -201,7 +192,7 @@ body {
     border-radius: 2px;
 }
 
-/* Badges end */
+/* Badges/Labels end */
 
 /* Navigation start */
 
@@ -871,18 +862,59 @@ footer {
     width: 30% !important;
 }
 
+/* Internal pages portfolio start */
+
 .port-page-internal {
+    margin: 10px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    margin: 20px;
     gap: 20px;
-    padding: 30px;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
+
+.projectinfo {
+    margin: 60px 0px;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.projectcontent {
+    margin: 20px;
+}
+
+.projectinfo ul li {
+    list-style: none;
+    padding: 0px 0px 0px 10px;
+}
+
+.port-page-internal h3 {
+    color: #071b4a;
+    font-size: 1.2em;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+.projectcontent img {
+    padding: 10px;
+}
+
+div.projectcontent > .label-text {
+    font-size: 14px;
+    color: #3b3b3b;
+    padding: 10px;
+    margin: 0px;
+}
+
+
+/* Internal pages portfolio end */
+
+
+
 
 
 
@@ -1316,3 +1348,6 @@ p {
 }
 
 /* Media query end */
+
+
+
