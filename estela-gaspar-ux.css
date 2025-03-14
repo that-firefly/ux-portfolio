@@ -511,6 +511,29 @@ ul li, ol li {
     padding: 0px 0px 0px 90px;
 }
 
+/* Small icons start */
+
+.small-icons {
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; 
+}
+
+.small-icons div {
+    width: 20%; 
+    margin: 0.5%; 
+    box-sizing: border-box; 
+}
+
+.small-icons img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Small icons end */
+
 /* Portfolio case study cards start */
 
 .card-content {
