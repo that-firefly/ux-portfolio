@@ -677,7 +677,7 @@ svg {
 /* Portfolio internal pages */
 
 .main-content h1 {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -1148,11 +1148,26 @@ nav .hamburger {
         display: flex;
     }
 
+    .text-only-wider {
+        width: 100%;
+        position: relative;
+        left: -120px;
+        bottom: 0px;
+    }
 
-h1 {
+
+    .text-only-wider h2 {
+        width: 90%;
+        width: 60%;
+        padding-left: 80px;
+    }
+    
+    h1 {
     font-size: 2em !important;
     font-weight: 600;
-}
+    }
+
+
   
 }
 
@@ -1356,14 +1371,10 @@ p {
 }
 
 
-@media (min-width: 250px) and (max-width: 3500px) {
+@media (min-width: 250px) and (max-width: 350px) {
 
     .text-only-wider {
-        width: 70%;
-        margin-right: 200px;
-        position: relative;
-        left: -60px;
-        bottom: 0px;
+        left: -120px;
     }
 
 
