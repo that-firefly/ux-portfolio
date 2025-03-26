@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estela Gaspar - UX User Experience Design</title>
+
+    <link rel="stylesheet" href="./estela-gaspar-ux.css">
+    <script src="./estela-ux.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <span class="logo">Estela UX Design</span>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./WhatI'mupto.html">💡What I'm up to?</a></li>
+                <li><a href="./case-studies.html">Case Studies</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <h1>Xanthos</h1>
+            <div class="port-page-internal">
+                <div class="text-content">
+                    <div class="projectinfo">
+                        <h3>UX case studies that changed the world:</h3>
+                        <ol>
+                            <li>Therac-25: The UX Failure That Led to Deaths.</li>
+                            <li>The Post Office Horizon Scandal (UK) - UX Destroyed Lives.</li>
+                            <li>Boeing 737 MAX (2018) - A UX Disaster That Killed 346 People</li>
+                            <li>Three Mile Island Nuclear Disaster (1979) - Confusing UI Led to a Meltdown.</li>
+                            <li> Volkswagen Emissions Scandal (2015) - UX Was Used to Deceive.</li>
+                            <li>McDonald’s Touchscreens & Hidden Fees (2018).</li>
+                        </ol>
+                    </div>
+                    <div class="projectcontent">
+                        <h2>The importance of good UX</h2>
+                        <h3>1. Therac-25: The UX Failure That Led to Deaths.</h3>
+                        <p>Therac-25 was a radiation therapy machine used in hospitals in the 1980s. A UI design flaw
+                            allowed technicians to accidentally administer massive overdoses of
+                            radiation, killing at least six patients and seriously injuring others.</p>
+
+                        <p><strong>The UX/UI Mistake:</strong></p>
+                        <ul>
+                            <li><strong>The interface was confusing & misleading</strong>. Operators could enter
+                                treatment
+                                settings too quickly (before the machine registered changes) and the system would
+                                default to a high-radiation mode without warning.</li>
+                            <li><strong>No error messages were properly displayed</strong>. When an error occurred, the
+                                system still
+                                looked like it was working correctly. Technicians thought everything was fine, but
+                                patients were getting fatal doses of radiation.</li>
+                            <li><strong>No failsafe mechanisms</strong>. The system relied too much on software
+                                controls,
+                                removing the physical safety interlocks that previous models had.</li>
+                        </ul>
+                        <img src="./images/ux-cases/image-1.png" alt="Therac-25 radiation therapy machine."
+                            title="Image of the Therac-25 radiation therapy machine.">
+                        <p class="label-text">Source image: <a href="https://pvs-studio.com/en/blog/posts/0438/"
+                                alt="PVS-Studio LLC" title="PVS-Studio LLC website">PVS-Studio LLC website</a></p>
+
+                        <p><strong>Lesson Learned:</strong></p>
+                        <ul>
+                            <li>Never assume users will interact perfectly with a system.</li>
+                            <li>Clear feedback & fail-safes are essential in UX - especially in critical systems.</li>
+                            <li>Don’t remove safety features in favor of "efficiency".</li>
+                        </ul>
+
+                        <p>UX isn’t just about making things look nice. It can literally be a matter of life and death.
+                        </p>
+                        <h3>2. The Post Office Horizon Scandal (UK) - UX Destroyed Lives.</h3>
+                        <p>The UK Post Office Horizon IT system (by Fujitsu) falsely accused hundreds of postmasters of
+                            financial fraud due to bad software & UX flaws (1999-2015). The system had glitches that
+                            created accounting errors, making it look like money was missing. Postmasters were wrongly
+                            prosecuted, leading to prison sentences, suicides, bankruptcies, and ruined reputations.</p>
+                        <p><strong>The UX/UI Mistake:</strong></p>
+                        <ul>
+                            <li><strong>No error handling</strong>. The system showed incorrect financial losses but had
+                                no way for users to verify or correct them.</li>
+                            <li><strong>Lack of transparency</strong>. Postmasters weren’t told about known system
+                                errors.</li>
+                            <li><strong>Complex, unusable UI</strong>. Staff couldn't track down errors due to confusing
+                                workflows and hidden data.</li>
+                        </ul>
+                        <img src="./images/ux-cases/image-2.jpg" alt="Judicial Office" title="Image of Judicial Office">
+
+                        <p class="label-text">Source images: By Muhammad Karns - Judicial Office Twitter feed., <a
+                                href="https://creativecommons.org/licenses/by-sa/4.0"
+                                title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a
+                                href="https://commons.wikimedia.org/w/index.php?curid=78284579">Link</a></p>
+
+                        <p><strong>Lesson Learned:</strong></p>
+                        <ul>
+                            <li>Accountability in UX is critical.</li>
+                            <li>A bad UI can literally ruin innocent people’s lives.</li>
+                        </ul>
+
+
+                        <h3>3. Boeing 737 MAX (2018) - A UX Disaster That Killed 346 People</h3>
+                        <p>Boeing introduced a new flight control system (MCAS) to the 737 MAX aircraft but failed to
+                            inform pilots about how it worked. A single sensor failure could trigger the system, pushing
+                            the plane’s nose down uncontrollably. Due to a lack of proper alerts and UI feedback, pilots
+                            couldn’t override it—resulting in two fatal crashes (Lion Air & Ethiopian Airlines), killing
+                            346 people.</p>
+                        <p><strong>The UX/UI Mistake:</strong></p>
+                        <ul>
+                            <li><strong>Lack of visibility</strong>. Pilots didn’t know about MCAS or how to disable it.
+                            </li>
+                            <li><strong>No clear warnings</strong>. The system didn’t properly alert pilots when it
+                                activated.</li>
+                            <li><strong>Hidden design flaws</strong>. Boeing tried to minimize costs by not requiring
+                                extra pilot training, assuming pilots would “just figure it out”.</li>
+                        </ul>
+                        <img src="./images/ux-cases/image-3.jpg"
+                            alt="Image of PK-LQP, the aircraft involved in the accident."
+                            title="13/08/2018 PK-LQP Lion Air 29/10/2018 Written off. Crashed after t/o from CGK as JT610 (189/189)">
+
+                        <p class="label-text">Source images: By PK-REN - <a rel="nofollow" class="external free"
+                                href="https://www.flickr.com/photos/pkaren/45953419622/">https://www.flickr.com/photos/pkaren/45953419622/</a>,
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0"
+                                title="Creative Commons Attribution-Share Alike 2.0">CC BY-SA 2.0</a>, <a
+                                href="https://commons.wikimedia.org/w/index.php?curid=96175780">Link</a>
+                        </p>
+
+                        <p><strong>Lesson Learned:</strong></p>
+                        <ul>
+                            <li>User training and transparency are essential in UX, especially in high-risk systems.
+                            </li>
+                        </ul>
+
+                        <h3>4. Three Mile Island Nuclear Disaster (1979) – Confusing UI Led to a Meltdown</h3>
+                        <p>A partial meltdown occurred at the Three Mile Island nuclear power plant (USA) due to a
+                            combination of UX design flaws and operator confusion. The warning system was a mess—instead
+                            of clear, actionable alerts, it overloaded operators with hundreds of vague alarms.
+                            Operators misinterpreted faulty indicators, shutting down the wrong systems and making the
+                            situation worse.</p>
+                        <p><strong>The UX/UI Mistake:</strong></p>
+                        <ul>
+                            <li><strong>Overwhelming alerts</strong>. The interface bombarded operators with too much
+                                data at once, making it impossible to tell what was critical.</li>
+                            <li><strong>Misleading indicators</strong>. The UI showed that a valve was closed when it
+                                was actually open, leading to coolant loss.</li>
+                            <li><strong>No hierarchy of importance</strong>. Everything looked equally urgent, so
+                                operators couldn’t focus on what actually mattered.</li>
+                        </ul>
+                        <img src="./images/ux-cases/image-4.jpg"
+                            alt="Image of the Three Mile Island nuclear facility, c. 1979."
+                            title="Color photograph of the Three Mile Island nuclear generating station, which suffered a partial meltdown in 1979. The reactors are in the smaller domes with rounded tops (the large smokestacks are just cooling towers).">
+                        <p class="label-text">Source images: By United States Department of Energy - <a rel="nofollow"
+                                class="external free"
+                                href="http://ma.mbe.doe.gov/me70/history/photos.htm">http://ma.mbe.doe.gov/me70/history/photos.htm</a>
+                            Copyright status: Identified on DOE page as "DOE photo", i.e. not copyrighted., Public
+                            Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1111348">Link</a></p>
+                        <p><strong>Lesson Learned:</strong></p>
+                        <ul>
+                            <li>Clear, actionable UI saves lives—especially in high-stress environments.</li>
+                        </ul>
+
+                        <h3>5. Volkswagen Emissions Scandal (2015) – UX Was Used to Deceive.</h3>
+                        <p>Volkswagen designed their diesel cars to cheat emissions tests by using software that
+                            detected when the car was being tested and adjusted emissions accordingly. This made it seem
+                            like the cars were environmentally friendly when, in reality, they were pumping out illegal
+                            pollution levels.</p>
+                        <p><strong>The UX/UI Mistake:</strong></p>
+                        <ul>
+                            <li><strong>Deceptive UI</strong>. The dashboard showed fake data, making both regulators
+                                and users believe the cars were "clean".</li>
+                            <li><strong>Hidden behavior</strong>. There was no way for users to detect that the car was
+                                running in "cheat mode".</li>
+                        </ul>
+                        <img src="./images/ux-cases/image-5.jpg"
+                            alt="A 2010 Volkswagen Golf TDI displaying clean diesel at the Detroit Auto Show."
+                            title="Lateral view VW Golf TDI clean diesel at the 2010 Washington Auto Show.">
+                        <p class="label-text">Source images: By <a href="//commons.wikimedia.org/wiki/User:Mariordo"
+                                title="User:Mariordo">Mariordo</a> Mario Roberto Duran Ortiz - <span
+                                class="int-own-work" lang="en">Own work</span>, <a
+                                href="https://creativecommons.org/licenses/by-sa/3.0"
+                                title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a
+                                href="https://commons.wikimedia.org/w/index.php?curid=11602665">Link</a></p>
+
+                        <p><strong>Lesson Learned:</strong></p>
+                        <ul>
+                            <li>Ethical UX matters. Bad UX can be intentionally used to deceive.</li>
+                        </ul>
+
+                        <h3>6. McDonald’s Touchscreens & Hidden Fees (2018).</h3>
+                        <p>McDonald’s introduced self-order kiosks, which were designed to increase upsells. But they
+                            purposely made it hard to remove extra charges (e.g., "extra cheese" was selected by
+                            default). In some cases, it even added fees without users noticing.</p>
+                        <p><strong>The UX/UI Mistake:</strong></p>
+                        <ul>
+                            <li><strong>Dark patterns</strong>. The UI tricked users into spending more money by making
+                                removal options hard to find.</li>
+                            <li><strong>Lack of transparency</strong>. The total cost wasn’t always clearly updated.
+                            </li>
+                        </ul>
+                        <img src="./images/ux-cases/image-6.jpg" alt="Headquarters in Chicago, Illinois, United States."
+                            title="McDonald's New Hamburger University (summer 2018).">
+
+                        <p class="label-text">Source images: By <a rel="nofollow" class="external text"
+                                href="https://www.flickr.com/people/15558793@N07">Dirk Tussing</a> from Chicago IL,
+                            United States - <a rel="nofollow" class="external text"
+                                href="https://www.flickr.com/photos/learningexecutive/43261171540/">New-McDonald-HU-lg</a>,
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0"
+                                title="Creative Commons Attribution-Share Alike 2.0">CC BY-SA 2.0</a>, <a
+                                href="https://commons.wikimedia.org/w/index.php?curid=74002350">Link</a>
+                        </p>
+
+                        <p><strong>Lesson Learned:</strong></p>
+                        <ul>
+                            <li> Ethical UX should never manipulate users into spending more than they intended.</li>
+                        </ul>
+
+
+                        <a class="button-like-eg" href="case-studies.html">Read more case studies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-banner">
+            <footer>
+                Website coded by Estela Gaspar
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
