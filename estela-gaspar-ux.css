@@ -501,7 +501,7 @@ ul li, ol li {
 /* Containers */
 
 .cover-alternate-content {
-    max-width: 100%;
+    max-width: 65%;
     margin: 0 auto;
     padding: 120px;
 }
