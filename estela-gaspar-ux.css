@@ -844,7 +844,6 @@ footer {
 }
 
 .card-case-studies {
-    color: #fff;
     margin: 0px 40px 40px 40px;
     padding: 10px;
     height:500px;
@@ -859,66 +858,82 @@ footer {
     border: 1px solid #ffffff;
 }
 
-.card-case-studies a:hover {
-    color:#ffffff;
 
-    
-}
-
-h3.card-content {
-    color: #ffffff;
-}
-
-
-.card-case-studies:hover {
-    background-color: #7e38b7;
-    transform: scale(1.06);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border: 1px solid #dadada;
-}
 
 .card-case-studies.one:hover {
     background-color: #c4feff;
 }
 
-
-.card-case-studies.one {
-    background-color: #c4feff;
-    transition: background-color 0.3s ease;
-    color: #000; /* base text color */
-  }
-  
-  .card-case-studies.one:hover {
-    background-color: #94dce5; /* darker version */
-  }
-  
-  .card-case-studies.one h3,
-  .card-case-studies.one p,
-  .card-case-studies.one a {
-    color: inherit; /* uses the parent color unless specified */
-  }
-  
-  /* Optional: keep link color consistent even on hover */
-  .card-case-studies.one a:hover {
-    color: inherit;
-    text-decoration: underline;
-  }
-  
-
-
-
-.card-case-studies.two:hover {
-    background-color: #99cced;
+.card-case-studies.one:hover h3,
+.card-case-studies.one:hover p,
+.card-case-studies.one:hover a,
+.card-case-studies.one:hover span {
+    color: #071E55;
 }
+
+.card-case-studies.one:hover a {
+    color: #071E55;
+    text-decoration: underline;
+}
+
+
+.card-case-studies.two:hover {    
+    background-color: #F0A0A0;
+}
+
+.card-case-studies.two:hover h3,
+.card-case-studies.two:hover p,
+.card-case-studies.two:hover span {
+    color: #071E55;
+}
+.card-case-studies.two:hover a {
+    color: #071E55;
+    text-decoration: underline;
+}
+
 
 .card-case-studies.three:hover {
     background-color: #9c89ff;
+}
+.card-case-studies.three:hover h3,
+.card-case-studies.three:hover p,
+.card-case-studies.three:hover span {
+    color: #3d155f;
+}
+.card-case-studies.three:hover a {
+    color: #071E55;
+    text-decoration: underline;
 }
 
 .card-case-studies.four:hover {
     background-color: #7e38b7;
 }
 
+.card-case-studies.four:hover h3,
+.card-case-studies.four:hover p,
+.card-case-studies.four:hover span {
+    color: #ffffff;
+}
+
+.card-case-studies.four:hover a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.card-case-studies.five:hover {
+    background-color: #98fb98;
+}
+
+.card-case-studies.five:hover h3,
+.card-case-studies.five:hover p,
+.card-case-studies.five:hover span {
+    color: #071E55;
+}
+
+.card-case-studies.five:hover a {
+    color: #071E55;
+    text-decoration: underline;
+}
 
 
 .card-case-studies span {
