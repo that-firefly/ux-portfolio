@@ -40,8 +40,10 @@ body {
     margin: 0;
     padding-top: 60px;
     height: 100vh; 
-    background-color: #fefefe;
+    background-color: #541675;
 }
+
+
 
 
 /* Badges/Labels start */
@@ -67,7 +69,7 @@ body {
 
 .strawberry-idea {
     background-color: #FFC0CB;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -76,7 +78,7 @@ body {
 
 .orange-idea {
     background-color: #FAC898;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -84,7 +86,7 @@ body {
 
 .lavendar-idea {
     background-color: #d4c0dc;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -93,7 +95,7 @@ body {
 
 .lake-idea {
     background-color: #c6dedf;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -101,7 +103,7 @@ body {
 
 .earth-idea {
     background-color: #dfc6c8;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -110,7 +112,7 @@ body {
 
 .heart-idea {
     background-color: #ffcdcd;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -119,7 +121,7 @@ body {
 
 .gold-idea {
     background-color: #fff7cd;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -128,7 +130,7 @@ body {
 
 .greenfields-idea {
     background-color: #d8e9c1;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -136,15 +138,15 @@ body {
 
 .grey-idea {
     background-color: #ebeced;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
 }
 
 .skin-idea {
-    background-color: #e2d5d0;
-    color: #555;
+    background-color: #c4feff;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -152,7 +154,7 @@ body {
 
 .plum-idea {
     background-color: #d9d0da;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -160,16 +162,16 @@ body {
 
 
 .sky-idea {
-    background-color: #c3dae9;
-    color: #555;
+    background-color: #99cced;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
 }
 
 .earth-idea {
-    background-color: #d3d2d0;
-    color: #555;
+    background-color: #9c89ff;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -177,7 +179,7 @@ body {
 
 .mustard-idea {
     background-color: #ffeaa6;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -186,7 +188,7 @@ body {
 
 .green-idea {
     background-color: #cdffcd;
-    color: #555;
+    color: #3d155f;
     font-weight: normal;
     padding: 2px 7px;
     border-radius: 2px;
@@ -200,14 +202,18 @@ body {
 nav {
     font-family: "Poppins", serif;
     position: fixed;  
-    
     top: 0;
     left: 0;
     width: 100%;      /* Full width */
-    background-color: #ebeef3;
-    color: #071b4a;
+    background-color: #3d155f;
+    color: #ffffff;
     padding: 15px 20px;
     z-index: 1000;    /* Ensures it stays above other content */
+}
+
+
+nav .menu a {
+    color: #ffffff;
 }
 
 
@@ -229,7 +235,7 @@ nav ul li {
 nav ul li a {
     font-family: "Poppins", serif;
     text-decoration: none;
-    color: #071b4a;
+    color: #ffffff;
     font-size: 16px;
 }
 
@@ -252,7 +258,7 @@ nav ul li a:hover {
 
 .display-title {
     margin: 0 auto;
-    color:  #2E6BA4ff ;
+    color:  #fffffff ;
     font-size: 28px;
     font-weight: 900;
     padding: 10px 0px;
@@ -384,12 +390,13 @@ h1, h2, h4, h5, h6, p {
     margin: 10px;
     text-align: center;
     font-family: "Poppins", serif;
-    color: #071b4a;
+    color: #fff;
 }
 
 h1 {
     font-size: 2em;
     font-weight: 900;
+    padding: 30px 0px 0px 0px;
 }
 
 
@@ -409,23 +416,33 @@ h3 {
     font-weight: 400;
 }
 
+h3.stronger {
+    font-weight: 700;
+}
+
 .cover-alternate-content.wider > .landingpage-title {
-    color: #2e6ba4;
+    color: #ffffff;
 }
 
 p, a, a:link {
     font-size: 1em;
     font-weight: 400;
+    color: #ffffff;
 }
 
 a, a:active {
-    color: #3200cc;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #3F00FF;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.card-content a {
+    font-size: 1.3em;
+    font-weight: 700;
 }
 
 /* Lists */
@@ -433,7 +450,7 @@ a:hover {
 ul, ol {
     text-align: center;
     font-family: "Poppins", serif;
-    color: #071b4a;
+    color: #ffffff;
     font-size: 1em;
     text-align: left;
     margin: 0px;
@@ -484,9 +501,9 @@ ul li, ol li {
 /* Containers */
 
 .cover-alternate-content {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 120px;
 }
 
 .cover-alternate-content .bleed-into-container {
@@ -502,7 +519,7 @@ ul li, ol li {
 }
 
 .cover-alternate-container.three {
-    background-color: #9b719d;
+    background-color: #7e38b7;
     padding: 60px 0px;
 }
 
@@ -510,6 +527,8 @@ ul li, ol li {
 .internal-page-card div {
     padding: 0px 0px 0px 90px;
 }
+
+
 
 /* Small icons start */
 
@@ -541,8 +560,12 @@ ul li, ol li {
     margin: 20px auto;
 }
 
+.card-content h3 {
+    font-weight: 700;
+}
+
 .card-content p {
-    font-weight: 500;
+ 
 }
 
 /* Portfolio case study cards end */
@@ -569,6 +592,7 @@ ul li, ol li {
 }
 
 .button-like-eg:hover {
+    color: #071E55;
     background: linear-gradient(to bottom,  #FDF5F5,  #FFD1DC);
     text-decoration: underline;
     transform: scale(1.06);
@@ -582,7 +606,7 @@ ul li, ol li {
 
 
 .cover-alternate-content p {
-    color: #071b4a;
+    color: #ffffff;
 }
 
 
@@ -606,13 +630,12 @@ ul li, ol li {
 
 /* Banner */
 .cover-alternate-content.wider {
-    margin: 0 0 60px 0;
-    padding: 60px;
-    background-image: url('./images/banner-header.png');
-    background-repeat: no-repeat; 
-    background-position: right; 
-    background-size: 50%; 
+    background-image: url('./images/banner-ux-estela.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% + 160px) -50px;
+    background-size: 60%;
 }
+
 
 .text-only-wider {
     margin-right: 60px;
@@ -649,6 +672,14 @@ svg {
 .container-eg {
     margin: 0px 0px 30px 0px;
 }
+
+.cover-alternate-container.one {
+    background-color: #541675;
+}
+
+.landingpage-title {
+    color: #fff;
+}
   
 
 .cover-alternate-content h2{
@@ -656,7 +687,7 @@ svg {
 }
 
 .cover-alternate-container.one .cover-alternate-content h2 {
-    color: #071E55;
+    color: #ffffff;
     margin: 0px;
 }
 
@@ -687,8 +718,6 @@ svg {
 }
 
 .text-content {
-    margin-left: 30px;
-    float: left;
     width: 60%;
     text-align: left;
 }
@@ -744,13 +773,13 @@ svg {
 
 img {
     width: 100%;
-    padding: 10px;
     height: auto;
     border-radius: 5px;
 }
 
 .card-content img {
     width: 70%;
+    padding: 30px 0px;
 }
 
 .internal-page-card img {
@@ -784,8 +813,7 @@ img {
 
 footer {
     font-family: "Poppins", serif;
-    background-color: #ffffff;
-    color: #777777; 
+    color: #ffffff; 
     padding: 10px;
 }
 
@@ -795,6 +823,7 @@ footer {
 
 
 .container {
+    padding-top: 60px;
     float: left;
     max-width: 50%;
 }
@@ -815,6 +844,7 @@ footer {
 }
 
 .card-case-studies {
+    color: #fff;
     margin: 0px 40px 40px 40px;
     padding: 10px;
     height:500px;
@@ -826,24 +856,77 @@ footer {
         transform 0.2s ease, 
         box-shadow 0.3s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #dadada;
+    border: 1px solid #ffffff;
+}
+
+.card-case-studies a:hover {
+    color:#ffffff;
+
+    
+}
+
+h3.card-content {
+    color: #ffffff;
 }
 
 
 .card-case-studies:hover {
-    background: linear-gradient(to bottom, #fdfdfe, #e6f3ff);
+    background-color: #7e38b7;
     transform: scale(1.06);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     border: 1px solid #dadada;
 }
 
+.card-case-studies.one:hover {
+    background-color: #c4feff;
+}
+
+
+.card-case-studies.one {
+    background-color: #c4feff;
+    transition: background-color 0.3s ease;
+    color: #000; /* base text color */
+  }
+  
+  .card-case-studies.one:hover {
+    background-color: #94dce5; /* darker version */
+  }
+  
+  .card-case-studies.one h3,
+  .card-case-studies.one p,
+  .card-case-studies.one a {
+    color: inherit; /* uses the parent color unless specified */
+  }
+  
+  /* Optional: keep link color consistent even on hover */
+  .card-case-studies.one a:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+  
+
+
+
+.card-case-studies.two:hover {
+    background-color: #99cced;
+}
+
+.card-case-studies.three:hover {
+    background-color: #9c89ff;
+}
+
+.card-case-studies.four:hover {
+    background-color: #7e38b7;
+}
+
+
 
 .card-case-studies span {
-    color: #071b4a;
+    color: #3d155f;
 }
 
 .card-case-studies:hover span {
-    color: #071b4a; 
+    color: #3d155f; 
 }
 
 .card-case-studies:active {
@@ -892,26 +975,20 @@ footer {
 /* Internal pages portfolio start */
 
 .port-page-internal {
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
     gap: 20px;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
+    background-color: #541675;
 }
 
 .projectinfo {
     margin: 60px 0px;
-    background-color: #eee;
     padding: 20px;
-}
-
-.projectcontent {
-    margin: 20px;
+    border: 1px solid #fff;
 }
 
 .projectinfo ul li {
@@ -920,19 +997,18 @@ footer {
 }
 
 .port-page-internal h3 {
-    color: #071b4a;
+    color: #fff;
     font-size: 1.2em;
     padding: 10px 0px;
-    font-weight: 600;
 }
 
 .projectcontent img {
-    padding: 10px;
+    padding: 30px 0px;
 }
 
 div.projectcontent > .label-text {
     font-size: 14px;
-    color: #3b3b3b;
+    color: #ffffff;
     padding: 10px;
     margin: 0px;
 }
@@ -992,9 +1068,10 @@ nav .menu li {
 
 nav .menu a {
     padding: 0px 10px;
-    color: #071b4a;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     display: block;
 }
 
@@ -1007,6 +1084,8 @@ nav .hamburger {
     top: 15px;
 }
 /* Mobile nav end */
+
+
 
 
 
@@ -1025,6 +1104,15 @@ h1.landingpage-title {
 }
 
 
+/*********** Media query 1024px ***********/
+
+@media (min-width: 1024px) {
+    .cover-alternate-content.wider {
+        background-position: calc(100% + 160px) -50px;
+    }
+}
+
+
 
 /*********** Media query 960px ***********/
 
@@ -1033,10 +1121,6 @@ h1.landingpage-title {
 .cover-alternate-content.wider > .landingpage-title {
     margin: 0px;
     padding: 20px 0px;
-}
-
-.cover-alternate-content.wider {
-    background-size: contain;
 }
 
 nav .logo {
@@ -1050,7 +1134,7 @@ font-size: 6em !important;
 
 .content-img {
     max-width: 60% !important;
-    padding: 20px;
+    padding: 60px;
 }
 
 }
@@ -1090,9 +1174,7 @@ div.main-button {
 
 @media (min-width: 768px) {
 
-.cover-alternate-content.wider {
-    background-size: 40%;
-}
+
     
  
 h1.landingpage-title {
@@ -1123,7 +1205,7 @@ nav .hamburger {
 .hamburger div {
     width: 30px;
     height: 4px;
-    background-color: #071b4a;
+    background-color: #ffffff;
     margin: 6px 0;
 }
 
@@ -1301,6 +1383,17 @@ li {
 
 h1.landingpage-title {
     font-size: 2em !important;
+    margin-left: 120px;
+}
+
+.cover-alternate-container.one .cover-alternate-content h2 {
+    margin-left: 60px;
+}
+
+a.button-like-eg {
+    position: relative;
+    left: 60px;
+
 }
  
 a {
@@ -1312,10 +1405,6 @@ p {
     padding: 10px !important;
 }
 
-
-.button-like-eg, .initial-heading {
-    margin: 0px !important;
-}
 
 .text-content {
     margin-right: 0px !important;
