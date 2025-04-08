@@ -503,7 +503,7 @@ ul li, ol li {
 .cover-alternate-content {
     max-width: 65%;
     margin: 0 auto;
-    padding: 120px;
+    padding: 60px;
 }
 
 .cover-alternate-content .bleed-into-container {
@@ -519,7 +519,6 @@ ul li, ol li {
 }
 
 .cover-alternate-container.three {
-    background-color: #7e38b7;
     padding: 60px 0px;
 }
 
@@ -531,6 +530,23 @@ ul li, ol li {
 
 
 /* Small icons start */
+
+.gradient-divider {
+    max-width: 65%;
+    margin: 0 auto;
+    border: 0;
+    height: 3px;
+    background: linear-gradient(
+      to right,
+      #541675,
+      #7d2eac,
+      #e4cef1,
+      #7d2eac,
+      #3a0d5d
+    );
+    border-radius: 2px;
+}
+  
 
 .small-icons {
     width: 100%; 
@@ -632,9 +648,11 @@ ul li, ol li {
 .cover-alternate-content.wider {
     background-image: url('./images/banner-ux-estela.png');
     background-repeat: no-repeat;
-    background-position: calc(100% + 160px) -50px;
+    background-position: calc(100% + 160px) calc(-50px);
     background-size: 60%;
-}
+    min-height: 600px;
+  }
+  
 
 
 .text-only-wider {
@@ -675,6 +693,7 @@ svg {
 
 .cover-alternate-container.one {
     background-color: #541675;
+    padding: 60px 0px;
 }
 
 .landingpage-title {
@@ -766,9 +785,18 @@ svg {
 
 /* Images start */
 
-.simg {
-    width:50%;
+
+.big-boy-card {
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+  
+
+.simg {
+    height: auto;
+    margin-bottom: 60px;
 }
 
 img {
@@ -1101,11 +1129,13 @@ nav .menu a {
 
 
 nav .hamburger {
-    display: block;
     cursor: pointer;
     font-size: 1.5rem;
     right: 20px;
     top: 15px;
+    position: relative;
+    bottom: 60%;
+    right: 30%;
 }
 /* Mobile nav end */
 
@@ -1132,7 +1162,7 @@ h1.landingpage-title {
 
 @media (min-width: 1024px) {
     .cover-alternate-content.wider {
-        background-position: calc(100% + 150px) 50px;
+        background-position: calc(100% + 130px) 50px;
     }
 }
 
@@ -1238,12 +1268,13 @@ nav .hamburger {
 
 /* Hide nav links by default on mobile */
 @media screen and (max-width: 768px) {
+    
 
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #ebeef3;
+        background-color: #3d155f;
         position: absolute;
         top: 60px;
         left: 0;
@@ -1251,7 +1282,16 @@ nav .hamburger {
     }
 
     nav ul.active {
-        display: flex;
+        padding:30px;
+        width: 80%;
+    }
+
+      
+    nav .menu li {
+        width: 78%;
+        margin: 10px 0;
+        padding-left: 0px;
+      
     }
 
     .text-only-wider {
@@ -1259,6 +1299,7 @@ nav .hamburger {
         position: relative;
         left: -120px;
         bottom: 0px;
+        margin-bottom: 30px;
     }
 
 
@@ -1344,6 +1385,22 @@ h2.initial-heading {
 
 @media (min-width: 350px) and (max-width: 450px) {
 
+
+    .cover-alternate-content.wider {
+        background-image: url('./images/banner-ux-estela.png');
+        background-repeat: no-repeat;
+        background-position: calc(50% + 50px) calc(-30px);
+        background-size: 80%;
+        min-height: 400px;
+    }
+      
+    
+    
+    .cover-alternate-container.one {
+        
+    }
+    
+
 .my-hero {
     width: 60%;
 }
@@ -1403,20 +1460,29 @@ ul, ol {
 
 li {
     padding: 0px;
-}  
+} 
+
 
 h1.landingpage-title {
     font-size: 2em !important;
-    margin-left: 120px;
+    margin-left: 200px;
+}
+
+
+
+.text-only-wider {
+    margin-bottom: 30px;
+    position: relative;
+    bottom: -100px;
 }
 
 .cover-alternate-container.one .cover-alternate-content h2 {
-    margin-left: 60px;
+    margin-left: 200px;
 }
 
 a.button-like-eg {
     position: relative;
-    left: 60px;
+    left: 120px;
 
 }
  
