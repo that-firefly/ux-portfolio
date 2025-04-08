@@ -516,9 +516,10 @@ ul li, ol li {
 .cover-alternate-container.two {
     background-color: #071E55;
     padding: 60px 0px;
+    margin: 0px;
 }
 
-.cover-alternate-container.three {
+.heading-text {
     padding: 60px 0px;
 }
 
@@ -785,6 +786,18 @@ svg {
 
 /* Images start */
 
+.bigboy {
+    background-color: #fff;
+}
+
+.bigboy-nobkg {
+    background-color: transparent;
+}
+
+.bigboy img {
+    width: 60%;
+}
+
 
 .big-boy-card {
     width: 100%;
@@ -793,11 +806,6 @@ svg {
     border-radius: 0;
 }
   
-
-.simg {
-    height: auto;
-    margin-bottom: 60px;
-}
 
 img {
     width: 100%;
@@ -844,6 +852,28 @@ footer {
     color: #ffffff; 
     padding: 10px;
 }
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.footer-banner {
+    padding: 1rem;
+    text-align: center;
+}
+
 
 /* Footer end */
 

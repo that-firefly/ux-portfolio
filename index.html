@@ -18,7 +18,6 @@
 
 <body>
     <div class="wrapper">
-
         <nav>
             <span class="logo">Estela UX Design</span>
             <span class="hamburger" onclick="toggleMenu()">☰</span>
@@ -33,7 +32,6 @@
             </ul>
         </nav>
 
-
         <div class="main-content">
             <div>
                 <div class="cover-alternate-container one">
@@ -47,10 +45,13 @@
                 </div>
             </div>
 
+            <div class="bigboy">
+                <img class="big-boy-card" src="./images/design-thinking-eg.PNG" alt="Design Thinking"
+                    title="Design Thinking: Understand, prototype, test, implement.">
+            </div>
+
             <div class="cover-alternate-container two">
                 <div class="cover-alternate-content">
-                    <img class="simg" src="./images/design-thinking-eg.PNG" alt="Design Thinking"
-                        title="Design Thinking: Understand, prototype, test, implement.">
                     <h2>
                         I leverage design thinking principles, rapid prototyping techniques, and data insights
                         to create innovative applications, enhance services, and drive informed decision-making.
@@ -61,8 +62,10 @@
                 </div>
             </div>
 
-            <img class="big-boy-card" src="./images/ux-testing-eg.PNG" alt="UX sticker board with processes."
-                title="Image showcasing a user experience sticker board illustrating key UX processes.">
+            <div class="bigboy-nobkg">
+                <img class="big-boy-card" src="./images/ux-testing-eg.PNG" alt="UX sticker board with processes."
+                    title="Image showcasing a user experience sticker board illustrating key UX processes.">
+            </div>
 
             <div class="cover-alternate-container three">
                 <div class="cover-alternate-content">
@@ -75,9 +78,7 @@
 
             <hr class="gradient-divider">
 
-
-
-            <div class="cover-alternate-container one">
+            <div class="cover-alternate-container three">
                 <div class="cover-alternate-content">
                     <h2>I have collaborated with organisations across diverse sectors, including energy, retail, and
                         government services, particularly in defence and education.
@@ -89,16 +90,16 @@
                         title="Companies I have worked for. DEFRA, HMRC, Capita, Teachers' Pensions, Howdens, Royal Navy, BoilerJuice">
                 </div>
             </div>
+        </div>
 
 
-            <div>
-                <div class="cover-alternate-container two">
-                    <div class="cover-alternate-content">
-                        <h2>Throughout my career, I have gained a broad skill set along with User Experience (UX)
-                            Design.
-                        </h2>
-                        <svg id="word-cloud"></svg>
-                    </div>
+        <div>
+            <div class="cover-alternate-container two">
+                <div class="cover-alternate-content">
+                    <h2>Throughout my career, I have gained a broad skill set along with User Experience (UX)
+                        Design.
+                    </h2>
+                    <svg id="word-cloud"></svg>
                 </div>
             </div>
         </div>
@@ -108,104 +109,105 @@
                 Website coded by Estela Gaspar
             </footer>
         </div>
-        <script>
-            const words = [
-                { text: "UX", size: 50 },
-                { text: "UI", size: 40 },
-                { text: "UR", size: 60 },
-                { text: "Data", size: 45 },
-                { text: "Explainable AI (XAI)", size: 55 },
-                { text: "Prototypes", size: 35 },
-                { text: "Figma", size: 40 },
-                { text: "Mural", size: 30 },
-                { text: "Miro", size: 50 },
-                { text: "Adobe XD", size: 40 },
-                { text: "HTML", size: 60 },
-                { text: "CSS", size: 45 },
-                { text: "Python", size: 55 },
-                { text: "AI", size: 35 },
-                { text: "ML", size: 40 },
-                { text: "Data Visualisations", size: 30 },
-                { text: "Jupyter Notebook", size: 30 },
-                { text: "Acessibility", size: 30 },
-                { text: "Software Design", size: 30 },
-                { text: "Design Thinking", size: 30 },
-                { text: "GitHub", size: 30 },
-                { text: "Adobe Photoshop", size: 30 },
-                { text: "Adobe Illustrator", size: 30 },
-                { text: "Sketch Visualisations", size: 30 },
-                { text: "Anima", size: 30 },
-                { text: "Invision", size: 30 },
-                { text: "Zeplin", size: 30 },
-                { text: "Axure", size: 30 },
-                { text: "Abstract", size: 30 },
-                { text: "Confluence", size: 30 },
-                { text: "Azure", size: 30 },
-                { text: "Google Analytics", size: 35 },
-                { text: "Google Optimize", size: 40 },
-                { text: "UserTesting", size: 30 },
-                { text: "LuckyOrange", size: 30 },
-                { text: "JavaScript", size: 30 },
-                { text: "Machine Learning", size: 30 },
-                { text: "Artificial Intelligence", size: 30 },
-                { text: "Adobe Captivate", size: 30 },
-                { text: "Adobe Indesign", size: 30 },
-                { text: "Dreamweaver", size: 30 },
-                { text: "MS Word", size: 30 },
-                { text: "Excel", size: 30 },
-                { text: "Powerpoint", size: 30 },
-                { text: "PC, Mac, Apple, Android", size: 35 },
-                { text: "Lean", size: 30 },
-                { text: "Agile", size: 40 },
-                { text: "Collaboration", size: 30 },
-                { text: "Negotiation", size: 30 },
-                { text: "Invention", size: 30 },
-                { text: "Innovation (patents)", size: 30 },
-                { text: "Sketching", size: 30 },
-                { text: "Painting", size: 30 },
-                { text: "Financial Market", size: 30 }
-            ];
-
-            const sizeMultiplier = 1.2;
-            const width = window.innerWidth * 0.8;
-            const height = window.innerHeight * 0.6;
-            const color = "#e3e3e4"; // Single color
-
-            const svg = d3.select("#word-cloud")
-                .attr("width", width)
-                .attr("height", height);
-
-            const layout = d3.layout.cloud()
-                .size([width, height])
-                .words(words.map(d => ({ text: d.text, size: d.size * sizeMultiplier })))
-                .padding(15)
-                .rotate(() => (Math.random() > 1 ? 0 : 360))
-                .fontSize(d => d.size)
-                .on("end", draw);
-
-            layout.start();
-
-            function draw(words) {
-                svg.append("g")
-                    .attr("transform", `translate(${width / 2}, ${height / 2})`)
-                    .selectAll("text")
-                    .data(words)
-                    .enter().append("text")
-                    .style("font-size", d => d.size + "px")
-                    .style("fill", color) // Use single color
-                    .attr("text-anchor", "middle")
-                    .attr("transform", d => `translate(${d.x}, ${d.y}) rotate(${d.rotate})`)
-                    .text(d => d.text);
-            }
-        </script>
-
-        <script>
-            function toggleMenu() {
-                const menu = document.querySelector('.menu');
-                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-            }
-        </script>
     </div>
-</body>
 
-</html>
+    <script>
+        const words = [
+            { text: "UX", size: 50 },
+            { text: "UI", size: 40 },
+            { text: "UR", size: 60 },
+            { text: "Data", size: 45 },
+            { text: "Explainable AI (XAI)", size: 55 },
+            { text: "Prototypes", size: 35 },
+            { text: "Figma", size: 40 },
+            { text: "Mural", size: 30 },
+            { text: "Miro", size: 50 },
+            { text: "Adobe XD", size: 40 },
+            { text: "HTML", size: 60 },
+            { text: "CSS", size: 45 },
+            { text: "Python", size: 55 },
+            { text: "AI", size: 35 },
+            { text: "ML", size: 40 },
+            { text: "Data Visualisations", size: 30 },
+            { text: "Jupyter Notebook", size: 30 },
+            { text: "Acessibility", size: 30 },
+            { text: "Software Design", size: 30 },
+            { text: "Design Thinking", size: 30 },
+            { text: "GitHub", size: 30 },
+            { text: "Adobe Photoshop", size: 30 },
+            { text: "Adobe Illustrator", size: 30 },
+            { text: "Sketch Visualisations", size: 30 },
+            { text: "Anima", size: 30 },
+            { text: "Invision", size: 30 },
+            { text: "Zeplin", size: 30 },
+            { text: "Axure", size: 30 },
+            { text: "Abstract", size: 30 },
+            { text: "Confluence", size: 30 },
+            { text: "Azure", size: 30 },
+            { text: "Google Analytics", size: 35 },
+            { text: "Google Optimize", size: 40 },
+            { text: "UserTesting", size: 30 },
+            { text: "LuckyOrange", size: 30 },
+            { text: "JavaScript", size: 30 },
+            { text: "Machine Learning", size: 30 },
+            { text: "Artificial Intelligence", size: 30 },
+            { text: "Adobe Captivate", size: 30 },
+            { text: "Adobe Indesign", size: 30 },
+            { text: "Dreamweaver", size: 30 },
+            { text: "MS Word", size: 30 },
+            { text: "Excel", size: 30 },
+            { text: "Powerpoint", size: 30 },
+            { text: "PC, Mac, Apple, Android", size: 35 },
+            { text: "Lean", size: 30 },
+            { text: "Agile", size: 40 },
+            { text: "Collaboration", size: 30 },
+            { text: "Negotiation", size: 30 },
+            { text: "Invention", size: 30 },
+            { text: "Innovation (patents)", size: 30 },
+            { text: "Sketching", size: 30 },
+            { text: "Painting", size: 30 },
+            { text: "Financial Market", size: 30 }
+        ];
+
+        const sizeMultiplier = 1.2;
+        const width = window.innerWidth * 0.8;
+        const height = window.innerHeight * 0.6;
+        const color = "#e3e3e4"; // Single color
+
+        const svg = d3.select("#word-cloud")
+            .attr("width", width)
+            .attr("height", height);
+
+        const layout = d3.layout.cloud()
+            .size([width, height])
+            .words(words.map(d => ({ text: d.text, size: d.size * sizeMultiplier })))
+            .padding(15)
+            .rotate(() => (Math.random() > 1 ? 0 : 360))
+            .fontSize(d => d.size)
+            .on("end", draw);
+
+        layout.start();
+
+        function draw(words) {
+            svg.append("g")
+                .attr("transform", `translate(${width / 2}, ${height / 2})`)
+                .selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", d => d.size + "px")
+                .style("fill", color) // Use single color
+                .attr("text-anchor", "middle")
+                .attr("transform", d => `translate(${d.x}, ${d.y}) rotate(${d.rotate})`)
+                .text(d => d.text);
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+
+</body>
