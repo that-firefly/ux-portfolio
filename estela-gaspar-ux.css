@@ -1132,7 +1132,7 @@ h1.landingpage-title {
 
 @media (min-width: 1024px) {
     .cover-alternate-content.wider {
-        background-position: calc(100% + 160px) -50px;
+        background-position: calc(100% + 150px) 50px;
     }
 }
 
