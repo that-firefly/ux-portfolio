@@ -1274,6 +1274,7 @@ nav .menu {
 
 nav .menu li {
     margin: 0px !important;
+    padding-left: 5px;
 }
 
 nav .hamburger {
