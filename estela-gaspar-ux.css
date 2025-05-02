@@ -43,6 +43,24 @@ body {
     background-color: #541675;
 }
 
+.highlighted-link {
+    display: inline-block;
+    color: #fff;
+    background-color: #9b59b6; /* Soft violet that contrasts with purple */
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .highlighted-link:hover {
+    background-color: #8e44ad; /* Darker purple on hover */
+    transform: translateY(-2px);
+  }
+  
+
 
 
 
