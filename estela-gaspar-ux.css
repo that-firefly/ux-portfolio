@@ -59,6 +59,19 @@ body {
     background-color: #8e44ad; /* Darker purple on hover */
     transform: translateY(-2px);
   }
+
+
+  .button-like-eg {
+    color: #071E55 !important;
+    text-decoration: none; /* Optional: removes underline */
+  }
+  
+  /* Optional: maintain the color on hover/focus */
+  .button-like-eg:hover,
+  .button-like-eg:focus {
+    color: #071E55 !important;
+  }
+  
   
 
 
