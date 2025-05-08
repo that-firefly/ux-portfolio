@@ -29,10 +29,11 @@ th, td
  vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6, th, td, caption, p { font-weight:normal; text-align: center; }
+h1, h2, h3, h4, h5, h6, th, td, caption, p { font-weight:normal; text-align: center; color: #ffffff; }
 h1, h2, h3, h4, h5, h6, th, td, caption {padding: 10px;margin: 10px; clear: both; }
 
 img { border: 0; }
+
 
 
 body {
@@ -1106,14 +1107,7 @@ body, html {
     padding: 10px 0px;
 }
 
-.projectcontent img {
-    padding: 30px 0px;
-    width:50%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 img.bordered {
     border-radius: 50%;
@@ -1416,6 +1410,33 @@ h1 {
     margin: 0 auto !important;
 }
 
+
+.art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.art-item {
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+}
+
+
+
+
+.image-container > img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+
+    
 
 
 h2 {
@@ -1764,22 +1785,55 @@ p {
     margin-top: 30px;
 }
 
-.art-item {
-    flex: 1 1 calc(33% - 20px);
+.drawwilder-item-container {
+    width: 100%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    max-width: 550px; 
+    height: auto;    
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    color: #3a0d5d;
+    box-sizing: border-box;
 }
 
-.art-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
+
+@media screen and (max-width: 768px) {
+    .drawwilder-item-container {
+        margin-left: 20px;
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+
+.drawwilder-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.drawwilder-item-container p,
+.drawwilder-item-container h3,
+.drawwilder-item-container a {
+    color: #3a0d5d !important;
+}
+
+
+
+.art-item {
+    flex: 1 1 calc(33% - 20px);
+    height: 300px;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .art-item h3 {
