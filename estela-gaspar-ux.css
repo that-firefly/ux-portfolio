@@ -1717,5 +1717,48 @@ p {
     background-color: #444;
   }
 
+  /* Drawwilder */
+
+  .art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.art-item {
+    flex: 1 1 calc(33% - 20px);
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 10px;
+    text-align: center;
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.art-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.art-item p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .art-item {
+        flex: 1 1 100%;
+    }
+}
+
 
 
