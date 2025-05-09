@@ -1667,8 +1667,7 @@ p {
   }
 
   .thumbnail {
-    width: 200px;
-    height: 130px;
+    height: 330px;
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -1679,7 +1678,7 @@ p {
   }
 
   .blog-preview > img {
-    width: 30%;
+    width: 50%;
     padding: 20px 20px 20px 0px;
   }
 
@@ -1860,6 +1859,11 @@ p {
     border-radius: 10px;
     overflow: hidden;
   }
+
+
+.projectcontent p {
+    text-align: left;
+}
   
 
 

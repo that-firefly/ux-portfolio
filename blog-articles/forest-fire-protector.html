@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estela Gaspar - UX User Experience Design</title>
+
+    <link rel="stylesheet" href="../estela-gaspar-ux.css">
+    <script src="./estela-ux.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <span class="logo">Estela UX Design</span>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <nav>
+                <span class="logo">Estela UX Design</span>
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../WhatI'mupto.html">💫 What I'm up to?</a></li>
+                    <li><a href="../case-studies.html">Case Studies</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../links.html">Links</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/estela-gaspar-that-firefly/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+
+        <div class="main-content">
+            <h1>Forest guard: nature-inspired mushroom fire defense</h1>
+            <div class="port-page-internal">
+                <div class="blog-content">
+                    <div class="projectcontent">
+                        <p>One of my favourite things to do is ideate and imagine bold solutions to real-world problems.
+                            Recently, I came up with a concept for a device that could be installed in forests and
+                            automatically activated when a fire is detected nearby. In the coming months, I’ll be
+                            developing this idea as if it were a real product — exploring its design, UX, and potential
+                            impact.
+                        </p>
+                        <p>If the idea sparks something in you, feel free to build on it — I’d genuinely love to see it
+                            come to life. I just ask that you bring me along for the journey and consider collaborating.
+                            Innovation is always better shared.</p>
+                        <p> In the heart of vulnerable forests, a bio-inspired sentinel quietly stands watch — the
+                            Mushroom Guard. This unassuming, mushroom-shaped pole blends naturally into the woodland,
+                            but it's anything but ordinary. Hidden within its organic silhouette is an advanced fire
+                            detection and suppression system.</p>
+
+                        <p>Equipped with heat sensors and air quality monitors, the Mushroom Guard activates when it
+                            detects early signs of fire - such as elevated temperatures or smoke — within a 5-meter
+                            radius. Upon detection, it releases a biodegradable, non-toxic fire-retardant foam designed
+                            to smother flames before they spread. The foam forms a protective barrier on vegetation,
+                            reducing the chance of ignition and buying critical time for emergency response teams.</p>
+
+                        <p>Silent, sustainable, and smart - the Mushroom Guard represents a new wave of eco-technology
+                            where design meets environmental resilience.</p>
+
+                        <img src="../images/mushroom-defense-system.png"
+                            alt="Image concept of the user experience of the Mushroom-Shaped Fire Prevention Unit (M-FPU)">
+
+                        <h2>Mushroom-Shaped Fire Prevention Unit (M-FPU)</h2>
+                        <p>The M-FPU is a passive, autonomous fire suppression device designed for early-stage wildfire
+                            mitigation in forested environments. Its structure mimics the form of a large mushroom to
+                            blend with natural surroundings while maximizing surface area for sensor arrays and foam
+                            dispersion.</p>
+
+
+                        <section>
+                            <h2>Key Features</h2>
+                            <ul>
+                                <li><strong>Thermal and Gas Sensors:</strong> Monitors for temperature and smoke,
+                                    triggering action when fire signs are within 5 meters.</li>
+                                <li><strong>Suppression System:</strong> Releases biodegradable, non-toxic foam to coat
+                                    vegetation and prevent fire spread.</li>
+                                <li><strong>Power Source:</strong> Self-powered via hybrid solar and kinetic energy
+                                    systems.</li>
+                                <li><strong>Communication:</strong> Mesh networking enables unit-to-unit and central
+                                    alert transmission.</li>
+                                <li><strong>Maintenance and Refilling:</strong> Foam canisters are modular and
+                                    refillable by rangers or drones.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2>UX Design Approach</h2>
+                            <h3>1. Define the Users</h3>
+                            <ul>
+                                <li><strong>Primary:</strong> Forest rangers, Environmental scientists, Firefighters,
+                                    Forestry maintenance workers</li>
+                                <li><strong>Secondary:</strong> Conservation organizations, Government fire control
+                                    agencies, Drone operators</li>
+                            </ul>
+
+                            <h3>2. User Goals</h3>
+                            <ul>
+                                <li>Monitor M-FPU unit status</li>
+                                <li>Receive real-time alerts</li>
+                                <li>View unit location and environmental data</li>
+                                <li>Coordinate fire risk responses</li>
+                                <li>Manage maintenance and refills</li>
+                            </ul>
+
+                            <h3>3. Key UX Components</h3>
+                            <p>I will be designing these in the following months and gathering your feedback.</p>
+                            <ul>
+                                <li><strong>Dashboard (Web + Mobile):</strong> Map view, environmental data, alerts,
+                                    maintenance logs, and network status.</li>
+                                <li><strong>AR Maintenance Interface:</strong> AR overlays with instructions and
+                                    diagnostics for field use.</li>
+                                <li><strong>Drone Integration Console:</strong> Plan refills or inspections; receive
+                                    video and diagnostics from drones.</li>
+                            </ul>
+
+                            <h3>4. UX Principles</h3>
+                            <ul>
+                                <li>Clarity and calm design for emergency use</li>
+                                <li>Offline mode support for remote fieldwork</li>
+                                <li>Accessible UI with language and contrast options</li>
+                                <li>Design reflecting sustainability and harmony with nature</li>
+                            </ul>
+
+                            <h3>5. Journey Example scenario 1</h3>
+                            <p><strong>Scenario:</strong> A forest ranger is alerted to 3 M-FPU units detecting smoke
+                                near Ridge Sector B.</p>
+                            <ul>
+                                <li>Opens app and views heatmap overlay</li>
+                                <li>Taps unit ID to check data and history</li>
+                                <li>Assigns a drone or plans visit</li>
+                                <li>Uses AR in the field to assess and refill canisters</li>
+                            </ul>
+
+                            <h3>6. Journey Example scenario 2</h3>
+                            <p><strong>Scenario:</strong>A family enjoying a picnic begins to smell smoke. Moments
+                                later, they spot a growing fire nearby, its flames quickly spreading through the trees.
+                            </p>
+                            <ul>
+                                <li>Sends an alert to nearby fire authorities and ranger networks.</li>
+                                <li>Updates the live dashboard with location, intensity, and deployment status.</li>
+                                <li>Triggers nearby Mushroom Guards via mesh network if the fire continues to spread.
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Replace YOUR-CONVERTKIT-FORM-ACTION with the real one from ConvertKit -->
+                        <form action="https://app.kit.com/forms/8028173/subscriptions" method="post"
+                            class="ck-subscribe-form" target="_blank">
+                            <label for="email">Get notified when the magic goes live:</label><br>
+                            <input type="email" name="email_address" placeholder="Your email..." required>
+                            <button type="submit">Notify Me ✨</button>
+                        </form>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-banner">
+            <footer>
+                Website coded by Estela Gaspar
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
