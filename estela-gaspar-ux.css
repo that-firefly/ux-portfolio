@@ -231,6 +231,45 @@ body {
 /* Navigation start */
 
 
+nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+
+
+
 nav {
     font-family: "Poppins", serif;
     position: fixed;  
@@ -937,7 +976,38 @@ svg {
 .projectcontent p {
     text-align: left;
 }
-  
+
+.art-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.back-to-gallery {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.back-to-gallery a {
+    text-decoration: underline;
+    color: #333;
+}
+
+
+
 
 
 
@@ -1305,7 +1375,6 @@ padding: 30px;
 
 
 /*////////////////////////////// Media query start */
-
 /* Mobile nav start */
 
 nav .logo {
@@ -1347,10 +1416,6 @@ nav .hamburger {
     right: 30%;
 }
 /* Mobile nav end */
-
-
-
-
 
 /*********** Media query 1500px ***********/
 

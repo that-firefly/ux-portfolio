@@ -2,176 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Estela Gaspar - UX User Experience Design</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estela Gaspar - UX User Experience Design</title>
 
-    <link rel="stylesheet" href="../estela-gaspar-ux.css">
-    <script src="../estela-ux.js"></script>
+  <!-- Core CSS and JS -->
+  <link rel="stylesheet" href="../estela-gaspar-ux.css" />
+  <script src="../estela-ux.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+  <!-- D3 Libraries -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+
+  <!-- Lightbox -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav>
-            <span class="logo">Estela UX Design</span>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../WhatI'mupto.html">💫 What I'm up to?</a></li>
-                <li><a href="../case-studies.html">Case Studies</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../links.html">Links</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li>
-                    <a href="https://www.linkedin.com/in/estela-gaspar-that-firefly/" target="_blank"
-                        aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-            </ul>
-        </nav>
+  <div class="wrapper">
+    <nav>
+      <span class="logo">Estela UX Design</span>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../WhatI'mupto.html">💫 What I'm up to?</a></li>
+        <li><a href="../case-studies.html">Case Studies</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../links.html">Links</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/estela-gaspar-that-firefly/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
 
+    <div class="main-content drawwilder">
+      <h1>Art & Design Showcase</h1>
+      <div class="port-page-internal drawwilder">
+        <div class="blog-content drawwilder">
+          <div class="projectcontent drawwilder">
+            <div class="drawwilder-text-intro">
+              <h2>
+                A creative sanctuary of art, textiles, and design — celebrating
+                soul, nature, and place through hand-painted works and unique
+                interior pieces.
+              </h2>
+              <p>
+                Each creation tells a story — rooted in the textures of travel,
+                the whispers of the natural world, and the timeless touch of
+                craftsmanship. From ethereal wall art to elegant scarves,
+                bespoke fabrics, statement cushions, and hand-painted
+                lampshades, every piece is designed to evoke warmth, connection,
+                and curiosity.
+              </p>
+            </div>
 
-        <div class="main-content drawwilder">
-            <h1>Art & Design Showcase</h1>
-            <div class="port-page-internal drawwilder">
-                <div class="blog-content drawwilder">
-                    <div class="projectcontent drawwilder">
-                        <div class="drawwilder-text-intro">
-                        <h2>A creative sanctuary of art, textiles, and design — celebrating soul, nature, and place through hand-painted works and unique interior pieces.</h2>
-                        <p>Each creation tells a story — rooted in the textures of travel, the whispers of the natural world, and the timeless touch of craftsmanship. From ethereal wall art to elegant scarves, bespoke fabrics, statement cushions, and hand-painted lampshades, every piece is designed to evoke warmth, connection, and curiosity.</p>
-                    </div>
-                        <div class="art-gallery">
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/fabric-1.jpeg"
-                                        alt="Image of Drawwilder flower burst explosion velvet fabric">
-                                </div>
-                                <h3>Velvet bloom: the flower burst explosion</h3>
-                                <p>This velvet fabric design evokes a
-                                    feeling of suspended motion-like petals frozen mid-flight. Ideal for accent
-                                    cushions, bold upholstery, or even wearable art.</p>
-                            </div>
-
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/fabric-2.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Summer blooms: a silk ode to sunshine</h3>
-                                <p>Summer Blooms is a silk fabric that captures the essence of golden afternoons and
-                                    sun-drenched meadows. Perfect
-                                    for flowing drapes, delicate scarves, or statement pieces.
-                                </p>
-                            </div>
-
-                              <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/fabric-2.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Summer blooms: a silk ode to sunshine</h3>
-                                <p>Summer Blooms is a silk fabric that captures the essence of golden afternoons and
-                                    sun-drenched meadows. Perfect
-                                    for flowing drapes, delicate scarves, or statement pieces.
-                                </p>
-                            </div>
-
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/fabric-3.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Countryside ducks: a silk stroll through nature</h3>
-                                <p>Graceful ducks wander across sunlit fields in this charming velvet design.
-                                    Perfect for adding whimsy and warmth to refined, nature-inspired spaces.</p>
-                            </div>
-
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/ceramics-3.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Street impressions: modern ceramics with an edge</h3>
-                                <p>Urban energy meet clay in this contemporary ceramic collection.
-                                    Each piece carries a raw, expressive spirit.
-                                    Perfect for interiors that crave personality.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="art-gallery">
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/ceramics-2.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Street impressions: modern ceramics with an edge</h3>
-                                <p>Urban energy meet clay in this contemporary ceramic collection.
-                                    Each piece carries a raw, expressive spirit.
-                                    Perfect for interiors that crave personality.</p>
-                            </div>
-
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/ceramics-1.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Street impressions: modern ceramics with an edge</h3>
-                                <p>Urban energy meet clay in this contemporary ceramic collection.
-                                    Each piece carries a raw, expressive spirit.
-                                    Perfect for interiors that crave personality.</p>
-                            </div>
-
-                            <div class="drawwilder-item-container">
-                                <div class="art-item">
-                                    <img src="../images/ceramics-4.jpeg" alt="Image of Drawwilder fabric creations">
-                                </div>
-                                <h3>Street impressions: modern ceramics with an edge</h3>
-                                <p>Urban energy meet clay in this contemporary ceramic collection.
-                                    Each piece carries a raw, expressive spirit.
-                                    Perfect for interiors that crave personality.</p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="instagram-feed">
-                            <!-- Paste the code from LightWidget here -->
-                            <!-- LightWidget WIDGET -->
-                            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
-                                src="//lightwidget.com/widgets/302ad85cf2ef56f6b458d950e2bb6f06.html" scrolling="no"
-                                allowtransparency="true" class="lightwidget-widget"
-                                style="width:100%;border:0;overflow:hidden;"></iframe>
-                        </div>
-
-
-
-                        <h2>Want to be the first to know when the full collection goes live?</h2>
-                        <p>Sign up below to get a gentle nudge when the shop opens and new pieces arrive.</p>
-
-                        <form action="https://app.kit.com/forms/8028173/subscriptions" method="post"
-                            class="ck-subscribe-form" target="_blank">
-                            <label for="email">Get notified when the magic goes live:</label><br>
-                            <input type="email" name="email_address" placeholder="Your email..." required>
-                            <button type="submit">Notify Me ✨</button>
-                        </form>
-
-
-
-
-                    </div>
-
-                    <div class="footer-banner">
-                        <footer>
-                            Website coded by Estela Gaspar
-                        </footer>
-                    </div>
+            <div class="art-gallery">
+              <div class="drawwilder-item-container">
+                <div class="art-item">
+                  <a
+                    href="../images/fabric-1.jpeg"
+                    data-lightbox="gallery"
+                    data-title="Velvet bloom: the flower burst explosion"
+                  >
+                    <img
+                      src="../images/fabric-1.jpeg"
+                      alt="Velvet fabric design with flower burst explosion"
+                    />
+                  </a>
                 </div>
+                <h3>Velvet bloom: the flower burst explosion</h3>
+                <p>
+                  Petals suspended in mid-air — a velvet piece ideal for
+                  statement cushions or bold upholstery.
+                </p>
+              </div>
+
+              <div class="drawwilder-item-container">
+                <div class="art-item">
+                  <a
+                    href="../images/fabric-2.jpeg"
+                    data-lightbox="gallery"
+                    data-title="Summer blooms: a silk ode to sunshine"
+                  >
+                    <img
+                      src="../images/fabric-2.jpeg"
+                      alt="Silk fabric with floral summer patterns"
+                    />
+                  </a>
+                </div>
+                <h3>Summer blooms: a silk ode to sunshine</h3>
+                <p>
+                  This silk fabric captures golden afternoons and sun-drenched
+                  meadows — perfect for drapes, scarves, or delicate upholstery.
+                </p>
+              </div>
+
+              <div class="drawwilder-item-container">
+                <div class="art-item">
+                  <a
+                    href="../images/fabric-3.jpeg"
+                    data-lightbox="gallery"
+                    data-title="Countryside ducks: a silk stroll through nature"
+                  >
+                    <img
+                      src="../images/fabric-3.jpeg"
+                      alt="Velvet with ducks in countryside setting"
+                    />
+                  </a>
+                </div>
+                <h3>Countryside ducks: a silk stroll through nature</h3>
+                <p>
+                  Graceful ducks on a sunlit stroll — perfect for cozy,
+                  nature-inspired interiors.
+                </p>
+              </div>
+
+              <div class="drawwilder-item-container">
+                <div class="art-item">
+                  <a
+                    href="../images/ceramics-3.jpeg"
+                    data-lightbox="gallery"
+                    data-title="Street impressions: modern ceramics with an edge"
+                  >
+                    <img
+                      src="../images/ceramics-3.jpeg"
+                      alt="Modern ceramic with urban flair"
+                    />
+                  </a>
+                </div>
+                <h3>Street impressions: modern ceramics with an edge</h3>
+                <p>
+                  Raw and expressive — ceramics that bring urban soul to curated
+                  spaces.
+                </p>
+              </div>
+            </div>
+
+            <div class="back-to-gallery">
+              <a href="#top">← Back to Gallery</a>
+            </div>
+
+            <div class="instagram-feed">
+              <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+              <iframe
+                src="//lightwidget.com/widgets/302ad85cf2ef56f6b458d950e2bb6f06.html"
+                scrolling="no"
+                allowtransparency="true"
+                class="lightwidget-widget"
+                style="width:100%;border:0;overflow:hidden;"
+              ></iframe>
+            </div>
+
+            <h2>Want to be the first to know when the full collection goes live?</h2>
+            <p>Sign up to get a gentle nudge when the shop opens and new pieces arrive.</p>
+
+            <form
+              action="https://app.kit.com/forms/8028173/subscriptions"
+              method="post"
+              class="ck-subscribe-form"
+              target="_blank"
+            >
+              <label for="email">Join the list:</label><br />
+              <input
+                type="email"
+                name="email_address"
+                placeholder="Your email..."
+                required
+              />
+              <button type="submit">Subscribe to Drawwilder ✨</button>
+            </form>
+          </div>
+
+          <div class="footer-banner">
+            <footer>Website coded by Estela Gaspar</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
