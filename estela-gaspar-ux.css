@@ -6,7 +6,7 @@ html, body {
 }
 
 .wrapper {
-    width: 100%;
+        width: 100%;
 }
 
 html, body, div, form, fieldset, legend, label
@@ -986,14 +986,39 @@ svg {
 }
 
 
+/* Drawwilder media queries start */
+.drawwilder-text-intro {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.art-gallery {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 .instagram-feed {
     max-width: 600px;
     margin: 2rem auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     border-radius: 10px;
     overflow: hidden;
-  }
+}
 
+.blog-content.drawwilder {
+  padding: 5px 40px 10px 10px;
+}
+
+.main-content.drawwilder h2 {
+  font-size: 1em;
+}
+
+.art-item {
+  height: 350px;
+}
+
+/* Drawwilder media queries end */
 
 .projectcontent p {
     text-align: left;
@@ -1607,7 +1632,7 @@ nav .hamburger {
     }
     
     h1 {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
     font-weight: 600;
     }
 
@@ -1815,7 +1840,7 @@ a {
 }
 
 p {
-    font-size: 1em !important;
+    font-size: 0.9em !important;
     padding: 10px !important;
 }
 
