@@ -838,6 +838,13 @@ svg {
   background-color: #fff;
 }
 
+.lb-close:after {
+  content: '✕';
+  font-size: 40px;
+  color: white;
+}
+
+
 
 .port-page-internal.drawwilder {
     background-color: #ffffff;
