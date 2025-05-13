@@ -2,7 +2,7 @@
 /* CSS Mini Reset */
 
 html, body {
-    overflow-x: hidden;
+    overflow-x: visible;
 }
 
 .wrapper {
@@ -1512,10 +1512,7 @@ font-size: 6em !important;
     padding: 60px;
 }
 
-.drawwilder-text-intro {
-  width: 70%;
-  margin: 0 auto;
-}
+
 
 }
 
@@ -1533,6 +1530,11 @@ font-size: 6em !important;
 div.main-button {
     margin: 0px auto;
     padding-left: 10%;
+}
+
+.drawwilder-text-intro {
+  width: 70%;
+  margin: 0 auto;
 }
     
     
