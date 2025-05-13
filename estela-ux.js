@@ -1,27 +1,31 @@
+// Toggle mobile menu
 function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  const menu = document.querySelector('.menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
+  // Hamburger click toggle (adds/removes 'active' class)
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector("nav ul");
 
+  if (hamburger && navMenu) {
     hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
+      navMenu.classList.toggle("active");
     });
-});
+  }
 
+  // Lightbox options
+  if (typeof lightbox !== "undefined") {
+    lightbox.option({
+      fadeDuration: 300,
+      imageFadeDuration: 300,
+      resizeDuration: 200,
+      wrapAround: true
+    });
+  }
 
-lightbox.option({
-  fadeDuration: 300,
-  imageFadeDuration: 300,
-  resizeDuration: 200,
-  wrapAround: true
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+  // Add "← Back to Gallery" link inside lightbox
   setTimeout(() => {
     const observer = new MutationObserver(() => {
       const container = document.querySelector(".lb-dataContainer");
@@ -37,5 +41,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(document.body, { childList: true, subtree: true });
   }, 500);
-});
 
+  // Swiper background slider (if present)
+  if (document.querySelector('.background-slider')) {
+    const swiper = new Swiper('.background-slider', {
+      loop: true,
+      effect: 'fade',
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      fadeEffect: {
+        crossFade: true
+      },
+    });
+  }
+});

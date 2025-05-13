@@ -894,7 +894,7 @@ svg {
 
 .blog-content.drawwilder {
   width: 95%;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 20px;
    text-align: center;
 }
@@ -985,6 +985,83 @@ svg {
     }
 }
 
+/* Slideshow start */
+
+.background-slider {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.background-slider .swiper-slide {
+  height: 100%;
+}
+
+.swiper-container.background-slider.swiper-fade.swiper-initialized.swiper-horizontal.swiper-watch-progress.swiper-backface-hidden {
+  margin-bottom: 30px;
+  height: 900px;
+  border-radius: 10px;
+}
+
+
+
+.background-slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  padding: 0 1rem;
+}
+
+.slider-overlay h1 {
+  padding: 0px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color:#ffffff !important;
+}
+
+
+.slider-overlay h2 {
+  color:#ffffff !important;
+}
+
+
+.slider-overlay p {
+  color:#ffffff !important;
+}
+
+.slider-overlay h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+.slider-overlay {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.4); /* optional */
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.background-slider .swiper-slide {
+  height: 100% !important;
+}
+
+
+/* Slideshow end */
+
+
 
 /* Drawwilder media queries start */
 .drawwilder-text-intro {
@@ -1011,7 +1088,7 @@ svg {
 }
 
 .main-content.drawwilder h2 {
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .art-item {
@@ -1512,6 +1589,10 @@ font-size: 6em !important;
     padding: 60px;
 }
 
+.background-slider {
+  height: 90vh;
+}
+
 
 
 }
@@ -1534,7 +1615,7 @@ div.main-button {
 
 .drawwilder-text-intro {
   width: 70%;
-  margin: 0 auto;
+ margin: 60px auto;
 }
     
     
@@ -1546,6 +1627,17 @@ div.main-button {
 .cover-alternate-content.wider.left {
     float: none !important;
 }
+
+
+
+#drawwilder-logo {
+    width: 200px;
+}
+
+
+
+
+
     
     
 }
@@ -1556,12 +1648,13 @@ div.main-button {
 
 @media (min-width: 768px) {
 
-
-    
- 
 h1.landingpage-title {
     font-size: 4em !important;
     font-weight: 900;
+}
+
+.background-slider {
+    height: 400px;
 }
 
 nav .menu {
@@ -1643,6 +1736,10 @@ nav .hamburger {
     font-weight: 600;
     }
 
+    .background-slider {
+    height: 400px !important;
+  }
+
 
   
 }
@@ -1655,6 +1752,11 @@ h1 {
     font-size: 1.5em !important; 
 }
 
+.background-slider {
+    height: 400px;
+}
+
+
 .cover-alternate-content.wider {
     background-size: 50%;
 }
@@ -1663,6 +1765,8 @@ h1 {
 .cover-alternate-container.two, .cover-alternate-container.one .cover-alternate-content h2, .cover-alternate-container.one p, #word-cloud {
   padding: 10px 0px !important;
 }
+
+
 
 #word-cloud {
     margin:0px auto !important;
@@ -1749,12 +1853,19 @@ h2.initial-heading {
         background-size: 80%;
         min-height: 400px;
     }
-      
-    
-    
-    .cover-alternate-container.one {
-        
-    }
+
+
+.slider-overlay {
+  width: 90%;
+}
+
+.main-content.drawwilder h2 {
+  font-size: 1.2em;
+}
+
+#drawwilder-logo {
+    width: 100px;
+}
     
 
 .my-hero {
