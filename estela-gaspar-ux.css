@@ -794,6 +794,160 @@ svg {
 }
 
 
+/* /////////////////////  Drawwilder start /////////////////////  */
+.main-content.drawwilder {
+  background-color: #fff;
+}
+
+
+.port-page-internal.drawwilder {
+    background-color: #ffffff;
+}
+
+.main-content.drawwilder h1, .main-content.drawwilder h2, .main-content.drawwilder h3 {
+  color: #3d155f;
+}
+
+.drawwilder-text-intro {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.main-content.drawwilder h1 {
+  font-size: 3em;
+   text-align: center;
+}
+
+.main-content.drawwilder h2 {
+  font-size: 2em;
+  padding: 10px 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.main-content.drawwilder p {
+  color: #3d155f;
+   text-align: center;
+}
+
+.blog-content.drawwilder {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+   text-align: center;
+}
+
+.art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.drawwilder-item-container {
+    width: 100%;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    max-width: 580px;
+    height: auto;    
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    color: #3a0d5d;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 768px) {
+    .drawwilder-item-container {
+        margin-left: 20px;
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+
+.drawwilder-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.drawwilder-item-container h2,
+.drawwilder-item-container h3,
+.drawwilder-item-container a {
+    color: #3a0d5d !important;
+}
+
+
+
+.drawwilder-item-container p{
+    color: #2a282b !important;
+}
+
+
+
+.art-item {
+    flex: 1 1 calc(33% - 20px);
+    height: 390px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.art-item h3 {
+    margin: 10px 0 5px;
+    font-size: 2.1em;
+}
+
+.port-page-internal.drawwilder h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.port-page-internal.drawwilder p {
+  color: #171417;
+}
+
+
+@media (max-width: 768px) {
+    .art-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+.instagram-feed {
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+.projectcontent p {
+    text-align: left;
+}
+  
+
+
+
+
+
+
+
+/* ///////////////////// Drawwilder end /////////////////////  */
+
+
 /* Content divs end */
 
 
@@ -1774,97 +1928,4 @@ p {
   .ck-subscribe-form button:hover {
     background-color: #444;
   }
-
-  /* Drawwilder */
-
-  .art-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.drawwilder-item-container {
-    width: 100%;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    max-width: 550px; 
-    height: auto;    
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    padding: 20px;
-    text-align: center;
-    color: #3a0d5d;
-    box-sizing: border-box;
-}
-
-
-@media screen and (max-width: 768px) {
-    .drawwilder-item-container {
-        margin-left: 20px;
-        padding: 15px;
-        max-width: 90%;
-    }
-}
-
-
-.drawwilder-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-
-.drawwilder-item-container p,
-.drawwilder-item-container h3,
-.drawwilder-item-container a {
-    color: #3a0d5d !important;
-}
-
-
-
-.art-item {
-    flex: 1 1 calc(33% - 20px);
-    height: 300px;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.art-item h3 {
-    margin: 10px 0 5px;
-    font-size: 1.1em;
-}
-
-.art-item p {
-    color: #666;
-    font-size: 0.9em;
-}
-
-@media (max-width: 768px) {
-    .art-item {
-        flex: 1 1 100%;
-    }
-}
-
-
-.instagram-feed {
-    max-width: 600px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-
-.projectcontent p {
-    text-align: left;
-}
-  
-
-
 
