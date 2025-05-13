@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estela Gaspar - UX User Experience Design</title>
+
+  <!-- Core CSS and JS -->
+  <link rel="stylesheet" href="../estela-gaspar-ux.css" />
+  <script src="../estela-ux.js"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- D3 Libraries -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+
+  <!-- Lightbox -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      background-color: #fdfcf9;
+    }
+    header {
+      background-image: url('https://example.com/hero-fabric.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      padding: 15px;
+      font-size: 1.1em;
+      font-family: 'Playfair Display', serif;
+    }
+    .about, .contact {
+      text-align: center;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact button {
+      padding: 12px;
+      background-color: #222;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #f3f3f3;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <span class="logo">Estela UX Design</span>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../WhatI'mupto.html">💫 What I'm up to?</a></li>
+        <li><a href="../case-studies.html">Case Studies</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../links.html">Links</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/estela-gaspar-that-firefly/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main-content drawwilder">
+   
+      <div class="port-page-internal drawwilder">
+        <div class="blog-content drawwilder">
+
+
+   
+
+
+<header>
+    <h1>Artisan Fabric Collection</h1>
+    <p>Where texture, story, and creativity come together in every thread.</p>
+  </header>
+
+  <section class="section">
+    <h2 class="about">Explore Our Fabrics</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://example.com/fabric1.jpg" alt="Fabric 1">
+        <h3>Wild Indigo - Organic Cotton</h3>
+      </div>
+      <div class="card">
+        <img src="https://example.com/fabric2.jpg" alt="Fabric 2">
+        <h3>Nomad Weave - Hand-Dyed Linen</h3>
+      </div>
+      <div class="card">
+        <img src="https://example.com/fabric3.jpg" alt="Fabric 3">
+        <h3>Sahara Blooms - Vintage Silk</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about">
+    <h2>About the Collection</h2>
+    <p>Each fabric in this collection is hand-painted, naturally dyed, or sustainably sourced. Inspired by travel and nature, they tell a story of timeless artistry and conscious design.</p>
+  </section>
+
+  <section class="section contact">
+    <h2>Contact Us</h2>
+    <p>For custom orders, collaborations, or wholesale inquiries:</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+            <div class="back-to-gallery">
+              <a href="#top">← Back to top</a>
+            </div>
+
+            <div class="instagram-feed">
+              <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+              <iframe
+                src="//lightwidget.com/widgets/302ad85cf2ef56f6b458d950e2bb6f06.html"
+                scrolling="no"
+                allowtransparency="true"
+                class="lightwidget-widget"
+                style="width:100%;border:0;overflow:hidden;"
+              ></iframe>
+            </div>
+
+            <h2>Want to be the first to know when the full collection goes live?</h2>
+            <p>Sign up to get a gentle nudge when the shop opens and new pieces arrive.</p>
+
+            <form
+              action="https://app.kit.com/forms/8028173/subscriptions"
+              method="post"
+              class="ck-subscribe-form"
+              target="_blank"
+            >
+              <label for="email">Join the list:</label><br />
+              <input
+                type="email"
+                name="email_address"
+                placeholder="Your email..."
+                required
+              />
+              <button type="submit">Subscribe to Drawwilder ✨</button>
+            </form>
+          </div>
+
+          <div class="footer-banner">
+            <footer>Website coded by Estela Gaspar</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
