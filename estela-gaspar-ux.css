@@ -290,7 +290,6 @@ img, video, iframe {
   margin: 0 auto;
   height: auto;
   display: block;
-  border-radius: 10px;
 }
 
 
@@ -1075,10 +1074,11 @@ svg {
   height: 100%;
 }
 
+
 .swiper-container.background-slider.swiper-fade.swiper-initialized.swiper-horizontal.swiper-watch-progress.swiper-backface-hidden {
   margin-bottom: 30px;
   height: 900px;
-  border-radius: 10px;
+
 }
 
 
