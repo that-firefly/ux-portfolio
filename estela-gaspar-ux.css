@@ -41,8 +41,7 @@ body {
       margin: 0 auto;
     }
     .section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 0px 60px;
       margin: auto;
     }
     .grid {
@@ -50,17 +49,17 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-    .card {
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
       background: white;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       overflow: hidden;
     }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+
     .card h3 {
       padding: 15px;
       font-size: 1.1em;
@@ -85,7 +84,7 @@ body {
     .contact button {
       padding: 12px;
       background-color: #222;
-      color: white;
+      color: #5d5d5d;
       font-size: 1em;
       border: none;
       border-radius: 5px;
@@ -95,7 +94,6 @@ body {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      background: #f3f3f3;
     }
 
 
@@ -155,10 +153,6 @@ body {
     color: #071E55 !important;
   }
   
-  
-
-
-
 
 /* Badges/Labels start */
 
@@ -179,6 +173,48 @@ body {
     border-radius: 2px;
 }
 
+
+/* Video start */
+
+.video-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.responsive-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Optional: adds a soft edge */
+}
+
+/* Video end */
+
+
+
+.drawwilder-text-intro li img {
+  width: 5%;
+  border-radius: 5px;
+  border: 1px solid #575757;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+
+
+ .drawwilder-text-intro li {
+  margin-bottom: 20px;
+  color: #171417;
+  font-size: 1.5em;
+  list-style-type: none;
+}
+
+.drawwilder-text-intro.specs {
+  border: 3px solid #3d155f;
+  padding: 30px;
+  border-radius: 10px;
+}
 
 
 .strawberry-idea {
@@ -975,10 +1011,13 @@ svg {
 }
 
 .blog-content.drawwilder {
-  width: 95%;
-  margin: 30px auto;
-  padding: 20px;
-   text-align: center;
+  width: 100%;
+  text-align: center;
+}
+
+.blog-content.drawwilder {
+  padding: 0px;
+  margin: 0px;
 }
 
 .art-gallery {
@@ -1058,6 +1097,7 @@ svg {
 
 .port-page-internal.drawwilder p {
   color: #171417;
+  font-size: 1.5em;
 }
 
 
@@ -1165,9 +1205,7 @@ svg {
     overflow: hidden;
 }
 
-.blog-content.drawwilder {
-  padding: 5px 40px 10px 10px;
-}
+
 
 .main-content.drawwilder h2 {
   font-size: 2em;
@@ -1310,9 +1348,9 @@ img {
 
 
 footer {
+    margin-top: 60px;
     font-family: "Poppins", serif;
-    color: #ffffff; 
-    padding: 10px;
+    color: #2a282b; 
 }
 
 
@@ -1332,8 +1370,8 @@ body, html {
 }
 
 .footer-banner {
-    padding: 1rem;
     text-align: center;
+    padding: 1rem;
 }
 
 
