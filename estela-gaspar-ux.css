@@ -316,6 +316,10 @@ img, video, iframe {
   list-style-type: none;
 }
 
+#drawwilder-logo {
+  width: 30%;
+}
+
 .drawwilder-text-intro.specs {
   width: 30%;
   margin: 30px auto;
