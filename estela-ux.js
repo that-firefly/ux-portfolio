@@ -1,9 +1,3 @@
-// Toggle mobile menu
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   // Hamburger click toggle (adds/removes 'active' class)
   const hamburger = document.querySelector(".hamburger");
