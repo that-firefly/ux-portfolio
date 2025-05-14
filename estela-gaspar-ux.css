@@ -915,7 +915,7 @@ svg {
   color: white;
 }
 
-.drawwilder-read-more {
+.drawwilder-read-more, .read-more-button {
   display: inline-block;
   margin: 20px;
   padding: 0.6rem 1.2rem;
