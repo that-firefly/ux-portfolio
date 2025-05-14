@@ -286,6 +286,7 @@ body {
 }
 
 img, video, iframe {
+  width: 60%;
   margin: 0 auto;
   height: auto;
   display: block;
