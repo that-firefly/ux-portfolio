@@ -4,6 +4,13 @@ html, body {
     overflow-x: visible;
 }
 
+.container-group {
+  display: block;
+  overflow: auto;
+  width: 80%;
+  margin: 0 auto;
+}
+
 
 html, body, div, form, fieldset, legend, label
 {
@@ -769,7 +776,7 @@ ul li, ol li {
 
 .card-content {
     width: 80%;
-    margin: 20px auto;
+    margin: 120px auto;
 }
 
 .card-content h3 {
@@ -777,9 +784,6 @@ ul li, ol li {
   font-size: 2.5em;
 }
 
-.card-case-studies.two {
-  margin: 60px;
-}
 
 /* Portfolio case study cards end */
 
@@ -1645,8 +1649,12 @@ p, ul li, ol li {
   /* styles for standard smartphones */
 
 
-
-
+  .container-group {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin: 0 auto;
+}
     img, video, iframe {
     width: 70%;
   }
@@ -1936,6 +1944,11 @@ p, ul li, ol li {
   
 
 /* Smaller aroun 1000px */
+
+
+.card-case-studies {
+  padding: 0px 120px;
+}
 
 
 @media (min-width: 997px) {
