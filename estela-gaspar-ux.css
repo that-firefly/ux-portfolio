@@ -611,7 +611,7 @@ h1, h2, h4, h5, h6, p {
 
 h1 {
     font-size: 5em;
-    font-weight: 900;
+    font-weight: 700;
     padding: 30px 0px 0px 0px;
 }
 
@@ -622,7 +622,7 @@ h2 {
 }
 
 .text-content h2 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     text-align: left;
     padding: 10px 0px 0px 0px;
 }
@@ -894,7 +894,17 @@ svg {
 .text-content img {
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px 0px;
+}
+
+.projectcontent {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.projectcontent.drawwilder {
+  width: 100%;
+  margin: 0 auto;
 }
 
 
@@ -1875,7 +1885,7 @@ section {
 
 
   h1 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     text-align: center;
     margin: 0px;
   }
