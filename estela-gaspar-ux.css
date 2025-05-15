@@ -773,11 +773,12 @@ ul li, ol li {
 }
 
 .card-content h3 {
-    font-weight: 700;
+  font-weight: 700;
+  font-size: 2.5em;
 }
 
-.card-content p {
- 
+.card-case-studies.two {
+  margin: 60px;
 }
 
 /* Portfolio case study cards end */
@@ -1494,13 +1495,6 @@ padding: 30px;
     transform: scale(1.01);
   }
 
-  .thumbnail {
-    object-fit: cover;
-    flex-shrink: 0;
-       border-radius: 100%;
-    width: 200px;
-    height: 200px;
-  }
 
   .blog-content {
     padding: 15px;
@@ -2017,14 +2011,7 @@ img, video, iframe {
   margin: 60px auto;
 }
 
-.thumbnail {
-  object-fit: cover;
-  flex-shrink: 0;
-  width: 30%;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
+
 
 }
 
@@ -2042,12 +2029,7 @@ img, video, iframe {
   margin: 60px auto;
 }
 
-.thumbnail {
-  object-fit: cover;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
+
 
 
   .drawwilder-item-container {
@@ -2099,22 +2081,11 @@ img, video, iframe {
   margin: 0px auto 60px auto;
 }
 
-.thumbnail {
-  object-fit: cover;
-  flex-shrink: 0;
-  width: 30%;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
-
-
-
 
 
 
    .card-content img {
-  width: 50%;
+  width: 30%;
   } 
 
   .drawwilder-item-container {
@@ -2146,14 +2117,6 @@ img, video, iframe {
   }
 
 
-  .thumbnail {
-  object-fit: cover;
-  flex-shrink: 0;
-  width: 30%;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
 
   .blog-preview {
   width: 50%;
@@ -2197,15 +2160,6 @@ img, video, iframe {
   }
 
 
-
-  .thumbnail {
-  object-fit: cover;
-  flex-shrink: 0;
-  width: 30%;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
 
   .blog-preview {
   width: 50%;
@@ -2356,12 +2310,6 @@ p, ul li, ol li {
     padding:0px;
   }
 
-  .thumbnail {
-  height: auto;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
     .drawwilder-text-intro.specs {
   width: 80%;
   padding: 10px;
@@ -2477,12 +2425,6 @@ p, ul li, ol li {
     padding:0px;
   }
 
-  .thumbnail {
-  height: auto;
-     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-}
 
 
   .drawwilder-text-intro.specs {
