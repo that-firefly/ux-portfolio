@@ -182,9 +182,6 @@ a:hover {
 }
 
 
-
-
-
 .highlighted-link {
   width: 30%;
   margin: 30px auto;
@@ -291,8 +288,7 @@ body {
 }
 
 img, video, iframe {
-  width: 60%;
-  margin: 40px auto;
+  margin: 0px auto;
   height: auto;
   display: block;
 }
@@ -1191,12 +1187,14 @@ svg {
 
 /* Images start */
 
+
 .cover-alternate-content.wider {
   background-image: url('./images/banner-ux-estela.png');
   background-repeat: no-repeat;
   background-position: calc(50% + 400px) calc(-35px);
   background-size: 55%;
   min-height: 550px;
+
 }
 
 
@@ -1630,13 +1628,33 @@ p, ul li, ol li {
   text-align: center;
 }
 
+
+
 }
+
+@media (max-width: 767px) {
+  .cover-alternate-content.wider {
+    background-position: center top;
+    background-size: cover;
+    background-size: 45%;
+    background-position: calc(0% + 120px) calc(-15px);
+  }
+
+  .landingpage-title.eg {
+  padding-top: 230px;
+}
+}
+
+
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   /* styles for standard smartphones */
 
+
+
+
     img, video, iframe {
-    width: 50%;
+    width: 70%;
   }
 
   .text-only-wider {
@@ -1679,6 +1697,7 @@ p, ul li, ol li {
 
 @media only screen and (min-width: 414px) and (max-width: 767px) {
   /* styles for large smartphones */
+
 
     img, video, iframe {
     width: 50%;
@@ -1826,6 +1845,8 @@ width: 95%;
 @media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
   /* likely an iPhone 6, 7, 8, X, 12 mini */
 
+
+
     img, video, iframe {
     width: 50%;
   }
@@ -1871,6 +1892,8 @@ p, ul li, ol li {
 @media only screen and (min-device-width: 360px) and (max-device-width: 412px) and (-webkit-device-pixel-ratio: 3) {
   /* high-res Android devices */
 
+
+
     img, video, iframe {
     width: 50%;
   }
@@ -1911,22 +1934,61 @@ p, ul li, ol li {
   text-align: center;
 }
 
+
 }
 
 
 
   
 
+/* Smaller aroun 1000px */
+
+
+@media (min-width: 997px) {
+img, video, iframe {
+  margin: 0px auto;
+  height: auto;
+  display: block;
+  width: 70%;
+}
+
+}
+
+@media (min-width: 1118px) {
+img, video, iframe {
+  margin: 0px auto;
+  height: auto;
+  display: block;
+  width: 70%;
+}
+
+}
+
+
 /* 🌟 Extra Large Screens (Desktops > 1500px) */
+
 
 @media (min-width: 1500px) {
   .initial-heading {
     font-size: 2em !important;
   }
 
+  img, video, iframe {
+  margin: 0px auto;
+  height: auto;
+  display: block;
+  width: 60%;
+}
+
+
+
   .cover-alternate-content.wider {
-  background-position: calc(50% + 400px) calc(-80px);
+  background-position: calc(75% + 400px) calc(-80px);
     background-size: 60%;
+}
+
+.landingpage-title.eg {
+  width: 75%;
 }
 
 .text-only-wider {
@@ -1973,6 +2035,7 @@ p, ul li, ol li {
   nav {
     flex-wrap: wrap;
   }
+
 
   .blog-preview {
   width: 85%;
@@ -2082,6 +2145,7 @@ p, ul li, ol li {
     padding: 20px 0;
   }
 
+
   .thumbnail {
   object-fit: cover;
   flex-shrink: 0;
@@ -2131,6 +2195,8 @@ p, ul li, ol li {
   .slider-overlay {
     width: 100% !important;
   }
+
+
 
   .thumbnail {
   object-fit: cover;
@@ -2194,6 +2260,9 @@ p, ul li, ol li {
     font-weight: 900;
   }
 
+
+  
+
   .background-slider {
     height: 400px;
   }
@@ -2216,8 +2285,10 @@ p, ul li, ol li {
 
 
     img, video, iframe {
-    width: 50%;
+    width: 70%;
   }
+
+
 
    .text-only-wider {
   max-width: 100%;
@@ -2337,6 +2408,10 @@ p, ul li, ol li {
     position: relative;
     left: -20px;
   }
+
+
+
+
 }
 
 
@@ -2347,8 +2422,9 @@ p, ul li, ol li {
 
 
 
-    img, video, iframe {
-    width: 50%;
+
+  img, video, iframe {
+    width: 80%;
   }
 
   .text-only-wider {
@@ -2362,6 +2438,12 @@ p, ul li, ol li {
     text-align: center;
     padding-bottom: 20px;
   }
+
+.landingpage-title.eg {
+  padding-top: 190px;
+}
+
+     
 
   h2 {
     font-size: 2em;
@@ -2424,6 +2506,8 @@ p, ul li, ol li {
   padding: 0px;
 }
 
+
+
   .main-content.drawwilder h2 {
   font-size: 1.2em;
 }
@@ -2437,7 +2521,7 @@ p, ul li, ol li {
   margin: 0px 0px;
 }
 
-    .card-case-studies {
+  .card-case-studies {
     height: auto;
   }
 
@@ -2460,6 +2544,8 @@ p, ul li, ol li {
   max-width: 100%;
   }
 
+
+
   .container {
   max-width: 100%;
   }
@@ -2475,9 +2561,6 @@ p, ul li, ol li {
   padding: 10px;
 }
 
-  .main-content h1 {
-    width: 100%;
-  }
 
   .cover-alternate-content.wider {
     background-size: 50%;
