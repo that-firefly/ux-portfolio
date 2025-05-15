@@ -21,6 +21,11 @@ html, body, div, form, fieldset, legend, label
   width: 100%;
 }
 
+.main-content {
+    flex: 1;
+    padding: 10px;
+}
+
 
 
 body {
@@ -1229,9 +1234,7 @@ body, html {
 }
 
 
-.main-content {
-    flex: 1;
-}
+
 
 .footer-banner {
     text-align: center;
