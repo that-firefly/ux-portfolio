@@ -160,7 +160,7 @@ nav .hamburger {
 }
 
 .text-only-wider {
-  max-width: 50%;
+  max-width: 60%;
 }
 
 /* links start  */
@@ -320,7 +320,7 @@ img, video, iframe {
 }
 
 #drawwilder-logo {
-  width: 30%;
+  width: 22%;
 }
 
 .drawwilder-text-intro.specs {
@@ -1583,6 +1583,334 @@ padding: 30px;
    /*************************  Media Queries start *************************/
   /*************************  Media Queries start *************************/
 
+@media only screen and (max-width: 480px) {
+  /* styles for very small devices like older iPhones/Androids */
+
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  /* styles for standard smartphones */
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  /* styles for large smartphones */
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* styles for iPads/tablets in portrait */
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* styles for iPads/tablets in landscape */
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 4em;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+.cover-alternate-content img {
+width: 95%;
+}
+
+
+.cover-alternate-content.wider {
+  background-size: 73%;
+  background-position: calc(50% + 400px) calc(-52px);
+  min-height: 350px;
+}
+
+}
+
+@media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
+  /* likely an iPhone 6, 7, 8, X, 12 mini */
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 412px) and (-webkit-device-pixel-ratio: 3) {
+  /* high-res Android devices */
+
+    img, video, iframe {
+    width: 50%;
+  }
+
+  .text-only-wider {
+  max-width: 100%;
+  }
+
+
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+p, ul li, ol li {
+  font-size: 1em;
+  text-align: center;
+}
+
+.port-page-internal h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+.projectcontent p {
+  text-align: center;
+}
+
+}
+
+
 
   
 
@@ -1593,6 +1921,17 @@ padding: 30px;
     font-size: 2em !important;
   }
 
+  .cover-alternate-content.wider {
+  background-position: calc(50% + 400px) calc(-80px);
+    background-size: 60%;
+}
+
+.text-only-wider {
+  max-width: 60%;
+  position: relative;
+  left: -120px;
+}
+
    .card-content img {
   width: 30%;
   }
@@ -1600,7 +1939,7 @@ padding: 30px;
   .main-content {
   flex: 1;
   padding: 10px;
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -1965,8 +2304,21 @@ p, ul li, ol li {
 
 }
 
+
+
+@media (min-width: 428px) and (max-width: 550px) {
+  .text-only-wider {
+    max-width: 60%;
+    position: relative;
+    left: -20px;
+  }
+}
+
+
+
+
 /* 📱 Small Phones (350px - 428px) */
-@media (min-width: 350px) and (max-width: 428px) {
+@media (min-width: 300px) and (max-width: 600px) {
 
 
 
