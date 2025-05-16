@@ -1,229 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
 
 <head>
-    <title>Estela Gaspar - UX User Experience Design</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estela-gaspar-ux.css">
-    <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #fefefe;
+            line-height: 1.6;
+            color: #222;
+        }
 
+        h1,
+        h2,
+        h3 {
+            color: #444;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        .contact,
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            margin-top: 1.5rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav>
-            <span class="logo">Estela UX Design</span>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul class="menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./WhatI'mupto.html">💫 What I'm up to?</a></li>
-                <li><a href="./case-studies.html">Case Studies</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./links.html">Links</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li>
-                    <a href="https://www.linkedin.com/in/estela-gaspar-that-firefly/" target="_blank"
-                        aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="main-content">
-            <h1>A groundbreaking platform to streamline heating oil readings, orders, and deliveries</h1>
-            <div class="port-page-internal">
-                <div class="text-content">
-                    <div class="labels">
-                        <span class="badge orange-idea">E-Commerce</span>
-                        <span class="badge mustard-idea">User Interface (UI)</span>
-                        <span class="badge green-idea">User Experience (UX)</span>
-                        <span class="badge earth-idea">User Research (UR)</span>
-                    </div>
-                    <div class="projectinfo">
-                        <ul>
-                            <li>
-                                <strong>Client:</strong>
-                            </li>
-                            <li>BoilerJuice</li>
-                            <li>
-                                <strong>Project(s):</strong>
-                            </li>
-                            <li>Innovative heating oil platform with integrated smart reading technology.</li>
-                            <li><strong>Role:</strong></li>
-                            <li>User interface designer, user experience designer and user researcher.</li>
-                        </ul>
-                    </div>
-                    <div class="projectcontent">
-                        <h2>About the project(s)</h2>
-                        <h3>Innovative heating oil platform with integrated smart reading technology.</h3>
-                        <p>BoilerJuice is the UK's leading heating oil supplier, providing a simple, efficient, and
-                            cost-effective way for customers to order heating oil. Established in 2004, BoilerJuice
-                            revolutionised the industry by offering a price comparison service that allows users to find
-                            the best local deals on heating oil. With its focus on customer satisfaction, BoilerJuice
-                            has built a reputation for offering competitive prices, reliable delivery, and a seamless
-                            online experience.</p>
-
-                        <p>The company operates through an extensive network of trusted heating oil
-                            suppliers, ensuring that customers receive fast and reliable delivery, no matter where they
-                            are. In addition to offering single heating oil deliveries, BoilerJuice provides
-                            subscription services for those who prefer the convenience of automatic top-ups, saving both
-                            time and effort. Their innovative approach and dedication to customer care make BoilerJuice
-                            the go-to platform for heating oil orders across the UK.</p>
-                        <img src="./images/boilerjuice/boilerjuice-homepage.png" alt="Boilerjuice homepage"
-                            title="Boilerjuice current homepage.">
-                        <img src="./images/boilerjuice/boilerjuice-homepage-2.png" alt="Boilerjuice homepage"
-                            title="Boilerjuice current homepage.">
-                        <p class="label-text">Current homepage of BoilerJuice.</p>
-                        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-                        </p>
-
-                        <p>BoilerJuice, founded in 2004, revolutionised the heating oil market by offering a comparison
-                            website that helped users save money by finding local, cheaper prices and facilitating oil
-                            deliveries. However, as demand grew, the traditional customer journey - relying on phone
-                            orders and a basic online form - became outdated and inefficient. Customers often faced
-                            delays, risking running out of heating oil, particularly in winter months, while the
-                            customer service team struggled to manage the increasing volume of orders.</p>
-
-                        <p>Customers also
-                            had to physically check oil levels, which was inconvenient, especially during cold weather.
-                            The lack of real-time updates and limited online interaction led to frustration, service
-                            abandonment, and loss of potential customers.</p>
-
-                        <img src="./images/boilerjuice/elder-heating-oil.jpg"
-                            alt="Elderly man waiting for heating oil delivery."
-                            title="Image on an elderly man waiting for a heating oil delivery.">
-                        <p class="label-text">Image of an elderly man waiting for a heating oil delivery generated by
-                            ChatGPT.</p>
-
-                        <img src="./images/boilerjuice/boilerjuice-3.png"
-                            alt="Mum with children waiting for heating oil delivery."
-                            title="Image of mum with children waiting for heating oil delivery.">
-                        <p class="label-text">Image of mum with children waiting for heating oil delivery.</p>
-
-                        <p class="label-text">Source images: <a
-                                href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington
-                                Research</a> on <a
-                                href="https://unsplash.com/photos/rectangular-brown-wooden-table-kN_kViDchA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-                            <a
-                                href="https://unsplash.com/@little_klein?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vitolda
-                                Klein</a> on <a
-                                href="https://unsplash.com/photos/girl-in-white-and-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-shirt-E31OyLefPTs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-                            <a
-                                href="https://unsplash.com/@kevcostello?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kev
-                                Costello</a> on <a
-                                href="https://unsplash.com/photos/woman-leaning-on-white-wooden-table-while-holding-black-android-smartphone-w3jVXGkYZCw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-                        <img src="./images/boilerjuice/heating-oil-truck.jpg" alt="Heating oil truck"
-                            title="Heating oil truck image generated by ChatGPT">
-                        <p class="label-text">Heating oil truck image generated by ChatGPT.</p>
-
-                        <p>To address these challenges, BoilerJuice introduced an innovative new platform that connects
-                            live heating oil readings from smart tanks directly to the online system. This platform
-                            provides users with accurate, up-to-date oil levels, automatically generating the best
-                            quotes from a range of suppliers and pairing users with the most cost-effective option.
-                            Customers can now place orders online, track delivery progress in real time, and save money
-                            through smarter decision-making. By redesigning the customer experience journey and
-                            listening to user feedback, BoilerJuice significantly improved service transparency and
-                            customer satisfaction while reducing pressure on support teams. As a result, the new
-                            platform not only promotes customer loyalty but also attracts new users by offering a
-                            seamless, efficient, and user-friendly experience.</p>
-
-                        <p>The result was a completely redesigned platform that connected live heating oil readings from
-                            smart tanks directly to the BoilerJuice website, mobile, and app. The new system sends
-                            alerts to customers when their oil levels are low, prompting them to place an order. It also
-                            allows them to get more precise quotes and purchase heating oil directly online, or even
-                            subscribe to an automatic refill service. This solution was convenient, accessible, and
-                            offered competitive prices, ensuring customer trust and making the process more transparent.
-                        </p>
-
-                        <p>Through this comprehensive approach, BoilerJuice successfully created a new platform that not
-                            only solved critical customer pain points but also improved the overall experience by
-                            providing a seamless, efficient, and user-friendly service.</p>
-
-                        <img src="./images/boilerjuice/boilerjuice-7.png"
-                            alt="BoilerJuice smart wireless oil level customer service tech."
-                            title="BoilerJuice website, mobile app and smart wireless oil level monitor.">
-                        <p class="label-text">BoilerJuice website, mobile app and smart wireless oil level monitor.</p>
-                        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-
-                        <p>To address these issues, we took a Design Thinking approach to redesign the entire customer
-                            experience. We started by researching pain points, analysing opportunities on the web
-                            platform, and examining both front-stage and back-stage services. This research involved
-                            collaborating with users (both new and returning), heating oil suppliers, engineers,
-                            customer service teams, web developers, and data analysts. Our goal was to create a
-                            personalised, seamless journey for customers and improve the mobile experience.</p>
-                        <img src="./images/boilerjuice/boilerjuice-5.png" alt="Project design processes."
-                            title="Examples of service design, user research, user experience, and user interface design processes.">
-                        <p class="label-text">Examples of service design, user research, user experience, and user
-                            interface design processes.</p>
-                        <p>We utilised tools such as Google Analytics, Google Optimize for A/B testing, and Lucky Orange
-                            to gain emotional insights. For journey mapping, we used Sketch and Smaply, among others.
-                            Jira was used for project tracking and collaboration, especially as we worked with a large
-                            team of specialists. Throughout the project, we produced various deliverables, including
-                            ecosystem maps, persona profiles, user journeys, emotion maps, wireframes, and prototypes,
-                            all of which were tested regularly. We conducted interviews, workshops, and continuous
-                            meetings with the client to present discovery outcomes, advise on solutions, and outline
-                            next steps.</p>
-
-
-                        <img src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="..." title="...">
-                        <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
-                                alt="Persona tool web application"
-                                title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
-                        </p>
-                        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-                        </p>
-                        <img src="./images/boilerjuice/boilerjuice-ux-deliverable-2.png" alt="..." title="...">
-                        <p class="label-text">Basic user flow journey.</p>
-                        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-                        </p>
-
-                        <img src="./images/boilerjuice/boilerjuice-ux-deliverable-3.png" alt="..." title="...">
-                        <p class="label-text">Google Analytics Goal Funnel / Funnel Visualisation of the BoilerJuice
-                            website journey.</p>
-                        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-                        </p>
-                        <img src="./images/boilerjuice/boilerjuice-ux-deliverable-4.png" alt="..." title="...">
-                        <p class="label-text">BoilerJuice homepage wireframe designed using <a
-                                href="https://www.axure.com/" alt="Wireframing tool used by UX/UI designers."
-                                title="Powerful wireframing, prototyping, and specification tool used by UX/UI designers.">Axure
-                                RP</a>.</p>
-                        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-                        </p>
-
-                     
-                        <div class="highlighted-link">
-                                <a href="case-studies.html">Read more case studies</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-banner">
-            <footer>
-                Website coded by Estela Gaspar
-            </footer>
-        </div>
+    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
+        <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
+        <h1>BoilerJuice - Heating oil supply.</h1>
+        <h3>Client:</h3>
+        <p>BoilerJuice</p>
+        <h3>Project(s):</h3>
+        <ul>
+            <li>A groundbreaking platform to streamline heating oil readings, orders, and deliveries.</li>
+        </ul>
+        <h3>Role:</h3>
+        <ul>
+            <li>User interface designer (UI).</li>
+            <li>User experience designer (UX).</li>
+            <li>User researcher (UR).</li>
+        </ul>
     </div>
+  
+
+
+<!-- Therac-25 -->
+
+    <div class="section">
+        <h2>About the project(s)</h2>
+        <h3>Innovative heating oil platform with integrated smart reading technology.</h3>
+        <p>BoilerJuice is the UK's leading heating oil supplier, providing a simple, efficient, and
+            cost-effective way for customers to order heating oil. <br>Established in 2004, BoilerJuice
+            revolutionised the industry by offering a price comparison service that allows users to find
+            the best local deals <br>on heating oil. With its focus on customer satisfaction, BoilerJuice
+            has built a reputation for offering competitive prices, reliable delivery, and a seamless
+            online experience.</p>
+
+        <p>The company operates through an extensive network of trusted heating oil
+            suppliers, ensuring that customers receive fast and reliable delivery, no matter where they
+            are. <br>In addition to offering single heating oil deliveries, BoilerJuice provides
+            subscription services for those who prefer the convenience of automatic top-ups, saving both
+            time and effort. <br>Their innovative approach and dedication to customer care make BoilerJuice
+            the go-to platform for heating oil orders across the UK.</p>
+              <img style="width:500px; height:auto;" style="width:500px; height:auto;"  src="./images/boilerjuice/boilerjuice-homepage.png" alt="Boilerjuice homepage"
+            title="Boilerjuice current homepage.">
+              <img style="width:500px; height:auto;" style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-homepage-2.png" alt="Boilerjuice homepage"
+            title="Boilerjuice current homepage.">
+        <p class="label-text">Current homepage of BoilerJuice.</p>
+        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
+                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+        </p>
+
+        <p>BoilerJuice, founded in 2004, revolutionised the heating oil market by offering a comparison
+            website that helped users save money by finding local, <br>cheaper prices and facilitating oil
+            deliveries. However, as demand grew, the traditional customer journey (relying on phone
+            orders and a basic online form)<br> became outdated and inefficient. Customers often faced
+            delays, risking running out of heating oil, particularly in winter months, while the
+            customer service team <br>struggled to manage the increasing volume of orders.</p>
+
+        <p>Customers also
+            had to physically check oil levels, which was inconvenient, especially during cold weather.<br>
+            The lack of real-time updates and limited online interaction led to frustration, service
+            abandonment, and loss of potential customers.</p>
+
+              <img style="width:500px; height:auto;" style="width:500px; height:auto;" src="./images/boilerjuice/elder-heating-oil.jpg"
+            alt="Elderly man waiting for heating oil delivery."
+            title="Image on an elderly man waiting for a heating oil delivery.">
+        <p class="label-text">Image of an elderly man waiting for a heating oil delivery generated by
+            ChatGPT.</p>
+
+              <img style="width:500px; height:auto;" style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-3.png"
+            alt="Mum with children waiting for heating oil delivery."
+            title="Image of mum with children waiting for heating oil delivery.">
+        <p class="label-text">Image of mum with children waiting for heating oil delivery.</p>
+
+        <p class="label-text">Source images: <a
+                href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington
+                Research</a> on <a
+                href="https://unsplash.com/photos/rectangular-brown-wooden-table-kN_kViDchA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
+            <a
+                href="https://unsplash.com/@little_klein?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vitolda
+                Klein</a> on <a
+                href="https://unsplash.com/photos/girl-in-white-and-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-shirt-E31OyLefPTs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
+            <a
+                href="https://unsplash.com/@kevcostello?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kev
+                Costello</a> on <a
+                href="https://unsplash.com/photos/woman-leaning-on-white-wooden-table-while-holding-black-android-smartphone-w3jVXGkYZCw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </p>
+              <img style="width:500px; height:auto;" style="width:500px; height:auto;" src="./images/boilerjuice/heating-oil-truck.jpg" alt="Heating oil truck"
+            title="Heating oil truck image generated by ChatGPT">
+        <p class="label-text">Heating oil truck image generated by ChatGPT.</p>
+
+        <p>To address these challenges, BoilerJuice introduced an innovative new platform that connects
+            live heating oil readings from smart <br>tanks directly to the online system. This platform
+            provides users with accurate, up-to-date oil levels, automatically generating the best<br>
+            quotes from a range of suppliers and pairing users with the most cost-effective option. Customers can now place orders online, track delivery <br>
+            progress in real time, and save money
+            through smarter decision-making. By redesigning the customer experience journey and
+            listening to user feedback,<br> BoilerJuice significantly improved service transparency and
+            customer satisfaction while reducing pressure on support teams. <br>As a result, the new
+            platform not only promotes customer loyalty but also attracts new users by offering a
+            seamless, efficient, and user-friendly experience.</p>
+
+        <p>The result was a completely redesigned platform that connected live heating oil readings from
+            smart tanks directly to the BoilerJuice website, mobile, and app. <br>The new system sends
+            alerts to customers when their oil levels are low, prompting them to place an order. It also
+            allows them to get more precise quotes <br>and purchase heating oil directly online, or even
+            subscribe to an automatic refill service. This solution was convenient, accessible, and
+            offered competitive prices, <br>ensuring customer trust and making the process more transparent.
+        </p>
+
+        <p>Through this comprehensive approach, BoilerJuice successfully created a new platform that not
+            only solved critical customer pain points <br>but also improved the overall experience by
+            providing a seamless, efficient, and user-friendly service.</p>
+
+              <img style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-7.png"
+            alt="BoilerJuice smart wireless oil level customer service tech."
+            title="BoilerJuice website, mobile app and smart wireless oil level monitor.">
+        <p class="label-text">BoilerJuice website, mobile app and smart wireless oil level monitor.</p>
+        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
+                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+
+        <p>To address these issues, we took a Design Thinking approach to redesign the entire customer
+            experience. We started by researching pain points, analysing opportunities<br>on the web
+            platform, and examining both front-stage and back-stage services. This research involved
+            collaborating with users (both new and returning), heating oil suppliers,<br> engineers,
+            customer service teams, web developers, and data analysts. Our goal was to create a
+            personalised, seamless journey for customers and improve the mobile experience.</p>
+           <img style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-5.png" alt="Project design processes."
+            title="Examples of service design, user research, user experience, and user interface design processes.">
+        <p class="label-text">Examples of service design, user research, user experience, and user
+            interface design processes.</p>
+        <p>We utilised tools such as Google Analytics, Google Optimize for A/B testing, and Lucky Orange
+            to gain emotional insights. <br>For journey mapping, we used Sketch and Smaply, among others.
+            Jira was used for project tracking and collaboration, especially as we worked <br>with a large
+            team of specialists. Throughout the project, we produced various deliverables, including
+            ecosystem maps, persona profiles, user journeys,<br> emotion maps, wireframes, and prototypes,
+            all of which were tested regularly. We conducted interviews, workshops, and continuous
+            meetings with the client <br>to present discovery outcomes, advise on solutions, and outline
+            next steps.</p>
+
+
+           <img style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="..." title="...">
+        <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
+                alt="Persona tool web application"
+                title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
+        </p>
+        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
+                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+        </p>
+           <img style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-ux-deliverable-2.png" alt="..." title="...">
+        <p class="label-text">Basic user flow journey.</p>
+        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
+                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+        </p>
+
+           <img style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-ux-deliverable-3.png" alt="..." title="...">
+        <p class="label-text">Google Analytics Goal Funnel / Funnel Visualisation of the BoilerJuice
+            website journey.</p>
+        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
+                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+        </p>
+           <img style="width:500px; height:auto;" src="./images/boilerjuice/boilerjuice-ux-deliverable-4.png" alt="..." title="...">
+        <p class="label-text">BoilerJuice homepage wireframe designed using <a
+                href="https://www.axure.com/" alt="Wireframing tool used by UX/UI designers."
+                title="Powerful wireframing, prototyping, and specification tool used by UX/UI designers.">Axure
+                RP</a>.</p>
+        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
+                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+        </p>
+      </div>
+
+    <a href="./case-studies.html">← Back to case studies</a>
+
 </body>
 
 </html>

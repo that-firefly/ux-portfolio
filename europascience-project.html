@@ -1,152 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
 
 <head>
-    <title>Estela Gaspar - UX User Experience Design</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estela-gaspar-ux.css">
-    <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #fefefe;
+            line-height: 1.6;
+            color: #222;
+        }
 
+        h1,
+        h2,
+        h3 {
+            color: #444;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        .contact,
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            margin-top: 1.5rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav>
-            <span class="logo">Estela UX Design</span>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul class="menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./WhatI'mupto.html">💫 What I'm up to?</a></li>
-                <li><a href="./case-studies.html">Case Studies</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./links.html">Links</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li>
-                    <a href="https://www.linkedin.com/in/estela-gaspar-that-firefly/" target="_blank"
-                        aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="main-content">
-            <h1>E-learning</h1>
-            <div class="port-page-internal">
-                <div class="text-content">
-                    <div class="labels">
-                        <span class="badge lavendar-idea">Web Design</span>
-                        <span class="badge gold-idea">Marketing</span>
-                    </div>
-                    <div class="projectinfo">
-                        <ul>
-                            <li>
-                                <strong>Client:</strong>
-                            </li>
-                            <li>Europa Science Group</li>
-                            <li><a href="https://www.europascience.com/" alt="Europa Science website"
-                                    title="Link to Europa Science website.">Europa Science website</a></li>
-                            <li>
-                                <strong>Project(s):</strong>
-                            </li>
-                            <li>Accessible, standards-compliant websites adhering to WC3 guidelines and email campaigns
-                                using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.</li>
-                            <li><strong>Role:</strong></li>
-                            <li>Web Designer and Graphic Designer (email marketing).</li>
-                        </ul>
-                    </div>
-                    <div class="projectcontent">
-                        <h2>About the project(s)</h2>
-                        <h3>Accessible, standards-compliant websites adhering to WC3 guidelines and email campaigns
-                            using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.</h3>
-                        <p>Europa Science is a renowned publishing company specialising in delivering cutting-edge
-                            content through a diverse range of magazines. Their publications cover a wide array of
-                            scientific and technological topics, providing industry insights, research developments, and
-                            expert perspectives.</p>
-                        <p>Europa Science Ltd, part of the Europa Science Group, commenced trading in 2003 with the
-                            acquisition of Electro Optics and Scientific Computing World. The company subsequently
-                            launched several spin-out titles, beginning with Research Information (sold in 2024) and
-                            Imaging and Machine Vision Europe in late 2003, followed by Laser Systems Europe in 2008
-                            (merged into Electro Optics in 2024), coinciding with the inaugural Lasys event.</p>
-                        <p>In 2009, Europa Science acquired Optics and Laser Europe from the Institute of Physics
-                            Publishing, leading to an expansion of Electro Optics to ten issues per year. As part of the
-                            same transaction, Fibre Systems was also acquired and subsequently relaunched in 2013.</p>
-                        <img src="./images/europascience/europascience-1.png"
-                            alt="Europa Science publishing company website"
-                            title="Europa Science publishing company website">
-                        <p class="label-text">Europa Science publishing company website</p>
-                        <p class="label-text">
-                            Source image: <a href="https://www.europascience.com"
-                                title="Visit Europa Science publishing company website">Europa Science</a>
-                        </p>
-
-                        <p>Today, Europa Science’s services extend beyond publishing into community building and
-                            marketing services across photonics, imaging, scientific computing, and optical
-                            communications.</p>
-                        <p>During my time at Europa Science, I worked on their websites using Drupal and PHP, handled
-                            email campaigns, and primarily performed web design tasks, with some graphic design work
-                            focused on email campaigns, expert blogs, and thought leadership articles. </p>
-
-
-                        <img src="./images/europascience/europascience-applications.png"
-                            alt="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress."
-                            title="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress to develop and maintain websites, as well as to create and manage email campaigns.">
-                        <p class="label-text">Applications utilised at Europa Science: Drupal, PHP, HTML, CSS,
-                            JavaScript, and WordPress to develop and maintain websites, as well as to create and manage
-                            email campaigns.</p>
-                        <p class="label-text">
-                            Source images: <a href="https://www.europascience.com"
-                                title="Visit Europa Science publishing company website">Europa Science</a>, <a
-                                href="https://en.m.wikipedia.org" alt="Wikimedia Foundation"
-                                title="Wikimedia Foundation, a nonprofit organisation that hosts and supports some of the world’s largest collaborative knowledge projects, including Wikipedia, Wikidata, Wikimedia Commons, and other free knowledge initiatives.">Wikipedia</a>
-                        </p>
-
-                        <img src="./images/europascience/europascience-2.png"
-                            alt="Europa Science publishing company website"
-                            title="Europa Science publishing company website">
-                        <p class="label-text">Europa Science publishing company website</p>
-                        <p class="label-text">
-                            Source image: <a href="https://www.europascience.com"
-                                title="Visit Europa Science publishing company website">Europa Science</a>
-                        </p>
-                        <p>I created accessible, standards-compliant websites adhering to WC3 guidelines and developed
-                            email campaigns and websites using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.</p>
-
-                        <img src="./images/europascience/europascience-3.png"
-                            alt="Europa Science publishing company website"
-                            title="Europa Science publishing company website">
-                        <p class="label-text">Europa Science publishing company website and some of the magazines they
-                            produce</p>
-                        <p class="label-text">
-                            Source image: <a href="https://www.europascience.com"
-                                title="Visit Europa Science publishing company website">Europa Science</a>
-                        </p>
-                        
-                        <div class="highlighted-link">
-                                <a href="case-studies.html">Read more case studies</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-banner">
-            <footer>
-                Website coded by Estela Gaspar
-            </footer>
-        </div>
+    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
+        <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
+        <h1>Europa Science Group - Web Design and Marketing.</h1>
+        <h3>Client:</h3>
+        <p>Europa Science Group</p>
+        <h3>Project(s):</h3>
+        <ul>
+            <li>Creating and updating ccessible, standards-compliant websites adhering to WC3 guidelines <br>and email campaigns
+                using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.</li>
+        </ul>
+        <h3>Role:</h3>
+        <ul>
+            <li>Web Designer</li>
+            <li>Graphic Designer (email marketing)</li>
+        </ul>
     </div>
+
+    <div class="section">
+
+        <h2>About the project(s)</h2>
+                        <h3>Creating and updating ccessible, standards-compliant websites adhering <br>to WC3 guidelines and email campaigns
+                            using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.</h3>
+                            <p>Europa Science is a renowned publishing company specialising in delivering cutting-edge
+                                content through a diverse range of magazines. <br>Their publications cover a wide array of
+                                scientific and technological topics, providing industry insights, research developments, and
+                                expert perspectives.</p>
+                            <p>Europa Science Ltd, part of the Europa Science Group, commenced trading in 2003 with the
+                                acquisition of Electro Optics and Scientific Computing World. <br>The company subsequently
+                                launched several spin-out titles, beginning with Research Information (sold in 2024) and
+                                Imaging and Machine Vision Europe in late 2003, <br>followed by Laser Systems Europe in 2008
+                                (merged into Electro Optics in 2024), coinciding with the inaugural Lasys event.</p>
+                            <p>In 2009, Europa Science acquired Optics and Laser Europe from the Institute of Physics
+                                Publishing, leading to an expansion of Electro Optics to ten issues per year. <br>As part of the
+                                same transaction, Fibre Systems was also acquired and subsequently relaunched in 2013.</p>
+                            <img style="width:500px; height:auto;" src="./images/europascience/europascience-1.png"
+                                alt="Europa Science publishing company website"
+                                title="Europa Science publishing company website">
+                            <p class="label-text">Europa Science publishing company website</p>
+                            <p class="label-text">
+                                Source image: <a href="https://www.europascience.com"
+                                    title="Visit Europa Science publishing company website">Europa Science</a>
+                            </p>
+    
+                            <p>Today, Europa Science’s services extend beyond publishing into community building and
+                                marketing services across photonics, <br>imaging, scientific computing, and optical communications.</p>
+                            <p>During my time at Europa Science, I worked on their websites using Drupal and PHP, handled
+                                email campaigns, and primarily performed <br>web design tasks, with some graphic design work
+                                focused on email campaigns, expert blogs, and thought leadership articles. </p>
+    
+    
+                            <img style="width:500px; height:auto;" src="./images/europascience/europascience-applications.png"
+                                alt="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress."
+                                title="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress to develop and maintain websites, as well as to create and manage email campaigns.">
+                            <p class="label-text">Applications utilised at Europa Science: Drupal, PHP, HTML, CSS,
+                                JavaScript, and WordPress <br>to develop and maintain websites, as well as to create and manage
+                                email campaigns.</p>
+                            <p class="label-text">
+                                Source images: <a href="https://www.europascience.com"
+                                    title="Visit Europa Science publishing company website">Europa Science</a>, <a
+                                    href="https://en.m.wikipedia.org" alt="Wikimedia Foundation"
+                                    title="Wikimedia Foundation, a nonprofit organisation that hosts and supports some of the world’s largest collaborative knowledge projects, including Wikipedia, Wikidata, Wikimedia Commons, and other free knowledge initiatives.">Wikipedia</a>
+                            </p>
+    
+                            <img style="width:500px; height:auto;" src="./images/europascience/europascience-2.png"
+                                alt="Europa Science publishing company website"
+                                title="Europa Science publishing company website">
+                            <p class="label-text">Europa Science publishing company website</p>
+                            <p class="label-text">
+                                Source image: <a href="https://www.europascience.com"
+                                    title="Visit Europa Science publishing company website">Europa Science</a>
+                            </p>
+                            <p>I created accessible, standards-compliant websites adhering to WC3 guidelines <br>and developed
+                                email campaigns and websites using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.</p>
+    
+                            <img style="width:500px; height:auto;" src="./images/europascience/europascience-3.png"
+                                alt="Europa Science publishing company website"
+                                title="Europa Science publishing company website">
+                            <p class="label-text">Europa Science publishing company website and some of the magazines they
+                                produce</p>
+                            <p class="label-text">
+                                Source image: <a href="https://www.europascience.com"
+                                    title="Visit Europa Science publishing company website">Europa Science</a>
+                            </p>
+    </div>
+
+
+
+    <a href="./case-studies.html">← Back to case studies</a>
+
 </body>
 
 </html>

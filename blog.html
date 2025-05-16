@@ -1,80 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-
-<head>
+  <head>
+    <meta charset="UTF-8" />
     <title>Estela Gaspar - UX User Experience Design</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estela-gaspar-ux.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estela-gaspar-ux.css" />
     <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-       <nav>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul class="menu">
-                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./WhatI'mupto.html">💫 What I'm up to?</a></li>
-                <li><a href="./case-studies.html">Case Studies</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./links.html">Links</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./WhatI'mupto.html">💫 What I'm up to?</a></li>
+          <li><a href="./case-studies.html">Case Studies</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./links.html">Links</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div class="main-content">
-            <h1>Blog</h1>
+      <div class="main-content">
+        <h1>Blog</h1>
 
-            <!-- Case Studies -->
-            <div class="container">
-                <div class="card-case-studies one">
-                    <div class="card-content">
-                        <div>
-                                 <h3>Creative lab</h3>
-                                 <p>Using AI in my daily UX practice with data visualisation and sentiment analysis.</p>
-                                 <p><a class="read-more-btn"
-                                        href="./blog-articles/creative-lab.html">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-group">
+          <div class="container">
+            <!-- Each case study card -->
+            <div class="card-case-studies">
+              <div class="card-content">
+                <h3>Forest Guard</h3>
+                <p>Forest Guard: forest fire defense</p>
+                <p>
+                  <a
+                    class="read-more-btn"
+                    href="./blog-articles/forest-fire-protector.html"
+                    >Read more</a
+                  >
+                </p>
+              </div>
             </div>
 
-
-            <div class="container">
-                <div class="card-case-studies three">
-                    <div class="card-content">
-                        <div>
-                                <h3>DrawWilder soulful design</h3>
-                            </a>
-                            <p>Personal collection of hand-crafted home décor, bespoke fabrics, and story-rich
-                                    pieces.</p>
-                                      <p><a class="read-more-btn"
-                                        href="./blog-articles/drawwilder.html">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="card-case-studies">
+              <div class="card-content">
+                <h3>Philosophy & Spirituality</h3>
+                <p>
+                  A space with deep questions
+                </p>
+                <p>
+                  <a class="read-more-btn" href="./blog-articles/blog-page.html"
+                    >Read more</a
+                  >
+                </p>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="footer-banner">
-            <footer>
-                Website coded by Estela Gaspar
-            </footer>
+          <div class="container">
+            <div class="card-case-studies">
+              <div class="card-content">
+                <h3>ElectroFlow Circuit</h3>
+                <p>
+                  Energy circuit
+                </p>
+                <p>
+                  <a
+                    class="read-more-btn"
+                    href="./blog-articles/living-electric-roadway.html"
+                    >Read more</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card-case-studies">
+              <div class="card-content">
+                <h3>DrawWilder interior design</h3>
+                <p>
+                  Hand-crafted home décor
+                </p>
+                <p>
+                  <a
+                    class="read-more-btn"
+                    href="./blog-articles/drawwilder.html"
+                    >Read more</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="footer-banner">
+        <footer>Website coded by Estela Gaspar</footer>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

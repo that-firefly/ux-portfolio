@@ -1,161 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
 
 <head>
-    <title>Estela Gaspar - UX User Experience Design</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estela-gaspar-ux.css">
-    <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #fefefe;
+            line-height: 1.6;
+            color: #222;
+        }
 
+        h1,
+        h2,
+        h3 {
+            color: #444;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        .contact,
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            margin-top: 1.5rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav>
-            <span class="logo">Estela UX Design</span>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul class="menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./WhatI'mupto.html">💫 What I'm up to?</a></li>
-                <li><a href="./case-studies.html">Case Studies</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./links.html">Links</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li>
-                    <a href="https://www.linkedin.com/in/estela-gaspar-that-firefly/" target="_blank"
-                        aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
+    <h1>DEFRA projects</h1>
+    <h3>
+        <ul>
+            <li>
+                <strong>Client:</strong>
+            </li>
+            <li>DEFRA</li>
+            <li>
+                <strong>Project(s):</strong>
+            </li>
+            <li> Extended Producer Responsibility for Packaging (EPR) and Packaging Recovery Notes
+                (PRN) and Materials Facilities.</li>
+            <li><strong>Role:</strong></li>
+            <li>Mostly user interface designer and user experience designer. Some user
+                research and service design.</li>
+        </ul>
+    </h3>
 
-        <div class="main-content">
-            <h1>DEFRA projects</h1>
-            <div class="port-page-internal">
-                <div class="text-content">
-                    <div class="labels">
-                        <span class="badge mustard-idea">User Interface (UI)</span>
-                        <span class="badge green-idea">User Experience (UX)</span>
-                        <span class="badge earth-idea">User Research (UR)</span>
-                        <span class="badge sky-idea">Service Design</span>
-                    </div>
-                    <div class="projectinfo">
-                        <ul>
-                            <li>
-                                <strong>Client:</strong>
-                            </li>
-                            <li>DEFRA</li>
-                            <li>
-                                <strong>Project(s):</strong>
-                            </li>
-                            <li> Extended Producer Responsibility for Packaging (EPR) and Packaging Recovery Notes
-                                (PRN) and Materials Facilities.</li>
-                            <li><strong>Role:</strong></li>
-                            <li>Mostly user interface designer and user experience designer. Some user
-                                research and service design.</li>
-                        </ul>
-                    </div>
-                    <div class="projectcontent">
-                        <h2>About the project(s)</h2>
-                        <h3>The Extended Producer Responsibility (EPR) is a regulatory
-                            framework that holds producers accountable for the environmental impact of their packaging
-                            throughout its lifecycle. It incentivises sustainable packaging design, waste
-                            reduction, and improved recycling processes by holding producers responsible for the amount
-                            and type of packaging they introduce into the market.</h3>
 
-                        <img src="./images/packaging-defra.png" alt="Image about the DEFRA EPR service with key stages"
-                            title="DEFRA EPR service">
-                        <p class="label-text">Source images: <a
-                                href="https://assets.publishing.service.gov.uk/media/5a78c38c40f0b62b22cbc9c2/pb13189-full-packaging-strategy-090624.pdf"
-                                title="DEFRA - Making the most of packaging">DEFRA - Making the most of packaging</a>
-                        </p>
-                        <p>Packaging Recovery Notes (PRNs) are evidence-based certificates that businesses
-                            can purchase to prove compliance with packaging recycling obligations, ensuring that a
-                            corresponding amount of packaging waste is recycled. Materials Facilities play a crucial
-                            role in the recycling chain by sorting, processing, and supplying recyclable materials to
-                            manufacturers, promoting a circular economy and reducing landfill waste. Together, these
-                            systems drive responsible waste management and sustainability in the packaging industry.
-                        </p>
-                        <p>I began these projects, as always, by gaining a deep understanding of both the business and
-                            user needs, as
-                            well as the specific problems to be solved. I drew upon existing research and collaborated
-                            with stakeholders, while also taking the initiative to apply my user research skills.
-                            Drawing
-                            from my previous experience, I conducted a lean, quick self-discovery study to identify key
-                            areas of focus.</p>
-                        <p>To structure my insights, I created my own lean UX canvas, user task maps, user diaries, and
-                            empathy maps. Additionally, I developed discovery user flows and journey maps to pinpoint
-                            critical micro-moments in the user experience.</p>
-                        <p>Created user flow diagrams, empathy maps, user flows with page patterns as per UK Government
-                            Digital Service (GDS) Design System, updated online prototypes using the GOV.UK Prototype
-                            Kit, GitHub repository
-                            and code (nunjucks).</p>
-                        <img src="./images/ux/as-is-mapping-example.jpg" alt="Image of UX deliverables"
-                            title="An image collection of some of the UX deliverables created">
-                        <p>My goal was to identify the real users of the service, empathise with their daily
-                            experiences,
-                            and refine the experience to better meet their needs. Mostly I aimed at serving producers
-                            and regulators.</p>
-                        <img src="./images/ux/user-interface-scope.jpg"
-                            alt="Image of the users, producers and regulators."
-                            title="Image of the main users, producers and regulators.">
-                        <img src="./images/ux/as-is-mapping-example-2.jpg"
-                            alt="Image about the users, mostly producers and regulators"
-                            title="An image of the type of users such as producers and regulators">
-                        <p>Conducted user experience research on platforms such as PowerBI and GOV.UK web pages web
-                            applications to understand producers and regulators' behaviour, main objectives, and tasks.
-                        </p>
-                        <p>I also created user task diagrams and data maps to provide me with a clear visualisation of
-                            data
-                            flow and its interconnections with user objectives and tasks, ensuring better alignment and
-                            understanding. I have used artificial intelligence from Eviden’s internal platform to assist
-                            me with this task.</p>
-                        <img src="./images/ux/applications-defra.png" alt="PowerBI and GDS UX flows diagrams"
-                            title="Tools that I have used in DEFRA. PowerBI and GDS UX flows diagrams">
-                        <img src="./images/ux/data-mapping.jpg" alt="Data map example"
-                            title="An example of a data map created">
-                        <p class="label-text">Source images: <a
-                                href="https://www.figma.com/community/file/1190408343174633432/govuk-design-system-flow-diagrams"
-                                title="Figma community GDS flow page patterns diagrams">GDS flow diagrams - Figma
-                                community - MHCLG and Paul
-                                Smith</a>, <a href="https://en.wikipedia.org/wiki/Microsoft_Power_BI"
-                                title="Wikipedia PowerBI logo">Wikipedia PowerBI logo</a>, DEFRA CSV file data mapping.
-                        </p>
-                        <p>I analysed previous documentation, user interviews, and workshops to identify user emotions,
-                            challenges, and opportunities for improvement across platforms and standards. My focus was
-                            on enhancing the overall user experience by creating a seamless and holistic journey,
-                            aligning with an omnichannel objective.</p>
+<!-- Therac-25 -->
 
-                        <img src="./images/ux/user-flows.jpg" alt="Image of prototype user flows"
-                            title="An image of the EPR prototype user flows">
+    <div class="section">
+        <h2>About the project(s)</h2>
+        <h3>The Extended Producer Responsibility (EPR) is a regulatory
+            framework that holds producers accountable<br> for the environmental impact of their packaging
+            throughout its lifecycle. It incentivises sustainable packaging design, <br>waste
+            reduction, and improved recycling processes by holding producers responsible for the amount
+            and type of packaging they introduce into the market.</h3>
 
-                       
-                        <div class="highlighted-link">
-                                <a href="case-studies.html">Read more case studies</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-banner">
-            <footer>
-                Website coded by Estela Gaspar
-            </footer>
-        </div>
-    </div>
+        <img  style="width: 500px; height: auto;" src="./images/packaging-defra.png" alt="Image about the DEFRA EPR service with key stages"
+            title="DEFRA EPR service">
+        <p class="label-text">Source images: <a
+                href="https://assets.publishing.service.gov.uk/media/5a78c38c40f0b62b22cbc9c2/pb13189-full-packaging-strategy-090624.pdf"
+                title="DEFRA - Making the most of packaging">DEFRA - Making the most of packaging</a>
+        </p>
+        <p>Packaging Recovery Notes (PRNs) are evidence-based certificates that businesses
+            can purchase to prove compliance with packaging recycling obligations, <br>ensuring that a
+            corresponding amount of packaging waste is recycled. Materials Facilities play a crucial
+            role in the recycling chain by sorting, processing, <br>and supplying recyclable materials to
+            manufacturers, promoting a circular economy and reducing landfill waste. <br>Together, these
+            systems drive responsible waste management and sustainability in the packaging industry.
+        </p>
+        <p>I began these projects, as always, by gaining a deep understanding of both the business and
+            user needs, as well as the specific problems to be solved. <br>I drew upon existing research and collaborated
+            with stakeholders, while also taking the initiative to apply my user research skills.<br>
+            Drawing from my previous experience, I conducted a lean, quick self-discovery study to identify key
+            areas of focus.</p>
+        <p>To structure my insights, I created my own lean UX canvas, user task maps, user diaries, and
+            empathy maps. <br>Additionally, I developed discovery user flows and journey maps to pinpoint
+            critical micro-moments in the user experience.</p>
+        <p>Created user flow diagrams, empathy maps, user flows with page patterns as per UK Government
+            Digital Service (GDS) Design System, <br>updated online prototypes using the GOV.UK Prototype
+            Kit, GitHub repository
+            and code (nunjucks).</p>
+        <img  style="width: 500px; height: auto;" src="./images/ux/as-is-mapping-example.jpg" alt="Image of UX deliverables"
+            title="An image collection of some of the UX deliverables created">
+        <p>My goal was to identify the real users of the service, empathise with their daily
+            experiences, and refine the experience to better meet their needs. <br>Mostly I aimed at serving producers
+            and regulators.</p>
+        <img  style="width: 500px; height: auto;" src="./images/ux/user-interface-scope.jpg"
+            alt="Image of the users, producers and regulators."
+            title="Image of the main users, producers and regulators.">
+        <img  style="width: 500px; height: auto;" src="./images/ux/as-is-mapping-example-2.jpg"
+            alt="Image about the users, mostly producers and regulators"
+            title="An image of the type of users such as producers and regulators">
+        <p>Conducted user experience research on platforms such as PowerBI and GOV.UK web pages web
+            applications to understand producers and regulators' behaviour, main objectives, and tasks.
+        </p>
+        <p>I also created user task diagrams and data maps to provide me with a clear visualisation of
+            data flow and its interconnections with user objectives and tasks, ensuring better alignment<br> and
+            understanding. I have used artificial intelligence from Eviden’s internal platform to assist
+            me with this task.</p>
+        <img  style="width: 500px; height: auto;" src="./images/ux/applications-defra.png" alt="PowerBI and GDS UX flows diagrams"
+            title="Tools that I have used in DEFRA. PowerBI and GDS UX flows diagrams">
+        <img  style="width: 500px; height: auto;" src="./images/ux/data-mapping.jpg" alt="Data map example"
+            title="An example of a data map created">
+        <p class="label-text">Source images: <a
+                href="https://www.figma.com/community/file/1190408343174633432/govuk-design-system-flow-diagrams"
+                title="Figma community GDS flow page patterns diagrams">GDS flow diagrams - Figma
+                community - MHCLG and Paul
+                Smith</a>, <a href="https://en.wikipedia.org/wiki/Microsoft_Power_BI"
+                title="Wikipedia PowerBI logo">Wikipedia PowerBI logo</a>, DEFRA CSV file data mapping.
+        </p>
+        <p>I analysed previous documentation, user interviews, and workshops to identify user emotions,
+            challenges, and opportunities for improvement <br>across platforms and standards. My focus was
+            on enhancing the overall user experience by creating a seamless and holistic journey,
+            aligning with an omnichannel objective.</p>
+
+        <img  style="width: 700px; height: auto;" src="./images/ux/user-flows.jpg" alt="Image of prototype user flows"
+            title="An image of the EPR prototype user flows">
+      </div>
+
+    <a href="./case-studies.html">← Back to case studies</a>
+
 </body>
 
 </html>
