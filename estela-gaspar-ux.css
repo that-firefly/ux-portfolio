@@ -2063,6 +2063,13 @@ div.projectcontent > .label-text {
     margin: 0 auto;
   }
 
+  .container-group {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
   .cover-alternate-content.wider {
     background-image: url("./images/banner-ux-estela.png");
     background-repeat: no-repeat;
@@ -2104,6 +2111,17 @@ div.projectcontent > .label-text {
 }
 
 /*************************************************************************** Desktops only sizes end ****************************************************************************/
+/* 💻 Desktops & Tablets (1264.67px - 3608px) */
+
+@media screen and (width: 1264.67px) and (height: 3608px) {
+ .container-group {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+}
+
 
 /* 💻 Desktops & Tablets (1024px - 1499px) */
 
@@ -2148,6 +2166,13 @@ div.projectcontent > .label-text {
   nav .menu li {
     margin: 10px 0;
   }
+
+  .container-group {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    margin: 0 auto;
+}
 }
 
 /* === Responsive: Medium+ Tablets and Desktop === */
