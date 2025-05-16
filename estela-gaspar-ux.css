@@ -149,9 +149,8 @@ nav .menu {
 }
 
 nav .menu li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  padding: 8px 12px;
   transition: background-color 0.3s ease;
 }
 
