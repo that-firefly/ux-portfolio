@@ -152,6 +152,7 @@ nav .menu li a {
   color: #ffffff;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  padding: 20px 20px;
 }
 
 nav .menu li a:hover {
@@ -692,8 +693,7 @@ ol {
 
 li {
   position: relative;
-  padding-left: 60px;
-  margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 .list-clean li {
