@@ -2550,8 +2550,9 @@ div.projectcontent > .label-text {
     width: 90%;
   }
 
-  .port-page-internal.drawwilder h3 {
-    font-size: 1em;
+
+    .port-page-internal.drawwilder h3 {
+    font-size: 1.5em;
   }
 
   .port-page-internal.drawwilder p {
