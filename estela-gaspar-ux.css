@@ -2435,12 +2435,12 @@ div.projectcontent > .label-text {
   border: 1px solid #b2a8ba;
   padding: 30px;
   border-radius: 10px;
-  background-image: url('../images/drawwilder/your-background.jpg'); /* change to your image path */
+  background-image: url('../images/drawwilder/fabric-2.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.85); /* fallback color with slight opacity */
-  background-blend-mode: lighten; /* softens the image behind */
+  background-color: rgba(255, 255, 255, 0.85);
+  background-blend-mode: lighten;
   }
 
   .drawwilder-text-intro li {
