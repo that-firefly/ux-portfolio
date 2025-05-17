@@ -2210,10 +2210,18 @@ div.projectcontent > .label-text {
     width: 100%;
   }
 
-  .drawwilder-text-intro {
-    margin: 30px auto;
-    width: 70%;
-  }
+      .drawwilder-text-intro.specs {
+        margin: 30px auto;
+        padding: 30px;
+        width: 75%;
+        background-image: url(../images/drawwilder/fabric-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.85);
+        background-blend-mode: lighten;
+        border-radius: 10px;
+    }
 }
 
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
@@ -2429,19 +2437,18 @@ div.projectcontent > .label-text {
     padding: 0px;
   }
 
-  .drawwilder-text-intro.specs {
-  width: 75%;
-  margin: 30px auto;
-  border: 1px solid #b2a8ba;
-  padding: 30px;
-  border-radius: 10px;
-  background-image: url('../images/drawwilder/fabric-2.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.85);
-  background-blend-mode: lighten;
-  }
+    .drawwilder-text-intro.specs {
+        margin: 30px auto;
+        padding: 30px;
+        width: 75%;
+        background-image: url(../images/drawwilder/fabric-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.85);
+        background-blend-mode: lighten;
+        border-radius: 10px;
+    }
 
   .drawwilder-text-intro li {
     font-size: 1em;
@@ -2535,10 +2542,6 @@ div.projectcontent > .label-text {
   .blog-content {
     width: 100%;
     padding: 0px;
-  }
-
-  .drawwilder-text-intro.specs {
-    width: 1000%;
   }
 
   .slider-overlay {
