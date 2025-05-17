@@ -368,12 +368,19 @@ iframe {
 }
 
 .drawwilder-text-intro.specs {
-    width: 75%;
-    margin: 30px auto;
-    border: 1px solid #3d155f;
-    padding: 30px;
-    border-radius: 10px;
+  width: 75%;
+  margin: 30px auto;
+  border: 1px solid #3d155f;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url('../images/drawwilder/fabric-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.85); 
+  background-blend-mode: lighten;
 }
+
 
 .strawberry-idea {
   background-color: #ffc0cb;
