@@ -1044,10 +1044,6 @@ art-gallery {
   text-align: center;
 }
 
-.art-item {
-  width: 100%;
-  margin-bottom: 20px;
-}
 
 .art-item img {
   width: 100%;
@@ -1092,40 +1088,14 @@ art-gallery {
   box-sizing: border-box;
 }
 
-.art-item {
-  flex: 1 1 calc(33% - 20px);
-  height: 550px;
-  overflow: hidden;
-  padding: 10px;
-}
 
-.art-item {
-  height: 350px;
-}
+
 
 .art-item img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-.art-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.art-item img {
-  width: 100%;
-  max-width: 90%;
-  height: auto;
-  display: block;
-}
-
-  .art-item {
-    flex: 1 1 300px;
-    max-width: 350px;
-  }
 
 .art-gallery {
   display: block !important;
@@ -1142,19 +1112,6 @@ art-gallery {
   text-align: center;
 }
 
-.art-item {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.art-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-
 
 .drawwilder-gallery {
   display: flex;
@@ -1165,22 +1122,9 @@ art-gallery {
 
 
 
-
-
-
-.art-item h3 {
-  margin: 10px 0 5px;
-  font-size: 2.1em;
-}
-
-.port-page-internal.drawwilder h3 {
-  font-weight: 600;
-  font-size: 1.8em;
-}
-
 .port-page-internal.drawwilder p {
   color: #171417;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .slider-overlay {
