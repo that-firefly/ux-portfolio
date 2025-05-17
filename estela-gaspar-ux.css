@@ -1067,6 +1067,106 @@ art-gallery {
 }
 
 
+.art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+
+.drawwilder-item-container {
+  width: 100%;
+  margin: 30px auto;
+  padding: 60px 30px;
+  max-width: 700px;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #3a0d5d;
+  box-sizing: border-box;
+}
+
+.art-item {
+  flex: 1 1 calc(33% - 20px);
+  height: 550px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.art-item {
+  height: 350px;
+}
+
+.art-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-item img {
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+  .art-item {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+
+.art-gallery {
+  display: block !important;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.drawwilder-item-container {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  display: block;
+  text-align: center;
+}
+
+.art-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.art-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+
+.drawwilder-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+
+
 
 .art-item h3 {
   margin: 10px 0 5px;
