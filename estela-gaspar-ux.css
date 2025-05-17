@@ -2430,8 +2430,17 @@ div.projectcontent > .label-text {
   }
 
   .drawwilder-text-intro.specs {
-    width: 80%;
-    padding: 10px;
+  width: 75%;
+  margin: 30px auto;
+  border: 1px solid #b2a8ba;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url('../images/drawwilder/your-background.jpg'); /* change to your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.85); /* fallback color with slight opacity */
+  background-blend-mode: lighten; /* softens the image behind */
   }
 
   .drawwilder-text-intro li {
