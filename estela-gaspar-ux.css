@@ -343,24 +343,26 @@ iframe {
 }
 
 /* Video end */
+
+
 .drawwilder-text-intro li {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between icon and text */
+  gap: 10px;
   list-style: none;
   font-size: 1.2em;
   color: #171417;
   margin-bottom: 10px;
+  text-align: left; /* override global centering */
 }
 
 .drawwilder-text-intro li img {
-  width: 30px; /* or your preferred icon size */
+  width: 30px;
   height: auto;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
+  display: inline-block; /* ensure it doesn't break layout */
+  margin: 0;
+  padding: 0;
 }
-
 
 #drawwilder-logo {
   width: 22%;
