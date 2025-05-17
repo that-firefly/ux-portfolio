@@ -343,13 +343,12 @@ iframe {
 }
 
 /* Video end */
-
 .drawwilder-text-intro li {
   display: flex;
   align-items: center;
   gap: 10px; /* space between icon and text */
   list-style: none;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #171417;
   margin-bottom: 10px;
 }
@@ -367,19 +366,6 @@ iframe {
   width: 22%;
 }
 
-.drawwilder-text-intro.specs {
-  width: 75%;
-  margin: 30px auto;
-  border: 1px solid #3d155f;
-  padding: 30px;
-  border-radius: 10px;
-  background-image: url('../images/drawwilder/fabric-2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.85); 
-  background-blend-mode: lighten;
-}
 
 
 .strawberry-idea {
