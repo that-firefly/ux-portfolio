@@ -1097,13 +1097,6 @@ art-gallery {
   display: block;
 }
 
-.art-gallery {
-  display: block !important;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .drawwilder-item-container {
   margin: 40px auto;
   width: 90%;
@@ -2213,7 +2206,7 @@ div.projectcontent > .label-text {
   }
 
   .drawwilder-item-container {
-    max-width: 800px;
+    max-width: 500px;
   }
 
   nav .hamburger {
