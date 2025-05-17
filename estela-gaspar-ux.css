@@ -1271,16 +1271,20 @@ html {
 }
 
 .card-case-studies {
-  margin: 0px 40px 40px 40px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 30px;
   height: 500px;
   border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.4s ease-in-out, transform 0.2s ease,
-    box-shadow 0.3s ease;
+  box-shadow 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ffffff;
+  
 }
 
 .card-case-studies.one:hover {
@@ -1748,6 +1752,19 @@ div.projectcontent > .label-text {
   .projectcontent p {
     text-align: center;
   }
+
+  .drawwilder-text-intro.specs {
+        margin: 30px auto;
+        padding: 30px;
+        width: 75%;
+        background-image: url(../images/drawwilder/fabric-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.85);
+        background-blend-mode: lighten;
+        border-radius: 10px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1803,6 +1820,19 @@ div.projectcontent > .label-text {
     background-position: calc(50% + 400px) calc(-52px);
     min-height: 350px;
   }
+
+  .drawwilder-text-intro.specs {
+        margin: 30px auto;
+        padding: 30px;
+        width: 75%;
+        background-image: url(../images/drawwilder/fabric-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.85);
+        background-blend-mode: lighten;
+        border-radius: 10px;
+    }
 }
 
 @media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
@@ -1897,9 +1927,6 @@ div.projectcontent > .label-text {
 
 /* Smaller aroun 1000px */
 
-.card-case-studies {
-  padding: 0px 120px;
-}
 
 @media (min-width: 997px) {
   img,
@@ -2178,13 +2205,6 @@ div.projectcontent > .label-text {
 
 /* === Responsive: Medium+ Tablets and Desktop === */
 @media screen and (min-width: 961px) {
-  .card-case-studies {
-    padding: 0px 120px;
-    max-width: 600px;
-    margin: 0 auto;
-    margin: 0px 90px 90px 0px;
-  }
-
   nav .menu {
     display: flex !important;
   }
