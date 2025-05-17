@@ -1754,6 +1754,14 @@ div.projectcontent > .label-text {
     text-align: center;
   }
 
+  .cover-alternate-content.wider {
+    background-image: url(./images/banner-ux-estela.png);
+    background-repeat: no-repeat;
+    background-position: calc(55% + 0px) calc(0px);
+    min-height: 360px;
+    background-size: 50%;
+}
+
   .drawwilder-text-intro.specs {
         margin: 30px auto;
         padding: 30px;
@@ -1816,11 +1824,13 @@ div.projectcontent > .label-text {
     width: 95%;
   }
 
-  .cover-alternate-content.wider {
-    background-size: 73%;
-    background-position: calc(50% + 400px) calc(-52px);
-    min-height: 350px;
-  }
+.cover-alternate-content.wider {
+    background-image: url(./images/banner-ux-estela.png);
+    background-repeat: no-repeat;
+    background-position: calc(55% + 0px) calc(0px);
+    min-height: 360px;
+    background-size: 50%;
+}
 
   .drawwilder-text-intro.specs {
         margin: 30px auto;
