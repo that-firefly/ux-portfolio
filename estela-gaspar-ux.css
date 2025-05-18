@@ -73,6 +73,7 @@ header p {
 }
 
 .card img {
+  margin-bottom: 20px;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -1013,8 +1014,8 @@ svg {
 }
 
 .main-content.drawwilder p {
-  color: #3d155f;
-  text-align: center;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .blog-content.drawwilder {
@@ -1103,8 +1104,9 @@ art-gallery {
 
 
 .port-page-internal.drawwilder p {
-  color: #171417;
-  font-size: 1em;
+    color: #171417;
+    font-size: 1em;
+    padding-bottom: 20px;
 }
 
 .slider-overlay {
@@ -1160,7 +1162,8 @@ art-gallery {
 }
 
 .main-content.drawwilder h2 {
-  font-size: 2.5em;
+    font-size: 2.5em;
+    font-weight: 400;
 }
 
 .main-content.drawwilder h2.plain {
