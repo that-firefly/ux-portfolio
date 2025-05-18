@@ -1172,7 +1172,11 @@ art-gallery {
 }
 
 .main-content.drawwilder h2 {
-  font-size: 2em;
+  font-size: 2.5em;
+}
+
+.main-content.drawwilder h2.plain {
+  font-family: "Poppins", serif;
 }
 
 
