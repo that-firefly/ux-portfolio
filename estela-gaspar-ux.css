@@ -1001,12 +1001,12 @@ svg {
 }
 
 .main-content.drawwilder h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
 }
 .main-content.drawwilder h2 {
-  font-size: 2em;
+  font-size: 2.5em;
+  font-family: 'Cormorant Garamond', serif;
   padding: 10px 0px;
   margin: 0px;
   text-align: center;
