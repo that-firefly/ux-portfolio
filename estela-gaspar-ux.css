@@ -661,7 +661,7 @@ h3,
 p,
 ul li,
 ol li {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 400;
 }
 
@@ -1037,19 +1037,13 @@ art-gallery {
 
 .drawwilder-item-container {
   margin: 40px auto;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   display: block;
   text-align: center;
 }
 
 
-.art-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
 
 .drawwilder-item-container h2,
 .drawwilder-item-container h3,
@@ -1072,17 +1066,12 @@ art-gallery {
 
 
 .drawwilder-item-container {
-  width: 100%;
-  margin: 30px auto;
-  padding: 60px 30px;
-  max-width: 700px;
   height: auto;
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  text-align: center;
   color: #3a0d5d;
   box-sizing: border-box;
 }
@@ -1098,8 +1087,7 @@ art-gallery {
 
 .drawwilder-item-container {
   margin: 40px auto;
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
   display: block;
   text-align: center;
 }
