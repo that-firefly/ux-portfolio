@@ -345,7 +345,6 @@ iframe {
 
 /* Video end */
 
-
 .drawwilder-text-intro li {
   display: flex;
   align-items: center;
@@ -365,11 +364,28 @@ iframe {
   padding: 0;
 }
 
+.avatar-text-intro li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  font-size: 1.2em;
+  color: #171417;
+  margin-bottom: 10px;
+  text-align: left; /* override global centering */
+}
+
+.avatar-text-intro li img {
+  width: 30px;
+  height: auto;
+  display: inline-block; /* ensure it doesn't break layout */
+  margin: 0;
+  padding: 0;
+}
+
 #drawwilder-logo {
   width: 22%;
 }
-
-
 
 .strawberry-idea {
   background-color: #ffc0cb;
@@ -1007,15 +1023,15 @@ svg {
 }
 .main-content.drawwilder h2 {
   font-size: 2.5em;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   padding: 10px 0px;
   margin: 0px;
   text-align: center;
 }
 
 .main-content.drawwilder p {
-    text-align: center;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .blog-content.drawwilder {
@@ -1035,7 +1051,6 @@ art-gallery {
   padding: 0;
 }
 
-
 .drawwilder-item-container {
   margin: 40px auto;
   width: 100%;
@@ -1043,8 +1058,6 @@ art-gallery {
   display: block;
   text-align: center;
 }
-
-
 
 .drawwilder-item-container h2,
 .drawwilder-item-container h3,
@@ -1056,13 +1069,11 @@ art-gallery {
   color: #2a282b !important;
 }
 
-
 .art-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-
 
 .drawwilder-item-container {
   height: auto;
@@ -1074,9 +1085,6 @@ art-gallery {
   color: #3a0d5d;
   box-sizing: border-box;
 }
-
-
-
 
 .art-item img {
   width: 100%;
@@ -1091,7 +1099,6 @@ art-gallery {
   text-align: center;
 }
 
-
 .drawwilder-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -1099,12 +1106,10 @@ art-gallery {
   gap: 20px;
 }
 
-
-
 .port-page-internal.drawwilder p {
-    color: #171417;
-    font-size: 1em;
-    padding-bottom: 20px;
+  color: #171417;
+  font-size: 1em;
+  padding-bottom: 20px;
 }
 
 .slider-overlay {
@@ -1160,15 +1165,13 @@ art-gallery {
 }
 
 .main-content.drawwilder h2 {
-    font-size: 2.5em;
-    font-weight: 400;
+  font-size: 2.5em;
+  font-weight: 400;
 }
 
 .main-content.drawwilder h2.plain {
   font-family: "Poppins", serif;
 }
-
-
 
 .back-to-gallery {
   text-align: center;
@@ -1275,10 +1278,9 @@ html {
   cursor: pointer;
   text-decoration: none;
   transition: background 0.4s ease-in-out, transform 0.2s ease,
-  box-shadow 0.3s ease;
+    box-shadow 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ffffff;
-  
 }
 
 .card-case-studies.one:hover {
@@ -1753,20 +1755,33 @@ div.projectcontent > .label-text {
     background-position: calc(55% + 0px) calc(0px);
     min-height: 360px;
     background-size: 50%;
-}
+  }
 
   .drawwilder-text-intro.specs {
-        margin: 30px auto;
-        padding: 30px;
-        width: 75%;
-        background-image: url(../images/drawwilder/fabric-2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.85);
-        background-blend-mode: lighten;
-        border-radius: 10px;
-    }
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/fabric-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
+
+  .avatar-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url("/images/drawwilder/avatar-flowers/avatar-flowers-detail-horiz.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1817,26 +1832,39 @@ div.projectcontent > .label-text {
     width: 95%;
   }
 
-.cover-alternate-content.wider {
+  .cover-alternate-content.wider {
     background-image: url(./images/banner-ux-estela.png);
     background-repeat: no-repeat;
     background-position: calc(55% + 0px) calc(0px);
     min-height: 360px;
     background-size: 50%;
-}
+  }
 
   .drawwilder-text-intro.specs {
-        margin: 30px auto;
-        padding: 30px;
-        width: 75%;
-        background-image: url(../images/drawwilder/fabric-2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.85);
-        background-blend-mode: lighten;
-        border-radius: 10px;
-    }
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/fabric-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
+
+  .avatar-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/avatar-flowers/avatar-flowers-detail-horiz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
 }
 
 @media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
@@ -1930,7 +1958,6 @@ div.projectcontent > .label-text {
 }
 
 /* Smaller aroun 1000px */
-
 
 @media (min-width: 997px) {
   img,
@@ -2100,7 +2127,7 @@ div.projectcontent > .label-text {
     overflow: auto;
     width: 100%;
     margin: 0 auto;
-}
+  }
 
   .cover-alternate-content.wider {
     background-image: url("./images/banner-ux-estela.png");
@@ -2146,14 +2173,13 @@ div.projectcontent > .label-text {
 /* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
 @media screen and (width: 1264.67px) and (height: 3608px) {
- .container-group {
+  .container-group {
     display: block;
     overflow: auto;
     width: 100%;
     margin: 0 auto;
+  }
 }
-}
-
 
 /* 💻 Desktops & Tablets (1024px - 1499px) */
 
@@ -2204,7 +2230,7 @@ div.projectcontent > .label-text {
     overflow: auto;
     width: 100%;
     margin: 0 auto;
-}
+  }
 }
 
 /* === Responsive: Medium+ Tablets and Desktop === */
@@ -2234,18 +2260,31 @@ div.projectcontent > .label-text {
     width: 100%;
   }
 
-      .drawwilder-text-intro.specs {
-        margin: 30px auto;
-        padding: 30px;
-        width: 75%;
-        background-image: url(../images/drawwilder/fabric-2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.85);
-        background-blend-mode: lighten;
-        border-radius: 10px;
-    }
+  .drawwilder-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/fabric-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
+
+  .avatar-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/avatar-flowers/avatar-flowers-detail-horiz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
 }
 
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
@@ -2269,6 +2308,11 @@ div.projectcontent > .label-text {
   }
 
   .drawwilder-text-intro {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .avatar-text-intro {
     width: 70%;
     margin: 0 auto;
   }
@@ -2334,6 +2378,11 @@ div.projectcontent > .label-text {
     margin: 60px auto;
   }
 
+  .avatar-text-intro {
+    width: 70%;
+    margin: 60px auto;
+  }
+
   .display-title {
     margin: 0 auto !important;
   }
@@ -2364,11 +2413,11 @@ div.projectcontent > .label-text {
     margin: 0px 90px 0px 0px;
   }
 
-     h1.landingpage-title {
-        font-size: 4em !important;
-        font-weight: 900;
-        margin-top: 250px;
-    }
+  h1.landingpage-title {
+    font-size: 4em !important;
+    font-weight: 900;
+    margin-top: 250px;
+  }
 
   .background-slider {
     height: 400px;
@@ -2462,21 +2511,40 @@ div.projectcontent > .label-text {
     padding: 0px;
   }
 
-    .drawwilder-text-intro.specs {
-        margin: 30px auto;
-        padding: 30px;
-        width: 75%;
-        background-image: url(../images/drawwilder/fabric-2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.85);
-        background-blend-mode: lighten;
-        border-radius: 10px;
-    }
+  .drawwilder-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/fabric-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
+
+  .avatar-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/avatar-flowers/avatar-flowers-detail-horiz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
 
   .drawwilder-text-intro li {
     font-size: 1em;
+    text-align: center;
+  }
+
+  .avatar-text-intro li {
+    font-size: 1em;
+    text-align: center;
   }
 
   .text-only-wider h2 {
@@ -2490,10 +2558,6 @@ div.projectcontent > .label-text {
 
   .card-case-studies {
     height: auto;
-  }
-
-  .drawwilder-text-intro li {
-    text-align: center;
   }
 
   .background-slider {
@@ -2573,8 +2637,7 @@ div.projectcontent > .label-text {
     width: 90%;
   }
 
-
-    .port-page-internal.drawwilder h3 {
+  .port-page-internal.drawwilder h3 {
     font-size: 1.5em;
   }
 
@@ -2647,8 +2710,6 @@ div.projectcontent > .label-text {
     gap: 2rem;
     justify-content: center;
   }
-
-
 
   .image-container > img {
     height: 200px !important;
