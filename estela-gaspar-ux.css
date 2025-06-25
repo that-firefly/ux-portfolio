@@ -189,6 +189,10 @@ a:link {
   color: #ffffff;
 }
 
+.reference {
+  font-size: 0.9em;
+}
+
 a,
 a:active {
   color: #ffffff;
