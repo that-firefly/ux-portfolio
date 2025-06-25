@@ -2298,9 +2298,13 @@ div.projectcontent > .label-text {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(58, 13, 93, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
     background-blend-mode: lighten;
     border-radius: 10px;
+  }
+
+  .avatar-text-intro.specs.floral-reverie h2 {
+    color: #3a0d5d;
   }
 }
 
