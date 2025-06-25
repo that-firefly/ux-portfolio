@@ -2133,7 +2133,7 @@ div.projectcontent > .label-text {
     background-image: url("./images/banner-ux-estela.png");
     background-repeat: no-repeat;
     background-position: calc(65% + 300px) calc(-55px);
-    min-height: 600px;
+    min-height: 0px;
     background-size: 50%;
   }
 
