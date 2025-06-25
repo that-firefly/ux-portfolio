@@ -2289,6 +2289,19 @@ div.projectcontent > .label-text {
     background-blend-mode: lighten;
     border-radius: 10px;
   }
+
+  .avatar-text-intro.specs.floral-reverie {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/flower-reverie/banner-floral-reverie-detail-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
 }
 
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
