@@ -201,9 +201,9 @@ a:hover {
 }
 
 .highlighted-link {
-  width: 30%;
+  width: 40%;
   margin: 30px auto;
-  padding: 0.6em 1.2em;
+  padding: 1em;
   color: #fff;
   background-color: #9b59b6;
   border-radius: 8px;
@@ -660,7 +660,6 @@ p {
 h1 {
   font-size: 5em;
   font-weight: 700;
-  padding: 30px 0px 0px 0px;
 }
 
 h2 {
@@ -2135,7 +2134,7 @@ div.projectcontent > .label-text {
     background-repeat: no-repeat;
     background-position: calc(65% + 300px) calc(-55px);
     min-height: 600px;
-    background-size: 65%;
+    background-size: 50%;
   }
 
   .text-only-wider {
@@ -2144,7 +2143,7 @@ div.projectcontent > .label-text {
   }
 
   h1 {
-    font-size: 4.5em;
+    font-size: 3em;
   }
 
   img,
