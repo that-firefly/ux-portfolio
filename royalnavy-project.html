@@ -2,308 +2,322 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estela Gaspar – UX/UI Designer CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background-color: #fefefe;
-            line-height: 1.6;
-            color: #222;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estela Gaspar – UX/UI Designer CV</title>
+  <style>
+    :root{
+      --container-max: 1120px;
+      --pad: clamp(16px,3vw,32px);
+      --radius: 10px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background-color:#fefefe;
+      line-height:1.6;
+      color:#222;
+    }
+    .container{
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 24px var(--pad) 64px;
+    }
 
-        h1,
-        h2,
-        h3 {
-            color: #444;
-        }
+    h1,h2,h3{color:#444; margin:1.2em 0 .5em}
+    h1{font-size:2em; border-bottom:2px solid #eee; padding-bottom:.5rem}
+    h2{margin-top:2rem}
+    ul{padding-left:1.2rem; margin:.6em 0 1.2em}
+    p{margin:.6em 0}
 
-        h1 {
-            font-size: 2em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
+    .section{margin-bottom:2rem}
 
-        h2 {
-            margin-top: 2rem;
-        }
+    .section-title{font-size:1.2em; margin-top:1.5rem; font-weight:bold}
+    .highlight{font-weight:bold; color:#555}
 
-        ul {
-            padding-left: 1.2rem;
-        }
+    /* Phase labels */
+    .case-section{
+      font-size:1.25rem;
+      background:#222; color:#fff;
+      padding:.4em .8em;
+      border-radius:6px;
+      margin-top:2em;
+      display:inline-block;
+    }
 
-        .contact,
-        .section {
-            margin-bottom: 2rem;
-        }
+    /* Media helpers */
+    img{max-width:100%; height:auto; display:block}
+    .img-lg{max-width:1100px; height: auto; margin: 40px 0px;}
+    .img-md{max-width:720px}
+    .img-sm{max-width:500px}
+    .center{margin-inline:auto}
 
-        .section-title {
-            font-size: 1.2em;
-            margin-top: 1.5rem;
-            font-weight: bold;
-        }
+    /* Gallery for runs of images */
+    .media-grid{display:grid; gap:16px; grid-template-columns: repeat(2, minmax(0,1fr))}
+    @media (min-width: 1200px){
+      .media-grid{grid-template-columns: repeat(3, minmax(0,1fr))}
+    }
+    @media (max-width: 900px){
+      .media-grid{grid-template-columns: 1fr}
+    }
 
-        .highlight {
-            font-weight: bold;
-            color: #555;
-        }
-    </style>
+    /* Tidy long URLs on narrow screens */
+    a, p, li{overflow-wrap:anywhere}
+
+    /* Optional: soften manual <br> on larger screens */
+    @media (min-width: 992px){ br{display:none} }
+  </style>
 </head>
 
 <body>
-    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-        <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
-        <h1>Royal Navy - Enhancing the Defence Learning Environment (DLE).</h1>
-        <h3>Client:</h3>
-        <p>Royal Navy</p>
-        <h3>Project(s):</h3>
-        <ul>
-            <li>Enhancing the Defence Learning Environment (DLE).</li>
-        </ul>
-        <h3>Role:</h3>
-        <ul>
-            <li>User researcher and user experience designer.</li>
-            <li>Some user interface design.</li>
-        </ul>
+  <main class="container">
+
+    <!-- Header / Overview -->
+  <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
+      <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
     </div>
-  
 
-
-<!-- Therac-25 -->
+    
+    <img style="width:400px; height:auto;" src="./images/royal-navy-thumb.jpg" alt="RoyalNavy logo"
+      title="Royal Navy logo.">
+      
+      <h1>Royal Navy - Enhancing the Defence Learning Environment (DLE).</h1>
 
     <div class="section">
-        <h2>About the project(s)</h2>
-        <h3>Enhancing the Defence Learning Environment (DLE), the Royal Navy’s e-learning platform, to
-            improve training accessibility, <br>flexibility, and effectiveness—ensuring cadets receive
-            solid, upfront training that accelerates their preparation for further offline instruction.</h3>
 
-        <p>The <strong>Defence Learning Environment (DLE)</strong> is the Royal Navy’s (and broader UK
-            Defence) E-Learning platform, designed to enhance training accessibility, flexibility, and
-            effectiveness.</p>
-        <h3>What did my UX and UI practice look like?</h3>
-        <p>We conducted reserach to understand who were our main users and what problems their were
-            facing relatively to the access of e-learning.</p>
-        <p>We discovered that personnel at various stages of their careers (recruits, active service
-            members, and those transitioning to civilian life) access the e-learning platform. <br>To ensure
-            comprehensive insights, we engaged with a wide range of stakeholders, from recruits to
-            officers.</p>
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-2.png"
-            alt="Images of training sessions and marching drills."
-            title="Images of officers and recruits during training sessions and marching drills.">
-        <p class="label-text">Images of officers and recruits during training sessions and marching
-            drills.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <br><a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>, <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
-        <p>Research and workshops were conducted to identify the main challenges and explore potential
-            solutions to improve platform accessibility.<br> We performed research on the use of the RN
-            eLearning platform (DLE), its current and potential users, their habits, emotions and
-            frustrations. <br>We then prototyped changes and improvements that were tested in different
-            sprints alongside an implementation culture program to change the mindset and facilitate
-            adoption.</p>
-        <p>Following a bespoke Design Thinking method to accomodate the hierarchy nature of the military
-            life, we served primarily a critical number of users, tested <br>and iterated on solution
-            hypothesis by involving the client at each stage on presentation of findings sessions and
-            workshops.</p>
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-3.png" alt="UX workshops"
-            title="UX workshops and findings exercise.">
-        <p class="label-text">UX workshops and findings exercise.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>, <br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
+      <h3>Client:</h3>
+      <p>Royal Navy</p>
 
-        <p>During this initial research phase, I visited various Royal Navy establishments throughout
-            the country, such as BRNC Dartmouth, HMS Collingwood,<br> CTCRM Lympstone and HMS Raleigh, and
-            facilitated workshops to assess the platform's current state. Conducted
-            as-is evaluations with recruits and trainers to identify key areas for improvement.</p>
+      <h3>Project(s):</h3>
+      <ul>
+        <li>Enhancing the Defence Learning Environment (DLE).</li>
+      </ul>
 
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-4.png" alt="On-site meetings"
-            title="On-site Royal Navy stakeholder meetings">
+      <h3>Role:</h3>
+      <ul>
+        <li>User researcher and user experience designer.</li>
+        <li>Some user interface design.</li>
+      </ul>
+    </div>
 
-        <p class="label-text">UX workshops and findings exercise.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>,<br> <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
+    <div class="section">
+      <h2>About the project(s)</h2>
+      <h3>Enhancing the Defence Learning Environment (DLE), the Royal Navy’s e-learning platform, to
+        improve training accessibility, <br>flexibility, and effectiveness—ensuring cadets receive
+        solid, upfront training that accelerates their preparation for further offline instruction.</h3>
 
-        <p>We created several deliverables such as business process mapping,<br> impact maps and risk
-            assessments, ecosystem maps, stakeholder maps, persona and empathy mapping, user journeys,
-            user flows, different flowcharts, <br>reports with key findings and advisory solutions based on
-            solid problem solving and UX hypothesis. We also created living prototypes using the legacy
-            user flows, different flowcharts, <br>reports with key findings and advisory solutions based on
-            system that we tested throughout the project and a custom-made design system.</p>
+      <p>The <strong>Defence Learning Environment (DLE)</strong> is the Royal Navy’s (and broader UK
+        Defence) E-Learning platform, designed to enhance training accessibility, flexibility, and
+        effectiveness.</p>
 
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-5.png" alt="DLE courses"
-            title="DLE (Defence Learning Environment) website courses page">
-        <p class="label-text">DLE (Defence Learning Environment) website courses page.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>,<br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
+      <h3>What did my UX and UI practice look like?</h3>
+      <p>We conducted reserach to understand who were our main users and what problems their were
+        facing relatively to the access of e-learning.</p>
+      <p>We discovered that personnel at various stages of their careers (recruits, active service
+        members, and those transitioning to civilian life) access the e-learning platform. <br>To ensure
+        comprehensive insights, we engaged with a wide range of stakeholders, from recruits to
+        officers.</p>
 
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-6.png" alt="DLE user journey."
-            title="Example of the DLE user journey.">
-        <p class="label-text">Example of the DLE user journey.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>, <br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-7.png" alt="On-site UX workshops."
-            title="Example of on-site UX workshops.">
-        <p class="label-text">Example of on-site UX workshops.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>, <br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
-        <p>We made service design recommendations to improve access to e-learning by scoping personas,
-            tasks and goals; mapping user journeys, <br>conducting workshops and interviews face-to-face and
-            remote (using Teams) from different RN establisments, <br>and by trying to understand current
-            challenges. We also collaborated with the RN key stakeholders to change the culture,
-            consolidate and incorporate <br>a more agile mindset so we could have effective adoption to the
-            e-learning platform.</p>
-         <img style="width:500px;  height: auto;" src="./images/royalnavy-project-8.png" alt="Royal Navy establishments."
-            title="Royal Navy establishments. BRNC Dartmouth, HMS Collingwood, CTCRM Lympstone and HMS Raleigh.">
+      <img class="img-lg center"  src="./images/royalnavy-project-2.png"
+           alt="Images of training sessions and marching drills."
+           title="Images of officers and recruits during training sessions and marching drills.">
+      <p class="label-text">Images of officers and recruits during training sessions and marching
+        drills.</p>
+      <p class="label-text">Source images: <a
+          href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+          alt="GP Strategies website"
+          title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
+          href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+          alt="Naval Technology website"
+          title="The leading site for news and procurement in the naval defence industry website">
+          www.naval-technology.com</a>,
+        <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
+          title="The Royal Navy website">royalnavy.mod.uk</a>, <br><a href="https://www.hsdc.ac.uk"
+          alt="HSDC website"
+          title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
+          href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
+          (unsplash.com)</a>, <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
+          Mourichon
+          (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
+          Reyes (unsplash.com)</a>.
+      </p>
+    </div>
 
-        <p class="label-text">Royal Navy establishments. BRNC Dartmouth, HMS Collingwood, CTCRM
-            Lympstone and HMS Raleigh.</p>
-        <p class="label-text">Source images: <a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="GP Strategies website"
-                title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-                href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-                alt="Naval Technology website"
-                title="The leading site for news and procurement in the naval defence industry website">
-                www.naval-technology.com</a>,
-            <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-                title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-                alt="HSDC website"
-                title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-                href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-                (unsplash.com)</a>, <br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-                Mourichon
-                (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-                Reyes (unsplash.com)</a>.
-        </p>
-        <p>We identified and addressed several areas for improvement, including:</p>
-        <ol>
-            <p><strong>Enhanced accessibility:</strong></p>
-            <ul>
-                <li>Mobile optimisation. Necessary seamless access across devices, including smartphones
-                    and tablets, for learning on the go.</li>
-                <li>Offline mode. The need for downloadable content for remote operations with limited
-                    internet connectivity such as in ships.</li>
-                <li>Single sign-On (SSO). Easier login integration with MoD systems.</li>
-                <li>User-friendly interface. Simplified navigation for quick access to courses and
-                    materials.</li>
-                <li>Adaptive learning paths that could also incentivise further learning and critical
-                    thought. Customisable courses based on role, experience, and prior knowledge.</li>
+    <!-- Phase 1: Discovery / Research -->
+    <h2 class="case-section">1 - Discovery & Research</h2>
+    <p>Research and workshops were conducted to identify the main challenges and explore potential
+      solutions to improve platform accessibility.<br> We performed research on the use of the RN
+      eLearning platform (DLE), its current and potential users, their habits, emotions and
+      frustrations. <br>We then prototyped changes and improvements that were tested in different
+      sprints alongside an implementation culture program to change the mindset and facilitate
+      adoption.</p>
 
-                <p><strong>Agile military training:</strong></p>
+    <p>Following a bespoke Design Thinking method to accomodate the hierarchy nature of the military
+      life, we served primarily a critical number of users, tested <br>and iterated on solution
+      hypothesis by involving the client at each stage on presentation of findings sessions and
+      workshops.</p>
 
-                <li>Microlearning modules. Short, focused lessons for rapid skill development.</li>
-                <li>Scenario-based simulations and up-front recommended learning. Interactive case study
-                    exercises and recommended <br>learning paths designed to prepare recruits for potential
-                    future situations.</li>
+    <img class="img-lg center" src="./images/royalnavy-project-3.png" alt="UX workshops"
+         title="UX workshops and findings exercise.">
+    <p class="label-text">UX workshops and findings exercise.</p>
+    <p class="label-text">Source images: <a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="GP Strategies website"
+        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="Naval Technology website"
+        title="The leading site for news and procurement in the naval defence industry website">
+        www.naval-technology.com</a>,
+      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
+        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
+        alt="HSDC website"
+        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
+        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
+        (unsplash.com)</a>, <br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
+        Mourichon
+        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
+        Reyes (unsplash.com)</a>.
+    </p>
 
-                <p><strong>Improved collaboration & engagement:</strong></p>
-                <li>Gamification. Leaderboards, badges, and challenges to boost engagement.</li>
-                <li>Peer learning & forums. Encourage knowledge-sharing and discussions.</li>
-                <li>Cross-branch learning. Standardised training across the Royal Navy, Army, and RAF.
-                </li>
-            </ul>
-        </ol>
-      </div>
+    <p>During this initial research phase, I visited various Royal Navy establishments throughout
+      the country, such as BRNC Dartmouth, HMS Collingwood,<br> CTCRM Lympstone and HMS Raleigh, and
+      facilitated workshops to assess the platform's current state. Conducted
+      as-is evaluations with recruits and trainers to identify key areas for improvement.</p>
+
+    <img class="img-lg center"  src="./images/royalnavy-project-4.png" alt="On-site meetings"
+         title="On-site Royal Navy stakeholder meetings">
+    <p class="label-text">UX workshops and findings exercise.</p>
+    <p class="label-text">Source images: <a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="GP Strategies website"
+        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="Naval Technology website"
+        title="The leading site for news and procurement in the naval defence industry website">
+        www.naval-technology.com</a>,
+      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
+        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
+        alt="HSDC website"
+        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
+        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
+        (unsplash.com)</a>,<br> <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
+        Mourichon
+        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
+        Reyes (unsplash.com)</a>.
+    </p>
+
+    <!-- Phase 2: Synthesis / Definition -->
+    <h2 class="case-section">2 - Synthesis & Definition</h2>
+    <p>We created several deliverables such as business process mapping,<br> impact maps and risk
+      assessments, ecosystem maps, stakeholder maps, persona and empathy mapping, user journeys,
+      user flows, different flowcharts, <br>reports with key findings and advisory solutions based on
+      solid problem solving and UX hypothesis. We also created living prototypes using the legacy
+      user flows, different flowcharts, <br>reports with key findings and advisory solutions based on
+      system that we tested throughout the project and a custom-made design system.</p>
+
+
+    <img class="img-lg center" src="./images/royalnavy-project-6.png" alt="DLE user journey."
+           title="Example of the DLE user journey.">
+    <img class="img-lg center" src="./images/royalnavy-project-7.png" alt="On-site UX workshops."
+           title="Example of on-site UX workshops.">
+    <img class="img-lg center" src="./images/royalnavy-project-5.png" alt="DLE courses"
+           title="DLE (Defence Learning Environment) website courses page">
+
+    
+
+
+    <p class="label-text">DLE assets and examples.</p>
+    <p class="label-text">Source images: <a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="GP Strategies website"
+        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="Naval Technology website"
+        title="The leading site for news and procurement in the naval defence industry website">
+        www.naval-technology.com</a>,
+      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
+        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
+        alt="HSDC website"
+        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
+        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
+        (unsplash.com)</a>,<br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
+        Mourichon
+        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
+        Reyes (unsplash.com)</a>.
+    </p>
+
+    <!-- Phase 3: Ideation / Service Design -->
+    <h2 class="case-section">3 - Ideation & Service Design</h2>
+    <p>We made service design recommendations to improve access to e-learning by scoping personas,
+      tasks and goals; mapping user journeys, <br>conducting workshops and interviews face-to-face and
+      remote (using Teams) from different RN establisments, <br>and by trying to understand current
+      challenges. We also collaborated with the RN key stakeholders to change the culture,
+      consolidate and incorporate <br>a more agile mindset so we could have effective adoption to the
+      e-learning platform.</p>
+
+    <img class="img-lg center"  src="./images/royalnavy-project-8.png" alt="Royal Navy establishments."
+         title="Royal Navy establishments. BRNC Dartmouth, HMS Collingwood, CTCRM Lympstone and HMS Raleigh.">
+    <p class="label-text">Royal Navy establishments. BRNC Dartmouth, HMS Collingwood, CTCRM
+      Lympstone and HMS Raleigh.</p>
+    <p class="label-text">Source images: <a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="GP Strategies website"
+        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
+        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
+        alt="Naval Technology website"
+        title="The leading site for news and procurement in the naval defence industry website">
+        www.naval-technology.com</a>,
+      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
+        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
+        alt="HSDC website"
+        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
+        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
+        (unsplash.com)</a>, <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
+        Mourichon
+        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
+        Reyes (unsplash.com)</a>.
+    </p>
+
+    <!-- Phase 4: Prototyping & Testing -->
+    <h2 class="case-section">4 - Prototyping & Testing</h2>
+    <p>We identified and addressed several areas for improvement, including:</p>
+    <ol>
+      <p><strong>Enhanced accessibility:</strong></p>
+      <ul>
+        <li>Mobile optimisation. Necessary seamless access across devices, including smartphones
+          and tablets, for learning on the go.</li>
+        <li>Offline mode. The need for downloadable content for remote operations with limited
+          internet connectivity such as in ships.</li>
+        <li>Single sign-On (SSO). Easier login integration with MoD systems.</li>
+        <li>User-friendly interface. Simplified navigation for quick access to courses and
+          materials.</li>
+        <li>Adaptive learning paths that could also incentivise further learning and critical
+          thought. Customisable courses based on role, experience, and prior knowledge.</li>
+
+        <p><strong>Agile military training:</strong></p>
+
+        <li>Microlearning modules. Short, focused lessons for rapid skill development.</li>
+        <li>Scenario-based simulations and up-front recommended learning. Interactive case study
+          exercises and recommended <br>learning paths designed to prepare recruits for potential
+          future situations.</li>
+
+        <p><strong>Improved collaboration & engagement:</strong></p>
+        <li>Gamification. Leaderboards, badges, and challenges to boost engagement.</li>
+        <li>Peer learning & forums. Encourage knowledge-sharing and discussions.</li>
+        <li>Cross-branch learning. Standardised training across the Royal Navy, Army, and RAF.
+        </li>
+      </ul>
+    </ol>
+
+    <!-- Phase 5: Adoption, Handover & Next Steps -->
+    <h2 class="case-section">5 - Adoption, Handover & Next Steps</h2>
+    <p>We then prototyped changes and improvements that were tested in different
+      sprints alongside an implementation culture program to change the mindset and facilitate
+      adoption.</p>
 
     <a href="./case-studies.html">← Back to case studies</a>
 
+  </main>
 </body>
-
 </html>

@@ -259,8 +259,17 @@
       overflow-wrap: anywhere;
     }
 
-    .media-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    @media (max-width: 960px) { .media-grid { grid-template-columns: 1fr; } }
+    .media-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 960px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
 
     /* dampen excessive <br> on large screens */
@@ -294,66 +303,97 @@
     }
 
     /* --- Mobile & small tablets --- */
-@media (max-width: 960px) {
-  body { margin: 0; }
-  .container { padding: 20px 16px 56px; }
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1.05rem; }
+    @media (max-width: 960px) {
+      body {
+        margin: 0;
+      }
+
+      .container {
+        padding: 20px 16px 56px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.05rem;
+      }
 
 
-  @media (max-width: 768px) {
-  .img-xl, .img-lg { max-width: 100%; } /* scale to screen */
-}
+      @media (max-width: 768px) {
 
-  /* Make grids stack to 1 column on phones */
-  .pain-points,
-  .outcomes,
-  .media-grid,
-  .role {
-    display: grid;
-    grid-template-columns: 1fr !important;
-    gap: 12px;
-  }
+        .img-xl,
+        .img-lg {
+          max-width: 100%;
+        }
 
-  .role {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
+        /* scale to screen */
+      }
+
+      /* Make grids stack to 1 column on phones */
+      .pain-points,
+      .outcomes,
+      .media-grid,
+      .role {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+      }
+
+      .role {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
 
 
-  /* Make cards comfy for thumbs */
-  .card,
-  .outcomes-card {
-    padding: 14px;
-    border-radius: 10px;
-    font-size: 0.98rem;
-    line-height: 1.45;
-  }
+      /* Make cards comfy for thumbs */
+      .card,
+      .outcomes-card {
+        padding: 14px;
+        border-radius: 10px;
+        font-size: 0.98rem;
+        line-height: 1.45;
+      }
 
-  /* Prevent horizontal scroll from long words/URLs */
-  p, li, a { overflow-wrap: anywhere; word-break: break-word; }
+      /* Prevent horizontal scroll from long words/URLs */
+      p,
+      li,
+      a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
 
-  /* Kill manual line breaks that crowd small screens */
-  br { display: none; }
-}
+      /* Kill manual line breaks that crowd small screens */
+      br {
+        display: none;
+      }
+    }
 
-/* Modest tablets (2 columns where possible) */
-@media (min-width: 961px) and (max-width: 1239px) {
-  .pain-points,
-  .outcomes,
-  .media-grid,
-  .role {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-}
+    /* Modest tablets (2 columns where possible) */
+    @media (min-width: 961px) and (max-width: 1239px) {
 
-/* Global image hygiene (helps all sizes) */
-img { max-width: 100%; height: auto; display: block; }
+      .pain-points,
+      .outcomes,
+      .media-grid,
+      .role {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+    }
 
+    /* Global image hygiene (helps all sizes) */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 
@@ -361,8 +401,6 @@ img { max-width: 100%; height: auto; display: block; }
   <main class="container">
     <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
       <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
-
-
     </div>
 
     <img style="width:600px; height:auto;" src="./images/boilerjuice/boilerjuice-logo-horiz.png" alt="BoilerJuice logo"
@@ -533,19 +571,23 @@ img { max-width: 100%; height: auto; display: block; }
       <ul>
         <li>Organised a series of meetings and workshops with stakeholders, customer service teams, product managers,
           <br>and developers to understand both what was working well and what was not, as well as to gain clarity on
-          the <br>new offering - the Connected Service.</li>
+          the <br>new offering - the Connected Service.
+        </li>
         <li>During this process, I used sketches and the Lean Canvas framework to quickly capture current problems,
           <br>business goals, value propositions, and success metrics, with the aim of achieving a market-fit product.
         </li>
         <li>Identified key user groups (including adults over 40 and stay-at-home parents) to map personas and capture
           diverse needs.</li>
         <li>Identified the key problems, opportunities, and challenges, focusing in particular on the main blockers
-          <br>and customer pain points within the journey, as well as patterns in returning-user behaviour.</li>
+          <br>and customer pain points within the journey, as well as patterns in returning-user behaviour.
+        </li>
         <li>Assessed how the new Connected Service might compare with the competition, and whether it could deliver
-          <br>advantages by meeting the underserved needs of users in the current market.</li>
+          <br>advantages by meeting the underserved needs of users in the current market.
+        </li>
       </ul>
 
-      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="Smaply personas" title="Image of Smaply personas created for BoilerJuice.">
+      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="Smaply personas"
+        title="Image of Smaply personas created for BoilerJuice.">
       <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
           alt="Persona tool web application"
           title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
@@ -602,7 +644,8 @@ img { max-width: 100%; height: auto; display: block; }
           stakeholder review, ensuring a shared understanding of functionality and flow.</li>
         <li>Applied consistent iconography and clear, accessible headings to support usability.</li>
         <li>Redesigned the quote form to provide faster, clearer heating-oil quotes, while also enabling the
-          <br>promotion and sale of a heating-oil subscription service.</li>
+          <br>promotion and sale of a heating-oil subscription service.
+        </li>
         <li>Focused on improving the end-to-end purchasing experience for heating oil. I redesigned key pages <br>in the
           checkout journey, including product selection, shopping cart,
           payment, and the final confirmation page, <br>to ensure a smoother, more transparent, and mobile-friendly
