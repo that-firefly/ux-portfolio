@@ -2,415 +2,714 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estela Gaspar – UX/UI Designer CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background-color: #fefefe;
-            line-height: 1.6;
-            color: #222;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estela Gaspar – UX/UI Designer CV</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Layout */
+    :root {
+      --container-max: 1120px;
+      /* sweet spot for laptop/desktop reading */
+      --container-pad: clamp(16px, 3vw, 32px);
+      --card-radius: 10px;
+    }
 
-        h1,
-        h2,
-        h3 {
-            color: #444;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        h1 {
-            font-size: 2em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      /* let container handle side padding */
+      background: #fefefe;
+      color: #222;
+      line-height: 1.6;
+    }
 
-        h2 {
-            margin-top: 2rem;
-        }
+    .container {
+      max-width: 80%;
+      margin-inline: auto;
+      padding: 24px var(--container-pad) 64px;
+    }
 
-        ul {
-            padding-left: 1.2rem;
-        }
+    /* Typography */
+    h1,
+    h2,
+    h3 {
+      color: #444;
+      margin: 1.2em 0 0.5em;
+    }
 
-        .contact,
-        .section {
-            margin-bottom: 2rem;
-        }
+    h1 {
+      font-size: clamp(28px, 2.2vw, 36px);
+      border-bottom: 2px solid #eee;
+      padding-bottom: .4rem;
+    }
 
-        .section-title {
-            font-size: 1.2em;
-            margin-top: 1.5rem;
-            font-weight: bold;
-        }
+    h2 {
+      font-size: clamp(22px, 1.8vw, 28px);
+    }
 
-        .highlight {
-            font-weight: bold;
-            color: #555;
-        }
-        
-        .challenge {
-  font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin: auto;
-}
+    h3 {
+      font-size: clamp(18px, 1.4vw, 22px);
+    }
 
-.challenge h2 {
-   font-family: 'Poppins', sans-serif;
-}
+    p {
+      margin: 0.6em 0;
+    }
 
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.6em 0 1.2em;
+    }
 
-.pain-points {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
+    /* Utility */
+    .muted {
+      color: #666;
+    }
 
-.outcomes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
+    .center {
+      text-align: center;
+    }
 
+    .stack-sm>*+* {
+      margin-top: .5rem;
+    }
 
+    .stack-md>*+* {
+      margin-top: 1rem;
+    }
 
-.outcomes-card {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  background: #D5FFD0;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  line-height: 1.4;
-}
+    .stack-lg>*+* {
+      margin-top: 1.6rem;
+    }
 
-.card {
- font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  background: #fadddb;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  line-height: 1.4;
-}
+    .hr {
+      border-top: 2px solid #eee;
+      margin: 16px 0 24px;
+    }
 
+    /* Responsive images */
+    img,
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
-.case-section {
-  font-size: 2em;
-  background-color: #222;
-  color: #fff;
-  padding: 0.4em 0.8em;
-  border-radius: 6px;
-  margin-top: 2em;
-}
+    .img-xs {
+      max-width: 320px;
+    }
 
+    .img-sm {
+      max-width: 480px;
+    }
 
+    .img-md {
+      max-width: 720px;
+    }
+
+    .img-lg {
+      max-width: 960px;
+    }
+
+    .img-xl {
+      max-width: 1120px;
+    }
 
 
+    .pain-points-card {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      background: #FDE4E3;
+      border: 1px solid #e6e8eb;
+      padding: 1rem;
+      border-radius: var(--card-radius);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+    }
 
-    </style>
+
+    .outcomes-card {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      background: #D5FFD0;
+      border: 1px solid #e6e8eb;
+      padding: 1rem;
+      border-radius: var(--card-radius);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+    }
+
+    .role {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+
+
+    .card {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      background: #f8fafb;
+      border: 1px solid #e6e8eb;
+      padding: 1rem;
+      border-radius: var(--card-radius);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+    }
+
+    .card--accent {
+      background: #fde8e7;
+    }
+
+    .outcomes-card--accent {
+      background: #e7f8e6;
+    }
+
+    .pain-points,
+    .outcomes,
+    .media-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    /* Desktop-friendly columns */
+    .pain-points {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .outcomes {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .media-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Wider desktops get more columns automatically */
+    @media (min-width: 1280px) {
+      .outcomes {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .pain-points {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .media-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    /* Section label */
+    .case-section {
+      font-size: clamp(20px, 1.6vw, 24px);
+      background-color: #222;
+      color: #fff;
+      padding: 0.4em 0.8em;
+      border-radius: 6px;
+      margin-top: 2em;
+    }
+
+    /* Results badges */
+    .results {
+      margin-top: 1.5rem;
+    }
+
+    .badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      padding: 12px 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+
+    .metric {
+      display: block;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .label {
+      display: block;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    /* Make long URLs/labels wrap (prevents overflow on laptops) */
+    a,
+    p,
+    li {
+      overflow-wrap: anywhere;
+    }
+
+    /* Optional: dampen excessive <br> on large screens */
+    @media (min-width: 992px) {
+      br {
+        display: none;
+      }
+
+      /* you can remove many <br> now that layout is responsive */
+    }
+
+    /* Print tweaks (still “ready-print”) */
+    @media print {
+      .case-section {
+        background: #000;
+        color: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .card,
+      .outcomes-card {
+        box-shadow: none;
+      }
+
+      a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        color: #666;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="container">
     <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-        <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
-        
-      
-    </div>
-  
-    <img style="width:600px; height:auto;" src="./images/boilerjuice/boilerjuice-logo-horiz.png" alt="BoilerJuice logo"
-            title="BoilerJuice old logo.">
+      <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
 
-     <h1>BoilerJuice UX Case Study - Heating oil supply</h1>
+
+    </div>
+
+    <img style="width:600px; height:auto;" src="./images/boilerjuice/boilerjuice-logo-horiz.png" alt="BoilerJuice logo"
+      title="BoilerJuice old logo.">
+
+    <h1>BoilerJuice UX Case Study - Heating oil supply</h1>
 
 
     <div class="section">
-        <h2>Overview</h2>
-        <p>BoilerJuice is the UK's leading heating oil supplier, providing a simple, efficient, and
-            cost-effective way for customers to order heating oil. <br>Established in 2004, BoilerJuice
-            revolutionised the industry by offering a price comparison service that allows users to find
-            the best local deals <br>on heating oil.</p>
-        
-        <p>BoilerJuice, founded in 2004, revolutionised the heating oil market by offering a comparison
-            website that helped users save money by finding local, <br>cheaper prices and facilitating oil
-            deliveries. However, as demand grew, the traditional customer journey (relying on phone
-            orders and a basic online form)<br> became outdated and inefficient.</p>
+      <h2>Overview</h2>
+      <p>BoilerJuice is the UK's leading heating oil supplier, providing a simple, efficient, and
+        cost-effective way for customers to order heating oil. <br>Established in 2004, BoilerJuice
+        revolutionised the industry by offering a price comparison service that allows users to find
+        the best local deals <br>on heating oil.</p>
 
-        <p><strong>With its focus on customer satisfaction, BoilerJuice
-            has built a reputation for offering competitive prices, reliable delivery, and a seamless<br>
-            online experience. The company operates through an extensive network of trusted heating oil
-            suppliers, ensuring that customers receive fast <br>and reliable delivery, no matter where they
-            are.</strong></p>
+      <p>BoilerJuice, founded in 2004, revolutionised the heating oil market by offering a comparison
+        website that helped users save money by finding local, <br>cheaper prices and facilitating oil
+        deliveries. However, as demand grew, the traditional customer journey (relying on phone
+        orders and a basic online form)<br> became outdated and inefficient.</p>
 
-        <p><strong>Due to their growing popularity and the seasonal surge in orders during winter, BoilerJuice faced challenges in maintaining customer satisfaction. 
-            <br>A key issue was the lack of a fast, real-time heating oil level monitoring system. Customers often discovered their tank levels were already <br>
-            critically low by the time they placed an order, leaving them without heating, particularly in remote locations such as countryside cottages.
-            <br>On top of that, the ordering process was cumbersome.</strong></p>
-        
-        <p>Customers had to manually search for the best quote, place their order, and then call customer service to confirm and receive delivery updates. 
-                <br>This not only placed significant strain on the customer service team and increased operational costs, but also risked losing clients to competitors, 
-                <br>as many did not want to wait in lengthy call queues.</p>
+      <p><strong>With its focus on customer satisfaction, BoilerJuice
+          has built a reputation for offering competitive prices, reliable delivery, and a seamless<br>
+          online experience. The company operates through an extensive network of trusted heating oil
+          suppliers, ensuring that customers receive fast <br>and reliable delivery, no matter where they
+          are.</strong></p>
 
-        <p>Customers also
-            had to physically check oil levels, which was inconvenient, especially during cold weather.<br>
-            The lack of real-time updates and limited online interaction led to frustration, service
-            abandonment, and loss of potential customers.</p>
+      <p><strong>Due to their growing popularity and the seasonal surge in orders during winter, BoilerJuice faced
+          challenges in maintaining customer satisfaction.
+          <br>A key issue was the lack of a fast, real-time heating oil level monitoring system. Customers often
+          discovered their tank levels were already <br>
+          critically low by the time they placed an order, leaving them without heating, particularly in remote
+          locations such as countryside cottages.
+          <br>On top of that, the ordering process was cumbersome.</strong></p>
 
-              
-  <img style="width:1200px; height:auto;" src="./images/boilerjuice/calling-boilerjuice.png" alt="BoilerJuice challenges"
-            title="BoilerJuice challenges from the old platform.">
+      <p>Customers had to manually search for the best quote, place their order, and then call customer service to
+        confirm and receive delivery updates.
+        <br>This not only placed significant strain on the customer service team and increased operational costs, but
+        also risked losing clients to competitors,
+        <br>as many did not want to wait in lengthy call queues.
+      </p>
 
-        <section class="challenge">
-  <h2>The challenge</h2>
-  <p>
-    Customers needed a fast, friction-free way to understand pricing and options and place a heating-oil order.
-    <br>Many also had to go outside to read their tank gauges, unpleasant in winter and impractical for customers with mobility constraints.<br>
-    <br>The existing website, calculator, and service showed the following issues:
-  </p>
+      <p>Customers also
+        had to physically check oil levels, which was inconvenient, especially during cold weather.<br>
+        The lack of real-time updates and limited online interaction led to frustration, service
+        abandonment, and loss of potential customers.</p>
 
-  <div class="pain-points">
-    <div class="card">Cluttered layout and weak content hierarchy, making key actions hard to find.</div>
-    <div class="card">A long, single-column form that was difficult to access on mobile; critical fields slipped below the fold or under the keyboard.</div>
-    <div class="card">Inconsistent responsive behavior across devices; key tasks (get a quote, order, reorder, track delivery) were unreliable on phones and desktops.</div>
-    <div class="card">Accessibility gaps (contrast, focus states, labels, keyboard navigation, screen-reader support) that made the journey harder for older adults and people with disabilities.</div>
-    <div class="card">Forced account creation before value was demonstrated; no clear guest checkout or clear “save my quote” path.</div>
-    <div class="card">Authentication and account-management problems (login loops, password reset failures, unclear error states).</div>
-    <div class="card">Fragmented end-to-end flow—from quote to checkout to delivery—causing drop-offs, abandoned orders, lower trust in the platform and unnecessary support calls.</div>
-    <div class="card">Limited order status visibility; no proactive notifications, live ETAs, or delivery-window selection.</div>
-    <div class="card">Over-reliance on phone support; no real alternative channels such as email, SMS, or WhatsApp for alerts and updates.</div>
-    <div class="card">Progress not preserved when switching devices; forms sometimes hid fields on small screens.</div>
-  </div>
 
-    <img style="width:1200px; height:auto;" src="./images/boilerjuice/cluttered-website.png" alt="BoilerJuice challenges cluttered website"
-            title="BoilerJuice challenges from the old platform such as cluttered website.">
+      <img class="img-lg" src="./images/boilerjuice/calling-boilerjuice.png" alt="BoilerJuice challenges"
+        title="BoilerJuice challenges from the old platform.">
 
-   <div class="pain-points">
-    <div class="card">No real-time tank-level input or smart gauge integration, increasing the risk of running out in cold weather.</div>
-    <div class="card">Pricing opacity: unclear fees, taxes, minimum order quantities, and postcode-based pricing changes.</div>
-    <div class="card">No budget or payment options (e.g., monthly plans, subscriptions, instalments, or AutoPay).</div>
-    <div class="card">Weak reorder tools: no order history, favourites, or one-tap “repeat last order.”</div>
-    <div class="card">Poor address and service-area validation; users could progress only to learn delivery wasn’t available.</div>
-    <div class="card">Missing delivery preferences (safe-fill limit, access notes, gate codes, pets, parking/driveway constraints).</div>
-    <div class="card">Limited support for multiple tanks, tank-size selection, and safe-capacity calculations.</div>
-    <div class="card">Performance issues on slower rural connections; timeouts during peak demand or severe weather.</div>
-    <div class="card">Trust and compliance signals were missing or buried (safety credentials, insurance, environmental commitments, GDPR/privacy).</div>
-    <div class="card">Inconsistent terminology and units (litres vs. gallons), confusing price and quantity expectations.</div>
-    <div class="card">Content relied on jargon and lacked reassurance, especially for winter or emergency scenarios.</div>
-  </div>
-</section>
-
-  <h2>These issues led to an increase of support calls, abandoned orders, and lower trust in the platform.</h2>
-  
-  <img style="width:1200px; height:auto;" src="./images/boilerjuice/boilerjuice-case-study.png" alt="BoilerJuice challenges"
-            title="BoilerJuice challenges from the old platform, pain points and opportunities.">
-
-        <p class="label-text">Source images: <a
-                href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington
-                Research</a> on <a
-                href="https://unsplash.com/photos/rectangular-brown-wooden-table-kN_kViDchA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-            <a
-                href="https://unsplash.com/@little_klein?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vitolda
-                Klein</a> on <a
-                href="https://unsplash.com/photos/girl-in-white-and-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-shirt-E31OyLefPTs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-            <a
-                href="https://unsplash.com/@kevcostello?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kev
-                Costello</a> on <a
-                href="https://unsplash.com/photos/woman-leaning-on-white-wooden-table-while-holding-black-android-smartphone-w3jVXGkYZCw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>, <a href="https://www.boilerjuice.com/uk"
-                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-                
+      <section class="challenge">
+        <h2>The challenge</h2>
+        <p>
+          Customers needed a fast, friction-free way to understand pricing and options and place a heating-oil order.
+          <br>Many also had to go outside to read their tank gauges, unpleasant in winter and impractical for customers
+          with mobility constraints.<br>
+          <br>The existing website, calculator, and service showed the following issues:
         </p>
 
-        <h2>My role</h2>
-        <img style="width:300px; height:auto;" src="./images/boilerjuice/ux-designer-estela.png" alt="Estela UX Designer"
-            title="Image of Estela UX Designer.">
-        <p>I worked on this project for approximately 18 months, with around 80% ownership.
-            <br>The team included product owners, engineers, customer service specialists, heating oil partners, marketing professionals, and developers,
-            <br>altogether involving around 300 people. We collaborated using platforms such as Confluence and Google Analytics, and designed for web
-            <br>environments optimised for Chrome and Internet Explorer, while also ensuring compatibility with Firefox, Opera, and Safari.</p>
-        <p>Designed and launched a new service that makes buying heating oil as effortless as being connected to a mains supply.
-            <br>This included creating new user journeys, redesigning legacy pages, and building fresh content for the Connected Service 
-            <br>across the company’s public website (www.boilerjuice.com) and mobile app.</p>
-        <ul>
-             <li>UX Designer (Research & Interaction Design).</li>
-            <li>UI Designer (User Interface Design).</li>
-            <li>Conducted user research in collaboration with the Product Owner.</li>
-            <li>Collaborated with Product Owner, Engineers, Customer Service, Heating Oil Companies, Data Analysts, and Developers.</li>
-            <li>Delivered user research insights, ecosystem maps, blueprint canvases, lean canvases, user flows with UX diaries, <br>and information architecture maps in collaboration with Engineers and the Product Owner.</li>
-            <li>Produced wireframes and interactive prototypes with Axure and Figma.</li>
-            <li>Created and maintained a design system with detailed interaction specifications using InVision.</li>
-            <li>Worked with the marketing team to create digital marketing materials.</li>
-        </ul>
+        <div class="pain-points">
+          <div class="pain-points-card">Cluttered layout and weak content hierarchy, making key actions hard to find.
+          </div>
+          <div class="pain-points-card">A long, single-column form that was difficult to access on mobile; critical
+            fields slipped below the fold or under the keyboard.</div>
+          <div class="pain-points-card">Inconsistent responsive behavior across devices; key tasks (get a quote, order,
+            reorder, track delivery) were unreliable on phones and desktops.</div>
+          <div class="pain-points-card">Accessibility gaps (contrast, focus states, labels, keyboard navigation,
+            screen-reader support) that made the journey harder for older adults and people with disabilities.</div>
+          <div class="pain-points-card">Forced account creation before value was demonstrated; no clear guest checkout
+            or clear “save my quote” path.</div>
+          <div class="pain-points-card">Authentication and account-management problems (login loops, password reset
+            failures, unclear error states).</div>
+          <div class="pain-points-card">Fragmented end-to-end flow—from quote to checkout to delivery—causing drop-offs,
+            abandoned orders, lower trust in the platform and unnecessary support calls.</div>
+          <div class="pain-points-card">Limited order status visibility; no proactive notifications, live ETAs, or
+            delivery-window selection.</div>
+          <div class="pain-points-card">Over-reliance on phone support; no real alternative channels such as email, SMS,
+            or WhatsApp for alerts and updates.</div>
+          <div class="pain-points-card">Progress not preserved when switching devices; forms sometimes hid fields on
+            small screens.</div>
+        </div>
 
-<h2>Process &amp; Approach</h2>
-<h2 class="case-section">1 – Business research and discovery</h2>
-<ul>
-        <li>Organised a series of meetings and workshops with stakeholders, customer service teams, product managers, <br>and developers to understand both what was working well and what was not, as well as to gain clarity on the <br>new offering - the Connected Service.</li>
-        <li>During this process, I used sketches and the Lean Canvas framework to quickly capture current problems, <br>business goals, value propositions, and success metrics, with the aim of achieving a market-fit product.</li>
-        <li>Identified key user groups (including adults over 40 and stay-at-home parents) to map personas and capture diverse needs.</li>
-        <li>Identified the key problems, opportunities, and challenges, focusing in particular on the main blockers <br>and customer pain points within the journey, as well as patterns in returning-user behaviour.</li>
-        <li>Assessed how the new Connected Service might compare with the competition, and whether it could deliver <br>advantages by meeting the underserved needs of users in the current market.</li>
-</ul>
-        
-        <img style="width:900px; height:auto; margin-top: 40px;" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="..." title="...">
-        <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
-                alt="Persona tool web application"
-                title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
-        </p>
+        <img class="img-xl" src="./images/boilerjuice/cluttered-website.png"
+          alt="BoilerJuice challenges cluttered website"
+          title="BoilerJuice challenges from the old platform such as cluttered website.">
 
-          <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery.png" alt="UX deliverables"
-            title="Image of UX deliverables such as Lean Canvas, Task Analysis and Empathy Maps.">
-            
-        
-            <img style="width:1000px; height:auto;" src="./images/boilerjuice/user-journey-2.png" alt="UX deliverables - User journey."
-            title="Image of UX deliverables - User journey.">
-        
-        <p><strong>Tasks and deliverables produced during this phase:</strong></p>
-        <ul>
-            <li>Held initial meetings with BoilerJuice stakeholders to gather their perspectives on potential problems and created a Lean Canvas to document and organise insights.</li>
-            <li>Analysed customer feedback and support tickets to identify common pain points and recurring issues.</li>
-            <li>Ran recurring in-depth interviews with at least 10 customers per week over several months, ensuring consistent feedback, ensuring representation from diverse UK regions including East Midlands, West Midlands, Yorkshire and Humber, North West, North East, Wales, Scotland, and Northern Ireland.</li>
-            <li>Reviewed and extracted Google Analytics data to pinpoint drop-off points in the user experience, mapping them into detailed user flows and breaking the journey down into key micro-interactions.</li>
-            <li>Created empathy maps to visualise user needs (pain points and opportunities), emotions, and behaviours at different stages of the journey.</li>
-            <li>Benchmarked competitor experiences to identify best practices and gaps in the market.</li>
-            <li>Mapped ecosystem diagrams to show how the product interacts with other systems and stakeholders.</li>
-            <li>Conducted a comprehensive as-is audit of the current website, mobile experience, and app, supplemented by a detailed competitive analysis.</li>
-            <li>Facilitated a stakeholder workshop to align on goals, define success criteria, and prioritise key problem areas for design and research focus.</li>
-        </ul>
-        <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery-2.png" alt="UX deliverables - Design review"
-            title="Image of UX deliverables - Design review.">
-        <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery-3.png" alt="UX deliverables accessibility checks - A"
-            title="Image of UX deliverables - Accessibility checks - A">
-        <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery-4.png" alt="UX deliverables accessibility checks - B"
-            title="Image of UX deliverables - Accessibility checks - B.">
-        <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery-5.png" alt="UX deliverables accessibility checks - C"
-            title="Image of UX deliverables - Accessibility checks - C.">
-        <img style="width:1000px; height:auto;" src="./images/boilerjuice/information-architecture.png" alt="UX deliverables information architecture"
-            title="Image of UX deliverables - information architecture.">
-        <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery-6.png" alt="UX deliverables user research"
-            title="Image of UX deliverables - user research.">
-         <img style="width:1000px; height:auto;" src="./images/boilerjuice/business-research-and-discovery-7.png" alt="UX deliverables user research data and analytics"
-            title="Image of UX deliverables - user research data and analytics.">
-    
-<h2 class="case-section">2 - Wireframing & Prototyping</h2>
-<ul>
-    <li>Mapped user flows in Draw.io and Sketch, capturing both ‘happy’ and ‘unhappy’ paths to anticipate <br>and address potential issues early in the design process.</li>
-    <li>Created low- to mid-fidelity interactive wireframes in Axure, Sketch, Figma, and Balsamiq <br>for stakeholder review, ensuring a shared understanding of functionality and flow.</li>
-    <li>Applied consistent iconography and clear, accessible headings to support usability.</li>
-    <li>Redesigned the quote form to provide faster, clearer heating-oil quotes, while also enabling the <br>promotion and sale of a heating-oil subscription service.</li>
-    <li>Focused on improving the end-to-end purchasing experience for heating oil. I redesigned key pages <br>in the checkout journey, including product selection, shopping cart,
-        payment, and the final confirmation page, <br>to ensure a smoother, more transparent, and mobile-friendly process.
-        The goal was to reduce friction, increase <br>trust at each step, and provide clear reassurance after purchase.</li>
-    <li>Refined marketing propositions, placing them more strategically on the page and removing visual clutter to improve clarity and focus.</li>
-    <li>Implemented consistent iconography and clear headings.</li>
-    <li>Added an improved search function for faster access to key documents and data.</li>
-</ul>
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/wireframing-prototying-1.png" alt="UX deliverables user flow"
-            title="Image of UX deliverables - user flow.">
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/wireframing-prototying-2.png" alt="UX deliverables wireframes and
+        <div class="pain-points">
+          <div class="pain-points-card">No real-time tank-level input or smart gauge integration, increasing the risk of
+            running out in cold weather.</div>
+          <div class="pain-points-card">Pricing opacity: unclear fees, taxes, minimum order quantities, and
+            postcode-based pricing changes.</div>
+          <div class="pain-points-card">No budget or payment options (e.g., monthly plans, subscriptions, instalments,
+            or AutoPay).</div>
+          <div class="pain-points-card">Weak reorder tools: no order history, favourites, or one-tap “repeat last
+            order.”</div>
+          <div class="pain-points-card">Poor address and service-area validation; users could progress only to learn
+            delivery wasn’t available.</div>
+          <div class="pain-points-card">Missing delivery preferences (safe-fill limit, access notes, gate codes, pets,
+            parking/driveway constraints).</div>
+          <div class="pain-points-card">Limited support for multiple tanks, tank-size selection, and safe-capacity
+            calculations.</div>
+          <div class="pain-points-card">Performance issues on slower rural connections; timeouts during peak demand or
+            severe weather.</div>
+          <div class="pain-points-card">Trust and compliance signals were missing or buried (safety credentials,
+            insurance, environmental commitments, GDPR/privacy).</div>
+          <div class="pain-points-card">Inconsistent terminology and units (litres vs. gallons), confusing price and
+            quantity expectations.</div>
+          <div class="pain-points-card">Content relied on jargon and lacked reassurance, especially for winter or
+            emergency scenarios.</div>
+        </div>
+      </section>
+
+      <h2>These issues led to an increase of support calls, abandoned orders, and lower trust in the platform.</h2>
+
+      <img class="img-xl" src="./images/boilerjuice/boilerjuice-case-study.png" alt="BoilerJuice challenges"
+        title="BoilerJuice challenges from the old platform, pain points and opportunities.">
+
+      <p class="label-text">Source images: <a
+          href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington
+          Research</a> on <a
+          href="https://unsplash.com/photos/rectangular-brown-wooden-table-kN_kViDchA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
+        <a href="https://unsplash.com/@little_klein?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vitolda
+          Klein</a> on <a
+          href="https://unsplash.com/photos/girl-in-white-and-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-shirt-E31OyLefPTs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
+        <a href="https://unsplash.com/@kevcostello?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kev
+          Costello</a> on <a
+          href="https://unsplash.com/photos/woman-leaning-on-white-wooden-table-while-holding-black-android-smartphone-w3jVXGkYZCw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
+        <a href="https://www.boilerjuice.com/uk" alt="BoilerJuice homepage"
+          title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+
+      </p>
+
+      <h2>My role</h2>
+      <img class="img-xs" src="./images/boilerjuice/ux-designer-estela.png" alt="Estela UX Designer"
+        title="Image of Estela UX Designer.">
+      <p>Over ~18 months, I held ~80% UX ownership in a 300-person cross-functional team.
+        <br>We used Confluence, Google Analytics, and optimised the web experience across Chrome, IE, Firefox, Opera,
+        and Safari.
+        <br>The team included product owners, engineers, customer service specialists, heating oil partners, marketing
+        professionals, and developers,
+        <br>altogether involving around 300 people. We collaborated using platforms such as Confluence and Google
+        Analytics, and designed for web
+        <br>environments optimised for Chrome and Internet Explorer, while also ensuring compatibility with Firefox,
+        Opera, and Safari.
+      </p>
+      <p>Designed and launched a new service that makes buying heating oil as effortless as being connected to a mains
+        supply.
+        <br>This included creating new user journeys, redesigning legacy pages, and building fresh content for the
+        Connected Service
+        <br>across the company’s public website (www.boilerjuice.com) and mobile app.
+      </p>
+      <div class="role">
+        <div class="card">UI Designer (User Interface Design).</div>
+        <div class="card">Conducted user research in collaboration with the Product Owner.</div>
+        <div class="card">Collaborated with Product Owner, Engineers, Customer Service, Heating Oil Companies, Data
+          Analysts, and Developers.</div>
+        <div class="card">Delivered user research insights, ecosystem maps, blueprint canvases, lean canvases, user
+          flows with UX diaries, <br>and information architecture maps in collaboration with Engineers and the Product
+          Owner.</div>
+        <div class="card">Produced wireframes and interactive prototypes with Axure and Figma.</div>
+        <div class="card">Created and maintained a design system with detailed interaction specifications using
+          InVision.</div>
+        <div class="card">Worked with the marketing team to create digital marketing materials.</div>
+      </div>
+
+      <h2>Process &amp; Approach</h2>
+      <h2 class="case-section">1 – Business research and discovery</h2>
+      <ul>
+        <li>Organised a series of meetings and workshops with stakeholders, customer service teams, product managers,
+          <br>and developers to understand both what was working well and what was not, as well as to gain clarity on
+          the <br>new offering - the Connected Service.</li>
+        <li>During this process, I used sketches and the Lean Canvas framework to quickly capture current problems,
+          <br>business goals, value propositions, and success metrics, with the aim of achieving a market-fit product.
+        </li>
+        <li>Identified key user groups (including adults over 40 and stay-at-home parents) to map personas and capture
+          diverse needs.</li>
+        <li>Identified the key problems, opportunities, and challenges, focusing in particular on the main blockers
+          <br>and customer pain points within the journey, as well as patterns in returning-user behaviour.</li>
+        <li>Assessed how the new Connected Service might compare with the competition, and whether it could deliver
+          <br>advantages by meeting the underserved needs of users in the current market.</li>
+      </ul>
+
+      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="..." title="...">
+      <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
+          alt="Persona tool web application"
+          title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
+      </p>
+
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery.png" alt="UX deliverables"
+        title="Image of UX deliverables such as Lean Canvas, Task Analysis and Empathy Maps.">
+
+
+      <img class="img-xl" src="./images/boilerjuice/user-journey-2.png" alt="UX deliverables - User journey."
+        title="Image of UX deliverables - User journey.">
+
+      <p><strong>Tasks and deliverables produced during this phase:</strong></p>
+      <ul>
+        <li>Held initial meetings with BoilerJuice stakeholders to gather their perspectives on potential problems and
+          created a Lean Canvas to document and organise insights.</li>
+        <li>Analysed customer feedback and support tickets to identify common pain points and recurring issues.</li>
+        <li>Ran recurring in-depth interviews with at least 10 customers per week over several months, ensuring
+          consistent feedback, ensuring representation from diverse UK regions including East Midlands, West Midlands,
+          Yorkshire and Humber, North West, North East, Wales, Scotland, and Northern Ireland.</li>
+        <li>Reviewed and extracted Google Analytics data to pinpoint drop-off points in the user experience, mapping
+          them into detailed user flows and breaking the journey down into key micro-interactions.</li>
+        <li>Created empathy maps to visualise user needs (pain points and opportunities), emotions, and behaviours at
+          different stages of the journey.</li>
+        <li>Benchmarked competitor experiences to identify best practices and gaps in the market.</li>
+        <li>Mapped ecosystem diagrams to show how the product interacts with other systems and stakeholders.</li>
+        <li>Conducted a comprehensive as-is audit of the current website, mobile experience, and app, supplemented by a
+          detailed competitive analysis.</li>
+        <li>Facilitated a stakeholder workshop to align on goals, define success criteria, and prioritise key problem
+          areas for design and research focus.</li>
+      </ul>
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-2.png"
+        alt="UX deliverables - Design review" title="Image of UX deliverables - Design review.">
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-3.png"
+        alt="UX deliverables accessibility checks - A" title="Image of UX deliverables - Accessibility checks - A">
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-4.png"
+        alt="UX deliverables accessibility checks - B" title="Image of UX deliverables - Accessibility checks - B.">
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-5.png"
+        alt="UX deliverables accessibility checks - C" title="Image of UX deliverables - Accessibility checks - C.">
+      <img class="img-xl" src="./images/boilerjuice/information-architecture.png"
+        alt="UX deliverables information architecture" title="Image of UX deliverables - information architecture.">
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-6.png"
+        alt="UX deliverables user research" title="Image of UX deliverables - user research.">
+      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-7.png"
+        alt="UX deliverables user research data and analytics"
+        title="Image of UX deliverables - user research data and analytics.">
+
+      <h2 class="case-section">2 - Wireframing & Prototyping</h2>
+      <ul>
+        <li>Mapped user flows in Draw.io and Sketch, capturing both ‘happy’ and ‘unhappy’ paths to anticipate <br>and
+          address potential issues early in the design process.</li>
+        <li>Created low- to mid-fidelity interactive wireframes in Axure, Sketch, Figma, and Balsamiq <br>for
+          stakeholder review, ensuring a shared understanding of functionality and flow.</li>
+        <li>Applied consistent iconography and clear, accessible headings to support usability.</li>
+        <li>Redesigned the quote form to provide faster, clearer heating-oil quotes, while also enabling the
+          <br>promotion and sale of a heating-oil subscription service.</li>
+        <li>Focused on improving the end-to-end purchasing experience for heating oil. I redesigned key pages <br>in the
+          checkout journey, including product selection, shopping cart,
+          payment, and the final confirmation page, <br>to ensure a smoother, more transparent, and mobile-friendly
+          process.
+          The goal was to reduce friction, increase <br>trust at each step, and provide clear reassurance after
+          purchase.</li>
+        <li>Refined marketing propositions, placing them more strategically on the page and removing visual clutter to
+          improve clarity and focus.</li>
+        <li>Implemented consistent iconography and clear headings.</li>
+        <li>Added an improved search function for faster access to key documents and data.</li>
+      </ul>
+      <img class="img-xl" src="./images/boilerjuice/wireframing-prototying-1.png" alt="UX deliverables user flow"
+        title="Image of UX deliverables - user flow.">
+      <img class="img-xl" src="./images/boilerjuice/wireframing-prototying-2.png" alt="UX deliverables wireframes and
 prototypes" title="Image of UX deliverables  wireframes and
 prototypes.">
-  
-           <img style="width:900px; height:auto;" src="./images/boilerjuice/boilerjuice-ux-deliverable-4.png" alt="..." title="...">
-        <p class="label-text">BoilerJuice homepage wireframe designed using <a
-                href="https://www.axure.com/" alt="Wireframing tool used by UX/UI designers."
-                title="Powerful wireframing, prototyping, and specification tool used by UX/UI designers.">Axure
-                RP</a>.</p>
-        <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk"
-                alt="BoilerJuice homepage" title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-        </p>
-<h2 class="case-section">3 - Testing & Iteration with live performance and feedback</h2>
 
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/testing-iteration.png" alt="UX deliverables usability testing" title="Image of UX deliverables usability testing.">
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/testing-iteration-2.png" alt="UX deliverables user journey" title="Image of UX deliverables user journey.">
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/testing-iteration-3.png" alt="UX deliverables analytics" title="Image of UX deliverables analytics.">
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/testing-iteration-4.png" alt="UX deliverables acessibility" title="Image of UX deliverables acessibility.">
+      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-4.png" alt="..." title="...">
+      <p class="label-text">BoilerJuice homepage wireframe designed using <a href="https://www.axure.com/"
+          alt="Wireframing tool used by UX/UI designers."
+          title="Powerful wireframing, prototyping, and specification tool used by UX/UI designers.">Axure
+          RP</a>.</p>
+      <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk" alt="BoilerJuice homepage"
+          title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
+      </p>
+      <h2 class="case-section">3 - Testing & Iteration with live performance and feedback</h2>
 
-<h2 class="case-section">4 - Sign-off and handover</h2>
+      <img class="img-xl" src="./images/boilerjuice/testing-iteration.png" alt="UX deliverables usability testing"
+        title="Image of UX deliverables usability testing.">
+      <img class="img-xl" src="./images/boilerjuice/testing-iteration-2.png" alt="UX deliverables user journey"
+        title="Image of UX deliverables user journey.">
+      <img class="img-xl" src="./images/boilerjuice/testing-iteration-3.png" alt="UX deliverables analytics"
+        title="Image of UX deliverables analytics.">
+      <img class="img-xl" style="width:1000px; height:auto;" src="./images/boilerjuice/testing-iteration-4.png"
+        alt="UX deliverables acessibility" title="Image of UX deliverables acessibility.">
 
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/sign-off-handover.png" alt="UX deliverables sign-off" title="Image of UX deliverables sign-off.">
-<img style="width:1000px; height:auto;" src="./images/boilerjuice/sign-off-handover-2.png" alt="UX deliverables handover and QA" title="Image of UX deliverables handover and QA.">
-</ol>
+      <h2 class="case-section">4 - Sign-off and handover</h2>
 
-<h2>Outcome</h2>
-<p>BoilerJuice was a growing oil marketplace, but customers often found the ordering process clunky, price comparisons confusing, and overall trust low. 
-    <br>In winter, heating oil deliveries could take one to two weeks, and many families were left without heating because the time-consuming process of requesting quotes, making payments, and arranging deliveries created delays.</p>
+      <img class="img-xl" src="./images/boilerjuice/sign-off-handover.png" alt="UX deliverables sign-off"
+        title="Image of UX deliverables sign-off.">
+      <img class="img-xl" src="./images/boilerjuice/sign-off-handover-2.png" alt="UX deliverables handover and QA"
+        title="Image of UX deliverables handover and QA.">
+      </ol>
+
+      <h2>Outcome</h2>
+      <p>BoilerJuice was a growing oil marketplace, but customers often found the ordering process clunky, price
+        comparisons confusing, and overall trust low.
+        <br>In winter, heating oil deliveries could take one to two weeks, and many families were left without heating
+        because the time-consuming process of requesting quotes, making payments, and arranging deliveries created
+        delays.
+      </p>
       <ul>
-        <li>Increase in self-serve ordering; CS calls shifted toward proactive follow-ups rather than winter emergencies.</li>
+        <li>Increase in self-serve ordering; CS calls shifted toward proactive follow-ups rather than winter
+          emergencies.</li>
         <li>Faster quote-to-order and clearer delivery expectations, improving perceived reliability.</li>
         <li>Higher repeat usage via alerts and subscription options, strengthening loyalty.</li>
         <li>Operational resilience during peak demand due to earlier reordering and better transparency.</li>
-    </ul>
+      </ul>
 
-    <div class="outcomes">
-    <p>But after UX improvements:</p>
-    <div class="outcomes-card">Simplified the order flow → reduced drop-off.</div>
-    <div class="outcomes-card">Clearer price transparency → increased trust + conversions.</div>
-    <div class="outcomes-card">Seamless uninterrupted journey → allowed customers to have real-time information about heating oil levels within the comfort of their homes.</div>
-    <div class="outcomes-card">Mobile-first redesign → opened up a larger customer segment.</div>
-    <div class="outcomes-card">Personalised journeys (repeat orders, reminders) → boosted retention.</div>
-    <div class="outcomes-card">Redesigned the website to be more accessible and user-friendly → streamlining the customer journey from quote to order.</div>
-    <div class="outcomes-card">Created new quote-generation screens → made pricing clearer and ordering faster, while highlighting potential issues up front, which not only reduced customer stress but also improved the quality of interactions with the support team.</div>
-    <div class="outcomes-card">Collaborated in the creation of a new service, the Connected Service, a subscription-style model that makes buying heating oil feel as effortless as being on mains.  → This subscription-style model transformed the experience of buying heating oil into a seamless process.</div>
-    <div class="outcomes-card">Redesigned client dashboards to integrate data from a new tank device → providing customers with automatic usage readings, alerts, and clear guidelines.</div>
-    <div class="outcomes-card">Omnichannel redesign → consistent, uninterrupted experience across devices and platforms.</div>
-    <div class="outcomes-card">Peak-season resilience → support pressure reduced; calls shifted from winter emergencies to proactive follow-ups.</div>
-    <div class="outcomes-card">Retention engine → alerts and subscription options encouraged timely reorders and sustained engagement.</div>
-    <div class="outcomes-card">UX contributions  → central in turning BoilerJuice into the UK’s largest online heating oil marketplace.</div>
-  </div>
+      <div class="outcomes">
+        <p>But after UX improvements:</p>
+        <div class="outcomes-card">Simplified the order flow → reduced drop-off.</div>
+        <div class="outcomes-card">Clearer price transparency → increased trust + conversions.</div>
+        <div class="outcomes-card">Seamless uninterrupted journey → allowed customers to have real-time information
+          about heating oil levels within the comfort of their homes.</div>
+        <div class="outcomes-card">Mobile-first redesign → opened up a larger customer segment.</div>
+        <div class="outcomes-card">Personalised journeys (repeat orders, reminders) → boosted retention.</div>
+        <div class="outcomes-card">Redesigned the website to be more accessible and user-friendly → streamlining the
+          customer journey from quote to order.</div>
+        <div class="outcomes-card">Created new quote-generation screens → made pricing clearer and ordering faster,
+          while highlighting potential issues up front, which not only reduced customer stress but also improved the
+          quality of interactions with the support team.</div>
+        <div class="outcomes-card">Collaborated in the creation of a new service, the Connected Service, a
+          subscription-style model that makes buying heating oil feel as effortless as being on mains. → This
+          subscription-style model transformed the experience of buying heating oil into a seamless process.</div>
+        <div class="outcomes-card">Redesigned client dashboards to integrate data from a new tank device → providing
+          customers with automatic usage readings, alerts, and clear guidelines.</div>
+        <div class="outcomes-card">Omnichannel redesign → consistent, uninterrupted experience across devices and
+          platforms.</div>
+        <div class="outcomes-card">Peak-season resilience → support pressure reduced; calls shifted from winter
+          emergencies to proactive follow-ups.</div>
+        <div class="outcomes-card">Retention engine → alerts and subscription options encouraged timely reorders and
+          sustained engagement.</div>
+        <div class="outcomes-card">UX contributions → central in turning BoilerJuice into the UK’s largest online
+          heating oil marketplace.</div>
+      </div>
 
-  <section class="results">
-  <h3 class="case-section">Key Results</h3>
-  <div class="badges">
-    <div class="badge"><span class="metric">↓ 20–30%</span><span class="label">Checkout drop-off</span></div>
-    <div class="badge"><span class="metric">↑ 10–15%</span><span class="label">Repeat orders</span></div>
-    <div class="badge"><span class="metric">↓ 25–35%</span><span class="label">Winter support tickets</span></div>
-  </div>
-  <p class="disclaimer">*Indicative ranges shown where exact figures are confidential.</p>
-</section>
-<style>
-.results { margin-top: 1.5rem; }
-.badges { display:flex; gap:12px; flex-wrap:wrap; }
-.badge { padding:12px 16px; border:1px solid #e5e7eb; border-radius:10px; }
-.metric { display:block; font-weight:700; font-size:1.1rem; }
-.label { display:block; font-size:0.9rem; opacity:0.8; }
-.disclaimer { font-size:0.85rem; opacity:0.7; margin-top:8px; }
-</style>
+      <section class="results">
+        <h3 class="case-section">Key Results</h3>
+        <div class="badges">
+          <div class="badge"><span class="metric">↓ 20–30%</span><span class="label">Checkout drop-off</span></div>
+          <div class="badge"><span class="metric">↑ 10–15%</span><span class="label">Repeat orders</span></div>
+          <div class="badge"><span class="metric">↓ 25–35%</span><span class="label">Winter support tickets</span></div>
+        </div>
+        <p class="disclaimer">*Indicative ranges shown where exact figures are confidential.</p>
+      </section>
+      <style>
+        .results {
+          margin-top: 1.5rem;
+        }
 
-<h2>Reflection</h2>
-<p> Connecting live tank data to the digital journey transformed heating oil buying from a reactive, last-minute scramble into a proactive, 
-    <br>planned experience. Real-time levels, clearer quotes, and tracked deliveries increased trust and pushed more customers toward self-serve 
-    <br>behaviours. The omnichannel, accessible redesign reduced seasonal pressure on support, shifted conversations from emergencies to follow-ups, 
-    <br>and created a foundation for retention through alerts and subscription-style ordering. In short: less panic, more planning—and a service that finally felt as reliable as a utility.</p>
-    <ul>
+        .badges {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .badge {
+          padding: 12px 16px;
+          border: 1px solid #e5e7eb;
+          border-radius: 10px;
+        }
+
+        .metric {
+          display: block;
+          font-weight: 700;
+          font-size: 1.1rem;
+        }
+
+        .label {
+          display: block;
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+
+        .disclaimer {
+          font-size: 0.85rem;
+          opacity: 0.7;
+          margin-top: 8px;
+        }
+      </style>
+
+
+      <h2>Reflection</h2>
+      <p> Connecting live tank data to the digital journey transformed heating oil buying from a reactive, last-minute
+        scramble into a proactive,
+        <br>planned experience. Real-time levels, clearer quotes, and tracked deliveries increased trust and pushed more
+        customers toward self-serve
+        <br>behaviours. The omnichannel, accessible redesign reduced seasonal pressure on support, shifted conversations
+        from emergencies to follow-ups,
+        <br>and created a foundation for retention through alerts and subscription-style ordering. In short: less panic,
+        more planning—and a service that finally felt as reliable as a utility.
+      </p>
+      <ul>
         <li>Real-time data &amp; alerts made usage visible and actionable, reducing winter stress and stockouts.</li>
         <li>Price transparency and a streamlined quote-to-order flow improved confidence and conversion.</li>
         <li>Omnichannel consistency + accessibility widened reach and simplified repeat ordering.</li>
         <li>Cross-functional delivery (engineering, CS, suppliers) turned UX changes into service innovation.</li>
-    </ul>
-    <h3>My contribution</h3>
-    <ul>
-        <li><strong>Accessible, mobile-first redesign:</strong> Reworked information architecture, forms, error states, and contrast to make the experience clearer and more inclusive across web, mobile, and app.</li>
-        <li><strong>Quote &amp; checkout clarity:</strong> Designed new quote-generation screens and simplified steps/copy to reduce friction and decision fatigue.</li>
-        <li><strong>Connected Service (subscription-style):</strong> Co-created and redesigned the proposition and end-to-end flows so buying oil felt as effortless as a mains connection.</li>
-        <li><strong>IoT-enabled dashboards:</strong> Redesigned account areas to ingest smart-tank readings; introduced low-level alerts, usage trends, refill guidance, and exception handling.</li>
-        <li><strong>Proactive issue surfacing:</strong> Embedded warnings and guidance earlier in the journey, improving first-time resolution and the quality of CS interactions.</li>
-        <li><strong>Omnichannel orchestration:</strong> Established shared patterns and components for a consistent, uninterrupted experience across channels and devices.</li>
-        <li><strong>Evidence-driven iteration:</strong> Led discovery and validation (interviews, journey mapping, analytics, A/B tests), prioritising a roadmap that balanced user value with operational feasibility.</li>
-        <li><strong>Delivery partnership:</strong> Worked closely with engineers on specs, edge cases, and QA/UAT to de-risk implementation and speed up release cycles.</li>
-    </ul>
+      </ul>
+      <h3>My contribution</h3>
+      <ul>
+        <li><strong>Accessible, mobile-first redesign:</strong> Reworked information architecture, forms, error states,
+          and contrast to make the experience clearer and more inclusive across web, mobile, and app.</li>
+        <li><strong>Quote &amp; checkout clarity:</strong> Designed new quote-generation screens and simplified
+          steps/copy to reduce friction and decision fatigue.</li>
+        <li><strong>Connected Service (subscription-style):</strong> Co-created and redesigned the proposition and
+          end-to-end flows so buying oil felt as effortless as a mains connection.</li>
+        <li><strong>IoT-enabled dashboards:</strong> Redesigned account areas to ingest smart-tank readings; introduced
+          low-level alerts, usage trends, refill guidance, and exception handling.</li>
+        <li><strong>Proactive issue surfacing:</strong> Embedded warnings and guidance earlier in the journey, improving
+          first-time resolution and the quality of CS interactions.</li>
+        <li><strong>Omnichannel orchestration:</strong> Established shared patterns and components for a consistent,
+          uninterrupted experience across channels and devices.</li>
+        <li><strong>Evidence-driven iteration:</strong> Led discovery and validation (interviews, journey mapping,
+          analytics, A/B tests), prioritising a roadmap that balanced user value with operational feasibility.</li>
+        <li><strong>Delivery partnership:</strong> Worked closely with engineers on specs, edge cases, and QA/UAT to
+          de-risk implementation and speed up release cycles.</li>
+      </ul>
 
-      </div>
+    </div>
 
     <a href="./case-studies.html">← Back to case studies</a>
+
+  </main>
 
 </body>
 
