@@ -259,7 +259,11 @@
       overflow-wrap: anywhere;
     }
 
-    /* Optional: dampen excessive <br> on large screens */
+    .media-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 960px) { .media-grid { grid-template-columns: 1fr; } }
+
+
+    /* dampen excessive <br> on large screens */
     @media (min-width: 992px) {
       br {
         display: none;
@@ -288,6 +292,68 @@
         color: #666;
       }
     }
+
+    /* --- Mobile & small tablets --- */
+@media (max-width: 960px) {
+  body { margin: 0; }
+  .container { padding: 20px 16px 56px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.05rem; }
+
+
+  @media (max-width: 768px) {
+  .img-xl, .img-lg { max-width: 100%; } /* scale to screen */
+}
+
+  /* Make grids stack to 1 column on phones */
+  .pain-points,
+  .outcomes,
+  .media-grid,
+  .role {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .role {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+
+  /* Make cards comfy for thumbs */
+  .card,
+  .outcomes-card {
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  /* Prevent horizontal scroll from long words/URLs */
+  p, li, a { overflow-wrap: anywhere; word-break: break-word; }
+
+  /* Kill manual line breaks that crowd small screens */
+  br { display: none; }
+}
+
+/* Modest tablets (2 columns where possible) */
+@media (min-width: 961px) and (max-width: 1239px) {
+  .pain-points,
+  .outcomes,
+  .media-grid,
+  .role {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Global image hygiene (helps all sizes) */
+img { max-width: 100%; height: auto; display: block; }
+
   </style>
 </head>
 
@@ -479,7 +545,7 @@
           <br>advantages by meeting the underserved needs of users in the current market.</li>
       </ul>
 
-      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="..." title="...">
+      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="Smaply personas" title="Image of Smaply personas created for BoilerJuice.">
       <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
           alt="Persona tool web application"
           title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
@@ -491,6 +557,7 @@
 
       <img class="img-xl" src="./images/boilerjuice/user-journey-2.png" alt="UX deliverables - User journey."
         title="Image of UX deliverables - User journey.">
+
 
       <p><strong>Tasks and deliverables produced during this phase:</strong></p>
       <ul>
