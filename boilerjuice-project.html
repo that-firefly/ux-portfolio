@@ -38,6 +38,7 @@
       padding: 24px var(--container-pad) 64px;
     }
 
+
     /* Typography */
     h1,
     h2,
@@ -394,6 +395,172 @@
       height: auto;
       display: block;
     }
+
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --text: #111318;
+      --muted: #667085;
+      --bar-bg: #e9eef5;
+      --accent-a: #ff914d;
+      --accent-b: #e63946;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0c0e;
+        --card: #14161c;
+        --text: #e8edf5;
+        --muted: #a6b0c2;
+        --bar-bg: #242836;
+         --accent-a: #ff914d;
+      --accent-b: #e63946;
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: clamp(20px, 4vw, 48px) auto;
+      padding: 24px;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    }
+
+    h1 {
+      margin: 0 0 .25rem;
+      line-height: 1.2
+    }
+
+    .lead {
+      margin: .25rem 0 1rem;
+      color: var(--muted)
+    }
+
+    .kr-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 12px
+    }
+
+    .kr {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .kr-h {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .kr-title {
+      font-weight: 600
+    }
+
+    .kr-range {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums
+    }
+
+    .bar-wrap {
+      position: relative;
+      height: 12px;
+      background: var(--bar-bg);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 10px
+    }
+
+    .bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: var(--value, 0%);
+      background: linear-gradient(90deg, var(--accent-a), var(--accent-b))
+    }
+
+    .kr-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: 8px
+    }
+
+    .note {
+      display: block;
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: .9rem
+    }
+
+    h2 {
+      margin: 24px 0 8px
+    }
+
+    ul {
+      margin: .25rem 0 0 1.2rem
+    }
+
+    footer {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .85rem
+    }
+
+    .results {
+      margin-top: 1.5rem;
+    }
+
+    .badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      padding: 12px 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+
+    .metric {
+      display: block;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .label {
+      display: block;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    section {
+      padding: 20px 0px;
+    }
+ 
   </style>
 </head>
 
@@ -734,7 +901,7 @@ prototypes.">
       </div>
 
       <section class="results">
-        <h3 class="case-section">Key Results</h3>
+        <h3 class="case-section">BoilerJuice key results</h3>
         <div class="badges">
           <div class="badge"><span class="metric">↓ 20–30%</span><span class="label">Checkout drop-off</span></div>
           <div class="badge"><span class="metric">↑ 10–15%</span><span class="label">Repeat orders</span></div>
@@ -742,60 +909,54 @@ prototypes.">
         </div>
         <p class="disclaimer">*Indicative ranges shown where exact figures are confidential.</p>
       </section>
-      <style>
-        .results {
-          margin-top: 1.5rem;
-        }
-
-        .badges {
-          display: flex;
-          gap: 12px;
-          flex-wrap: wrap;
-        }
-
-        .badge {
-          padding: 12px 16px;
-          border: 1px solid #e5e7eb;
-          border-radius: 10px;
-        }
-
-        .metric {
-          display: block;
-          font-weight: 700;
-          font-size: 1.1rem;
-        }
-
-        .label {
-          display: block;
-          font-size: 0.9rem;
-          opacity: 0.8;
-        }
-
-        .disclaimer {
-          font-size: 0.85rem;
-          opacity: 0.7;
-          margin-top: 8px;
-        }
-      </style>
 
 
-      <h2>Reflection</h2>
-      <p> Connecting live tank data to the digital journey transformed heating oil buying from a reactive, last-minute
-        scramble into a proactive,
-        <br>planned experience. Real-time levels, clearer quotes, and tracked deliveries increased trust and pushed more
-        customers toward self-serve
-        <br>behaviours. The omnichannel, accessible redesign reduced seasonal pressure on support, shifted conversations
-        from emergencies to follow-ups,
-        <br>and created a foundation for retention through alerts and subscription-style ordering. In short: less panic,
-        more planning—and a service that finally felt as reliable as a utility.
-      </p>
-      <ul>
-        <li>Real-time data &amp; alerts made usage visible and actionable, reducing winter stress and stockouts.</li>
-        <li>Price transparency and a streamlined quote-to-order flow improved confidence and conversion.</li>
-        <li>Omnichannel consistency + accessibility widened reach and simplified repeat ordering.</li>
-        <li>Cross-functional delivery (engineering, CS, suppliers) turned UX changes into service innovation.</li>
-      </ul>
-      <h3>My contribution</h3>
+
+
+
+      <h2>BoilerJuice - Key results visualised</h2>
+      <section class="kr-list" role="img" aria-label="Bar chart of key result midpoints for BoilerJuice">
+        <!-- Checkout drop-off -->
+        <article class="kr">
+          <div class="kr-h">
+            <div class="kr-title">Checkout drop-off</div>
+            <div class="kr-range">↓ 20–30% • Midpoint <strong>25%</strong></div>
+          </div>
+          <div class="bar-wrap" aria-hidden="true">
+            <div class="bar" style="--value:25%"></div>
+          </div>
+          <div class="kr-meta"><span>Lower is better</span><span>25%</span></div>
+        </article>
+
+        <!-- Repeat orders -->
+        <article class="kr">
+          <div class="kr-h">
+            <div class="kr-title">Repeat orders</div>
+            <div class="kr-range">↑ 10–15% • Midpoint <strong>12.5%</strong></div>
+          </div>
+          <div class="bar-wrap" aria-hidden="true">
+            <div class="bar" style="--value:12.5%"></div>
+          </div>
+          <div class="kr-meta"><span>Higher is better</span><span>12.5%</span></div>
+        </article>
+
+        <!-- Winter support tickets -->
+        <article class="kr">
+          <div class="kr-h">
+            <div class="kr-title">Winter support tickets</div>
+            <div class="kr-range">↓ 25–35% • Midpoint <strong>30%</strong></div>
+          </div>
+          <div class="bar-wrap" aria-hidden="true">
+            <div class="bar" style="--value:30%"></div>
+          </div>
+          <div class="kr-meta"><span>Lower is better</span><span>30%</span></div>
+        </article>
+      </section>
+
+      <small class="note">Ranges are indicative; exact figures remain confidential.</small>
+
+
+      <h2>My contribution</h2>
       <ul>
         <li><strong>Accessible, mobile-first redesign:</strong> Reworked information architecture, forms, error states,
           and contrast to make the experience clearer and more inclusive across web, mobile, and app.</li>
@@ -815,9 +976,31 @@ prototypes.">
           de-risk implementation and speed up release cycles.</li>
       </ul>
 
+      <section>
+
+      <h2>Reflection</h2>
+      <p> Connecting live tank data to the digital journey transformed heating oil buying from a reactive, last-minute
+        scramble into a proactive,
+        <br>planned experience. Real-time levels, clearer quotes, and tracked deliveries increased trust and pushed more
+        customers toward self-serve
+        <br>behaviours. The omnichannel, accessible redesign reduced seasonal pressure on support, shifted conversations
+        from emergencies to follow-ups,
+        <br>and created a foundation for retention through alerts and subscription-style ordering. In short: less panic,
+        more planning—and a service that finally felt as reliable as a utility.
+      </p>
+      <ul>
+        <li>Real-time data &amp; alerts made usage visible and actionable, reducing winter stress and stockouts.</li>
+        <li>Price transparency and a streamlined quote-to-order flow improved confidence and conversion.</li>
+        <li>Omnichannel consistency + accessibility widened reach and simplified repeat ordering.</li>
+        <li>Cross-functional delivery (engineering, CS, suppliers) turned UX changes into service innovation.</li>
+      </ul>
+
+      </section>
+
+
     </div>
 
-    <a href="./case-studies.html">← Back to case studies</a>
+    <section><a href="./case-studies.html">← Back to case studies</a></section>
 
   </main>
 
