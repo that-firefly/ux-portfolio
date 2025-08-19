@@ -134,6 +134,120 @@
       .kpi-bar { grid-template-columns: 1fr; }
       .journey .row, .blueprint .row { grid-template-columns: 120px repeat(6, 1fr); }
     }
+
+    :root {
+background: rgba(37,99,235,.08);
+border: 1px solid rgba(37,99,235,.18);
+padding: 6px 10px;
+border-radius: 999px;
+}
+
+
+h2 {
+margin: 14px 0 6px;
+font-size: 22px;
+letter-spacing: -0.01em;
+}
+
+
+p { margin: 8px 0 14px; }
+
+
+.list {
+display: grid;
+gap: 10px;
+padding: 0;
+list-style: none;
+}
+.list li {
+display: grid;
+grid-template-columns: 28px 1fr;
+align-items: start;
+gap: 10px;
+background: linear-gradient(0deg, rgba(255,255,255,.45), rgba(255,255,255,.45));
+border: 1px solid var(--line);
+border-radius: 12px;
+padding: 10px 12px;
+}
+.icon {
+font-size: 18px;
+line-height: 1.4;
+display: inline-flex; align-items: center; justify-content: center;
+}
+
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 6px; }
+.chip {
+display: inline-flex; align-items: center; gap: 8px;
+font-size: 12px; font-weight: 600;
+padding: 7px 10px; border-radius: 999px;
+border: 1px dashed var(--line);
+background: #fff6; /* subtle */
+}
+.chip b { font-weight: 800; }
+
+
+.hint { font-size: 13px; color: var(--muted); }
+
+
+.flow {
+display: grid; gap: 10px; margin-top: 10px;
+}
+.flow .step {
+background: #fff2; border: 1px dashed var(--line);
+padding: 10px 12px; border-radius: 12px;
+}
+.arrow { text-align: center; color: var(--muted); }
+
+
+.together { margin-top: 18px; }
+
+
+.footer {
+margin-top: 28px; color: var(--muted); font-size: 13px;
+display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+}
+.tag { background: rgba(16,185,129,.08); color: var(--accent-2); border: 1px solid rgba(16,185,129,.24); padding: 4px 8px; border-radius: 999px; font-weight: 700; font-size: 12px; }
+
+
+/* Utility */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* === Your original CSS (shortened here for clarity, but keep full in prod) === */
+    :root{
+      --container-max: 1120px;
+      --pad: clamp(16px,3vw,32px);
+      --radius: 10px;
+      --line: #e5e7eb;
+      --muted: #6b7280;
+      --accent-2: #10b981;
+    }
+    *{box-sizing:border-box}
+    body{font-family: Arial, sans-serif; margin:0; background:#fefefe; line-height:1.6; color:#222;}
+
+    /* … [keep all your existing CSS unchanged] … */
+
+    /* === Microlearning / Mastery CSS additions === */
+    h2 { margin: 14px 0 6px; font-size: 22px; letter-spacing: -0.01em; }
+    .list { display: grid; gap: 10px; padding: 0; list-style: none; }
+    .list li { display: grid; grid-template-columns: 28px 1fr; align-items: start; gap: 10px;
+      background: linear-gradient(0deg, rgba(255,255,255,.45), rgba(255,255,255,.45));
+      border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+    .icon { font-size: 18px; line-height: 1.4; display: inline-flex; align-items: center; justify-content: center; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 6px; }
+    .chip { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600;
+      padding: 7px 10px; border-radius: 999px; border: 1px dashed var(--line); background: #fff6; }
+    .chip b { font-weight: 800; }
+    .hint { font-size: 13px; color: var(--muted); }
+    .flow { display: grid; gap: 10px; margin-top: 10px; }
+    .flow .step { background: #fff2; border: 1px dashed var(--line); padding: 10px 12px; border-radius: 12px; }
+    .arrow { text-align: center; color: var(--muted); }
+    .together { margin-top: 18px; }
+    .eyebrow { display: inline-block; font-weight: 600; font-size: 13px; letter-spacing: .04em;
+      text-transform: uppercase; margin-bottom: 4px; }
+    .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 1rem; background:#fafafa; }
+    .pair { display: grid; gap: 16px; }
+    @media (min-width: 800px){ .pair{ grid-template-columns: 1fr 1fr; } }
   </style>
       <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
     <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
@@ -573,6 +687,71 @@
       <li><strong>Project/problem-based</strong> with <strong>social learning</strong> (peer discussion, reflection)</li>
       <li><strong>Dual coding</strong> (concise text + supportive visuals)</li>
     </ul>
+
+
+    <a href="#content" class="sr-only">Skip to content</a>
+<div class="wrap" id="content">
+
+
+<header>
+<h1>Microlearning & Mastery Learning</h1>
+<p class="subtitle">Two complementary approaches that make learning <em>lighter</em> and outcomes <em>stronger</em>. Short bursts for memory; checkpoints and support for true understanding.</p>
+</header>
+
+
+<section class="pair" aria-label="Two-column explainer">
+<article class="card" aria-labelledby="micro-h">
+<span class="eyebrow" aria-hidden="true">⚡ Microlearning</span>
+<h2 id="micro-h">Short bites (5–10 min)</h2>
+<p>Teach one idea at a time in compact units. Easier to fit into busy days and kinder on attention.</p>
+
+
+<ul class="list">
+<li><span class="icon" aria-hidden="true">⏱️</span><div><strong>5–10 minutes each</strong><br><span class="hint">Just enough to learn one concept without overload.</span></div></li>
+<li><span class="icon" aria-hidden="true">🔁</span><div><strong>Spaced repetition</strong><br><span class="hint">Revisit key points on a schedule (e.g., Day 0 → Day 2 → Day 7 → Day 21) so knowledge sticks.</span></div></li>
+<li><span class="icon" aria-hidden="true">🧠</span><div><strong>Retrieval practice</strong><br><span class="hint">Quiz, explain, or apply—actively recalling beats re‑reading.</span></div></li>
+</ul>
+
+
+<div class="chips" aria-label="Microlearning quick facts">
+<span class="chip">⏲️ <b>5–10</b> min</span>
+<span class="chip">📆 <b>Spaced</b> reviews</span>
+<span class="chip">✅ <b>Recall</b> > re‑read</span>
+</div>
+</article>
+
+
+<article class="card" aria-labelledby="mastery-h">
+<span class="eyebrow" aria-hidden="true">🎯 Mastery learning</span>
+<h2 id="mastery-h">Progress only after you’ve <em>got it</em></h2>
+<p>Learners advance when they show solid understanding—no one is pushed ahead with shaky basics.</p>
+
+
+<ul class="list">
+<li><span class="icon" aria-hidden="true">🧪</span><div><strong>Frequent formative checks</strong><br><span class="hint">Low‑stakes quizzes, quick exercises, or micro‑projects give timely feedback.</span></div></li>
+<li><span class="icon" aria-hidden="true">🧭</span><div><strong>Adaptive remediation</strong><br><span class="hint">If a check flags a gap, provide targeted practice or another explanation until it’s mastered.</span></div></li>
+</ul>
+
+
+<div class="flow" aria-label="If‑this‑then‑that flow">
+<div class="step"><b>Check</b>: short quiz or task</div>
+<div class="arrow" aria-hidden="true">↓</div>
+<div class="step"><b>If pass</b>: move on confidently</div>
+<div class="arrow" aria-hidden="true">↓</div>
+<div class="step"><b>If miss</b>: targeted support → try again</div>
+</div>
+</article>
+</section>
+
+
+<section class="card together" aria-labelledby="together-h">
+<h2 id="together-h">How they work together</h2>
+<p><strong>Microlearning</strong> delivers focused content you can actually remember. <strong>Mastery learning</strong> ensures you don’t move on until you truly understand. Together: <em>right‑sized lessons + feedback loop = durable learning</em>.</p>
+<ul class="list">
+<li><span class="icon" aria-hidden="true">🧩</span><div><strong>Bite → Check → Support → Next</strong><br><span class="hint">Repeat in small cycles to build momentum and confidence.</span></div></li>
+<li><span class="icon" aria-hidden="true">📈</span><div><strong>Better retention, fewer gaps</strong><br><span class="hint">Memory is reinforced and misunderstandings are caught early.</span></div></li>
+</ul>
+</section>
 
     <h3>Go-Live Runbook (lite)</h3>
     <ol>
