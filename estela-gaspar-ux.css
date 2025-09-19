@@ -12,6 +12,15 @@ body {
   margin: 0 auto;
 }
 
+.container-group::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container-group { display: flow-root; }
+
+
 html,
 body,
 div,
