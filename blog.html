@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Estela Gaspar - UX User Experience Design</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./estela-gaspar-ux.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estela-gaspar-ux.css">
     <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-32x32.png"
-      sizes="32x32"
-    />
-  </head>
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
-      <nav>
-        <span class="hamburger" onclick="toggleMenu()">☰</span>
-        <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-           <li><a href="./new.html">💫 New</a></li>
-          <li><a href="./case-studies.html">Case Studies</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./links.html">Links</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="main-content">
-        <h1>Blog</h1>
-
-        <div class="container-group">
-           <div>
-            <h2>Latest</h2>
-            <ul>
-              <li><a href="./blog-articles/cybersecurity-ux.html" alt="Why cybersecurity training is important for UX?" title="writting about why cybersecurity training is important for UX?">Why cybersecurity training is important for UX?</a></li>
-              </ul>
-            <h2>Ongoing and past writing projects</h2>
-            <ul>
-              <li><a href="./blog-articles/forest-fire-protector.html" alt="Forest Guard concept" title="writting and developing an idea about a system that can protect a forest from fire">Forest Guard</a> - writting about a system that protects a forest from fire.</li>
-              <li><a href="./blog-articles/living-electric-roadway.html" alt="ElectroFlow Circuit concept" title="writting and developing an idea about an electroFlow Circuit concept">ElectroFlow Circuit</a> - writting about an idea of a system that can power a city.</li>
-              <li><a href="./blog-articles/drawwilder.html" alt="Hand-crafted home décor" title="Hand-crafted home décor I create in my free time">DrawWilder interior design</a> - hand-crafted home décor I create in my free time.</li>
-              <li><a href="./blog-articles/blog-page.html" alt="A space with deep questions" title="A space where I write about deep questions">Philosophy & Spirituality</a> - exploring deep questions.</li>
+         <nav>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <ul class="menu">
+                 <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./new.html">💫 New</a></li>
+                <li><a href="./case-studies.html">Case Studies</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./links.html">Links</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
-          </div>
+        </nav>
+
+        <div class="main-content">
+            <h1>Blog</h1>
+
+            <div class="container-group">
+                <div class="container">
+                    <!-- Each case study card -->
+                    <div class="card-case-studies"><div class="card-content">
+                        <h3>Why cybersecurity training is important for UX?</h3>
+                        <p>Why I think cybersecurity training is crucial for UX designers</p>
+                        <p><a class="read-more-btn" href="./blog-articles/cybersecurity-ux.html">Read more</a></p>
+                    </div></div>
+
+                    <div class="card-case-studies"><div class="card-content">
+                        <h3>Forest Guard idea</h3>
+                        <p>writting about a system that protects a forest from fire</p>
+                        <p><a class="read-more-btn" href="./blog-articles/forest-fire-protector.html">Read more</a></p>
+                   </div></div>
+
+                    <div class="card-case-studies"><div class="card-content">
+                        <h3>ElectroFlow Circuit idea</h3>
+                        <p>Writting about an idea of a system that can power a city</p>
+                        <p><a class="read-more-btn" href="./blog-articles/living-electric-roadway.html">Read more</a></p>
+                     </div></div>
+
+                    <div class="card-case-studies"><div class="card-content">
+                        <h3>DrawWilder</h3>
+                        <p>DrawWilder interior design</p>
+                        <p><a class="read-more-btn" href="./blog-articles/drawwilder.html">Read more</a></p>
+                    </div></div>
+
+                    <div class="card-case-studies"><div class="card-content">
+                        <h3>Philosophy & Spirituality</h3>
+                        <p>A space where I write about deep questions</p>
+                        <p><a class="read-more-btn" href="./blog-articles/blog-page.html">Read more</a></p>
+                    </div></div>
+
+                </div>
+
+            </div>
         </div>
-     
-      <div class="footer-banner">
-        <footer>Website coded by Estela Gaspar</footer>
-      </div>
+
+        <div class="footer-banner">
+            <footer>
+                Website coded by Estela Gaspar
+            </footer>
+        </div>
     </div>
-  </body>
+</body>
 </html>
