@@ -399,6 +399,10 @@ iframe {
   display: block;
 }
 
+.cover-alternate-content img {
+   margin: 30px auto;
+}
+
 /* Video end */
 
 .drawwilder-text-intro li {
