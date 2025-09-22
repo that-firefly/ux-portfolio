@@ -97,12 +97,6 @@ header p {
   display: contents;  
 }
 
-.container-group {margin: 20px 30px 20px 20px; }
-
-@media (max-width: 9999px) {
-  .container-group { display: grid !important; margin: 20px 30px 20px 20px; }
-}
-
 .card img {
   margin-bottom: 20px;
   width: 100%;
@@ -1881,6 +1875,12 @@ div.projectcontent > .label-text {
     display: block;
     width: 70%;
   }
+
+  .container-group {margin: 20px 30px 20px 20px; }
+
+   .container-group { display: grid !important; margin: 20px 30px 20px 20px; }
+
+
 }
 
 /*************************************************************************** Desktops only sizes start ****************************************************************************/
