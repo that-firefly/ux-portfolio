@@ -56,6 +56,23 @@ header p {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.back-btn a {
+  color: #808080;
+  margin: 0 0 30px 0;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-btn a:hover,
+.back-btn a:active,
+.back-btn a:focus,
+.back-btn a:visited {
+  color: #666666; /* darker gray */
+}
+
+
 .section {
   padding: 0px;
   margin: auto;
