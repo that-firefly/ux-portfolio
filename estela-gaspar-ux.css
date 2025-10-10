@@ -385,7 +385,7 @@ img {
 }
 
   h1.landingpage-title.eg {
-    margin-top: 70px;
+    margin: 70px auto;
     width: 100%;
     font-size: 2em;
     font-weight: 600;
