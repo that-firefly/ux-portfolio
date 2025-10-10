@@ -87,7 +87,7 @@ header p {
 .cover-alternate-content.wider {
   background-image: url("./images/banner-ux-estela.png");
   background-repeat: no-repeat;
-  background-position: calc(25% + 400px) calc(-5px);
+  background-position: calc(25% + 350px) calc(0px);
   background-size: 35%;
 }
 
@@ -122,6 +122,13 @@ header p {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+
+.infographic-image {
+  margin: 5px auto;
+  width: 80%;
+  height: auto;
 }
 
 .card h3 {
@@ -267,6 +274,36 @@ a:hover {
   text-decoration: underline;
 }
 
+
+a.highlighted-link {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 20%;
+    margin: 60px auto;
+    padding: 1em;
+    color: #fff;
+    background-color: #9b59b6;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s 
+ease, transform 0.2s 
+ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+a.highlighted-link:hover {
+  background-color: #8e44ad; /* Darker purple on hover */
+  transform: translateY(-2px);
+}
+
+
 .text-only-wider > .highlighted-link {
   width: 20%;
   margin: 0 auto;
@@ -348,6 +385,7 @@ img {
 }
 
   h1.landingpage-title.eg {
+    margin-top: 70px;
     width: 100%;
     font-size: 2em;
     font-weight: 600;
