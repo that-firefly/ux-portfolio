@@ -380,6 +380,27 @@ caption {
   clear: both;
 }
 
+h1.drawwilder-title {
+    color: #000000;
+}
+
+h2.drawwilder-subtitle {
+    color: #000000;
+}
+
+.drawwilder-container{
+    margin: 0px auto;
+    padding-bottom: 20px;
+    width: 60%;
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+
 img {
   border: 0;
 }
@@ -460,6 +481,220 @@ iframe {
 
 /* Video end */
 
+
+/* Drawwilder website */
+
+.main-content.drawwilder h2 {
+  font-size: 1.6em;
+}
+
+
+/* Left (text) */
+.drawwilder-left {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-start; /* stays to the left */
+  align-items: center;
+  padding: 4rem 3rem;
+  box-sizing: border-box;
+}
+
+.drawwilder-container {
+  max-width: 520px;
+  text-align: left; /* this ensures all text aligns left */
+}
+
+#drawwilder-logo {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.drawwilder-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+
+.drawwilder-container p em {
+  color: #777;
+}
+
+.drawwilder-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  color: #444;
+  text-align: left;
+}
+
+.drawwilder-text-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+
+.drawwilder-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
+  }
+
+  .drawwilder-left, .drawwilder-right {
+    flex: 1 1 100%;
+    padding: 2rem;
+  }
+
+  .drawwilder-image {
+    height: 50vh;
+  }
+
+  .drawwilder-title {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* keep ONE wrapper rule */
+.drawwilder-wrapper{
+  display:flex;
+  flex-wrap:wrap;
+  min-height:100vh;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#1a1a1a;
+}
+
+/* left column stays white so text is readable */
+.drawwilder-left{
+  flex:1 1 50%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:4rem 3rem;
+  box-sizing:border-box;
+  background:#fff;
+}
+
+.drawwilder-container{ max-width:520px; text-align:left; }
+
+/* right column gets the background image */
+.drawwilder-right{
+  flex:1 1 50%;
+  min-height:100vh;
+  background:url("images/drawwilder/neotropica/neotropica-thumb.png") center / cover no-repeat;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .drawwilder-wrapper{ flex-direction:column; }
+  .drawwilder-right{ min-height:50vh; }
+  .drawwilder-left{ padding:2rem; }
+}
+
+
+
+.drawwilder-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  flex: 1 1 50%;
+}
+
+
+/* Left (text) */
+.drawwilder-left {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.8rem 3rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.drawwilder-container {
+  width:90%;
+}
+
+#drawwilder-logo {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.drawwilder-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+.drawwilder-container p em {
+  color: #777;
+}
+
+.drawwilder-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  color: #444;
+}
+
+.drawwilder-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Right (image) */
+.drawwilder-right {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.drawwilder-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive layout for tablets and phones */
+@media (max-width: 900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
+  }
+
+  .drawwilder-left, .drawwilder-right {
+    flex: 1 1 100%;
+    padding: 0.8rem 2rem;
+  }
+
+  .drawwilder-image {
+    height: 50vh;
+  }
+
+  .drawwilder-title {
+    font-size: 2rem;
+  }
+}
+
+
 .drawwilder-text-intro li {
   display: flex;
   align-items: center;
@@ -499,7 +734,7 @@ iframe {
 }
 
 #drawwilder-logo {
-  width: 12%;
+  width: 35%;
 }
 
 .strawberry-idea {
@@ -1098,12 +1333,28 @@ svg {
 }
 
 .main-content.drawwilder h1 {
-  font-size: 3.5em;
-  text-align: center;
+  font-size: 3em;
+  text-align: left;
+  font-weight: 900;
+  padding-left: 0px;
+  margin-left: 0px;
 }
+
+.drawwilder-byline {
+  text-align: left;
+  font-style: italic;
+  color: #777;
+  margin: 0.5rem 0 1rem;
+}
+
 
 .drawwilder-text-intro h2 {
   color: #3a0d5d;
+}
+
+.main-content.drawwilder h2.drawwilder-subtitle-strong {
+  color: #000;
+  font-size: 2em;
 }
 
 
@@ -1113,18 +1364,7 @@ svg {
 }
 
 
-.main-content.drawwilder h2 {
-  font-size: 2.5em;
-  font-family: "Cormorant Garamond", serif;
-  padding: 10px 0px;
-  margin: 0px;
-  text-align: center;
-}
 
-.main-content.drawwilder p {
-  text-align: center;
-  padding-bottom: 20px;
-}
 
 .blog-content.drawwilder {
   width: 100%;
@@ -1154,7 +1394,7 @@ art-gallery {
 .drawwilder-item-container h2,
 .drawwilder-item-container h3,
 .drawwilder-item-container a {
-  color: #3a0d5d !important;
+  color: #000000 !important;
 }
 
 .drawwilder-item-container p {
@@ -1257,9 +1497,18 @@ art-gallery {
   overflow: hidden;
 }
 
-.main-content.drawwilder h2 {
-  font-size: 2.5em;
-  font-weight: 400;
+/*Drawwilder intro titles */
+
+h2.drawwilder-subtitle {
+    font-size: 1em;
+    text-align: left;
+    padding: 0px;
+}
+
+p.drawwilder-text-intro
+Specificity: (0,1,1)
+ {
+    text-align: left;
 }
 
 .main-content.drawwilder h2.plain {
