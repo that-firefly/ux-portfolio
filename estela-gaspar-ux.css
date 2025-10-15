@@ -33,7 +33,7 @@ label {
 }
 
 .cover-alternate-content {
-    width: 80%;
+  width: 80%;
 }
 
 body {
@@ -42,6 +42,7 @@ body {
   color: #333;
   background-color: #fdfcf9;
 }
+
 header {
   background-image: url("https://example.com/hero-fabric.jpg");
   background-size: cover;
@@ -60,7 +61,7 @@ header p {
 .back-btn a {
   color: #808080;
   margin: 0 0 30px 0;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -69,7 +70,8 @@ header p {
 .back-btn a:active,
 .back-btn a:focus,
 .back-btn a:visited {
-  color: #666666; /* darker gray */
+  color: #666666;
+  /* darker gray */
 }
 
 
@@ -77,6 +79,7 @@ header p {
   padding: 0px;
   margin: auto;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -98,7 +101,8 @@ header p {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  width: min(1200px, 100%);   /* center the whole grid nicely */
+  width: min(1200px, 100%);
+  /* center the whole grid nicely */
   margin: 0 auto;
 }
 
@@ -111,7 +115,7 @@ header p {
   max-width: unset;
   margin: 0;
   padding-top: 0;
-  display: contents;  
+  display: contents;
 }
 
 .card img {
@@ -147,7 +151,7 @@ header p {
   cursor: pointer;
   text-decoration: none;
   transition: background 0.4s ease-in-out, transform 0.2s ease,
-  box-shadow 0.3s ease;
+    box-shadow 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ffffff;
 
@@ -163,6 +167,7 @@ header p {
 .contact {
   text-align: center;
 }
+
 .contact form {
   display: flex;
   flex-direction: column;
@@ -170,6 +175,7 @@ header p {
   max-width: 400px;
   margin: auto;
 }
+
 .contact input,
 .contact textarea {
   padding: 10px;
@@ -177,6 +183,7 @@ header p {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .contact button {
   padding: 12px;
   background-color: #222;
@@ -238,6 +245,7 @@ nav .hamburger {
   cursor: pointer;
   user-select: none;
 }
+
 /* Navigation end */
 
 .text-only-wider {
@@ -276,35 +284,33 @@ a:hover {
 
 
 a.highlighted-link {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    width: 20%;
-    margin: 60px auto;
-    padding: 1em;
-    color: #fff;
-    background-color: #9b59b6;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s 
-ease, transform 0.2s 
-ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 20%;
+  margin: 60px auto;
+  padding: 1em;
+  color: #fff;
+  background-color: #9b59b6;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 a.highlighted-link:hover {
-  background-color: #8e44ad; /* Darker purple on hover */
+  background-color: #8e44ad;
+  /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
 
-.text-only-wider > .highlighted-link {
+.text-only-wider>.highlighted-link {
   width: 20%;
   margin: 0 auto;
   padding: 1em;
@@ -321,7 +327,8 @@ a.highlighted-link:hover {
 }
 
 .highlighted-link:hover {
-  background-color: #8e44ad; /* Darker purple on hover */
+  background-color: #8e44ad;
+  /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
@@ -339,6 +346,7 @@ a.highlighted-link:hover {
 .highlight-card img {
   width: 30%;
 }
+
 /* links end  */
 
 table {
@@ -366,6 +374,7 @@ p {
   text-align: center;
   color: #ffffff;
 }
+
 h1,
 h2,
 h3,
@@ -381,19 +390,19 @@ caption {
 }
 
 h1.drawwilder-title {
-    color: #000000;
+  color: #000000;
 }
 
 h2.drawwilder-subtitle {
-    color: #000000;
+  color: #000000;
 }
 
-.drawwilder-container{
-    margin: 0px auto;
-    padding-bottom: 20px;
-    width: 60%;
-    display: block;
-    text-align: center;
+.drawwilder-container {
+  margin: 0px auto;
+  padding-bottom: 20px;
+  width: 60%;
+  display: block;
+  text-align: center;
 }
 
 
@@ -405,11 +414,11 @@ img {
   border: 0;
 }
 
-  h1.landingpage-title.eg {
-    margin: 70px auto;
-    width: 100%;
-    font-size: 2em;
-    font-weight: 600;
+h1.landingpage-title.eg {
+  margin: 70px auto;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 body {
@@ -457,7 +466,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px; /* Optional: adds a soft edge */
+  border-radius: 8px;
+  /* Optional: adds a soft edge */
 }
 
 .responsive-video {
@@ -476,13 +486,49 @@ iframe {
 }
 
 .cover-alternate-content img {
-   margin: 30px auto;
+  margin: 30px auto;
 }
 
 /* Video end */
 
 
 /* Drawwilder website */
+
+
+.drawwilder-noborder-container {
+  width: 60%;
+  margin: 60px auto 0px auto;
+
+}
+
+.workwithme-button {
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  text-decoration: none;
+  /* removes underline */
+  display: inline-block;
+  /* lets padding work properly */
+  transition: all 0.3s ease;
+  /* smooth hover effect */
+}
+
+.workwithme-button:hover {
+  background-color: #333;
+  /* subtle lightening on hover */
+  text-decoration: underline;
+  /* brings the underline back */
+  text-underline-offset: 4px;
+  /* pushes underline down a bit for elegance */
+}
+
+
+
 
 .main-content.drawwilder h2 {
   font-size: 1.6em;
@@ -493,7 +539,8 @@ iframe {
 .drawwilder-left {
   flex: 1 1 50%;
   display: flex;
-  justify-content: flex-start; /* stays to the left */
+  justify-content: flex-start;
+  /* stays to the left */
   align-items: center;
   padding: 4rem 3rem;
   box-sizing: border-box;
@@ -501,7 +548,8 @@ iframe {
 
 .drawwilder-container {
   max-width: 520px;
-  text-align: left; /* this ensures all text aligns left */
+  text-align: left;
+  /* this ensures all text aligns left */
 }
 
 #drawwilder-logo {
@@ -550,7 +598,8 @@ iframe {
     flex-direction: column;
   }
 
-  .drawwilder-left, .drawwilder-right {
+  .drawwilder-left,
+  .drawwilder-right {
     flex: 1 1 100%;
     padding: 2rem;
   }
@@ -567,39 +616,50 @@ iframe {
 
 
 /* keep ONE wrapper rule */
-.drawwilder-wrapper{
-  display:flex;
-  flex-wrap:wrap;
-  min-height:100vh;
-  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color:#1a1a1a;
+.drawwilder-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
 }
 
 /* left column stays white so text is readable */
-.drawwilder-left{
-  flex:1 1 50%;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  padding:4rem 3rem;
-  box-sizing:border-box;
-  background:#fff;
+.drawwilder-left {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 3rem;
+  box-sizing: border-box;
+  background: #fff;
 }
 
-.drawwilder-container{ max-width:520px; text-align:left; }
+.drawwilder-container {
+  max-width: 520px;
+  text-align: left;
+}
 
 /* right column gets the background image */
-.drawwilder-right{
-  flex:1 1 50%;
-  min-height:100vh;
-  background:url("images/drawwilder/neotropica/neotropica-thumb.png") center / cover no-repeat;
+.drawwilder-right {
+  flex: 1 1 50%;
+  min-height: 100vh;
+  background: url("images/drawwilder/neotropica/neotropica-thumb.png") center / cover no-repeat;
 }
 
 /* responsive */
-@media (max-width:900px){
-  .drawwilder-wrapper{ flex-direction:column; }
-  .drawwilder-right{ min-height:50vh; }
-  .drawwilder-left{ padding:2rem; }
+@media (max-width:900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
+  }
+
+  .drawwilder-right {
+    min-height: 50vh;
+  }
+
+  .drawwilder-left {
+    padding: 2rem;
+  }
 }
 
 
@@ -626,7 +686,7 @@ iframe {
 }
 
 .drawwilder-container {
-  width:90%;
+  width: 90%;
 }
 
 #drawwilder-logo {
@@ -680,7 +740,8 @@ iframe {
     flex-direction: column;
   }
 
-  .drawwilder-left, .drawwilder-right {
+  .drawwilder-left,
+  .drawwilder-right {
     flex: 1 1 100%;
     padding: 0.8rem 2rem;
   }
@@ -703,13 +764,15 @@ iframe {
   font-size: 1.2em;
   color: #171417;
   margin-bottom: 10px;
-  text-align: left; /* override global centering */
+  text-align: left;
+  /* override global centering */
 }
 
 .drawwilder-text-intro li img {
   width: 30px;
   height: auto;
-  display: inline-block; /* ensure it doesn't break layout */
+  display: inline-block;
+  /* ensure it doesn't break layout */
   margin: 0;
   padding: 0;
 }
@@ -722,18 +785,21 @@ iframe {
   font-size: 1.2em;
   color: #171417;
   margin-bottom: 10px;
-  text-align: left; /* override global centering */
+  text-align: left;
+  /* override global centering */
 }
 
 .avatar-text-intro li img {
   width: 30px;
   height: auto;
-  display: inline-block; /* ensure it doesn't break layout */
+  display: inline-block;
+  /* ensure it doesn't break layout */
   margin: 0;
   padding: 0;
 }
 
 #drawwilder-logo {
+  margin-left: 75px;
   width: 35%;
 }
 
@@ -1026,7 +1092,7 @@ h3.stronger {
   font-weight: 700;
 }
 
-.cover-alternate-content.wider > .landingpage-title {
+.cover-alternate-content.wider>.landingpage-title {
   color: #ffffff;
 }
 
@@ -1132,14 +1198,12 @@ ol li {
   margin: 0 auto;
   border: 0;
   height: 3px;
-  background: linear-gradient(
-    to right,
-    #541675,
-    #7d2eac,
-    #e4cef1,
-    #7d2eac,
-    #3a0d5d
-  );
+  background: linear-gradient(to right,
+      #541675,
+      #7d2eac,
+      #e4cef1,
+      #7d2eac,
+      #3a0d5d);
   border-radius: 2px;
 }
 
@@ -1188,7 +1252,8 @@ ol li {
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden;
+  /* prevent horizontal scroll */
   display: flex;
   flex-direction: column;
 }
@@ -1500,15 +1565,14 @@ art-gallery {
 /*Drawwilder intro titles */
 
 h2.drawwilder-subtitle {
-    font-size: 1em;
-    text-align: left;
-    padding: 0px;
+  font-size: 1em;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
 }
 
-p.drawwilder-text-intro
-Specificity: (0,1,1)
- {
-    text-align: left;
+p.drawwilder-text-intro Specificity: (0, 1, 1) {
+  text-align: left;
 }
 
 .main-content.drawwilder h2.plain {
@@ -1561,6 +1625,7 @@ Specificity: (0,1,1)
 .my-hero {
   width: 20%;
 }
+
 /* Images end */
 
 /* Footer start */
@@ -1633,7 +1698,7 @@ html {
   float: left;
 }
 
-.internal-page-card > .image-eg-small {
+.internal-page-card>.image-eg-small {
   width: 30% !important;
 }
 
@@ -1654,7 +1719,7 @@ img.bordered {
   border-radius: 50%;
 }
 
-div.projectcontent > .label-text {
+div.projectcontent>.label-text {
   margin: 0px;
   padding: 10px 0px;
   font-size: 14px;
@@ -1709,7 +1774,7 @@ div.projectcontent > .label-text {
   width: 90%;
 }
 
-.blog-preview > img {
+.blog-preview>img {
   width: 50%;
   padding: 20px 20px 20px 0px;
 }
@@ -1747,7 +1812,7 @@ div.projectcontent > .label-text {
   background: #fefefe;
   border: 2px solid #e0e0e0;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 60px auto 0px auto;
   padding: 30px;
   max-width: 600px;
   font-family: sans-serif;
@@ -1755,7 +1820,7 @@ div.projectcontent > .label-text {
 
 .ck-subscribe-form input[type="email"] {
   width: 95%;
-  margin: 20px 0px;
+  margin: 60px 0px;
   padding: 12px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -1781,12 +1846,14 @@ div.projectcontent > .label-text {
 /*************************  Media Queries start *************************/
 
 @media only screen and (max-width: 480px) {
+
   /* styles for very small devices like older iPhones/Androids */
   img,
   video,
   iframe {
     width: 50%;
   }
+
   .text-only-wider {
     max-width: 100%;
   }
@@ -2166,6 +2233,7 @@ div.projectcontent > .label-text {
 /* Smaller aroun 1000px */
 
 @media (min-width: 997px) {
+
   img,
   video,
   iframe {
@@ -2177,6 +2245,7 @@ div.projectcontent > .label-text {
 }
 
 @media (min-width: 1118px) {
+
   img,
   video,
   iframe {
@@ -2186,9 +2255,14 @@ div.projectcontent > .label-text {
     width: 70%;
   }
 
-  .container-group {margin: 20px 30px 20px 20px; }
+  .container-group {
+    margin: 20px 30px 20px 20px;
+  }
 
-   .container-group { display: grid !important; margin: 20px 30px 20px 20px; }
+  .container-group {
+    display: grid !important;
+    margin: 20px 30px 20px 20px;
+  }
 
 
 }
@@ -2336,9 +2410,7 @@ div.projectcontent > .label-text {
 /*************************************************************************** Desktops only sizes end ****************************************************************************/
 /* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
-@media screen and (width: 1264.67px) and (height: 3608px) {
-
-}
+@media screen and (width: 1264.67px) and (height: 3608px) {}
 
 /* 💻 Desktops & Tablets (1024px - 1499px) */
 
@@ -2452,7 +2524,7 @@ div.projectcontent > .label-text {
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
 
 @media (min-width: 960px) and (max-width: 1023px) {
-  .cover-alternate-content.wider > .landingpage-title {
+  .cover-alternate-content.wider>.landingpage-title {
     margin: 0;
     padding: 20px 0;
   }
@@ -2538,6 +2610,7 @@ div.projectcontent > .label-text {
   #drawwilder-logo {
     width: 200px;
   }
+
   .container {
     max-width: 100%;
   }
@@ -2572,6 +2645,7 @@ div.projectcontent > .label-text {
 
 /* 📱 Mobile Devices (Up to 768px) */
 @media screen and (max-width: 768px) {
+
   img,
   video,
   iframe {
@@ -2619,6 +2693,7 @@ div.projectcontent > .label-text {
   .projectcontent p {
     text-align: center;
   }
+
   .blog-title {
     text-align: center;
   }
@@ -2790,7 +2865,7 @@ div.projectcontent > .label-text {
     justify-content: center;
   }
 
-  .image-container > img {
+  .image-container>img {
     height: 200px !important;
     width: 100% !important;
     object-fit: cover;
