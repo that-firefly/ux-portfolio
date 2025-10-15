@@ -2758,6 +2758,12 @@ div.projectcontent>.label-text {
 }
 
 @media (min-width: 428px) and (max-width: 550px) {
+
+  .drawwilder-right {
+    width: 90%;
+  }
+
+
   .text-only-wider {
     max-width: 60%;
     position: relative;
@@ -2768,11 +2774,13 @@ div.projectcontent>.label-text {
 /* 📱 Small Phones (350px - 428px) */
 @media (min-width: 300px) and (max-width: 600px) {
 
-  img,
-  video,
-  iframe {
+
+  .drawwilder-right {
     width: 90%;
   }
+
+
+
 
   .text-only-wider {
     max-width: 100%;
@@ -2886,6 +2894,11 @@ div.projectcontent>.label-text {
 
 /* 📱 Tiny Phones (250px - 349px) */
 @media (min-width: 250px) and (max-width: 349px) {
+
+  .drawwilder-right {
+    width: 90%;
+  }
+
   .text-only-wider {
     left: -120px;
   }
