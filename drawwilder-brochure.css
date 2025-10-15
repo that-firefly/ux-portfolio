@@ -265,6 +265,8 @@ footer {
   text-align: center
 }
 
+
+
 @media print {
   body {
     background: #fff;
@@ -317,4 +319,8 @@ footer {
   .pin-mobile {
     display: block;
   }
+}
+
+footer.footer-banner.drawwilder {
+    color: #000000;
 }
