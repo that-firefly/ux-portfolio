@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Process-First Data — Live Data Integration Experimentation</title>
+  <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
+  <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#7c3aed;--glass:rgba(255,255,255,0.03)}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#051025 0%, #071428 60%);color:#e6eef6;padding:28px}
+    .wrap{max-width:1100px;margin:0 auto}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:20px}
+    header h1{font-size:20px;margin:0}
+    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+    .grid{display:grid;grid-template-columns:1fr 420px;gap:16px}
+    .lead{color:var(--muted);line-height:1.5;margin-top:8px}
+    .controls{display:flex;flex-direction:column;gap:12px}
+    .control-row{display:flex;gap:8px;align-items:center}
+    label{font-size:13px;color:var(--muted);min-width:110px}
+    input[type=range]{flex:1}
+    button{background:var(--accent);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer}
+    button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    .viz{height:420px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;position:relative}
+    svg{width:100%;height:100%;display:block;border-radius:10px}
+    .panel{padding:12px;background:var(--glass);border-radius:10px;margin-bottom:12px}
+    .muted{color:var(--muted);font-size:13px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:12px}
+    .download{margin-left:auto}
+    pre{white-space:pre-wrap;color:#cfe8ff;background:transparent;padding:8px;border-radius:8px}
+    .small{font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="card" style="padding:12px 16px;display:flex;align-items:center;gap:12px;width:100%">
+        <div style="width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5)"></div>
+        <div>
+          <h1>Process-First Data — Live Data Integration</h1>
+          <div class="muted">This version pulls live public data (World Bank, Wikimedia) and uses it to drive the process simulation.</div>
+        </div>
+        <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+          <button id="downloadBtn" title="Download this page as HTML">Download HTML</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2 style="margin-top:0">Live data sources & intent</h2>
+        <p class="lead">This page demonstrates a process-first approach by mapping live indicators into node states. It currently uses:</p>
+        <ul class="muted">
+          <li><strong>World Bank</strong> — life expectancy (biological), GDP per capita (economic), trade (% of GDP) (supply-chain proxy).</li>
+          <li><strong>Wikimedia Pageviews</strong> — simple social/attention proxy for a search term.</li>
+        </ul>
+
+        <div class="panel">
+          <strong>How it maps to the simulation</strong>
+          <ul class="muted">
+            <li>Node <em>energy</em> is seeded from per-country life expectancy or GDP (normalized).</li>
+            <li>Connectivity is influenced by trade intensity (higher trade → stronger links between nodes).</li>
+            <li>Social attention (pageviews) alters short-term noise/connectivity to simulate viral spikes.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <strong>Usage notes</strong>
+          <pre>• The page fetches data live; if an API fails it falls back to embedded sample data.
+• No API keys are required for the chosen endpoints (World Bank and Wikimedia).
+• You can change the social topic term in the controls to see different pageview patterns.</pre>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="controls">
+          <div class="control-row">
+            <label>Dataset</label>
+            <select id="datasetSelect">
+              <option value="biology">Biological (Life expectancy)</option>
+              <option value="supply">Supply chain (Trade % GDP)</option>
+              <option value="social">Social (Wikimedia pageviews)</option>
+              <option value="economic">Economic (GDP per capita)</option>
+            </select>
+          </div>
+
+          <div class="control-row">
+            <label>Social topic</label>
+            <input id="socialTerm" type="text" value="COVID-19" style="flex:1;padding:6px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"/>
+          </div>
+
+          <div class="control-row">
+            <label>Connectivity</label>
+            <input id="connectivity" type="range" min="0" max="1" step="0.01" value="0.5">
+          </div>
+
+          <div class="control-row">
+            <label>Decay</label>
+            <input id="decay" type="range" min="0" max="1" step="0.01" value="0.12">
+          </div>
+
+          <div class="control-row">
+            <label>Seed / reset</label>
+            <button id="resetBtn" class="secondary">Reset</button>
+            <button id="loadBtn">Load live data</button>
+          </div>
+
+          <div class="panel">
+            <div style="display:flex;gap:8px;align-items:center">
+              <div class="tag">Live</div>
+              <div class="tag">Fallback</div>
+              <div class="tag">Process-first</div>
+            </div>
+            <p class="muted" style="margin-top:8px">Click <strong>Load live data</strong> to fetch the latest public indicators. The visualization will use those values to seed node states and connectivity.</p>
+          </div>
+        </div>
+      </aside>
+
+      <section style="grid-column:1 / -1;margin-top:12px">
+        <div class="card">
+          <div class="viz" id="vizWrap">
+            <svg id="vizSvg" viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid meet" aria-label="Process visualization"></svg>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="muted">Dataset: <strong id="currentDataset">biology</strong></div>
+            <div style="margin-left:auto" class="muted">Nodes: <strong id="nodeCount">0</strong></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="wrap muted">Tip: you can extend the mapping rules to domain-specific dynamics (e.g., epidemiological SIR models, inventory replenishment dynamics, or agent-based market models).</footer>
+  </div>
+
+  <script>
+    // --------- Utilities and fallback samples ---------
+    const svg = document.getElementById('vizSvg');
+    const datasetSelect = document.getElementById('datasetSelect');
+    const socialTermInput = document.getElementById('socialTerm');
+    const loadBtn = document.getElementById('loadBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const nodeCountLabel = document.getElementById('nodeCount');
+    const currentDatasetLabel = document.getElementById('currentDataset');
+    const connectivityInput = document.getElementById('connectivity');
+    const decayInput = document.getElementById('decay');
+
+    let width = 1000, height = 420;
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+
+    function rand(min, max){ return Math.random()*(max-min)+min }
+
+    // fallback sample (10 countries simplified)
+    const sampleData = {
+      biology: [ {id:'USA',val:79.1},{id:'CHN',val:76.9},{id:'IND',val:69.4},{id:'RUS',val:71.6},{id:'BRA',val:75.9},{id:'ZAF',val:64.1},{id:'GBR',val:81.3},{id:'FRA',val:82.4},{id:'JPN',val:84.6},{id:'AUS',val:82.8} ],
+      economic: [ {id:'USA',val:65279},{id:'CHN',val:11234},{id:'IND',val:2300},{id:'RUS',val:11305},{id:'BRA',val:8897},{id:'ZAF',val:6001},{id:'GBR',val:42330},{id:'FRA',val:38610},{id:'JPN',val:40100},{id:'AUS',val:51400} ],
+      supply: [ {id:'USA',val:27.3},{id:'CHN',val:36.8},{id:'IND',val:23.1},{id:'RUS',val:45.2},{id:'BRA',val:23.4},{id:'ZAF',val:30.2},{id:'GBR',val:62.1},{id:'FRA',val:61.5},{id:'JPN',val:34.7},{id:'AUS',val:17.2} ],
+      social: [ {id:'USA',val:12000},{id:'CHN',val:9000},{id:'IND',val:15000},{id:'RUS',val:3000},{id:'BRA',val:4000},{id:'ZAF',val:800},{id:'GBR',val:2000},{id:'FRA',val:2200},{id:'JPN',val:1800},{id:'AUS',val:900} ]
+    };
+
+    let nodes = [];
+
+    function createNodesFromData(data){
+      nodes = data.map((d,i)=>({ id:d.id, x: rand(100, width-100), y: rand(60, height-60), vx:0, vy:0, energy: Math.max(0.02, d.val) }));
+      nodeCountLabel.textContent = nodes.length;
+    }
+
+    // ---------- Fetch live data helpers ----------
+    async function fetchWorldBankIndicator(indicator, yearRange='2010:2023'){
+      // returns array of {country,id,value} for most recent year available per country (limited list)
+      const url = `https://api.worldbank.org/v2/country/all/indicator/${indicator}?format=json&date=${yearRange}&per_page=20000`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error('World Bank fetch failed');
+      const json = await res.json();
+      if(!Array.isArray(json) || json.length < 2) throw new Error('Unexpected WB response');
+      const entries = json[1];
+      // choose most recent value per country
+      const map = new Map();
+      for(const e of entries){
+        if(!e.country || !e.country.id) continue;
+        const code = e.country.id;
+        if(e.value === null) continue;
+        if(!map.has(code) || (map.get(code).year < e.date)){
+          map.set(code, {id: code, country: e.country.value, value: e.value, year: parseInt(e.date)});
+        }
+      }
+      // convert to array and sort by value descending
+      return Array.from(map.values()).sort((a,b)=>b.value - a.value);
+    }
+
+    async function fetchWikimediaPageviews(term, project='en.wikipedia', startDays=60){
+      // fetch pageviews for the given term over the last N days and return aggregated number per 'country' proxy
+      // Wikimedia pageviews API: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{project}/{access}/{agent}/{article}/{granularity}/{start}/{end}
+      const end = new Date();
+      const start = new Date(); start.setDate(end.getDate() - startDays);
+      const fmt = (d)=> d.toISOString().slice(0,10).replace(/-/g,'');
+      const article = encodeURIComponent(term.replace(/ /g,'_'));
+      const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/${project}/all-access/all-agents/${article}/daily/${fmt(start)}/${fmt(end)}`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error('Wikimedia fetch failed');
+      const json = await res.json();
+      if(!json.items) throw new Error('No pageview items');
+      const total = json.items.reduce((s,i)=>s + (i.views||0), 0);
+      // create a pseudo-distribution by splitting total across sample countries
+      const countries = ['USA','CHN','IND','RUS','BRA','ZAF','GBR','FRA','JPN','AUS'];
+      const base = countries.map((c,i)=>({id:c, val: Math.round(total * (1/(i+1)) * 0.0001)}));
+      // normalize to non-zero
+      return base.map(b=>({id:b.id, val: Math.max(1,b.val)}));
+    }
+
+    // ---------- Mapping and simulation ----------
+    function mapIndicatorToNodes(indicatorArray, mode){
+      // indicatorArray: [{id, value}] or WB objects
+      let arr;
+      if(indicatorArray.length && indicatorArray[0].value !== undefined){
+        arr = indicatorArray.slice(0,10).map(x=>({id:x.id, val: x.value}));
+      } else if(indicatorArray.length && indicatorArray[0].val !== undefined){
+        arr = indicatorArray.slice(0,10).map(x=>({id:x.id, val: x.val}));
+      } else {
+        arr = sampleData[mode].slice(0,10).map(x=>({id:x.id, val:x.val}));
+      }
+      // normalize val to reasonable energy scale
+      const vals = arr.map(a=>a.val).filter(v=>v!=null);
+      const maxv = Math.max(...vals);
+      return arr.map(a=>({id:a.id, val: (a.val||0) / maxv }));
+    }
+
+    function createNodesFromMapped(mapped){
+      nodes = mapped.map((d,i)=>({ id:d.id, x: rand(100, width-100), y: rand(60, height-60), vx:0, vy:0, energy: Math.max(0.02, d.val) }));
+      nodeCountLabel.textContent = nodes.length;
+    }
+
+    function render(){
+      svg.innerHTML = '';
+      const conn = parseFloat(connectivityInput.value);
+      const links = [];
+      for(let i=0;i<nodes.length;i++){
+        for(let j=i+1;j<nodes.length;j++){
+          if(Math.random() < conn) links.push([i,j]);
+        }
+      }
+      for(const [i,j] of links){
+        const a = nodes[i], b = nodes[j];
+        const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+        line.setAttribute('x1',a.x); line.setAttribute('y1',a.y);
+        line.setAttribute('x2',b.x); line.setAttribute('y2',b.y);
+        line.setAttribute('stroke','rgba(200,210,255,0.06)'); line.setAttribute('stroke-width',1);
+        svg.appendChild(line);
+      }
+      for(const node of nodes){
+        const trail = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        trail.setAttribute('cx',node.x); trail.setAttribute('cy',node.y);
+        trail.setAttribute('r', Math.max(2, Math.min(12, node.energy*18)));
+        trail.setAttribute('fill','rgba(124,58,237,0.15)');
+        svg.appendChild(trail);
+      }
+      for(const node of nodes){
+        const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+        const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        circle.setAttribute('cx',node.x); circle.setAttribute('cy',node.y);
+        circle.setAttribute('r', Math.max(3, Math.min(14, node.energy*18)));
+        circle.setAttribute('fill','rgba(124,58,237,0.95)');
+        circle.setAttribute('stroke','rgba(255,255,255,0.06)'); circle.setAttribute('stroke-width',1);
+        g.appendChild(circle);
+        const text = document.createElementNS('http://www.w3.org/2000/svg','text');
+        text.setAttribute('x', node.x + Math.min(20, node.energy*20));
+        text.setAttribute('y', node.y - Math.min(12, node.energy*12));
+        text.setAttribute('fill','rgba(255,255,255,0.7)');
+        text.setAttribute('font-size','10');
+        text.textContent = node.id;
+        g.appendChild(text);
+        svg.appendChild(g);
+      }
+    }
+
+    function step(dt=1/30){
+      const decay = parseFloat(decayInput.value);
+      const conn = parseFloat(connectivityInput.value);
+      for(let i=0;i<nodes.length;i++){
+        const a = nodes[i];
+        const cx = width/2, cy = height/2;
+        const ax = (cx - a.x) * (0.0007);
+        const ay = (cy - a.y) * (0.0007);
+        a.vx += ax; a.vy += ay;
+        for(let j=0;j<nodes.length;j++){
+          if(i===j) continue;
+          if(Math.random() < conn*0.002){
+            const b = nodes[j];
+            const dx = b.x - a.x, dy = b.y - a.y;
+            a.vx += dx * 0.0005 * b.energy;
+            a.vy += dy * 0.0005 * b.energy;
+            const transfer = 0.001 * b.energy;
+            a.energy += transfer * 0.02; b.energy -= transfer * 0.02;
+          }
+        }
+        a.vx *= 0.98; a.vy *= 0.98;
+        a.x += a.vx * 60 * dt; a.y += a.vy * 60 * dt;
+        a.energy -= decay * 0.001;
+        if(a.energy < 0.02) a.energy = 0.02;
+        if(a.x < 30) a.x = 30 + Math.random()*10;
+        if(a.x > width-30) a.x = width-30 - Math.random()*10;
+        if(a.y < 30) a.y = 30 + Math.random()*10;
+        if(a.y > height-30) a.y = height-30 - Math.random()*10;
+      }
+      render();
+    }
+
+    let anim = null; function start(){ if(anim) return; anim = setInterval(()=>step(1/30), 33); }
+
+    // ---------- Load live data and map ----------
+    async function loadLiveForMode(mode){
+      currentDatasetLabel.textContent = mode;
+      try{
+        if(mode === 'biology'){
+          const data = await fetchWorldBankIndicator('SP.DYN.LE00.IN'); // life expectancy at birth
+          const mapped = mapIndicatorToNodes(data, 'biology');
+          createNodesFromMapped(mapped);
+        } else if(mode === 'economic'){
+          const data = await fetchWorldBankIndicator('NY.GDP.PCAP.CD'); // GDP per capita (current US$)
+          const mapped = mapIndicatorToNodes(data, 'economic');
+          createNodesFromMapped(mapped);
+        } else if(mode === 'supply'){
+          // use trade (% of GDP) as a rough proxy for trade intensity: 'NE.TRD.GNFS.ZS'
+          const data = await fetchWorldBankIndicator('NE.TRD.GNFS.ZS');
+          const mapped = mapIndicatorToNodes(data, 'supply');
+          createNodesFromMapped(mapped);
+        } else if(mode === 'social'){
+          const term = socialTermInput.value || 'COVID-19';
+          const data = await fetchWikimediaPageviews(term);
+          const mapped = data.map(d=>({id:d.id, val:d.val}));
+          const mm = mapIndicatorToNodes(mapped, 'social');
+          createNodesFromMapped(mm);
+        }
+      }catch(err){
+        console.warn('Live fetch failed, falling back to sample data', err);
+        createNodesFromData(sampleData[mode]);
+      }
+      render();
+    }
+
+    // ---------- UI wiring ----------
+    loadBtn.addEventListener('click', ()=> loadLiveForMode(datasetSelect.value));
+    datasetSelect.addEventListener('change', ()=>{ currentDatasetLabel.textContent = datasetSelect.value; });
+    resetBtn.addEventListener('click', ()=>{ createNodesFromData(sampleData[datasetSelect.value]); render(); });
+
+    // download HTML
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const html = `<!doctype html>
+` + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'process-first-live.html';
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // start with sample biology
+    createNodesFromData(sampleData['biology']);
+    start();
+    render();
+  </script>
+</body>
+</html>
