@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
+  <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+  <title>Estela Gaspar – UX/UI Designer - Design States, Omnipresence, and the Agentic Future</title>
+
+  <style>
+    body {
+      max-width: 70%;
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #fefefe;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    img {
+      max-width: 50%;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #444;
+    }
+
+    h1 {
+      font-size: 2em;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .contact,
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.2em;
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .back-btn a {
+      color: #808080;
+      margin: 0 0 30px 0;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .back-btn a:hover,
+    .back-btn a:active,
+    .back-btn a:focus {
+      color: #666666;
+      /* darker gray */
+    }
+
+    figure {
+      display: block;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      unicode-bidi: isolate;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #555;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    blockquote {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      unicode-bidi: isolate;
+      border-left: 4px solid grey;
+      padding-left: 20px;
+    }
+
+
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #555;
+    }
+
+
+    article.interaction-evolution {
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem 2rem;
+    }
+
+    table.new-states {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      border: 1px solid #000000;
+      border-radius: 10px;
+    }
+
+    table.new-states th,
+    table.new-states td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    table.new-states th {
+      background: #f3f3f3;
+      color: #000;
+      font-weight: 600;
+    }
+
+    table.new-states tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.new-states td strong {
+      color: #000;
+    }
+
+    em {
+      color: #555;
+      font-style: italic;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 1rem;
+      }
+
+      article.interaction-evolution {
+        padding: 2rem 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      table.new-states th,
+      table.new-states td {
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back-btn">
+    <a href="../blog.html">← Back to main blog</a>
+  </div>
+  <h1>Design States, Omnipresence, and <br>the Agentic Future... Consciousness</h1>
+  <img src="../images/blog-images/robot-nature-interaction-stockcake.jpg"
+    alt="Time as a human construct and its relation to data and insights.">
+  <legend>Photo by <a href="https://stockcake.com/i/robot-nature-interaction_712315_869905">Stockcake</a></legend>
+
+  <p>Our current six main interaction states are beginning to morph into something new, omnipresent, adaptive, and
+    almost alive. They behave less like static interface conditions and more like living cells: responsive,
+    self-regulating, and capable of foreseeing near-future scenarios.</p>
+
+  <p>Traditionally, the <strong>default state</strong> represents the initial landing condition, the moment before
+    interaction, when an element is simply seen or sensed. From there, the <strong>focus state</strong> emerges when the
+    user intentionally engages, typically by keyboard navigation or clicking into an interactive element.</p>
+
+  <p>The <strong>hover state</strong>, much like focus, signals interactivity through proximity, a user’s pointer
+    hovering above a potential action. The <strong>disabled state</strong> communicates temporary dormancy: an element
+    that is normally interactive but unavailable at the moment.</p>
+
+  <p>The <strong>pressed state</strong> reflects the liminal moment of intention, between pressing and releasing an
+    action, across devices:</p>
+  <ul>
+    <li>On a keyboard, after a key is pressed but before it’s released.</li>
+    <li>On a mouse, between the click down and the release.</li>
+    <li>On touchscreens, from contact until the finger lifts.</li>
+  </ul>
+
+  <p>This state anticipates an event, embodying the threshold where potential becomes action. Finally, the
+    <strong>active state</strong> signifies selection, a persistent acknowledgment that an element is chosen or engaged.
+    It is the visible trace of decision, often marked by a highlight, checkmark, or shift in context within menus and
+    navigation systems.</p>
+
+  <article class="interaction-evolution">
+
+    <section id="origin">
+      <h2>1. Where These Six States Come From</h2>
+      <p>These states originate in <strong>Human–Computer Interaction (HCI)</strong> and GUI design systems,
+        particularly from the lineage of <strong>WIMP interfaces</strong> (Windows, Icons, Menus, Pointer) developed in
+        the 1980s–90s. They reflect a local, bounded interaction loop, a user acting on a discrete element within a
+        bounded context (the screen, the app, the window).</p>
+      <p>Each state captures a moment in that bounded loop, an event that can be observed, rendered, and resolved. But
+        that model assumes:</p>
+      <ul>
+        <li>The user is present and focused on a single interface.</li>
+        <li>The system is reactive, not proactive.</li>
+        <li>Time flows in discrete input–response cycles.</li>
+      </ul>
+    </section>
+
+    <section id="shift">
+      <h2>2. The Shift: Ubiquitous and Agentic Environments</h2>
+      <p>In a ubiquitous or ambient computing world, those assumptions collapse. The interface is no longer a window,
+        it’s everywhere. The user is no longer bounded, they’re distributed across devices, contexts, and identities.
+        The system is no longer passive, it has agency, continuity, and memory.</p>
+      <p>So “interaction” stops being a momentary state change on a button, it becomes an ongoing negotiation between
+        distributed agents (human and machine) across contexts.</p>
+    </section>
+
+    <section id="meta-states">
+      <h2>3. Toward New “States” in the Agentic Age</h2>
+      <p>If we extend the classic model, we might define meta-states that represent not input conditions but
+        <em>relationship conditions</em>, how presence, attention, and intention flow in a continuous field.</p>
+
+      <h3>Here’s one possible expansion:</h3>
+      <table class="new-states">
+        <thead>
+          <tr>
+            <th>New State</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ambient</strong></td>
+            <td>The system and user are mutually aware but not in active interaction. Context is sensed, but no direct
+              engagement is occurring.</td>
+          </tr>
+          <tr>
+            <td><strong>Anticipatory</strong></td>
+            <td>The system predicts or infers potential user intent and subtly shifts affordances or prepares responses
+              before explicit interaction.</td>
+          </tr>
+          <tr>
+            <td><strong>Delegated</strong></td>
+            <td>The user has handed partial or full control to an agent; interaction is asynchronous, ambient, or
+              representational.</td>
+          </tr>
+          <tr>
+            <td><strong>Reconciled</strong></td>
+            <td>The system merges asynchronous states (actions, data, context) into a coherent whole, a post-interaction
+              synthesis state.</td>
+          </tr>
+          <tr>
+            <td><strong>Trans-temporal</strong></td>
+            <td>The interaction is not bounded by “now”, it reflects continuity across time and context, e.g., an agent
+              acting in your absence, remembering, or adapting.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>These states recognize that interaction is continuous, distributed, and temporally fuzzy.</p>
+    </section>
+
+    <section id="time">
+      <h2>4. View of Time</h2>
+      <p>If we assume that time isn’t real but is a construct of local circumstance, an emergent property of perception,
+        then traditional UI “states” are themselves illusions of time.</p>
+      <p>The “Pressed” or “Hover” states only make sense when time is linear and causal (<em>event → response → next
+          event</em>). But in an agentic temporal framework, interaction is nonlinear, actions ripple across moments,
+        and presence can be asynchronous yet immediate.</p>
+      <p>So instead of states as frames in time, we might think of <strong>fields of relation</strong>, multidimensional
+        conditions of attention, intent, and agency that coexist and overlap.</p>
+    </section>
+
+    <section id="ontology">
+      <h2>5. A New Ontology of Interaction</h2>
+      <p>In such an environment, interaction might be modeled not as a timeline, but as an <strong>energy field or
+          network of presences</strong>. Each agent (human or synthetic) occupies a vector within that field,
+        expressing:</p>
+      <ul>
+        <li><strong>Attention:</strong> degree of focus or awareness</li>
+        <li><strong>Intention:</strong> goal or purpose projection</li>
+        <li><strong>Agency:</strong> capacity to act autonomously</li>
+        <li><strong>Contextual gravity:</strong> how strongly an environment attracts or modulates behavior</li>
+      </ul>
+      <p>The “states” of interaction, then, are configurations of these vectors, dynamic and simultaneous, not
+        sequential.</p>
+    </section>
+  </article>
+
+  <section id="industrial">
+    <h2>6. From Industrial Roots to Conscious Systems</h2>
+    <p>These interaction states evolved historically from the industrial and cybernetic worldview, where processes were
+      standardized and predictable, much like Henry Ford’s assembly lines. Over time, design transitioned from
+      mechanical precision to adaptive interaction. This shift mirrors the evolution from <em>industrial control</em> to
+      <em>cybernetic feedback</em> and now toward <em>agentic systems</em> that sense, anticipate, and learn.</p>
+    <p>In this transformation, consciousness becomes the new user state, awareness as an interactive modality. The
+      interface is no longer static but responsive, ecological, and anticipatory.</p>
+  </section>
+
+  <section id="slds">
+    <h2>7. SLDS 2 and Design Evolution</h2>
+    <p>The Salesforce Lightning Design System (SLDS) 2 marks a new phase of this evolution. SLDS 2 uses <strong>CSS
+        custom properties</strong> as its visual language, reducing reliance on traditional design tokens. It
+      prioritizes <strong>out-of-the-box base Lightning components</strong> over custom blueprints, reflecting a move
+      toward consistency and resilience. This architecture is built with <strong>AI-ready components</strong> in mind,
+      preparing the foundation for adaptive, intelligent interfaces that integrate seamlessly into agentic systems.</p>
+  </section>
+
+  <section id="organisms">
+    <h2>8. Design Systems as Living Organisms</h2>
+    <p>Modern design systems behave more like living cells, they sense, adapt, and maintain coherence across
+      environments. Just as the human immune system reacts to threats and maintains balance, design systems now must
+      foresee challenges and self-regulate. They act as ecosystems rather than toolkits.</p>
+    <ul>
+      <li><strong>Antigens</strong> – unexpected inputs or contextual changes.</li>
+      <li><strong>Antibodies</strong> – adaptive responses via AI or design logic.</li>
+      <li><strong>Homeostasis</strong> – maintaining brand, trust, and ethical balance.</li>
+      <li><strong>Evolution</strong> – continuous learning from user interaction data.</li>
+    </ul>
+  </section>
+
+  <section id="sources">
+    <h2>9. Key Sources and Theoretical Roots</h2>
+    <p>This framework draws from cybernetics, HCI, biomimicry, and posthuman design philosophies, converging into an
+      understanding of design as a conscious, adaptive process rather than a static set of rules.</p>
+  </section>
+
+  <section id="reading">
+    <h2>10. Recommended Reading and Resources</h2>
+
+    <h3>🏭 Industrial and Mechanistic Origins</h3>
+    <ul>
+      <li>Frederick Winslow Taylor – <em>The Principles of Scientific Management</em> (1911)</li>
+      <li>Henry Ford – <em>My Life and Work</em> (1922)</li>
+      <li>Lewis Mumford – <em>Technics and Civilization</em> (1934)</li>
+    </ul>
+
+    <h3>⚙️ Cybernetics and Systems Thinking</h3>
+    <ul>
+      <li>Norbert Wiener – <em>Cybernetics</em> (1948)</li>
+      <li>Ross Ashby – <em>An Introduction to Cybernetics</em> (1956)</li>
+      <li>Stafford Beer – <em>Brain of the Firm</em> (1972)</li>
+      <li>Heinz von Foerster – <em>Understanding Understanding</em> (2003)</li>
+    </ul>
+
+    <h3>💻 Human–Computer Interaction</h3>
+    <ul>
+      <li>Donald Norman – <em>The Design of Everyday Things</em> (1988 / 2013)</li>
+      <li>Bill Buxton – <em>Sketching User Experiences</em> (2007)</li>
+      <li>Lucy Suchman – <em>Plans and Situated Actions</em> (1987)</li>
+      <li>Terry Winograd & Fernando Flores – <em>Understanding Computers and Cognition</em> (1986)</li>
+    </ul>
+
+    <h3>🧬 Living Systems and Biomimicry</h3>
+    <ul>
+      <li>Humberto Maturana & Francisco Varela – <em>Autopoiesis and Cognition</em> (1980)</li>
+      <li>Fritjof Capra – <em>The Web of Life</em> (1996)</li>
+      <li>John Holland – <em>Complex Adaptive Systems</em> (1992)</li>
+      <li>Janine Benyus – <em>Biomimicry: Innovation Inspired by Nature</em> (1997)</li>
+    </ul>
+
+    <h3>🔮 Anticipation, Agency, and Futures</h3>
+    <ul>
+      <li>Mihai Nadin – <em>Anticipation</em> (2015)</li>
+      <li>Riel Miller – <em>Transforming the Future</em> (UNESCO, 2018)</li>
+      <li>Benjamin Bratton – <em>The Stack</em> (2016)</li>
+      <li>Elisa Giaccardi – <em>Design for the Posthuman Era</em> (2021)</li>
+    </ul>
+
+    <h3>🪞 Consciousness, Ethics, and Posthumanism</h3>
+    <ul>
+      <li>Alfred North Whitehead – <em>Process and Reality</em> (1929)</li>
+      <li>Francisco Varela – <em>Ethical Know-How</em> (1999)</li>
+      <li>Donna Haraway – <em>A Cyborg Manifesto</em> (1985)</li>
+      <li>Andy Clark – <em>Supersizing the Mind</em> (2008)</li>
+      <li>Karen Barad – <em>Meeting the Universe Halfway</em> (2007)</li>
+    </ul>
+
+    <h3>🧭 Contemporary Extensions</h3>
+    <ul>
+      <li>Neri Oxman – <em>Material Ecology</em> (2020)</li>
+      <li>Ezio Manzini – <em>Design, When Everybody Designs</em> (2015)</li>
+      <li>Arturo Escobar – <em>Designs for the Pluriverse</em> (2018)</li>
+    </ul>
+
+    <h3>🌐 Salesforce and Accessibility Resources</h3>
+    <ul>
+      <li><a href="https://www.w3.org/TR/WCAG20/" target="_blank">Accessibility (WCAG 2.0)</a></li>
+      <li><a href="https://v1.lightningdesignsystem.com/guidelines/overview/" target="_blank">Design Guidelines
+          Overview</a></li>
+      <li><a href="https://v1.lightningdesignsystem.com/components/overview/" target="_blank">Salesforce Blueprint
+          Overview</a></li>
+      <li><a href="https://v1.lightningdesignsystem.com/design-tokens/" target="_blank">Design Tokens</a></li>
+      <li><a href="https://v1.lightningdesignsystem.com/guidelines/voice-and-tone/#site-main-content"
+          target="_blank">Voice and Tone</a></li>
+      <li><a href="https://v1.lightningdesignsystem.com/accessibility/overview/" target="_blank">Accessibility
+          Overview</a></li>
+    </ul>
+
+    <p>This collection provides a panoramic foundation, from industrial standardization to the posthuman, agentic view
+      of design systems as living, anticipatory organisms ready for the AI age.</p>
+  </section>
+
+  <p><a href="../blog.html">← Back to blog</a></p>
+</body>
+
+</html>
