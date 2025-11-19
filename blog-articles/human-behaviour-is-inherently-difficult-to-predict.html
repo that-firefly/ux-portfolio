@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="An exploration of the evolution from Design Thinking to Design with Data and AI — systems thinking, deterministic vs generative models, and augmented imagination.">
+  <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
+  <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+  <title>Estela Gaspar – UX/UI Designer - Human behaviour is inherently difficult to predict</title>
+
+  <style>
+    :root {
+      --card: #ffffff;
+      --accent: #0f766e;
+      --muted: #666;
+    }
+
+
+    body {
+      max-width: 70%;
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #fefefe;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    img {
+      max-width: 30%;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #444;
+    }
+
+    h1 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .contact {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.2em;
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .back-btn a {
+      color: #808080;
+      margin: 0 0 30px 0;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .back-btn a:hover,
+    .back-btn a:active,
+    .back-btn a:focus {
+      color: #666666;
+      /* darker gray */
+    }
+
+    figure {
+      display: block;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      unicode-bidi: isolate;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #555;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    blockquote {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      unicode-bidi: isolate;
+      border-left: 4px solid grey;
+      padding-left: 20px;
+    }
+
+
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #555;
+    }
+
+
+    article.interaction-evolution {
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem 2rem;
+    }
+
+    table.new-states {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      border: 1px solid #000000;
+      border-radius: 10px;
+    }
+
+    table.new-states th,
+    table.new-states td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    table.new-states th {
+      background: #f3f3f3;
+      color: #000;
+      font-weight: 600;
+    }
+
+    table.new-states tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.new-states td strong {
+      color: #000;
+    }
+
+    em {
+      color: #555;
+      font-style: italic;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 1rem;
+      }
+
+      article.interaction-evolution {
+        padding: 2rem 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      table.new-states th,
+      table.new-states td {
+        padding: 0.8rem;
+      }
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 36px auto;
+      padding: 20px
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06)
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px
+    }
+
+    p.lead {
+      margin: 0 0 18px;
+      color: var(--muted)
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px
+    }
+
+    thead th {
+      background: linear-gradient(90deg, rgba(15, 118, 110, 0.06), transparent);
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #eef2f7
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top
+    }
+
+    td:first-child {
+      width: 18%;
+      font-weight: 600
+    }
+
+    ul.reading {
+      padding-left: 18px;
+      margin-top: 14px
+    }
+
+    ul.reading li {
+      margin: 10px 0
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 18px
+    }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer
+    }
+
+    @media(max-width:720px) {
+      td:first-child {
+        display: block;
+        width: 100%;
+        font-weight: 700;
+        margin-bottom: 6px
+      }
+
+      table,
+      thead,
+      tbody,
+      tr,
+      th,
+      td {
+        display: block;
+        width: 100%
+      }
+
+      thead {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back-btn">
+    <a href="../blog.html">← Back to main blog</a>
+  </div>
+  <h1>Human behaviour is inherently difficult to predict</h1>
+
+  <figure>
+    <img src="../images/blog-images/vibrant-energy-burst-stockcake.jpg"
+      alt="man walking through a dual blue light and yellow light vibrant energy burst">
+    <figcaption>Photo by <a href="https://stockcake.com/i/vibrant-energy-burst_913962_845686"
+        target="_blank">Stockcake</a></figcaption>
+  </figure>
+
+
+  <h2>Systems built on rigid, overly simplified algorithms will almost certainly fall short</h2>
+  <p>A well-known example comes from the U.S. housing crisis: some companies used mathematical models to estimate home values and assess lending risk, assuming people would behave in stable, rational ways. But human behaviour didn’t follow the models. Banks approved loans for people who couldn’t realistically afford them, and when the market shifted, many homeowners simply walked away. The algorithms failed because they treated a complex human system as if it were predictable and linear, and the real world isn’t.</p>
+  <p>Companies like <a href="https://www.wired.com/story/zillow-ibuyer-real-estate" target="_blank">Zillow used algorithms/automated valuation models (AVMs)</a> to value homes, then tried to buy/sell them via their “iBuyer” programs and, they faced large losses when the market changed.</p>
+  <p>The AVM was trained on historical data and “average” conditions, but the housing market experienced rapid changes and unpredictable shifts, e.g., during the pandemic. That meant many assumptions in the model didn’t hold.</p>
+  <p>Zillow underestimated the risk that having to hold and resell many homes would expose them to market downturns, cost overruns (renovations, labour, materials) and other operational risks.</p>
+  <p>The mismatch between model outputs and real-world outcomes highlights how modelling human-led systems (people buying/selling homes, values shifting, sellers choosing offers) is much more complex than many algorithms assume.</p>
+  <blockquote><a href="https://www.researchgate.net/publication/362472089_Real_Estate_Economic_Development_Based_on_Logarithmic_Growth_Function_Model" target="_blank"><strong>Research</strong></a> <strong>shows real-estate valuation models (including regression, machine learning, logarithmic models) struggle with real-world nonlinearities and complexity. For example, one study uses a logarithmic growth model for real estate economics.</strong></blockquote>
+  <p>People are emotional, situational, inconsistent, influenced by context, incentives, fear, hope, social pressure, misinformation, and countless other factors that no simple model can fully capture.</p>
+  <p>Algorithms that assume “if X, then Y” will break when humans behave like:</p>
+  <ul>
+    <li>“if X, then maybe Y, maybe Z, maybe nothing, depending on 20 hidden factors.”</li>
+  </ul>
+  
+  <p>As an example, during the lead-up to the 2007–2008 housing crisis, many financial institutions used:</p>
+  <ul>
+    <li>Risk models</li>
+    <li>Predictive scoring systems</li>
+    <li>Simplified assumptions about default behaviour</li>
+    <li>Over-optimistic algorithms trained on limited historical data</li>
+  </ul>
+  <p>These systems assumed:</p>
+  <ul>
+    <li>Home prices always rise</li>
+    <li>Borrowers behave rationally</li>
+    <li>Defaults are rare</li>
+    <li>Risk can be “spread out” safely</li>
+  </ul>
+  <p>But when prices stopped rising, borrowers <strong>stopped behaving in ways the models anticipated</strong>. Many simply abandoned homes (“jingle mail”), leaving lenders exposed.</p>
+  <p>This is a textbook example of <strong>algorithmic determinism failing in a complex, human-led system</strong>.</p>
+
+  <h2>The deeper lesson</h2>
+  <p>Algorithms aren’t the problem, overconfidence in simplified models is. Human behaviour is nonlinear, contextual, and shaped by feedback loops. This is exactly what systems thinkers warn about:</p>
+  <blockquote>“If you treat a complex system like it’s simple, it will find a way to surprise you.”</blockquote>
+  <p>This housing example is great to explain the unpredictable behaviour of humans and events that need to be taken into consideration when designing a product.</p>
+  <p>Its important to consider:</p>
+  <ul>
+    <li>Hidden users (borrowers whose behaviour wasn’t modeled accurately.)</li>
+    <li>Ripple effects (defaults → banks collapse → global recession).</li>
+    <li>Failure of linear models.</li>
+    <li>Limitations of deterministic calculations in unpredictable human systems.</li>
+  </ul>
+
+  <h2 style="margin-top:20px">Reading list</h2>
+  <ul class="reading">
+  <li><a href="https://www.iangoldin.org/books/the-butterfly-defect" target="_blank"><strong>The Butterfly Defect</strong> — Ian Goldin</a></li>
+  <li><a href="https://www.penguin.co.uk/books/56916/butterfly-economics-by-ormerod-paul/9780571277498" target="_blank"><strong>Butterfly Economics</strong> — Paul Ormerod</a></li>
+  <li><a href="https://donellameadows.org/systems-thinking-bookstore/" target="_blank"><strong>Thinking in Systems</strong> — Donella H. Meadows</a></li>
+  <li><a href="https://www.penguinrandomhouse.com/books/25022/the-hidden-connections-by-fritjof-capra/" target="_blank"><strong>The Hidden Connections</strong> — Fritjof Capra</a></li>
+  <li><a href="https://www.chelseagreen.com/product/systems-thinking-for-social-change/" target="_blank"><strong>Systems Thinking for Social Change</strong> — David Peter Stroh</a></li>
+  <li><a href="https://www.penguinrandomhouse.com/books/294387/the-fifth-discipline-by-peter-m-senge/" target="_blank"><strong>The Fifth Discipline</strong> — Peter Senge</a></li>
+  <li><a href="https://mitpress.mit.edu/9780262536050/radical-technologies/" target="_blank"><strong>Radical Technologies</strong> — Adam Greenfield</a></li>
+  <li><a href="https://policy.bristoluniversitypress.co.uk/governance-in-the-climate-emergency" target="_blank"><strong>Governance in a Climate Emergency</strong> — Ray Ison & Ed Straw</a></li>
+  <li><a href="https://rosenfeldmedia.com/books/closing-the-loop/" target="_blank"><strong>Closing the Loop: Systems Thinking for Designers</strong> — Sheryl Cababa</a></li>
+  <li><a href="https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555" target="_blank"><strong>Thinking, Fast and Slow</strong> — Daniel Kahneman</a></li>
+  <li><a href="https://www.amazon.com/Complexity-Living-Systems-M-Lerner/dp/0262531961" target="_blank"><strong>Complexity: A Guided Tour</strong> — Melanie Mitchell</a></li>
+  <li><a href="https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718" target="_blank"><strong>Superforecasting</strong> — Philip E. Tetlock & Dan Gardner</a></li>
+</ul>
+
+
+  <p><a href="../blog.html">← Back to blog</a></p>
+</body>
+
+</html>
