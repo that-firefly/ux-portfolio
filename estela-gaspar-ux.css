@@ -5,7 +5,6 @@ body {
   overflow-x: visible;
 }
 
-
 html,
 body,
 div,
@@ -74,7 +73,6 @@ header p {
   /* darker gray */
 }
 
-
 .section {
   padding: 0px;
   margin: auto;
@@ -86,14 +84,12 @@ header p {
   gap: 20px;
 }
 
-
 .cover-alternate-content.wider {
   background-image: url("./images/banner-ux-estela.png");
   background-repeat: no-repeat;
   background-position: calc(25% + 350px) calc(0px);
   background-size: 35%;
 }
-
 
 /* Portfolio case study cards start */
 
@@ -128,7 +124,6 @@ header p {
   overflow: hidden;
 }
 
-
 .infographic-image {
   margin: 5px auto;
   width: 80%;
@@ -154,14 +149,9 @@ header p {
     box-shadow 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ffffff;
-
 }
 
-
-
 /* Portfolio case study cards end */
-
-
 
 .about,
 .contact {
@@ -282,7 +272,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
 a.highlighted-link {
   display: block;
   text-align: center;
@@ -301,16 +290,13 @@ a.highlighted-link {
   align-items: center;
 }
 
-
-
 a.highlighted-link:hover {
   background-color: #8e44ad;
   /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
-
-.text-only-wider>.highlighted-link {
+.text-only-wider > .highlighted-link {
   width: 20%;
   margin: 0 auto;
   padding: 1em;
@@ -405,11 +391,6 @@ h2.drawwilder-subtitle {
   text-align: center;
 }
 
-
-
-
-
-
 img {
   border: 0;
 }
@@ -491,14 +472,11 @@ iframe {
 
 /* Video end */
 
-
 /* Drawwilder website */
-
 
 .drawwilder-noborder-container {
   width: 60%;
   margin: 60px auto 0px auto;
-
 }
 
 .workwithme-button {
@@ -527,13 +505,9 @@ iframe {
   /* pushes underline down a bit for elegance */
 }
 
-
-
-
 .main-content.drawwilder h2 {
   font-size: 1.6em;
 }
-
 
 /* Left (text) */
 .drawwilder-left {
@@ -584,7 +558,6 @@ iframe {
   text-align: left;
 }
 
-
 .drawwilder-image {
   width: 100%;
   height: 100vh;
@@ -613,14 +586,12 @@ iframe {
   }
 }
 
-
-
 /* keep ONE wrapper rule */
 .drawwilder-wrapper {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1a1a1a;
 }
 
@@ -644,11 +615,12 @@ iframe {
 .drawwilder-right {
   flex: 1 1 50%;
   min-height: 100vh;
-  background: url("images/drawwilder/neotropica/neotropica-thumb.png") center / cover no-repeat;
+  background: url("images/drawwilder/neotropica/neotropica-thumb.png") center /
+    cover no-repeat;
 }
 
 /* responsive */
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .drawwilder-wrapper {
     flex-direction: column;
   }
@@ -662,8 +634,6 @@ iframe {
   }
 }
 
-
-
 .drawwilder-wrapper {
   display: flex;
   align-items: center;
@@ -672,7 +642,6 @@ iframe {
   min-height: 100vh;
   flex: 1 1 50%;
 }
-
 
 /* Left (text) */
 .drawwilder-left {
@@ -754,7 +723,6 @@ iframe {
     font-size: 2rem;
   }
 }
-
 
 .drawwilder-text-intro li {
   display: flex;
@@ -1087,15 +1055,13 @@ ol li {
   font-weight: 400;
 }
 
-
 h3.stronger {
   font-weight: 700;
 }
 
-.cover-alternate-content.wider>.landingpage-title {
+.cover-alternate-content.wider > .landingpage-title {
   color: #ffffff;
 }
-
 
 /* Lists */
 
@@ -1198,12 +1164,14 @@ ol li {
   margin: 0 auto;
   border: 0;
   height: 3px;
-  background: linear-gradient(to right,
-      #541675,
-      #7d2eac,
-      #e4cef1,
-      #7d2eac,
-      #3a0d5d);
+  background: linear-gradient(
+    to right,
+    #541675,
+    #7d2eac,
+    #e4cef1,
+    #7d2eac,
+    #3a0d5d
+  );
   border-radius: 2px;
 }
 
@@ -1412,7 +1380,6 @@ svg {
   margin: 0.5rem 0 1rem;
 }
 
-
 .drawwilder-text-intro h2 {
   color: #3a0d5d;
 }
@@ -1422,14 +1389,10 @@ svg {
   font-size: 2em;
 }
 
-
 .drawwilder-text-intro {
   width: 70%;
   margin: 0 auto;
 }
-
-
-
 
 .blog-content.drawwilder {
   width: 100%;
@@ -1571,7 +1534,7 @@ h2.drawwilder-subtitle {
   margin: 0px;
 }
 
-p.drawwilder-text-intro Specificity: (0, 1, 1) {
+p.drawwilder-text-introSpecificity: (0, 1, 1) {
   text-align: left;
 }
 
@@ -1611,7 +1574,6 @@ p.drawwilder-text-intro Specificity: (0, 1, 1) {
 }
 
 /* Images start */
-
 
 .internal-page-card img {
   width: 100%;
@@ -1698,7 +1660,7 @@ html {
   float: left;
 }
 
-.internal-page-card>.image-eg-small {
+.internal-page-card > .image-eg-small {
   width: 30% !important;
 }
 
@@ -1719,7 +1681,7 @@ img.bordered {
   border-radius: 50%;
 }
 
-div.projectcontent>.label-text {
+div.projectcontent > .label-text {
   margin: 0px;
   padding: 10px 0px;
   font-size: 14px;
@@ -1774,7 +1736,7 @@ div.projectcontent>.label-text {
   width: 90%;
 }
 
-.blog-preview>img {
+.blog-preview > img {
   width: 50%;
   padding: 20px 20px 20px 0px;
 }
@@ -1846,7 +1808,6 @@ div.projectcontent>.label-text {
 /*************************  Media Queries start *************************/
 
 @media only screen and (max-width: 480px) {
-
   /* styles for very small devices like older iPhones/Androids */
   img,
   video,
@@ -1891,7 +1852,6 @@ div.projectcontent>.label-text {
 }
 
 @media (max-width: 767px) {
-
   .landingpage-title.eg {
     padding-top: 230px;
   }
@@ -1899,7 +1859,6 @@ div.projectcontent>.label-text {
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   /* styles for standard smartphones */
-
 
   .cover-alternate-container.one {
     margin-top: 60px;
@@ -2034,8 +1993,6 @@ div.projectcontent>.label-text {
     text-align: center;
   }
 
-
-
   .drawwilder-text-intro.specs {
     margin: 30px auto;
     padding: 30px;
@@ -2081,7 +2038,6 @@ div.projectcontent>.label-text {
     width: 50%;
   }
 
-
   h2 {
     font-size: 2em;
     text-align: left;
@@ -2110,8 +2066,6 @@ div.projectcontent>.label-text {
   .cover-alternate-content img {
     width: 95%;
   }
-
-
 
   .drawwilder-text-intro.specs {
     margin: 30px auto;
@@ -2233,7 +2187,6 @@ div.projectcontent>.label-text {
 /* Smaller aroun 1000px */
 
 @media (min-width: 997px) {
-
   img,
   video,
   iframe {
@@ -2245,7 +2198,6 @@ div.projectcontent>.label-text {
 }
 
 @media (min-width: 1118px) {
-
   img,
   video,
   iframe {
@@ -2262,15 +2214,12 @@ div.projectcontent>.label-text {
   .container-group {
     display: grid !important;
     margin: 20px 30px 20px 20px;
+    margin: 0 auto;
   }
-
-
 }
 
 /*************************************************************************** Desktops only sizes start ****************************************************************************/
 @media (min-width: 2415px) and (max-width: 2435px) {
-
-
   .text-only-wider {
     padding: 0px 0px;
     max-width: 50%;
@@ -2303,8 +2252,6 @@ div.projectcontent>.label-text {
 }
 
 @media (min-width: 2000px) and (max-width: 2415px) {
-
-
   .text-only-wider {
     padding: 0px 0px;
     max-width: 50%;
@@ -2337,8 +2284,6 @@ div.projectcontent>.label-text {
 }
 
 @media (min-width: 1500px) and (max-width: 2000px) {
-
-
   .text-only-wider {
     padding: 0px 0px;
     max-width: 50%;
@@ -2396,7 +2341,6 @@ div.projectcontent>.label-text {
     width: 60%;
   }
 
-
   .drawwilder-item-container {
     max-width: 1000px;
   }
@@ -2410,7 +2354,8 @@ div.projectcontent>.label-text {
 /*************************************************************************** Desktops only sizes end ****************************************************************************/
 /* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
-@media screen and (width: 1264.67px) and (height: 3608px) {}
+@media screen and (width: 1264.67px) and (height: 3608px) {
+}
 
 /* 💻 Desktops & Tablets (1024px - 1499px) */
 
@@ -2451,7 +2396,6 @@ div.projectcontent>.label-text {
   nav .menu li {
     margin: 10px 0;
   }
-
 }
 
 /* === Responsive: Medium+ Tablets and Desktop === */
@@ -2524,7 +2468,7 @@ div.projectcontent>.label-text {
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
 
 @media (min-width: 960px) and (max-width: 1023px) {
-  .cover-alternate-content.wider>.landingpage-title {
+  .cover-alternate-content.wider > .landingpage-title {
     margin: 0;
     padding: 20px 0;
   }
@@ -2623,7 +2567,6 @@ div.projectcontent>.label-text {
 /* 🍩 Tablets (768px - 799px) */
 
 @media (min-width: 768px) and (max-width: 799px) {
-
   h1.landingpage-title {
     font-size: 4em !important;
     font-weight: 900;
@@ -2645,7 +2588,6 @@ div.projectcontent>.label-text {
 
 /* 📱 Mobile Devices (Up to 768px) */
 @media screen and (max-width: 768px) {
-
   img,
   video,
   iframe {
@@ -2655,7 +2597,6 @@ div.projectcontent>.label-text {
   .text-only-wider {
     max-width: 100%;
   }
-
 
   .cover-alternate-content {
     width: 100%;
@@ -2670,7 +2611,6 @@ div.projectcontent>.label-text {
   .text-content {
     width: 100%;
   }
-
 
   h2 {
     text-align: center;
@@ -2758,11 +2698,9 @@ div.projectcontent>.label-text {
 }
 
 @media (min-width: 428px) and (max-width: 550px) {
-
   .drawwilder-right {
     width: 90%;
   }
-
 
   .text-only-wider {
     max-width: 60%;
@@ -2773,14 +2711,9 @@ div.projectcontent>.label-text {
 
 /* 📱 Small Phones (350px - 428px) */
 @media (min-width: 300px) and (max-width: 600px) {
-
-
   .drawwilder-right {
     width: 90%;
   }
-
-
-
 
   .text-only-wider {
     max-width: 100%;
@@ -2789,7 +2722,6 @@ div.projectcontent>.label-text {
   .landingpage-title.eg {
     padding-top: 90px;
   }
-
 
   h3 {
     font-size: 1em;
@@ -2829,8 +2761,6 @@ div.projectcontent>.label-text {
     font-size: 1em;
   }
 
-
-
   .main-content.drawwilder h2 {
     font-size: 1.2em;
   }
@@ -2847,8 +2777,6 @@ div.projectcontent>.label-text {
   .text-content {
     width: 100%;
   }
-
-
 
   .text-only-wider {
     max-width: 100%;
@@ -2873,7 +2801,7 @@ div.projectcontent>.label-text {
     justify-content: center;
   }
 
-  .image-container>img {
+  .image-container > img {
     height: 200px !important;
     width: 100% !important;
     object-fit: cover;
@@ -2894,7 +2822,6 @@ div.projectcontent>.label-text {
 
 /* 📱 Tiny Phones (250px - 349px) */
 @media (min-width: 250px) and (max-width: 349px) {
-
   .drawwilder-right {
     width: 90%;
   }
@@ -2917,7 +2844,6 @@ div.projectcontent>.label-text {
 /*************************  Media Queries end *************************/
 /*************************  Media Queries end *************************/
 
-
 footer.footer-banner.drawwilder {
-    color: #000000;
+  color: #000000;
 }
