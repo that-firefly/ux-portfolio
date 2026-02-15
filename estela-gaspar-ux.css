@@ -18,7 +18,7 @@ label {
 
 .text-container {
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
 }
 
 .port-page-internal {
@@ -2277,7 +2277,7 @@ div.projectcontent > .label-text {
     height: auto;
     display: block;
     width: 20%;
-    border-radius: 400px;
+    border-radius: 50%;
   }
 
   .main-content {
@@ -2301,15 +2301,6 @@ div.projectcontent > .label-text {
   .text-only-wider {
     padding: 0px 0px;
     max-width: 50%;
-  }
-
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 60%;
   }
 
   .main-content {
@@ -2342,29 +2333,15 @@ div.projectcontent > .label-text {
     max-width: 45%;
   }
 
-  .portrait-eg {
-    padding: 10px;
-    width: 20%;
-    margin: 0 auto;
-  }
-
   h1 {
     font-size: 3em;
   }
 
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 100%;
-  }
-
   .portrait-eg {
     padding: 10px;
     width: 20%;
     margin: 0 auto;
+    border-radius: 50%;
   }
 
   .drawwilder-item-container {
@@ -2381,6 +2358,14 @@ div.projectcontent > .label-text {
 /* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
 @media screen and (width: 1264.67px) and (height: 3608px) {
+  img,
+  video,
+  iframe {
+    margin: 0px auto;
+    height: auto;
+    display: block;
+    width: 70%;
+  }
 }
 
 /* 💻 Desktops & Tablets (1024px - 1499px) */
@@ -2388,6 +2373,15 @@ div.projectcontent > .label-text {
 @media screen and (max-width: 960px) {
   nav {
     flex-wrap: wrap;
+  }
+
+  img,
+  video,
+  iframe {
+    margin: 0px auto;
+    height: auto;
+    display: block;
+    width: 70%;
   }
 
   .blog-preview {
@@ -2532,6 +2526,7 @@ div.projectcontent > .label-text {
     padding: 10px;
     width: 20%;
     margin: 0 auto;
+    border-radius: 50%;
   }
 
   .background-slider {
@@ -2630,6 +2625,7 @@ div.projectcontent > .label-text {
     padding: 10px;
     width: 20%;
     margin: 0 auto;
+    border-radius: 50%;
   }
   .text-only-wider {
     max-width: 100%;
@@ -2756,6 +2752,7 @@ div.projectcontent > .label-text {
     padding: 10px;
     width: 30%;
     margin: 0 auto;
+    border-radius: 50%;
   }
 
   .text-container {
@@ -2796,6 +2793,7 @@ div.projectcontent > .label-text {
   video,
   iframe {
     width: 100%;
+    margin: 20px auto;
   }
 
   .port-page-internal h3 {
@@ -2907,6 +2905,7 @@ div.projectcontent > .label-text {
     padding: 10px;
     width: 70%;
     margin: 0 auto;
+    border-radius: 50%;
   }
 }
 
