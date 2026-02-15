@@ -1,69 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-
 <head>
-    <title>Estela Gaspar - UX User Experience Design</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estela-gaspar-ux.css">
-    <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+  <meta charset="UTF-8" />
 
+  <title>Estela Gaspar - UX User Experience Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./estela-gaspar-ux.css" />
+
+  <!-- Load after HTML is parsed -->
+  <script src="./estela-ux.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul class="menu">
-                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./new.html">💫 New</a></li>
-                <li><a href="./case-studies.html">Case Studies</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./links.html">Links</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <div class="wrapper">
+    <nav>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./new.html">New</a></li>
+        <li><a href="./case-studies.html">Case Studies</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./links.html">Links</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-        <div class="main-content">
-             <img class="infographic-image" src="./images/design-thinking-estela-infographic.png" alt="Design Thinking process diagram" title="Design Thinking lenses">
-            <div class="cover-alternate-container three">
-                <div class="cover-alternate-content">
-                    <p class="reference">Design Thinking workflow diagram</p>
-                    <h2>As a Lead UX Designer, I am passionate about shaping human-centred, data-driven digital experiences that fuse strategy, design, and AI innovation. Guided by Design Thinking, Agile, and Lean methodologies, I turn complex challenges into elegant, meaningful solutions.</h2>
-                    <h2>With over a decade of experience in UX Design, I have cultivated a passion for creating accessible, engaging user experiences that not only meet user needs but also inspire and delight. 
-                    </h2>
-                    <h3>The name That Firefly comes from my childhood in Portugal, where I would often retreat to the forests and watch the fireflies light up the night. That simple, magical sight stayed with me, a reminder that even the smallest light can illuminate great darkness. It has inspired me throughout my life to stay curious, to create, and to keep moving towards growth and purpose, no matter how uncertain the path ahead. Like the firefly, I aim to bring light and meaning into the spaces I touch, through design, art, and human connection.</h3>
-                 <a class="highlighted-link" href="./about-cv.html">View CV</a>
-                </div>
-            </div>
-        </div>
+    <main class="main-content">
+      <h1 class="landingpage-title eg">
+        Estela Gaspar UX Designer
+        <br />
+        <span style="font-weight: 300;">Driven by design that empowers people</span>
+      </h1>
 
-        <div class="footer-banner">
-            <footer>
-                Website coded by Estela Gaspar
-            </footer>
+      <!-- Layout wrapper (image + text) -->
+      <section class="about-layout">
+        <img
+          class="portrait-eg"
+          src="./images/ux-designer-estela.jpg"
+          alt="Portrait of Estela Gaspar"
+          title="Estela portrait image"
+        />
+
+        <div class="text-container">
+          <h2>
+            I specialise in designing complex systems and data-rich platforms, translating technical constraints, APIs,
+            and backend logic into clear, scalable user experiences.
+          </h2>
+
+          <img
+            src="./images/design-process.png"
+            alt="Design Thinking process"
+            title="Design process"
+          />
+
+          <p>
+            I apply Design Thinking as a structured yet human-centred approach across my projects, moving from research and
+            problem framing through ideation, prototyping, testing, and implementation.
+          </p>
+
+             <img
+            src="./images/design-process-explanation.png"
+            alt="Design process"
+            title="Design process explanation"
+          />
+          <p>
+            With over ten years of experience across government and enterprise environments, I focus on reducing ambiguity,
+            aligning cross-functional teams, and bringing clarity to interconnected workflows.
+          </p>
+           <img
+            src="./images/design-10-plus.png"
+            alt="Years of practice"
+            title="10 years of practice"
+          />
+          <p>
+            Alongside my technical foundation, I have a strong artistic sensibility and a natural inclination for recognising
+            patterns within complex systems.
+          </p>
+          <p>
+            I am particularly drawn to environments where structure, creativity, and analytical thinking intersect, especially
+            within ML tooling and intelligent platforms where usability and clarity are critical.
+          </p>
         </div>
+      </section>
+    </main>
+
+    <div class="footer-banner">
+      <footer>Website coded by Estela Gaspar</footer>
     </div>
+  </div>
 
-   
-
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
-
-
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
+</html>

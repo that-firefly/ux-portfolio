@@ -16,6 +16,11 @@ label {
   padding: 0;
 }
 
+.text-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
 .port-page-internal {
   padding: 0 0px;
   display: flex;
@@ -85,10 +90,6 @@ header p {
 }
 
 .cover-alternate-content.wider {
-  background-image: url("./images/banner-ux-estela.png");
-  background-repeat: no-repeat;
-  background-position: calc(25% + 350px) calc(0px);
-  background-size: 35%;
   height: 400px;
 }
 
@@ -126,7 +127,7 @@ header p {
 
 .infographic-image {
   margin: 5px auto;
-  width: 80%;
+  width: 50%;
   height: auto;
 }
 
@@ -402,7 +403,7 @@ img {
 }
 
 h1.landingpage-title.eg {
-  margin: 70px auto;
+  margin: 70px auto 0px auto;
   width: 100%;
   font-size: 2em;
   font-weight: 600;
@@ -1222,6 +1223,12 @@ ol li {
 /* Banner */
 
 /* Content divs start */
+
+.content-inner {
+  max-width: 900px; /* Ideal readable width */
+  margin: 0 auto; /* Center it */
+  padding: 0 20px; /* Breathing room on mobile */
+}
 
 .wrapper {
   width: 100%;
@@ -2212,7 +2219,7 @@ div.projectcontent > .label-text {
     margin: 0px auto;
     height: auto;
     display: block;
-    width: 70%;
+    width: 100%;
   }
 
   .container-group {
@@ -2265,13 +2272,12 @@ div.projectcontent > .label-text {
     max-width: 50%;
   }
 
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
+  .portrait-eg {
+    margin: 20px auto;
     height: auto;
     display: block;
-    width: 60%;
+    width: 20%;
+    border-radius: 400px;
   }
 
   .main-content {
@@ -2336,6 +2342,12 @@ div.projectcontent > .label-text {
     max-width: 45%;
   }
 
+  .portrait-eg {
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+  }
+
   h1 {
     font-size: 3em;
   }
@@ -2346,7 +2358,13 @@ div.projectcontent > .label-text {
     margin: 0px auto;
     height: auto;
     display: block;
-    width: 60%;
+    width: 100%;
+  }
+
+  .portrait-eg {
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
   }
 
   .drawwilder-item-container {
@@ -2510,6 +2528,12 @@ div.projectcontent > .label-text {
     padding: 60px;
   }
 
+  .portrait-eg {
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+  }
+
   .background-slider {
     height: 90vh;
   }
@@ -2602,6 +2626,11 @@ div.projectcontent > .label-text {
     width: 70%;
   }
 
+  .portrait-eg {
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+  }
   .text-only-wider {
     max-width: 100%;
   }
@@ -2723,12 +2752,32 @@ div.projectcontent > .label-text {
     width: 90%;
   }
 
+  .portrait-eg {
+    padding: 10px;
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .text-container {
+    margin: 0 auto;
+    width: 90%;
+  }
+
   .text-only-wider {
     max-width: 100%;
   }
 
   .landingpage-title.eg {
     padding-top: 90px;
+  }
+
+  h1.landingpage-title.eg {
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
   }
 
   h3 {
@@ -2741,6 +2790,12 @@ div.projectcontent > .label-text {
   ol li {
     font-size: 1em;
     text-align: center;
+  }
+
+  img,
+  video,
+  iframe {
+    width: 100%;
   }
 
   .port-page-internal h3 {
@@ -2845,7 +2900,13 @@ div.projectcontent > .label-text {
   img,
   video,
   iframe {
-    max-width: 50%;
+    max-width: 90%;
+  }
+
+  .portrait-eg {
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
