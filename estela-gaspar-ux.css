@@ -1825,11 +1825,6 @@ div.projectcontent > .label-text {
 
 @media only screen and (max-width: 480px) {
   /* styles for very small devices like older iPhones/Androids */
-  img,
-  video,
-  iframe {
-    width: 50%;
-  }
 
   .text-only-wider {
     max-width: 100%;
@@ -1880,12 +1875,6 @@ div.projectcontent > .label-text {
     margin-top: 60px;
   }
 
-  img,
-  video,
-  iframe {
-    width: 70%;
-  }
-
   .text-only-wider {
     max-width: 100%;
   }
@@ -1923,11 +1912,7 @@ div.projectcontent > .label-text {
 @media only screen and (min-width: 414px) and (max-width: 767px) {
   /* styles for large smartphones */
 
-  img,
-  video,
-  iframe {
-    width: 50%;
-  }
+
 
   .text-only-wider {
     max-width: 100%;
@@ -1968,11 +1953,7 @@ div.projectcontent > .label-text {
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   /* styles for iPads/tablets in portrait */
 
-  img,
-  video,
-  iframe {
-    width: 50%;
-  }
+
 
   .text-only-wider {
     max-width: 100%;
@@ -2039,11 +2020,7 @@ div.projectcontent > .label-text {
 @media only screen and (min-width: 768px) and (max-width: 900px) and (orientation: landscape) {
   /* styles for iPads/tablets in landscape */
 
-  img,
-  video,
-  iframe {
-    width: 50%;
-  }
+
 
   .text-only-wider {
     max-width: 100%;
@@ -2113,11 +2090,7 @@ div.projectcontent > .label-text {
 @media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
   /* likely an iPhone 6, 7, 8, X, 12 mini */
 
-  img,
-  video,
-  iframe {
-    width: 50%;
-  }
+
 
   .text-only-wider {
     max-width: 100%;
@@ -2158,11 +2131,6 @@ div.projectcontent > .label-text {
 @media only screen and (min-device-width: 360px) and (max-device-width: 412px) and (-webkit-device-pixel-ratio: 3) {
   /* high-res Android devices */
 
-  img,
-  video,
-  iframe {
-    width: 50%;
-  }
 
   .text-only-wider {
     max-width: 100%;
@@ -2202,49 +2170,10 @@ div.projectcontent > .label-text {
 
 /* Smaller aroun 1000px */
 
-@media (min-width: 996px) {
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 50%;
-  }
-}
 
-@media (min-width: 997px) {
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 30%;
-  }
-}
 
-@media (min-width: 998px) and (max-width: 1117px) {
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 50%;
-  }
-}
 
-@media (min-width: 1118px) and (max-width: 2415px) {
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 30%;
-  }
-}
+
 
 /*************************************************************************** Desktops only sizes start ****************************************************************************/
 @media (min-width: 2415px) and (max-width: 2435px) {
@@ -2253,14 +2182,7 @@ div.projectcontent > .label-text {
     max-width: 50%;
   }
 
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 60%;
-  }
+
 
   .main-content {
     flex: 1;
@@ -2370,16 +2292,7 @@ div.projectcontent > .label-text {
 /*************************************************************************** Desktops only sizes end ****************************************************************************/
 /* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
-@media screen and (width: 1264.67px) and (height: 3608px) {
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 70%;
-  }
-}
+
 
 /* 💻 Desktops & Tablets (1024px - 1499px) */
 
@@ -2388,14 +2301,6 @@ div.projectcontent > .label-text {
     flex-wrap: wrap;
   }
 
-  img,
-  video,
-  iframe {
-    margin: 0px auto;
-    height: auto;
-    display: block;
-    width: 70%;
-  }
 
   .blog-preview {
     width: 85%;
@@ -2628,11 +2533,7 @@ div.projectcontent > .label-text {
 
 /* 📱 Mobile Devices (Up to 768px) */
 @media screen and (max-width: 768px) {
-  img,
-  video,
-  iframe {
-    width: 70%;
-  }
+
 
   .portrait-eg {
     padding: 10px;
@@ -2802,12 +2703,7 @@ div.projectcontent > .label-text {
     text-align: center;
   }
 
-  img,
-  video,
-  iframe {
-    width: 100%;
-    margin: 20px auto;
-  }
+
 
   .port-page-internal h3 {
     font-size: 1.5em;
@@ -2908,11 +2804,7 @@ div.projectcontent > .label-text {
     width: 100%;
   }
 
-  img,
-  video,
-  iframe {
-    max-width: 90%;
-  }
+
 
   .portrait-eg {
     padding: 10px;
