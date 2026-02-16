@@ -2202,6 +2202,17 @@ div.projectcontent > .label-text {
 
 /* Smaller aroun 1000px */
 
+@media (min-width: 996px) {
+  img,
+  video,
+  iframe {
+    margin: 0px auto;
+    height: auto;
+    display: block;
+    width: 50%;
+  }
+}
+
 @media (min-width: 997px) {
   img,
   video,
@@ -2209,28 +2220,29 @@ div.projectcontent > .label-text {
     margin: 0px auto;
     height: auto;
     display: block;
-    width: 70%;
+    width: 30%;
   }
 }
 
-@media (min-width: 1118px) {
+@media (min-width: 998px) and (max-width: 1117px) {
   img,
   video,
   iframe {
     margin: 0px auto;
     height: auto;
     display: block;
-    width: 100%;
+    width: 50%;
   }
+}
 
-  .container-group {
-    margin: 20px 30px 20px 20px;
-  }
-
-  .container-group {
-    display: grid !important;
-    margin: 20px 30px 20px 20px;
-    margin: 0 auto;
+@media (min-width: 1118px) and (max-width: 2415px) {
+  img,
+  video,
+  iframe {
+    margin: 0px auto;
+    height: auto;
+    display: block;
+    width: 30%;
   }
 }
 
