@@ -2929,7 +2929,6 @@ footer.footer-banner.drawwilder {
   color: #000000;
 }
 
-
 /* Global default for media (non-card, non-gallery rules can still override) */
 :where(img, video, iframe) {
   display: block;
@@ -2940,3 +2939,7 @@ footer.footer-banner.drawwilder {
   width: min(100%, clamp(320px, 70vw, 720px));
 }
 
+.biggy {
+  width: 60%;
+  margin: 0px auto;
+}
