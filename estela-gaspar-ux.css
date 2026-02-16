@@ -2928,3 +2928,15 @@ div.projectcontent > .label-text {
 footer.footer-banner.drawwilder {
   color: #000000;
 }
+
+
+/* Global default for media (non-card, non-gallery rules can still override) */
+:where(img, video, iframe) {
+  display: block;
+  margin-inline: auto;
+  height: auto;
+
+  /* 👇 Responsive size: never overflow container, but grows nicely on iPad */
+  width: min(100%, clamp(320px, 70vw, 720px));
+}
+
