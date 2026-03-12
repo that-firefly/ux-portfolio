@@ -2238,14 +2238,32 @@ div.projectcontent > .label-text {
     width: 50%;
     margin: 0 auto;
   }
+
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 60% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
+  }
 }
 
 @media (min-width: 1118px) and (max-width: 2000px) {
   .main-content {
     flex: 1;
     padding: 10px;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
+  }
+
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 80% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
   }
 
   .text-only-wider {
@@ -2638,6 +2656,15 @@ div.projectcontent > .label-text {
 
 /* 📱 Small Phones (350px - 428px) */
 @media (min-width: 300px) and (max-width: 600px) {
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 90% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
+  }
+
   .drawwilder-right {
     width: 90%;
   }
@@ -2770,6 +2797,15 @@ div.projectcontent > .label-text {
 
 /* 📱 Tiny Phones (250px - 349px) */
 @media (min-width: 250px) and (max-width: 349px) {
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 60% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
+  }
+
   .drawwilder-right {
     width: 90%;
   }
@@ -2802,12 +2838,7 @@ footer.footer-banner.drawwilder {
   display: block;
   margin-inline: auto;
   max-width: 100%;
-  width: 80%;
+  width: 70%;
   height: auto;
   padding: 60px 0px 0px 0px;
-}
-
-.biggy {
-  width: 60%;
-  margin: 0px auto;
 }
