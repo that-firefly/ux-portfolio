@@ -18,7 +18,7 @@ label {
 
 .text-container {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
 }
 
 .port-page-internal {
@@ -229,7 +229,6 @@ nav .menu li a {
 
 nav .menu li a:hover {
   background-color: #5a2b8c;
-  border-radius: 4px;
 }
 
 nav .hamburger {
@@ -403,7 +402,6 @@ img {
 }
 
 h1.landingpage-title.eg {
-  margin: 70px auto 0px auto;
   width: 100%;
   font-size: 2em;
   font-weight: 600;
@@ -2183,14 +2181,6 @@ div.projectcontent > .label-text {
     max-width: 50%;
   }
 
-  .portrait-eg {
-    margin: 20px auto;
-    height: auto;
-    display: block;
-    width: 20%;
-    border-radius: 50%;
-  }
-
   .main-content {
     flex: 1;
     padding: 10px;
@@ -2841,4 +2831,16 @@ footer.footer-banner.drawwilder {
   width: 70%;
   height: auto;
   padding: 60px 0px 0px 0px;
+}
+
+.about-images {
+  margin: 30px 0px;
+  width: 100% !important;
+  height: auto;
+}
+
+.about-estela-image {
+  margin: 10px auto 50px auto;
+  width: 30% !important;
+  height: auto;
 }
