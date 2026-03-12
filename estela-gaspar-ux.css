@@ -2692,7 +2692,7 @@ div.projectcontent > .label-text {
   h1.landingpage-title.eg {
     margin: 0px auto 0px auto;
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
   }
   h2 {
     font-size: 1em;
@@ -2841,4 +2841,12 @@ footer.footer-banner.drawwilder {
   width: 70%;
   height: auto;
   padding: 60px 0px 0px 0px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
