@@ -2842,11 +2842,3 @@ footer.footer-banner.drawwilder {
   height: auto;
   padding: 60px 0px 0px 0px;
 }
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-}
