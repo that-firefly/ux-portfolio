@@ -466,14 +466,6 @@ body {
   display: block;
 }
 
-img,
-video,
-iframe {
-  margin: 0px auto;
-  height: auto;
-  display: block;
-}
-
 .cover-alternate-content img {
   margin: 30px auto;
 }
@@ -2239,11 +2231,20 @@ div.projectcontent > .label-text {
   }
 }
 
+@media (min-width: 2000px) and (max-width: 3000px) {
+  .main-content {
+    flex: 1;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 1118px) and (max-width: 2000px) {
   .main-content {
     flex: 1;
     padding: 10px;
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
   }
 
@@ -2801,11 +2802,9 @@ footer.footer-banner.drawwilder {
   display: block;
   margin-inline: auto;
   max-width: 100%;
-  width: 100%;
+  width: 60%;
   height: auto;
-
-  /* 👇 Responsive size: never overflow container, but grows nicely on iPad */
-  width: min(100%, clamp(320px, 70vw, 720px));
+  padding: 30px 0px;
 }
 
 .biggy {
