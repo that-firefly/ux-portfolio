@@ -2802,9 +2802,9 @@ footer.footer-banner.drawwilder {
   display: block;
   margin-inline: auto;
   max-width: 100%;
-  width: 60%;
+  width: 80%;
   height: auto;
-  padding: 30px 0px;
+  padding: 60px 0px 0px 0px;
 }
 
 .biggy {
