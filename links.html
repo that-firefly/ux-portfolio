@@ -1,114 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <title>Estela Gaspar - Useful links</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estela Gaspar – UX/UI Designer CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background-color: #fefefe;
-            line-height: 1.6;
-            color: #222;
-        }
+    <link rel="stylesheet" href="./no-background.css">
+    <script src="./estela-ux.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
 
-        h1,
-        h2,
-        h3 {
-            color: #444;
-        }
-
-        h1 {
-            font-size: 2em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        .contact,
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section-title {
-            font-size: 1.2em;
-            margin-top: 1.5rem;
-            font-weight: bold;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #555;
-        }
-    </style>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
 </head>
+<body class="none">
+  <div class="wrapper">
+         <nav>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <ul class="menu">
+                 <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./new.html">New</a></li>
+                <li><a href="./case-studies.html">Case Studies</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./links.html">Links</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container-message">
+          <h1 class="landingpage-title eg">Useful Links<br><span style="font-weight: 300;"></span></h1>
+      </div>
+      <div class="container-links">
 
-<body>
-    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-        <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
-        <h1>UX deliverables and Useful Links</h1>
-    </div>
-
-    <div class="section">
-
-        <h3>Here is a collection of examples of my work and valuable resources for enhancing your
-            understanding <br>and application of human-computer interaction, usability, and accessibility.</h3>
-        <p> The links provided cover a wide
-            range of topics, from foundational texts like The Encyclopedia of Human-Computer Interaction
-            and the <br>UXPA’s Usability Body of Knowledge, to guidelines and best practices, such as the<br>
-            Web Content Accessibility Guidelines (WCAG) and Apple's Human Interface Guidelines.</p>
-        <p>You will also find information on inclusive design methodologies, assistive technologies, and
-            essential <br>design systems like Google’s Material Design and IBM's Carbon Design System. <br>These
-            resources are essential for anyone interested in improving user experience, accessibility,
-            and interaction design in digital environments.</p>
-        <h2>Figma examples</h2>
-
-        <p>To view the example below in Figma click (please use Firefox for better results): <br><a
-                href="https://www.figma.com/proto/jOJMNZIRWcZvFqefjMCKHe/Wireframing-BoilerJuice?node-id=116%3A55&scaling=min-zoom">https://www.figma.com/proto/jOJMNZIRWcZvFqefjMCKHe/Wireframing-BoilerJuice?node-id=116%3A55&scaling=min-zoom</a>
-        </p>
-        <img style="width:500px; height:auto;" src="./images/links-examples/figma-example.jpg" alt="BoilerJuice wireframe website."
-            title="Figma example of a wireframe created for the BoilerJuice website.">
-        <p class="label-text">Figma example of a wireframe created for the BoilerJuice website.</p>
-
-
-        <p>To view the example below in Figma click (please use Firefox for better results): <br><a
-                href="https://www.figma.com/proto/c3uRuwBDv78KNUhhDK47Sv/UI?node-id=8%3A0&scaling=min-zoom">https://www.figma.com/proto/c3uRuwBDv78KNUhhDK47Sv/UI?node-id=8%3A0&scaling=min-zoom</a>
-        </p>
-
-        <img style="width:500px; height:auto;" src="./images/links-examples/figma-example-1.jpg" alt="Auto layout buttons"
-            title="Basic auto layout buttons.">
-        <p class="label-text">Basic auto layout buttons</p>
-
-
-        <p>To view the example below in Figma click (please use Firefox for better results): <br><a
-                href="https://www.figma.com/proto/uzkwSRpnxdiQ9F4NBb3wac/Prototyping-in-Figma?node-id=204%3A131&scaling=scale-down">https://www.figma.com/proto/uzkwSRpnxdiQ9F4NBb3wac/Prototyping-in-Figma?node-id=204%3A131&scaling=scale-down</a>
-        </p>
-
-        <img style="width:500px; height:auto;" src="./images/links-examples/figma-example-2.jpg" alt="Figma music app."
-            title="Music app example created in Figma.">
-        <p class="label-text">Music app example created in Figma.</p>
-
-
-
-        <img style="width:500px; height:auto;" src="./images/links-examples/user-flow-example.png" alt="Example of a user flow."
-            title="Image illustrating an example of a user flow.">
-        <img style="width:500px; height:auto;" src="./images/links-examples/user-flow-example-1.png" alt="Example of a user flow."
-            title="Image illustrating an example of a user flow.">
-        <img style="width:500px; height:auto;" src="./images/links-examples/user-journey-example.png" alt="Example of a user journey."
-            title="Image illustrating an example of a user journey.">
-
-        <p class="label-text">Images illustrating examples of user flows and user journey.</p>
-
-        <h2>Useful links</h2>
         <ul>
             <li><a
                 href="https://www.aremycolorsaccessible.com">Accessibility checks website</a></li>
@@ -175,14 +102,15 @@
             <li><a href="http://www.welie.com/patterns">Martijn van Welie, Pattern Library, 2008</a>
             </li>
         </ul>
+</div>
 
 
-    </div>
-
-
-
-    <a href="./index.html">← Back to Home</a>
-
+      <div class="footer-banner">
+            <footer>
+                Website coded by Estela Gaspar
+            </footer>
+      </div>
+  </div>
 </body>
-
 </html>
+

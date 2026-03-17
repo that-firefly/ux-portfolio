@@ -98,15 +98,10 @@ header p {
 .container-group {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 60px;
   width: min(1200px, 100%);
   margin: 0 auto;
 }
-
-.card-content h3 {
-  font-weight: 700;
-}
-
 .container {
   float: none;
   max-width: unset;
@@ -142,16 +137,33 @@ header p {
 
 .card-case-studies {
   margin-top: 30px;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   transition:
     background 0.4s ease-in-out,
     transform 0.2s ease,
     box-shadow 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+.card-content h3,
+.card-content p {
+  color: #1b0626;
+}
+
+.card-content a {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 10px;
+  color: #1b0626;
+}
+
+.read-more-btn:hover {
+  background-color: #8e44ad;
+  transform: scale(1.05);
 }
 
 /* Portfolio case study cards end */
@@ -256,7 +268,6 @@ p,
 a,
 a:link {
   font-weight: 400;
-  color: #ffffff;
 }
 
 .reference {
@@ -401,9 +412,12 @@ img {
   border: 0;
 }
 
+/* Index page */
+
 h1.landingpage-title.eg {
-  width: 100%;
-  font-size: 2em;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 3em;
   font-weight: 600;
   text-align: center;
 }
@@ -412,13 +426,94 @@ body {
   font-family: "Poppins", serif;
   margin: 0;
   height: 100vh;
-  background-color: #541675;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(48, 0, 80, 0.85) 0%,
+      /* deep purple */ rgba(48, 0, 80, 0.6) 40%,
+      /* mid fade */ rgba(48, 0, 80, 0.2) 100%,
+      /* soft fade */ rgba(48, 0, 80, 0) 100% /* transparent */
+    ),
+    url(./images/london-artwork-estela.png);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #8052b8;
 }
 
-/* Optional: maintain the color on hover/focus */
+.landingpage-title {
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* About page */
+
+.about-images {
+  margin: 30px 0px;
+  width: 30% !important;
+  height: auto;
+}
+
+.container-message {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.cover-alternate-content p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.cover-alternate-content h2 {
+  margin: 30px 0px;
+  color: #ffffff;
+  font-size: 2em;
+  text-align: left;
+}
+
 .button-like-eg:hover,
 .button-like-eg:focus {
   color: #071e55 !important;
+}
+
+.cover-alternate-content {
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #4a006d;
+  padding: 90px;
+  width: 60%;
+}
+
+.internal-full-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cover-alternate-content .bleed-into-container {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  width: 90%;
+}
+
+.cover-alternate-container.two {
+  background-color: #071e55;
+  padding: 60px 0px;
+  margin: 0px;
 }
 
 /* Badges/Labels start */
@@ -533,7 +628,6 @@ body {
   font-size: 2.4rem;
   letter-spacing: 0.5px;
   margin-bottom: 0.2rem;
-  text-align: left;
 }
 
 .drawwilder-container p em {
@@ -654,6 +748,7 @@ body {
 
 .drawwilder-container {
   width: 90%;
+  text-align: center;
 }
 
 #drawwilder-logo {
@@ -1045,14 +1140,6 @@ p {
   padding: 10px 0px 0px 0px;
 }
 
-h3,
-p,
-ul li,
-ol li {
-  font-size: 1em;
-  font-weight: 400;
-}
-
 h3.stronger {
   font-weight: 700;
 }
@@ -1130,23 +1217,6 @@ ol li {
   border-radius: 10px;
 }
 
-.cover-alternate-content {
-  margin: 0 auto;
-  padding: 30px;
-}
-
-.cover-alternate-content .bleed-into-container {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  width: 90%;
-}
-
-.cover-alternate-container.two {
-  background-color: #071e55;
-  padding: 60px 0px;
-  margin: 0px;
-}
-
 .heading-text {
   padding: 60px 0px;
 }
@@ -1192,10 +1262,6 @@ ol li {
 }
 
 /* Small icons end */
-
-.cover-alternate-content p {
-  color: #ffffff;
-}
 
 .word-cloud {
   text-align: center;
@@ -1257,10 +1323,6 @@ svg {
 
 .landingpage-title {
   color: #fff;
-}
-
-.cover-alternate-content h2 {
-  color: #ffffff;
 }
 
 .cover-alternate-container.one .cover-alternate-content h2 {
@@ -1371,7 +1433,6 @@ svg {
 
 .main-content.drawwilder h1 {
   font-size: 3em;
-  text-align: left;
   font-weight: 900;
   padding-left: 0px;
   margin-left: 0px;
@@ -1533,7 +1594,6 @@ art-gallery {
 
 h2.drawwilder-subtitle {
   font-size: 1em;
-  text-align: left;
   padding: 0px;
   margin: 0px;
 }
@@ -1754,25 +1814,6 @@ div.projectcontent > .label-text {
 .blog-intro {
   margin: 0;
   color: #ffffff;
-}
-
-.read-more-btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 5px 10px;
-  background-color: #8e44ad;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-}
-
-.read-more-btn:hover {
-  background-color: #8e44ad;
-  transform: scale(1.05);
 }
 
 /* Subscriber form */
@@ -2831,12 +2872,6 @@ footer.footer-banner.drawwilder {
   width: 70%;
   height: auto;
   padding: 60px 0px 0px 0px;
-}
-
-.about-images {
-  margin: 30px 0px;
-  width: 100% !important;
-  height: auto;
 }
 
 .about-estela-image {
