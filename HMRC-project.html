@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <title>Estela Gaspar – UX/UI Designer - HMRC Government</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,12 +49,37 @@
             font-weight: bold;
             color: #555;
         }
+
+        .ready-print {
+        display: inline-block;
+        padding: 8px 14px;
+        margin: 20px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 4px;
+        box-shadow: 2px 2px 0 #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     </style>
 </head>
 
 <body>
-    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-        <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
+    <body>
+    <div class="back-btn">
+      <a href="javascript:history.back()" style="text-decoration: none"
+        >← Back</a
+      >
+    </div>
+    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+      This is a ready-to-print page
+    </h4>
         <h1>Make Tax Digital (MTD) for Property Income <br>Tax Submission and Advanced Ruling Service (ARS).</h1>
         <h3>Client:</h3>
         <p>His Majesty’s Revenue and Customs (HMRC)</p>
@@ -251,5 +276,15 @@
     <a href="./case-studies.html">← Back to case studies</a>
 
 </body>
+  <script>
+    function printPage() {
+      window.print();
+    }
 
+    document.addEventListener("keydown", function (e) {
+      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+        printPage();
+      }
+    });
+  </script>
 </html>

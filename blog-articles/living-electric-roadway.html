@@ -1,12 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estela Gaspar – UX/UI Designer CV</title>
-    <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
     <style>
+      .back-btn a:hover,
+      .back-btn a:active,
+      .back-btn a:focus,
+      .back-btn a:visited {
+        color: #666666;
+      }
+
       body {
         font-family: Arial, sans-serif;
         margin: 2rem;
@@ -52,27 +64,41 @@
       }
 
       .back-btn a {
-  color: #808080;
-  margin: 0 0 30px 0;
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+        color: #808080;
+        margin: 0 0 30px 0;
+        font-size: 14px;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
 
-.back-btn a:hover,
-.back-btn a:active,
-.back-btn a:focus,
-.back-btn a:visited {
-  color: #666666; /* darker gray */
-}
+      .ready-print {
+        display: inline-block;
+        padding: 8px 14px;
+        margin: 20px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 4px;
+        box-shadow: 2px 2px 0 #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     </style>
   </head>
 
   <body>
- <div class="back-btn"><a href="../blog.html">← Back to main blog</a>
+    <div class="back-btn"><a href="../blog.html">← Back to main blog</a></div>
+    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+      This is a ready-to-print page
+    </h4>
 
     <div class="section">
-        <h1>The living electric roadway.</h1>
+      <h1>The living electric roadway.</h1>
       <h2>About the project</h2>
       <h3>
         A closed-loop energy system that operates on a fixed energy input and
@@ -82,20 +108,20 @@
       <p>
         One of my favourite things to do is ideate and imagine bold solutions to
         real-world problems. When I am in nature or drawing I come up will ideas
-        for things <br>that I observe in real life and stay in my mind waiting
-        for... ideation.  If the idea sparks something in you, feel free to build on it — I’d
-        genuinely love to see it come to life. <br>I just ask that you bring me
-        along for the journey and consider collaborating. Projects like these
-        make me feel truly alive - they give purpose to design and turn<br>
+        for things <br />that I observe in real life and stay in my mind waiting
+        for... ideation. If the idea sparks something in you, feel free to build
+        on it — I’d genuinely love to see it come to life. <br />I just ask that
+        you bring me along for the journey and consider collaborating. Projects
+        like these make me feel truly alive - they give purpose to design and
+        turn<br />
         creativity into something deeply meaningful.
       </p>
       <p>
         Imagine the following... It’s a warm afternoon. People stroll down the
-        park-side pathway, cyclists glide by, and a steady stream of electric<br>
+        park-side pathway, cyclists glide by, and a steady stream of electric<br />
         cars hum across the nearby road. All of them - unknowingly - are part of
         a dynamic, intelligent energy ecosystem beneath their feet.
       </p>
-
 
       <img
         style="width: 400px; height: auto"
@@ -109,7 +135,6 @@
         alt="Image concept of the user experience of a living road concept."
       />
 
-
       <p>
         Suddenly, a power outage occurs in a nearby neighbourhood. But instead
         of a blackout, the
@@ -119,8 +144,8 @@
       <p>
         Just like blood redirects to an injured area, the
         <strong>ElectroFlow Circuit</strong> reroutes stored energy through its
-        <strong>self-regulating microgrid</strong>. <br>The system pulls reserve
-        power from three key sources:
+        <strong>self-regulating microgrid</strong>. <br />The system pulls
+        reserve power from three key sources:
       </p>
 
       <ul>
@@ -161,8 +186,9 @@
       <p></p>
       <p>
         To the average citizen? Everything appears calm, efficient, and
-        uninterrupted. To the designers, engineers, and UX minds behind it? <br>It’s
-        the future of <strong>civic infrastructure as a living system.</strong>
+        uninterrupted. To the designers, engineers, and UX minds behind it?
+        <br />It’s the future of
+        <strong>civic infrastructure as a living system.</strong>
       </p>
 
       <img
@@ -174,4 +200,16 @@
 
     <a href="../blog.html">← Back to blog</a>
   </body>
+
+  <script>
+    function printPage() {
+      window.print();
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+        printPage();
+      }
+    });
+  </script>
 </html>

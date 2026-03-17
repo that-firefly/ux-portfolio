@@ -248,6 +248,25 @@ display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
     .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 1rem; background:#fafafa; }
     .pair { display: grid; gap: 16px; }
     @media (min-width: 800px){ .pair{ grid-template-columns: 1fr 1fr; } }
+
+
+      .ready-print {
+        display: inline-block;
+        padding: 8px 14px;
+        margin: 20px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 4px;
+        box-shadow: 2px 2px 0 #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
   </style>
       <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
     <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
@@ -257,13 +276,14 @@ display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
 <body>
   <main class="container">
 
-    <!-- Header / Overview -->
-    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-      <a href="javascript:history.back()" style="text-decoration: none;">← Back</a>
+    <div class="back-btn">
+      <a href="javascript:history.back()" style="text-decoration: none"
+        >← Back</a
+      >
     </div>
-
-    <img style="width:400px; height:auto;" src="./images/royal-navy-thumb.jpg" alt="Royal Navy logo"
-      title="Royal Navy logo.">
+    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+      This is a ready-to-print page
+    </h4>
     <h1>Royal Navy - Enhancing the Defence Learning Environment (DLE).</h1>
 
     <div class="section">
@@ -871,4 +891,15 @@ display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
 
   </main>
 </body>
+  <script>
+    function printPage() {
+      window.print();
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+        printPage();
+      }
+    });
+  </script>
 </html>

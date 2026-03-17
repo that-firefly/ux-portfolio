@@ -172,6 +172,24 @@
         padding: 0.8rem;
       }
     }
+
+     .ready-print {
+        display: inline-block;
+        padding: 8px 14px;
+        margin: 20px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 4px;
+        box-shadow: 2px 2px 0 #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
   </style>
 </head>
 
@@ -179,6 +197,10 @@
   <div class="back-btn">
     <a href="../blog.html">← Back to main blog</a>
   </div>
+
+   <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+    </h4>
   <h1>Design states, omnipresence, and <br>the agentic future... consciousness</h1>
   <img src="../images/blog-images/robot-nature-interaction-stockcake.jpg"
     alt="Time as a human construct and its relation to data and insights.">
@@ -422,5 +444,18 @@
 
   <p><a href="../blog.html">← Back to blog</a></p>
 </body>
+
+
+<script>
+  function printPage() {
+    window.print();
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+      printPage();
+    }
+  });
+</script>
 
 </html>
