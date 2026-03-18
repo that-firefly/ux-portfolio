@@ -447,7 +447,7 @@ h1.landingpage-title.eg {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -2632,6 +2632,14 @@ footer.footer-banner.drawwilder {
     text-align: center;
   }
 
+  p,
+  ul li,
+  ol li {
+    margin: 0px;
+    font-size: 1em;
+    text-align: center;
+  }
+
   .projectcontent p {
     text-align: center;
   }
@@ -2765,8 +2773,12 @@ footer.footer-banner.drawwilder {
 
 /* 📱 Mobile Devices (300px - 600px) */
 @media (min-width: 300px) and (max-width: 600px) {
-  /* New page start */
+  /* Links page */
+  .container-links li {
+    padding: 30px 0px;
+  }
 
+  /* New page start */
   .cover-alternate-content {
     width: 80%;
     padding: 60px;
@@ -2916,6 +2928,11 @@ footer.footer-banner.drawwilder {
 /* 📱 Mobile Devices (250px - 349px) */
 
 @media (min-width: 250px) and (max-width: 349px) {
+  /* Links page */
+  .container-links li {
+    padding: 30px 0px;
+  }
+
   :where(img, video, iframe) {
     display: block;
     margin-inline: auto;
@@ -2957,7 +2974,7 @@ footer.footer-banner.drawwilder {
 /* Links page */
 
 .container-links {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   padding: 0px;
 }
@@ -2965,12 +2982,4 @@ footer.footer-banner.drawwilder {
 body {
   font-family: "Poppins", serif;
   background-color: #4a006d;
-}
-
-p,
-ul li,
-ol li {
-  margin: 30px 0px;
-  font-size: 1em;
-  text-align: center;
 }
