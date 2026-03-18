@@ -36,10 +36,6 @@ label {
   padding: 10px;
 }
 
-.cover-alternate-content {
-  width: 80%;
-}
-
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -471,17 +467,18 @@ body {
   margin: 0 auto;
 }
 
-.cover-alternate-content p {
-  color: #ffffff;
-  text-align: left;
-  font-size: 1.5em;
-}
-
 .cover-alternate-content h2 {
-  margin: 30px 0px;
+  margin-bottom: 30px;
   color: #ffffff;
   font-size: 2em;
   text-align: left;
+}
+
+.cover-alternate-content p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 200;
 }
 
 .button-like-eg:hover,
@@ -491,9 +488,8 @@ body {
 
 .cover-alternate-content {
   margin: 0 auto;
-  padding: 30px;
   background-color: #4a006d;
-  padding: 90px;
+  padding: 60px;
   width: 60%;
 }
 
@@ -2127,6 +2123,7 @@ footer.footer-banner.drawwilder {
 }
 
 /*************************************************************************** Desktops only sizes start ****************************************************************************/
+
 @media (min-width: 2415px) and (max-width: 2435px) {
   .text-only-wider {
     padding: 0px 0px;
@@ -2174,6 +2171,13 @@ footer.footer-banner.drawwilder {
 }
 
 @media (min-width: 1500px) and (max-width: 2000px) {
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
   .text-only-wider {
     padding: 0px 0px;
     max-width: 50%;
@@ -2197,12 +2201,20 @@ footer.footer-banner.drawwilder {
 }
 
 @media (min-width: 2000px) and (max-width: 3000px) {
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
   .main-content {
     flex: 1;
     padding: 10px;
     width: 50%;
     margin: 0 auto;
   }
+
   /* About page start */
 
   .about-estela-image {
@@ -2240,10 +2252,17 @@ footer.footer-banner.drawwilder {
     height: auto;
   }
 
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
   h1.landingpage-title.eg {
     width: 50%;
     margin: 0 auto;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
     text-align: center;
   }
@@ -2606,8 +2625,8 @@ footer.footer-banner.drawwilder {
   }
 
   .cover-alternate-content {
-    width: 100%;
-    padding: 5px;
+    width: 90%;
+    padding: 60px;
   }
 
   section {
@@ -2728,23 +2747,6 @@ footer.footer-banner.drawwilder {
     text-align: center;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 1em;
-  }
-
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
-  }
-
   .port-page-internal h3 {
     font-size: 1.5em;
     text-align: center;
@@ -2787,6 +2789,29 @@ footer.footer-banner.drawwilder {
 
 /* 📱 Mobile Devices (300px - 600px) */
 @media (min-width: 300px) and (max-width: 600px) {
+  /* New page start */
+
+  .cover-alternate-content {
+    width: 80%;
+    padding: 60px;
+  }
+
+  .cover-alternate-content h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .cover-alternate-content p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 200;
+  }
+
+  /* New page end */
+
   :where(img, video, iframe) {
     display: block;
     margin-inline: auto;
@@ -2825,22 +2850,6 @@ footer.footer-banner.drawwilder {
 
   span {
     font-size: 0.8em;
-  }
-
-  h2 {
-    font-size: 1em;
-  }
-
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
   }
 
   .port-page-internal h3 {
