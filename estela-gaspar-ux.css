@@ -307,7 +307,6 @@ a.highlighted-link {
 
 a.highlighted-link:hover {
   background-color: #8e44ad;
-  /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
@@ -331,7 +330,6 @@ a.highlighted-link:hover {
 
 .highlighted-link:hover {
   background-color: #8e44ad;
-  /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
@@ -431,9 +429,9 @@ body {
     linear-gradient(
       to bottom,
       rgba(48, 0, 80, 0.85) 0%,
-      /* deep purple */ rgba(48, 0, 80, 0.6) 40%,
-      /* mid fade */ rgba(48, 0, 80, 0.2) 100%,
-      /* soft fade */ rgba(48, 0, 80, 0) 100% /* transparent */
+      rgba(48, 0, 80, 0.6) 40%,
+      rgba(48, 0, 80, 0.2) 100%,
+      rgba(48, 0, 80, 0) 100%
     ),
     url(./images/london-artwork-estela.png);
 
@@ -549,7 +547,6 @@ body {
   height: auto;
   display: block;
   border-radius: 8px;
-  /* Optional: adds a soft edge */
 }
 
 .responsive-video {
@@ -582,20 +579,14 @@ body {
   cursor: pointer;
   font-size: 1.5em;
   text-decoration: none;
-  /* removes underline */
   display: inline-block;
-  /* lets padding work properly */
   transition: all 0.3s ease;
-  /* smooth hover effect */
 }
 
 .workwithme-button:hover {
   background-color: #333;
-  /* subtle lightening on hover */
   text-decoration: underline;
-  /* brings the underline back */
   text-underline-offset: 4px;
-  /* pushes underline down a bit for elegance */
 }
 
 .main-content.drawwilder h2 {
@@ -607,7 +598,6 @@ body {
   flex: 1 1 50%;
   display: flex;
   justify-content: flex-start;
-  /* stays to the left */
   align-items: center;
   padding: 4rem 3rem;
   box-sizing: border-box;
@@ -616,7 +606,6 @@ body {
 .drawwilder-container {
   max-width: 520px;
   text-align: left;
-  /* this ensures all text aligns left */
 }
 
 #drawwilder-logo {
@@ -678,7 +667,6 @@ body {
   }
 }
 
-/* keep ONE wrapper rule */
 .drawwilder-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -687,7 +675,6 @@ body {
   color: #1a1a1a;
 }
 
-/* left column stays white so text is readable */
 .drawwilder-left {
   flex: 1 1 50%;
   display: flex;
@@ -703,27 +690,11 @@ body {
   text-align: left;
 }
 
-/* right column gets the background image */
 .drawwilder-right {
   flex: 1 1 50%;
   min-height: 100vh;
   background: url("images/drawwilder/neotropica/neotropica-thumb.png") center /
     cover no-repeat;
-}
-
-/* responsive */
-@media (max-width: 900px) {
-  .drawwilder-wrapper {
-    flex-direction: column;
-  }
-
-  .drawwilder-right {
-    min-height: 50vh;
-  }
-
-  .drawwilder-left {
-    padding: 2rem;
-  }
 }
 
 .drawwilder-wrapper {
@@ -735,7 +706,6 @@ body {
   flex: 1 1 50%;
 }
 
-/* Left (text) */
 .drawwilder-left {
   flex: 1 1 50%;
   display: flex;
@@ -780,7 +750,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Right (image) */
 .drawwilder-right {
   flex: 1 1 50%;
   display: flex;
@@ -796,27 +765,6 @@ body {
   object-position: center;
 }
 
-/* Responsive layout for tablets and phones */
-@media (max-width: 900px) {
-  .drawwilder-wrapper {
-    flex-direction: column;
-  }
-
-  .drawwilder-left,
-  .drawwilder-right {
-    flex: 1 1 100%;
-    padding: 0.8rem 2rem;
-  }
-
-  .drawwilder-image {
-    height: 50vh;
-  }
-
-  .drawwilder-title {
-    font-size: 2rem;
-  }
-}
-
 .drawwilder-text-intro li {
   display: flex;
   align-items: center;
@@ -826,14 +774,12 @@ body {
   color: #171417;
   margin-bottom: 10px;
   text-align: left;
-  /* override global centering */
 }
 
 .drawwilder-text-intro li img {
   width: 30px;
   height: auto;
   display: inline-block;
-  /* ensure it doesn't break layout */
   margin: 0;
   padding: 0;
 }
@@ -847,14 +793,12 @@ body {
   color: #171417;
   margin-bottom: 10px;
   text-align: left;
-  /* override global centering */
 }
 
 .avatar-text-intro li img {
   width: 30px;
   height: auto;
   display: inline-block;
-  /* ensure it doesn't break layout */
   margin: 0;
   padding: 0;
 }
@@ -983,8 +927,6 @@ body {
   padding: 2px 7px;
   border-radius: 2px;
 }
-
-/* Badges/Labels end */
 
 /* Typography start */
 
@@ -1282,16 +1224,15 @@ ol li {
 /* Content divs start */
 
 .content-inner {
-  max-width: 900px; /* Ideal readable width */
-  margin: 0 auto; /* Center it */
-  padding: 0 20px; /* Breathing room on mobile */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .wrapper {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  /* prevent horizontal scroll */
   display: flex;
   flex-direction: column;
 }
@@ -1851,51 +1792,62 @@ div.projectcontent > .label-text {
   background-color: #444;
 }
 
+footer.footer-banner.drawwilder {
+  color: #000000;
+}
+
+/* Global default for media (non-card, non-gallery rules can still override) */
+:where(img, video, iframe) {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  width: 70%;
+  height: auto;
+  padding: 60px 0px 0px 0px;
+}
+
+.about-estela-image {
+  margin: 10px auto 50px auto;
+  width: 30% !important;
+  height: auto;
+}
+
 /*************************  Media Queries start *************************/
 /*************************  Media Queries start *************************/
 
-@media only screen and (max-width: 480px) {
-  /* styles for very small devices like older iPhones/Androids */
+/* Drawwilder media qieries specific */
 
-  .text-only-wider {
-    max-width: 100%;
+@media (max-width: 900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
   }
 
-  h1 {
-    font-size: 1.5em;
-    text-align: center;
+  .drawwilder-right {
+    min-height: 50vh;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 1em;
-  }
-
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .port-page-internal h3 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .projectcontent p {
-    text-align: center;
+  .drawwilder-left {
+    padding: 2rem;
   }
 }
 
-@media (max-width: 767px) {
-  .landingpage-title.eg {
-    padding-top: 230px;
+@media (max-width: 900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
+  }
+
+  .drawwilder-left,
+  .drawwilder-right {
+    flex: 1 1 100%;
+    padding: 0.8rem 2rem;
+  }
+
+  .drawwilder-image {
+    height: 50vh;
+  }
+
+  .drawwilder-title {
+    font-size: 2rem;
   }
 }
 
@@ -2189,8 +2141,6 @@ div.projectcontent > .label-text {
     text-align: center;
   }
 }
-
-/* Smaller aroun 1000px */
 
 /*************************************************************************** Desktops only sizes start ****************************************************************************/
 @media (min-width: 2415px) and (max-width: 2435px) {
@@ -2685,7 +2635,53 @@ div.projectcontent > .label-text {
   }
 }
 
-/* 📱 Small Phones (350px - 428px) */
+/* 📱 Mobile Devices up to (480px) */
+
+@media only screen and (max-width: 480px) {
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  p,
+  ul li,
+  ol li {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .port-page-internal h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .projectcontent p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .landingpage-title.eg {
+    padding-top: 230px;
+  }
+}
+
+/* 📱 Mobile Devices (300px - 600px) */
+
 @media (min-width: 300px) and (max-width: 600px) {
   :where(img, video, iframe) {
     display: block;
@@ -2716,15 +2712,17 @@ div.projectcontent > .label-text {
     max-width: 100%;
   }
 
-  .landingpage-title.eg {
-    padding-top: 90px;
-  }
-
   h1.landingpage-title.eg {
+    width: 100%;
     margin: 0px auto 0px auto;
     padding: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
   }
+
+  span {
+    font-size: 0.8em;
+  }
+
   h2 {
     font-size: 1em;
   }
@@ -2826,7 +2824,8 @@ div.projectcontent > .label-text {
   }
 }
 
-/* 📱 Tiny Phones (250px - 349px) */
+/* 📱 Mobile Devices (250px - 349px) */
+
 @media (min-width: 250px) and (max-width: 349px) {
   :where(img, video, iframe) {
     display: block;
@@ -2859,23 +2858,3 @@ div.projectcontent > .label-text {
 
 /*************************  Media Queries end *************************/
 /*************************  Media Queries end *************************/
-
-footer.footer-banner.drawwilder {
-  color: #000000;
-}
-
-/* Global default for media (non-card, non-gallery rules can still override) */
-:where(img, video, iframe) {
-  display: block;
-  margin-inline: auto;
-  max-width: 100%;
-  width: 70%;
-  height: auto;
-  padding: 60px 0px 0px 0px;
-}
-
-.about-estela-image {
-  margin: 10px auto 50px auto;
-  width: 30% !important;
-  height: auto;
-}
