@@ -210,7 +210,7 @@ nav {
   align-items: center;
   background-color: #3d155f;
   color: white;
-  padding: 10px 20px;
+  padding: 0px;
   position: relative;
   z-index: 1000;
 }
@@ -229,14 +229,55 @@ nav .menu {
 }
 
 nav .menu li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  padding: 20px 20px;
+  padding: 30px 20px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 nav .menu li a:hover {
   background-color: #5a2b8c;
+}
+
+.menu li a i,
+.menu li a svg {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.menu li a:hover i,
+.menu li a:hover svg {
+  transform: scale(1.1);
+}
+
+nav .menu li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 30px 20px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+nav .menu li a:hover {
+  background-color: #5a2b8c;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* Make SVG behave like a proper centered icon */
+nav .menu li a.social-link svg {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 nav .hamburger {
@@ -1073,11 +1114,6 @@ ol {
   padding: 0px;
 }
 
-li {
-  position: relative;
-  padding-left: 10px;
-}
-
 .list-clean li {
   list-style: none;
   padding-left: 20px;
@@ -1111,11 +1147,6 @@ ol ::marker {
 ul {
   list-style-type: disc;
   font-size: 1em;
-}
-
-ul li,
-ol li {
-  margin-bottom: 10px;
 }
 
 /* Lists end */
@@ -1218,10 +1249,6 @@ section {
   justify-content: center;
   align-items: center;
   margin: 120px 0px;
-}
-
-svg {
-  display: block;
 }
 
 .container-eg {
@@ -2773,13 +2800,8 @@ footer.footer-banner.drawwilder {
 
 /* 📱 Mobile Devices (300px - 600px) */
 @media (min-width: 300px) and (max-width: 600px) {
-  /* Links page start */
-  .container-links li {
-    padding: 20px 0px;
-  }
-  /* Links page end */
-
   /* New page start */
+
   .cover-alternate-content {
     width: 80%;
     padding: 60px;
@@ -2929,12 +2951,6 @@ footer.footer-banner.drawwilder {
 /* 📱 Mobile Devices (250px - 349px) */
 
 @media (min-width: 250px) and (max-width: 349px) {
-  /* Links page start */
-  .container-links li {
-    padding: 20px 0px;
-  }
-  /* Links page end */
-
   :where(img, video, iframe) {
     display: block;
     margin-inline: auto;
