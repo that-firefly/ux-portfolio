@@ -455,9 +455,9 @@ body {
 
 /* About page */
 
-.about-images {
-  margin: 30px 0px;
-  width: 30% !important;
+.about-estela-image {
+  margin: 10px auto 50px auto;
+  width: 30%;
   height: auto;
 }
 
@@ -1796,12 +1796,6 @@ footer.footer-banner.drawwilder {
   padding: 60px 0px 0px 0px;
 }
 
-.about-estela-image {
-  margin: 10px auto 50px auto;
-  width: 30% !important;
-  height: auto;
-}
-
 /*************************  Media Queries start *************************/
 /*************************  Media Queries start *************************/
 
@@ -2209,6 +2203,23 @@ footer.footer-banner.drawwilder {
     width: 50%;
     margin: 0 auto;
   }
+  /* About page start */
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30% !important;
+    height: auto;
+  }
+
+  h1.landingpage-title.eg {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
 
   :where(img, video, iframe) {
     display: block;
@@ -2221,6 +2232,24 @@ footer.footer-banner.drawwilder {
 }
 
 @media (min-width: 1118px) and (max-width: 2000px) {
+  /* About page start */
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30% !important;
+    height: auto;
+  }
+
+  h1.landingpage-title.eg {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
+
   .main-content {
     flex: 1;
     padding: 10px;
@@ -2264,11 +2293,24 @@ footer.footer-banner.drawwilder {
 }
 
 /*************************************************************************** Desktops only sizes end ****************************************************************************/
-/* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
-/* 💻 Desktops & Tablets (1024px - 1499px) */
+/* 💻 Desktops & Tablets (960px) */
 
 @media screen and (max-width: 960px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+  /* About page end */
+
   nav {
     flex-wrap: wrap;
   }
@@ -2377,6 +2419,29 @@ footer.footer-banner.drawwilder {
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
 
 @media (min-width: 960px) and (max-width: 1023px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
+
   .cover-alternate-content.wider > .landingpage-title {
     margin: 0;
     padding: 20px 0;
@@ -2427,9 +2492,32 @@ footer.footer-banner.drawwilder {
   }
 }
 
-/* 🧁 Medium Tablets (800px - 959px) */
+/* 📱 Medium Tablets (800px - 959px) */
 
 @media (min-width: 800px) and (max-width: 959px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
+
   .slider-overlay {
     width: 100% !important;
   }
@@ -2476,9 +2564,16 @@ footer.footer-banner.drawwilder {
   }
 }
 
-/* 🍩 Tablets (768px - 799px) */
+/* 📱 Tablets (768px - 799px) */
 
 @media (min-width: 768px) and (max-width: 799px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    font-size: 1.8em;
+  }
+
   h1.landingpage-title {
     font-size: 4em !important;
     font-weight: 900;
@@ -2661,9 +2756,33 @@ footer.footer-banner.drawwilder {
 }
 
 @media (max-width: 767px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    font-size: 1.8em;
+  }
+
   .landingpage-title.eg {
     padding-top: 230px;
   }
+}
+
+/* 📱 Mobile Devices up to (768px) */
+@media (max-width: 768px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+  /* About page end */
 }
 
 /* 📱 Mobile Devices (300px - 600px) */
@@ -2819,6 +2938,12 @@ footer.footer-banner.drawwilder {
     width: 60% !important;
     height: auto;
     padding: 30px 0px 0px 0px !important;
+  }
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30%;
+    height: auto;
   }
 
   .drawwilder-right {
