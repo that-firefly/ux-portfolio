@@ -608,11 +608,6 @@ body {
   text-align: left;
 }
 
-#drawwilder-logo {
-  width: 140px;
-  margin-bottom: 1rem;
-}
-
 .drawwilder-title {
   font-size: 2.4rem;
   letter-spacing: 0.5px;
@@ -721,11 +716,6 @@ body {
   text-align: center;
 }
 
-#drawwilder-logo {
-  width: 140px;
-  margin-bottom: 1rem;
-}
-
 .drawwilder-title {
   font-size: 2.4rem;
   letter-spacing: 0.5px;
@@ -803,9 +793,9 @@ body {
   padding: 0;
 }
 
-#drawwilder-logo {
-  margin-left: 75px;
-  width: 35%;
+.drawwilder-container img {
+  width: 30%;
+  margin: 0 auto;
 }
 
 .strawberry-idea {
@@ -2477,10 +2467,6 @@ footer.footer-banner.drawwilder {
     float: none !important;
   }
 
-  #drawwilder-logo {
-    width: 200px;
-  }
-
   .container {
     max-width: 100%;
   }
@@ -2681,13 +2667,12 @@ footer.footer-banner.drawwilder {
 }
 
 /* 📱 Mobile Devices (300px - 600px) */
-
 @media (min-width: 300px) and (max-width: 600px) {
   :where(img, video, iframe) {
     display: block;
     margin-inline: auto;
     max-width: 100% !important;
-    width: 90% !important;
+    width: 40% !important;
     height: auto;
     padding: 30px 0px 0px 0px !important;
   }
@@ -2716,7 +2701,7 @@ footer.footer-banner.drawwilder {
     width: 100%;
     margin: 0px auto 0px auto;
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
   span {
