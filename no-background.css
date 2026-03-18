@@ -2983,6 +2983,7 @@ footer.footer-banner.drawwilder {
 
 .container-links ul li {
   text-align: left;
+  list-style: none;
 }
 
 body {
