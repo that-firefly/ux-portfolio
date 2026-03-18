@@ -1,4 +1,4 @@
-ƒ/* CSS Mini Reset */
+/* CSS Mini Reset */
 
 html,
 body {
@@ -34,10 +34,6 @@ label {
 .main-content {
   flex: 1;
   padding: 10px;
-}
-
-.cover-alternate-content {
-  width: 80%;
 }
 
 body {
@@ -307,7 +303,6 @@ a.highlighted-link {
 
 a.highlighted-link:hover {
   background-color: #8e44ad;
-  /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
@@ -331,7 +326,6 @@ a.highlighted-link:hover {
 
 .highlighted-link:hover {
   background-color: #8e44ad;
-  /* Darker purple on hover */
   transform: translateY(-2px);
 }
 
@@ -422,15 +416,8 @@ h1.landingpage-title.eg {
   text-align: center;
 }
 
-body {
-  font-family: "Poppins", serif;
-  margin: 0;
-  height: 100vh;
-  background-color: #4a006d;
-}
-
 .container-links {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -448,9 +435,9 @@ body {
 
 /* About page */
 
-.about-images {
-  margin: 30px 0px;
-  width: 30% !important;
+.about-estela-image {
+  margin: 10px auto 50px auto;
+  width: 30%;
   height: auto;
 }
 
@@ -464,17 +451,18 @@ body {
   margin: 0 auto;
 }
 
-.cover-alternate-content p {
-  color: #ffffff;
-  text-align: left;
-  font-size: 1.5em;
-}
-
 .cover-alternate-content h2 {
-  margin: 30px 0px;
+  margin-bottom: 30px;
   color: #ffffff;
   font-size: 2em;
   text-align: left;
+}
+
+.cover-alternate-content p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 200;
 }
 
 .button-like-eg:hover,
@@ -484,9 +472,8 @@ body {
 
 .cover-alternate-content {
   margin: 0 auto;
-  padding: 30px;
   background-color: #4a006d;
-  padding: 90px;
+  padding: 60px;
   width: 60%;
 }
 
@@ -540,7 +527,6 @@ body {
   height: auto;
   display: block;
   border-radius: 8px;
-  /* Optional: adds a soft edge */
 }
 
 .responsive-video {
@@ -573,20 +559,14 @@ body {
   cursor: pointer;
   font-size: 1.5em;
   text-decoration: none;
-  /* removes underline */
   display: inline-block;
-  /* lets padding work properly */
   transition: all 0.3s ease;
-  /* smooth hover effect */
 }
 
 .workwithme-button:hover {
   background-color: #333;
-  /* subtle lightening on hover */
   text-decoration: underline;
-  /* brings the underline back */
   text-underline-offset: 4px;
-  /* pushes underline down a bit for elegance */
 }
 
 .main-content.drawwilder h2 {
@@ -598,7 +578,6 @@ body {
   flex: 1 1 50%;
   display: flex;
   justify-content: flex-start;
-  /* stays to the left */
   align-items: center;
   padding: 4rem 3rem;
   box-sizing: border-box;
@@ -607,12 +586,6 @@ body {
 .drawwilder-container {
   max-width: 520px;
   text-align: left;
-  /* this ensures all text aligns left */
-}
-
-#drawwilder-logo {
-  width: 140px;
-  margin-bottom: 1rem;
 }
 
 .drawwilder-title {
@@ -669,7 +642,6 @@ body {
   }
 }
 
-/* keep ONE wrapper rule */
 .drawwilder-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -678,7 +650,6 @@ body {
   color: #1a1a1a;
 }
 
-/* left column stays white so text is readable */
 .drawwilder-left {
   flex: 1 1 50%;
   display: flex;
@@ -694,27 +665,11 @@ body {
   text-align: left;
 }
 
-/* right column gets the background image */
 .drawwilder-right {
   flex: 1 1 50%;
   min-height: 100vh;
   background: url("images/drawwilder/neotropica/neotropica-thumb.png") center /
     cover no-repeat;
-}
-
-/* responsive */
-@media (max-width: 900px) {
-  .drawwilder-wrapper {
-    flex-direction: column;
-  }
-
-  .drawwilder-right {
-    min-height: 50vh;
-  }
-
-  .drawwilder-left {
-    padding: 2rem;
-  }
 }
 
 .drawwilder-wrapper {
@@ -726,7 +681,6 @@ body {
   flex: 1 1 50%;
 }
 
-/* Left (text) */
 .drawwilder-left {
   flex: 1 1 50%;
   display: flex;
@@ -740,11 +694,6 @@ body {
 .drawwilder-container {
   width: 90%;
   text-align: center;
-}
-
-#drawwilder-logo {
-  width: 140px;
-  margin-bottom: 1rem;
 }
 
 .drawwilder-title {
@@ -771,7 +720,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Right (image) */
 .drawwilder-right {
   flex: 1 1 50%;
   display: flex;
@@ -787,27 +735,6 @@ body {
   object-position: center;
 }
 
-/* Responsive layout for tablets and phones */
-@media (max-width: 900px) {
-  .drawwilder-wrapper {
-    flex-direction: column;
-  }
-
-  .drawwilder-left,
-  .drawwilder-right {
-    flex: 1 1 100%;
-    padding: 0.8rem 2rem;
-  }
-
-  .drawwilder-image {
-    height: 50vh;
-  }
-
-  .drawwilder-title {
-    font-size: 2rem;
-  }
-}
-
 .drawwilder-text-intro li {
   display: flex;
   align-items: center;
@@ -817,14 +744,12 @@ body {
   color: #171417;
   margin-bottom: 10px;
   text-align: left;
-  /* override global centering */
 }
 
 .drawwilder-text-intro li img {
   width: 30px;
   height: auto;
   display: inline-block;
-  /* ensure it doesn't break layout */
   margin: 0;
   padding: 0;
 }
@@ -838,21 +763,19 @@ body {
   color: #171417;
   margin-bottom: 10px;
   text-align: left;
-  /* override global centering */
 }
 
 .avatar-text-intro li img {
   width: 30px;
   height: auto;
   display: inline-block;
-  /* ensure it doesn't break layout */
   margin: 0;
   padding: 0;
 }
 
-#drawwilder-logo {
-  margin-left: 75px;
-  width: 35%;
+.drawwilder-container img {
+  width: 30%;
+  margin: 0 auto;
 }
 
 .strawberry-idea {
@@ -974,8 +897,6 @@ body {
   padding: 2px 7px;
   border-radius: 2px;
 }
-
-/* Badges/Labels end */
 
 /* Typography start */
 
@@ -1273,16 +1194,15 @@ ol li {
 /* Content divs start */
 
 .content-inner {
-  max-width: 900px; /* Ideal readable width */
-  margin: 0 auto; /* Center it */
-  padding: 0 20px; /* Breathing room on mobile */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .wrapper {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  /* prevent horizontal scroll */
   display: flex;
   flex-direction: column;
 }
@@ -1842,51 +1762,56 @@ div.projectcontent > .label-text {
   background-color: #444;
 }
 
+footer.footer-banner.drawwilder {
+  color: #000000;
+}
+
+/* Global default for media (non-card, non-gallery rules can still override) */
+:where(img, video, iframe) {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  width: 70%;
+  height: auto;
+  padding: 60px 0px 0px 0px;
+}
+
 /*************************  Media Queries start *************************/
 /*************************  Media Queries start *************************/
 
-@media only screen and (max-width: 480px) {
-  /* styles for very small devices like older iPhones/Androids */
+/* Drawwilder media qieries specific */
 
-  .text-only-wider {
-    max-width: 100%;
+@media (max-width: 900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
   }
 
-  h1 {
-    font-size: 1.5em;
-    text-align: center;
+  .drawwilder-right {
+    min-height: 50vh;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 1em;
-  }
-
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .port-page-internal h3 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .projectcontent p {
-    text-align: center;
+  .drawwilder-left {
+    padding: 2rem;
   }
 }
 
-@media (max-width: 767px) {
-  .landingpage-title.eg {
-    padding-top: 230px;
+@media (max-width: 900px) {
+  .drawwilder-wrapper {
+    flex-direction: column;
+  }
+
+  .drawwilder-left,
+  .drawwilder-right {
+    flex: 1 1 100%;
+    padding: 0.8rem 2rem;
+  }
+
+  .drawwilder-image {
+    height: 50vh;
+  }
+
+  .drawwilder-title {
+    font-size: 2rem;
   }
 }
 
@@ -2181,9 +2106,8 @@ div.projectcontent > .label-text {
   }
 }
 
-/* Smaller aroun 1000px */
-
 /*************************************************************************** Desktops only sizes start ****************************************************************************/
+
 @media (min-width: 2415px) and (max-width: 2435px) {
   .text-only-wider {
     padding: 0px 0px;
@@ -2231,6 +2155,13 @@ div.projectcontent > .label-text {
 }
 
 @media (min-width: 1500px) and (max-width: 2000px) {
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
   .text-only-wider {
     padding: 0px 0px;
     max-width: 50%;
@@ -2254,12 +2185,37 @@ div.projectcontent > .label-text {
 }
 
 @media (min-width: 2000px) and (max-width: 3000px) {
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
   .main-content {
     flex: 1;
     padding: 10px;
     width: 50%;
     margin: 0 auto;
   }
+
+  /* About page start */
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30% !important;
+    height: auto;
+  }
+
+  h1.landingpage-title.eg {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
 
   :where(img, video, iframe) {
     display: block;
@@ -2272,6 +2228,31 @@ div.projectcontent > .label-text {
 }
 
 @media (min-width: 1118px) and (max-width: 2000px) {
+  /* About page start */
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30% !important;
+    height: auto;
+  }
+
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
+  h1.landingpage-title.eg {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
+
   .main-content {
     flex: 1;
     padding: 10px;
@@ -2315,11 +2296,24 @@ div.projectcontent > .label-text {
 }
 
 /*************************************************************************** Desktops only sizes end ****************************************************************************/
-/* 💻 Desktops & Tablets (1264.67px - 3608px) */
 
-/* 💻 Desktops & Tablets (1024px - 1499px) */
+/* 💻 Desktops & Tablets (960px) */
 
 @media screen and (max-width: 960px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+  /* About page end */
+
   nav {
     flex-wrap: wrap;
   }
@@ -2428,6 +2422,29 @@ div.projectcontent > .label-text {
 /* 📱 Large Tablets & Small Laptops (960px - 1023px) */
 
 @media (min-width: 960px) and (max-width: 1023px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
+
   .cover-alternate-content.wider > .landingpage-title {
     margin: 0;
     padding: 20px 0;
@@ -2478,9 +2495,32 @@ div.projectcontent > .label-text {
   }
 }
 
-/* 🧁 Medium Tablets (800px - 959px) */
+/* 📱 Medium Tablets (800px - 959px) */
 
 @media (min-width: 800px) and (max-width: 959px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page end */
+
   .slider-overlay {
     width: 100% !important;
   }
@@ -2518,10 +2558,6 @@ div.projectcontent > .label-text {
     float: none !important;
   }
 
-  #drawwilder-logo {
-    width: 200px;
-  }
-
   .container {
     max-width: 100%;
   }
@@ -2531,9 +2567,16 @@ div.projectcontent > .label-text {
   }
 }
 
-/* 🍩 Tablets (768px - 799px) */
+/* 📱 Tablets (768px - 799px) */
 
 @media (min-width: 768px) and (max-width: 799px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    font-size: 1.8em;
+  }
+
   h1.landingpage-title {
     font-size: 4em !important;
     font-weight: 900;
@@ -2566,8 +2609,8 @@ div.projectcontent > .label-text {
   }
 
   .cover-alternate-content {
-    width: 100%;
-    padding: 5px;
+    width: 90%;
+    padding: 60px;
   }
 
   section {
@@ -2676,13 +2719,88 @@ div.projectcontent > .label-text {
   }
 }
 
-/* 📱 Small Phones (350px - 428px) */
+/* 📱 Mobile Devices up to (480px) */
+
+@media only screen and (max-width: 480px) {
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .port-page-internal h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .projectcontent p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    font-size: 1.8em;
+  }
+
+  .landingpage-title.eg {
+    padding-top: 230px;
+  }
+}
+
+/* 📱 Mobile Devices up to (768px) */
+@media (max-width: 768px) {
+  /* About page start */
+  .container-message {
+    flex-direction: column;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+  /* About page end */
+}
+
+/* 📱 Mobile Devices (300px - 600px) */
 @media (min-width: 300px) and (max-width: 600px) {
+  /* New page start */
+
+  .cover-alternate-content {
+    width: 80%;
+    padding: 60px;
+  }
+
+  .cover-alternate-content h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .cover-alternate-content p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 200;
+  }
+
+  /* New page end */
+
   :where(img, video, iframe) {
     display: block;
     margin-inline: auto;
     max-width: 100% !important;
-    width: 90% !important;
+    width: 40% !important;
     height: auto;
     padding: 30px 0px 0px 0px !important;
   }
@@ -2707,29 +2825,15 @@ div.projectcontent > .label-text {
     max-width: 100%;
   }
 
-  .landingpage-title.eg {
-    padding-top: 90px;
-  }
-
   h1.landingpage-title.eg {
+    width: 100%;
     margin: 0px auto 0px auto;
     padding: 10px;
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1em;
+    font-size: 1.8em;
   }
 
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
+  span {
+    font-size: 0.8em;
   }
 
   .port-page-internal h3 {
@@ -2817,7 +2921,8 @@ div.projectcontent > .label-text {
   }
 }
 
-/* 📱 Tiny Phones (250px - 349px) */
+/* 📱 Mobile Devices (250px - 349px) */
+
 @media (min-width: 250px) and (max-width: 349px) {
   :where(img, video, iframe) {
     display: block;
@@ -2826,6 +2931,12 @@ div.projectcontent > .label-text {
     width: 60% !important;
     height: auto;
     padding: 30px 0px 0px 0px !important;
+  }
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30%;
+    height: auto;
   }
 
   .drawwilder-right {
@@ -2851,22 +2962,15 @@ div.projectcontent > .label-text {
 /*************************  Media Queries end *************************/
 /*************************  Media Queries end *************************/
 
-footer.footer-banner.drawwilder {
-  color: #000000;
+/* Links page */
+
+.container-links {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
 }
 
-/* Global default for media (non-card, non-gallery rules can still override) */
-:where(img, video, iframe) {
-  display: block;
-  margin-inline: auto;
-  max-width: 100%;
-  width: 70%;
-  height: auto;
-  padding: 60px 0px 0px 0px;
-}
-
-.about-estela-image {
-  margin: 10px auto 50px auto;
-  width: 30% !important;
-  height: auto;
+body {
+  font-family: "Poppins", serif;
+  background-color: #4a006d;
 }

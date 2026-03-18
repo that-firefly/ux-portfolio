@@ -437,6 +437,11 @@ body {
   background-color: #8052b8;
 }
 
+.container-links {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .landingpage-title {
   text-shadow:
     0 1px 3px rgba(0, 0, 0, 0.25),
