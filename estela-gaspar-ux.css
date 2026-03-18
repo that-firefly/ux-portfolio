@@ -2821,8 +2821,24 @@ footer.footer-banner.drawwilder {
 
 /* 📱 Mobile Devices (300px - 600px) */
 @media (min-width: 300px) and (max-width: 600px) {
-  /* New page start */
+  nav .menu li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px !important;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
 
+  nav .menu li a,
+  nav .menu {
+    padding: 8px !important;
+  }
+
+  /* New page start */
   .cover-alternate-content {
     width: 80%;
     padding: 60px;
