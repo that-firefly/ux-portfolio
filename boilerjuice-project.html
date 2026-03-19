@@ -1,1150 +1,529 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      BoilerJuice UX Case Study - Heating oil supply - Estela Gaspar - UX/UI
+      Designer
+    </title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BoilerJuice UX Case Study - Heating oil supply - Estela Gaspar - UX/UI Designer</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-  <style>
-    /* Layout */
-    :root {
-      --container-max: 1120px;
-      /* sweet spot for laptop/desktop reading */
-      --container-pad: clamp(16px, 3vw, 32px);
-      --card-radius: 10px;
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    * {
-      box-sizing: border-box;
-    }
+    <!-- Estela Gaspar favicon -->
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      /* let container handle side padding */
-      background: #fefefe;
-      color: #222;
-      line-height: 1.6;
-    }
+    <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
 
-    .container {
-      max-width: 80%;
-      margin-inline: auto;
-      padding: 24px var(--container-pad) 64px;
-    }
+        --pain-bg: #fde4e3;
+        --outcome-bg: #d5ffd0;
+        --section-bg: #222;
+        --section-text: #fff;
 
-
-    /* Typography */
-    h1,
-    h2,
-    h3 {
-      color: #444;
-      margin: 1.2em 0 0.5em;
-    }
-
-    h1 {
-      font-size: clamp(28px, 2.2vw, 36px);
-      border-bottom: 2px solid #eee;
-      padding-bottom: .4rem;
-    }
-
-    h2 {
-      font-size: clamp(22px, 1.8vw, 28px);
-    }
-
-    h3 {
-      font-size: clamp(18px, 1.4vw, 22px);
-    }
-
-    p {
-      margin: 0.6em 0;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-      margin: 0.6em 0 1.2em;
-    }
-
-    /* Utility */
-    .muted {
-      color: #666;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .stack-sm>*+* {
-      margin-top: .5rem;
-    }
-
-    .stack-md>*+* {
-      margin-top: 1rem;
-    }
-
-    .stack-lg>*+* {
-      margin-top: 1.6rem;
-    }
-
-    .hr {
-      border-top: 2px solid #eee;
-      margin: 16px 0 24px;
-    }
-
-    /* Responsive images */
-    img,
-    figure img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .img-xs {
-      max-width: 320px;
-    }
-
-    .img-sm {
-      max-width: 480px;
-    }
-
-    .img-md {
-      max-width: 720px;
-    }
-
-    .img-lg {
-      max-width: 960px;
-    }
-
-    .img-xl {
-      max-width: 1120px;
-    }
-
-
-    .pain-points-card {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      background: #FDE4E3;
-      border: 1px solid #e6e8eb;
-      padding: 1rem;
-      border-radius: var(--card-radius);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
-    }
-
-
-    .outcomes-card {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      background: #D5FFD0;
-      border: 1px solid #e6e8eb;
-      padding: 1rem;
-      border-radius: var(--card-radius);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
-    }
-
-    .role {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      margin-top: 1.5rem;
-      margin: 60px 0px 0px 0px;
-    }
-
-
-
-    .card {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      background: #f8fafb;
-      border: 1px solid #e6e8eb;
-      padding: 1rem;
-      border-radius: var(--card-radius);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
-    }
-
-    .card--accent {
-      background: #fde8e7;
-    }
-
-    .outcomes-card--accent {
-      background: #e7f8e6;
-    }
-
-    .pain-points,
-    .outcomes,
-    .media-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    /* Desktop-friendly columns */
-    .pain-points {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin: 60px 0px 0px 0px;
-    }
-
-    .outcomes {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-            margin: 60px 0px 0px 0px;
-    }
-
-    .media-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    /* Wider desktops get more columns automatically */
-    @media (min-width: 1280px) {
-      .outcomes {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        --container: 940px;
       }
 
-      .pain-points {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+      * {
+        box-sizing: border-box;
       }
 
-      .media-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    /* Section label */
-    .case-section {
-      font-size: clamp(20px, 1.6vw, 24px);
-      background-color: #222;
-      color: #fff;
-      padding: 0.4em 0.8em;
-      border-radius: 6px;
-      margin-top: 2em;
-    }
-
-    /* Results badges */
-    .results {
-      margin-top: 1.5rem;
-    }
-
-    .badges {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      padding: 12px 16px;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-    }
-
-    .metric {
-      display: block;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .label {
-      display: block;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    .disclaimer {
-      font-size: 0.85rem;
-      opacity: 0.7;
-      margin-top: 8px;
-    }
-
-    /* Make long URLs/labels wrap (prevents overflow on laptops) */
-    a,
-    p,
-    li {
-      overflow-wrap: anywhere;
-    }
-
-    .media-grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    @media (max-width: 960px) {
-      .media-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-
-    /* dampen excessive <br> on large screens */
-    @media (min-width: 992px) {
-      br {
-        display: none;
+      html {
+        scroll-behavior: smooth;
       }
 
-      /* you can remove many <br> now that layout is responsive */
-    }
-
-    /* Print tweaks (still “ready-print”) */
-    @media print {
-      .case-section {
-        background: #000;
-        color: #fff;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .card,
-      .outcomes-card {
-        box-shadow: none;
-      }
-
-      a::after {
-        content: " (" attr(href) ")";
-        font-size: 0.85em;
-        color: #666;
-      }
-    }
-
-    /* --- Mobile & small tablets --- */
-    @media (max-width: 960px) {
       body {
         margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
       }
 
-      .container {
-        padding: 20px 16px 56px;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin-bottom: 20px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
       }
 
       h1 {
-        font-size: 1.6rem;
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
       }
 
       h2 {
-        font-size: 1.25rem;
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0px 0 14px;
       }
 
       h3 {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
       }
 
+      p {
+        margin: 0 0 16px;
+        color: #344054;
+      }
 
-      @media (max-width: 768px) {
+      ul {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
 
-        .img-xl,
-        .img-lg {
-          max-width: 100%;
+      li {
+        margin-bottom: 10px;
+        color: #344054;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .case-section {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .pain-points,
+      .outcomes,
+      .role,
+      .media-grid {
+        display: grid;
+        gap: 42px;
+        margin-top: 24px;
+      }
+
+      .pain-points,
+      .outcomes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 60px;
+      }
+
+      .role,
+      .media-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pain-points > p {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      .card,
+      .pain-points-card,
+      .outcomes-card {
+        width: 250px;
+        height: 250px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+        background: #f8fafb;
+        font-size: 0.98rem;
+      }
+
+      .pain-points-card {
+        background: var(--pain-bg);
+      }
+
+      .outcomes-card {
+        background: var(--outcome-bg);
+      }
+
+      section {
+        padding: 10px 0;
+      }
+
+      footer {
+        margin-top: 32px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
         }
 
-        /* scale to screen */
+        .pain-points,
+        .outcomes,
+        .role,
+        .media-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
       }
 
-      /* Make grids stack to 1 column on phones */
-      .pain-points,
-      .outcomes,
-      .media-grid,
-      .role {
-        display: grid;
-        grid-template-columns: 1fr !important;
-        gap: 12px;
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .case-section {
+          background: #000 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
+
+        a[href*="boilerjuice"] {
+          font-weight: 500;
+          text-decoration: underline;
+          text-decoration-thickness: 1.5px;
+          text-underline-offset: 3px;
+          transition: all 0.2s ease;
+        }
+
+        a[href*="boilerjuice"]:hover {
+          opacity: 0.7;
+          text-decoration-thickness: 2px;
+        }
       }
+    </style>
+  </head>
 
-      .role {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      }
+  <body>
+    <main class="container">
+      <div class="back-btn">
+        <a href="javascript:history.back()">← Back</a>
+      </div>
 
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
 
-      /* Make cards comfy for thumbs */
-      .card,
-      .outcomes-card {
-        padding: 14px;
-        border-radius: 10px;
-        font-size: 0.98rem;
-        line-height: 1.45;
-      }
+      <h1>BoilerJuice</h1>
 
-      /* Prevent horizontal scroll from long words/URLs */
-      p,
-      li,
-      a {
-        overflow-wrap: anywhere;
-        word-break: break-word;
-      }
-
-      /* Kill manual line breaks that crowd small screens */
-      br {
-        display: none;
-      }
-    }
-
-    /* Modest tablets (2 columns where possible) */
-    @media (min-width: 961px) and (max-width: 1239px) {
-
-      .pain-points,
-      .outcomes,
-      .media-grid,
-      .role {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-      }
-    }
-
-    /* Global image hygiene (helps all sizes) */
-    img {
-      margin: 40px 0px;
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    :root {
-      --bg: #ffffff;
-      --card: #ffffff;
-      --text: #111318;
-      --muted: #667085;
-      --bar-bg: #e9eef5;
-      --accent-a: #ff914d;
-      --accent-b: #e63946;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0c0e;
-        --card: #14161c;
-        --text: #e8edf5;
-        --muted: #a6b0c2;
-        --bar-bg: #242836;
-         --accent-a: #ff914d;
-      --accent-b: #e63946;
-      }
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
-    body {
-      margin: 0;
-      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    .wrap {
-      max-width: 900px;
-      margin: clamp(20px, 4vw, 48px) auto;
-      padding: 24px;
-      background: var(--card);
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
-    }
-
-    h1 {
-      margin: 0 0 .25rem;
-      line-height: 1.2
-    }
-
-    .lead {
-      margin: .25rem 0 1rem;
-      color: var(--muted)
-    }
-
-    .kr-list {
-      display: grid;
-      gap: 16px;
-      margin-top: 12px
-    }
-
-    .kr {
-      border: 1px solid rgba(0, 0, 0, .06);
-      border-radius: 14px;
-      padding: 14px 16px;
-    }
-
-    .kr-h {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px
-    }
-
-    .kr-title {
-      font-weight: 600
-    }
-
-    .kr-range {
-      color: var(--muted);
-      font-variant-numeric: tabular-nums
-    }
-
-    .bar-wrap {
-      position: relative;
-      height: 12px;
-      background: var(--bar-bg);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-top: 10px
-    }
-
-    .bar {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: var(--value, 0%);
-      background: linear-gradient(90deg, var(--accent-a), var(--accent-b))
-    }
-
-    .kr-meta {
-      display: flex;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: .9rem;
-      margin-top: 8px
-    }
-
-    .note {
-      display: block;
-      color: var(--muted);
-      margin-top: 8px;
-      font-size: .9rem
-    }
-
-    h2 {
-      margin: 24px 0 8px
-    }
-
-    ul {
-      margin: .25rem 0 0 1.2rem
-    }
-
-    footer {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: .85rem
-    }
-
-    .results {
-      margin-top: 1.5rem;
-    }
-
-    .badges {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      padding: 12px 16px;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-    }
-
-    .metric {
-      display: block;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .label {
-      display: block;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    .disclaimer {
-      font-size: 0.85rem;
-      opacity: 0.7;
-      margin-top: 8px;
-    }
-
-    section {
-      padding: 20px 0px;
-    }
-
-    .ready-print {
-        display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
- 
-  </style>
-  <!-- Estela Gaspar favicon -->
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
-
-</head>
-
-<body>
-  <main class="container">
-     <div class="back-btn">
-      <a href="javascript:history.back()" style="text-decoration: none"
-        >← Back</a
-      >
-    </div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-      This is a ready-to-print page
-    </h4>
-
-    <img style="width:600px; height:auto;" src="./images/boilerjuice/boilerjuice-logo-horiz.png" alt="BoilerJuice logo"
-      title="BoilerJuice old logo.">
-
-    <h1>BoilerJuice UX Case Study - Heating oil supply</h1>
-
-
-    <div class="section">
-      <h2>Overview</h2>
-      <p>BoilerJuice is the UK's leading heating oil supplier, providing a simple, efficient, and
-        cost-effective way for customers to order heating oil. <br>Established in 2004, BoilerJuice
-        revolutionised the industry by offering a price comparison service that allows users to find
-        the best local deals <br>on heating oil.</p>
-
-      <p>BoilerJuice, founded in 2004, revolutionised the heating oil market by offering a comparison
-        website that helped users save money by finding local, <br>cheaper prices and facilitating oil
-        deliveries. However, as demand grew, the traditional customer journey (relying on phone
-        orders and a basic online form)<br> became outdated and inefficient.</p>
-
-      <p><strong>With its focus on customer satisfaction, BoilerJuice
-          has built a reputation for offering competitive prices, reliable delivery, and a seamless<br>
-          online experience. The company operates through an extensive network of trusted heating oil
-          suppliers, ensuring that customers receive fast <br>and reliable delivery, no matter where they
-          are.</strong></p>
-
-      <p><strong>Due to their growing popularity and the seasonal surge in orders during winter, BoilerJuice faced
-          challenges in maintaining customer satisfaction.
-          <br>A key issue was the lack of a fast, real-time heating oil level monitoring system. Customers often
-          discovered their tank levels were already <br>
-          critically low by the time they placed an order, leaving them without heating, particularly in remote
-          locations such as countryside cottages.
-          <br>On top of that, the ordering process was cumbersome.</strong></p>
-
-      <p>Customers had to manually search for the best quote, place their order, and then call customer service to
-        confirm and receive delivery updates.
-        <br>This not only placed significant strain on the customer service team and increased operational costs, but
-        also risked losing clients to competitors,
-        <br>as many did not want to wait in lengthy call queues.
-      </p>
-
-      <p>Customers also
-        had to physically check oil levels, which was inconvenient, especially during cold weather.<br>
-        The lack of real-time updates and limited online interaction led to frustration, service
-        abandonment, and loss of potential customers.</p>
-
-
-      <img class="img-lg" src="./images/boilerjuice/calling-boilerjuice.png" alt="BoilerJuice challenges"
-        title="BoilerJuice challenges from the old platform.">
-
-      <section class="challenge">
-        <h2>The challenge</h2>
+      <div class="section">
+        <h2>Service design and UI for the commodity market</h2>
         <p>
-          Customers needed a fast, friction-free way to understand pricing and options and place a heating-oil order.
-          <br>Many also had to go outside to read their tank gauges, unpleasant in winter and impractical for customers
-          with mobility constraints.<br>
-          <br>The existing website, calculator, and service showed the following issues:
+          BoilerJuice is the UK's leading heating oil supplier, providing a
+          simple, efficient, and cost-effective way for customers to order
+          heating oil. Established in 2004, BoilerJuice revolutionised the
+          industry by offering a price comparison service that allows users to
+          find the best local deals on heating oil.
         </p>
 
-        <div class="pain-points">
-          <p>Some of the pain points found:</p>
-          <div class="pain-points-card">Cluttered layout and weak content hierarchy, making key actions hard to find.
-          </div>
-          <div class="pain-points-card">A long, single-column form that was difficult to access on mobile; critical
-            fields slipped below the fold or under the keyboard.</div>
-          <div class="pain-points-card">Inconsistent responsive behavior across devices; key tasks (get a quote, order,
-            reorder, track delivery) were unreliable on phones and desktops.</div>
-          <div class="pain-points-card">Accessibility gaps (contrast, focus states, labels, keyboard navigation,
-            screen-reader support) that made the journey harder for older adults and people with disabilities.</div>
-          <div class="pain-points-card">Forced account creation before value was demonstrated; no clear guest checkout
-            or clear “save my quote” path.</div>
-          <div class="pain-points-card">Authentication and account-management problems (login loops, password reset
-            failures, unclear error states).</div>
-          <div class="pain-points-card">Fragmented end-to-end flow—from quote to checkout to delivery—causing drop-offs,
-            abandoned orders, lower trust in the platform and unnecessary support calls.</div>
-          <div class="pain-points-card">Limited order status visibility; no proactive notifications, live ETAs, or
-            delivery-window selection.</div>
-          <div class="pain-points-card">Over-reliance on phone support; no real alternative channels such as email, SMS,
-            or WhatsApp for alerts and updates.</div>
-          <div class="pain-points-card">Progress not preserved when switching devices; forms sometimes hid fields on
-            small screens.</div>
+        <section class="challenge">
+          <h2>The challenge</h2>
+
+          <p>
+            Due to their growing popularity and the seasonal surge in orders
+            during winter, BoilerJuice faced challenges in maintaining customer
+            satisfaction. A key issue was the lack of a fast, real-time heating
+            oil level monitoring system. Customers often discovered their tank
+            levels were already critically low by the time they placed an order,
+            leaving them without heating, particularly in remote locations such
+            as countryside cottages. On top of that, the ordering process was
+            cumbersome.
+          </p>
+
+          <p>
+            As demand grew, the traditional customer journey (relying on phone
+            orders and a basic online form) became outdated and inefficient.
+          </p>
+
+          <img
+            class="img-xl"
+            src="./images/boilerjuice/boilerjuice-empathy-mapping.png"
+            alt="BoilerJuice challenges"
+            title="BoilerJuice challenges from the old platform, pain points and opportunities."
+            style="margin-bottom: 24px"
+          />
+        </section>
+
+        <h2>My role</h2>
+        <p>
+          Over 18 months, I held 80% UX ownership in a 300 person
+          cross-functional team. We used Confluence, Google Analytics, and
+          optimised the web experience across Chrome, IE, Firefox, Opera, and
+          Safari. The team included product owners, engineers, customer service
+          specialists, heating oil partners, marketing professionals, and
+          developers.
+        </p>
+
+        <p>
+          Designed and launched a new service that makes buying heating oil as
+          effortless as being connected to a mains supply. This included
+          creating new user journeys, redesigning legacy pages, and building
+          fresh content for the Connected Service across the company’s public
+          website
+          <a
+            href="https://www.boilerjuice.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-size: 1em"
+            >(www.boilerjuice.com)</a
+          >
+          and mobile app.
+        </p>
+
+        <p>
+          Although I inherited parts of the original app design from another
+          designer, the current structure and layouts, despite updates to colour
+          and typography, are largely based on my work.
+        </p>
+
+        <h2 style="margin-top: 30px">Process &amp; Approach</h2>
+        <h2 class="case-section">User Research (UR)</h2>
+        <p>
+          Discovery through defining core problem statements, with ongoing
+          testing and iteration driven by live performance and user feedback.
+        </p>
+        <p>
+          I carried out accessibility audits, user interviews, and quantitative
+          research using the System Usability Scale (SUS). I analysed user
+          behaviour and improved the information architecture through card
+          sorting exercises.
+        </p>
+        <p>
+          Conducted user research in collaboration with the Product Manager.
+          Delivered user research insights, ecosystem maps, blueprint canvases,
+          lean canvases, user flows with UX diaries, and information
+          architecture maps.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/boilerjuice/UR-images.jpg"
+          alt="User research artifacts showing personas, user journeys, and behavioural insights for BoilerJuice"
+          title="A collection of user research deliverables used to inform design decisions and identify opportunities"
+        />
+
+        <h2 class="case-section" style="margin-top: 60px">
+          User Interface design (UI)
+        </h2>
+        <p>
+          Mapped user flows in Draw.io and Sketch, covering both happy and
+          unhappy paths to identify issues early. Created low to mid-fidelity
+          wireframes in Axure, Sketch, Figma, and Balsamiq to align stakeholders
+          on functionality and flow.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/boilerjuice/user-interface.jpg"
+          alt="UI and UX artifacts including user flows, analytics, heatmaps, accessibility testing, and wireframes"
+          title="Collection of UI and UX deliverables created for the BoilerJuice platform"
+          style="margin-bottom: 35px"
+        />
+
+        <p>
+          Redesigned the quote form to deliver faster, clearer heating oil
+          quotes and support a subscription service. Improved the end-to-end
+          purchasing experience by redesigning key checkout pages to reduce
+          friction, increase trust, and create a more transparent, mobile
+          friendly journey. Also introduced an improved search function for
+          easier access to key documents and data.
+        </p>
+        <h2 class="case-section">Design handover</h2>
+        <p>
+          I partnered closely with developers to ensure designs were delivered
+          in line with approved layouts, supported by clear guidelines, assets,
+          and documentation. Through ongoing check-ins and QA sessions, I
+          maintained quality and ensured the final product consistently
+          reflected the intended experience.
+        </p>
+
+        <p>
+          Drove alignment between design and business goals by demonstrating
+          value through user research and testing, engaging stakeholders early
+          to validate decisions, set priorities, and support delivery within an
+          agile framework.
+        </p>
+
+        <h2 style="margin-top: 30px">Outcome</h2>
+
+        <ul>
+          <li>
+            Increased trust in the BoilerJuice website and reduced journey
+            abandonment. Customers were able to order heating oil with little to
+            no support. Customer service calls shifted towards follow-ups rather
+            than winter emergencies.
+          </li>
+          <li>
+            It became easier, faster, and more trustworthy to order heating oil.
+            People felt reassured by clearer delivery expectations and real-time
+            updates.
+          </li>
+          <li>
+            Meaningful alerts and subscription options increased repeat usage
+            and loyalty.
+          </li>
+          <li>
+            Earlier reordering and clearer service transparency improved
+            operational resilience during winter peak demand.
+          </li>
+        </ul>
+
+        <div style="margin-top: 30px; margin-bottom: 30px">
+          <a
+            href="https://www.boilerjuice.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-size: 1em"
+          >
+            <strong>Visit the BoilerJuice website (opens in a new tab)</strong>
+          </a>
         </div>
-
-        <img class="img-xl" src="./images/boilerjuice/cluttered-website.png"
-          alt="BoilerJuice challenges cluttered website"
-          title="BoilerJuice challenges from the old platform such as cluttered website.">
-
-        <div class="pain-points">
-          <div class="pain-points-card">No real-time tank-level input or smart gauge integration, increasing the risk of
-            running out in cold weather.</div>
-          <div class="pain-points-card">Pricing opacity: unclear fees, taxes, minimum order quantities, and
-            postcode-based pricing changes.</div>
-          <div class="pain-points-card">No budget or payment options (e.g., monthly plans, subscriptions, instalments,
-            or AutoPay).</div>
-          <div class="pain-points-card">Weak reorder tools: no order history, favourites, or one-tap “repeat last
-            order.”</div>
-          <div class="pain-points-card">Poor address and service-area validation; users could progress only to learn
-            delivery wasn’t available.</div>
-          <div class="pain-points-card">Missing delivery preferences (safe-fill limit, access notes, gate codes, pets,
-            parking/driveway constraints).</div>
-          <div class="pain-points-card">Limited support for multiple tanks, tank-size selection, and safe-capacity
-            calculations.</div>
-          <div class="pain-points-card">Performance issues on slower rural connections; timeouts during peak demand or
-            severe weather.</div>
-          <div class="pain-points-card">Trust and compliance signals were missing or buried (safety credentials,
-            insurance, environmental commitments, GDPR/privacy).</div>
-          <div class="pain-points-card">Inconsistent terminology and units (litres vs. gallons), confusing price and
-            quantity expectations.</div>
-          <div class="pain-points-card">Content relied on jargon and lacked reassurance, especially for winter or
-            emergency scenarios.</div>
-        </div>
-      </section>
-
-      <h2>These issues led to an increase of support calls, abandoned orders, and lower trust in the platform.</h2>
-
-      <img class="img-xl" src="./images/boilerjuice/boilerjuice-case-study.png" alt="BoilerJuice challenges"
-        title="BoilerJuice challenges from the old platform, pain points and opportunities.">
-
-      <p class="label-text">Source images: <a
-          href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington
-          Research</a> on <a
-          href="https://unsplash.com/photos/rectangular-brown-wooden-table-kN_kViDchA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-        <a href="https://unsplash.com/@little_klein?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vitolda
-          Klein</a> on <a
-          href="https://unsplash.com/photos/girl-in-white-and-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-shirt-E31OyLefPTs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-        <a href="https://unsplash.com/@kevcostello?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kev
-          Costello</a> on <a
-          href="https://unsplash.com/photos/woman-leaning-on-white-wooden-table-while-holding-black-android-smartphone-w3jVXGkYZCw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>,
-        <a href="https://www.boilerjuice.com/uk" alt="BoilerJuice homepage"
-          title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-
-      </p>
-
-      <h2>My role</h2>
-      <img class="img-xs" src="./images/boilerjuice/ux-designer-estela.png" alt="Estela UX Designer"
-        title="Image of Estela UX Designer.">
-      <p>Over ~18 months, I held ~80% UX ownership in a 300-person cross-functional team.
-        <br>We used Confluence, Google Analytics, and optimised the web experience across Chrome, IE, Firefox, Opera,
-        and Safari.
-        <br>The team included product owners, engineers, customer service specialists, heating oil partners, marketing
-        professionals, and developers,
-        <br>altogether involving around 300 people. We collaborated using platforms such as Confluence and Google
-        Analytics, and designed for web
-        <br>environments optimised for Chrome and Internet Explorer, while also ensuring compatibility with Firefox,
-        Opera, and Safari.
-      </p>
-      <p>Designed and launched a new service that makes buying heating oil as effortless as being connected to a mains
-        supply.
-        <br>This included creating new user journeys, redesigning legacy pages, and building fresh content for the
-        Connected Service
-        <br>across the company’s public website (www.boilerjuice.com) and mobile app.
-      </p>
-
-    
-      <div class="role">
-          <p>Some of my tasks:</p>
-        <div class="card">UI Designer (User Interface Design).</div>
-        <div class="card">Conducted user research in collaboration with the Product Owner.</div>
-        <div class="card">Collaborated with Product Owner, Engineers, Customer Service, Heating Oil Companies, Data
-          Analysts, and Developers.</div>
-        <div class="card">Delivered user research insights, ecosystem maps, blueprint canvases, lean canvases, user
-          flows with UX diaries, <br>and information architecture maps in collaboration with Engineers and the Product
-          Owner.</div>
-        <div class="card">Produced wireframes and interactive prototypes with Axure and Figma.</div>
-        <div class="card">Created and maintained a design system with detailed interaction specifications using
-          InVision.</div>
-        <div class="card">Worked with the marketing team to create digital marketing materials.</div>
       </div>
 
-      <h2>Process &amp; Approach</h2>
-      <h2 class="case-section">1 – Business research and discovery</h2>
-      <ul>
-        <li>Organised a series of meetings and workshops with stakeholders, customer service teams, product managers,
-          <br>and developers to understand both what was working well and what was not, as well as to gain clarity on
-          the <br>new offering - the Connected Service.
-        </li>
-        <li>During this process, I used sketches and the Lean Canvas framework to quickly capture current problems,
-          <br>business goals, value propositions, and success metrics, with the aim of achieving a market-fit product.
-        </li>
-        <li>Identified key user groups (including adults over 40 and stay-at-home parents) to map personas and capture
-          diverse needs.</li>
-        <li>Identified the key problems, opportunities, and challenges, focusing in particular on the main blockers
-          <br>and customer pain points within the journey, as well as patterns in returning-user behaviour.
-        </li>
-        <li>Assessed how the new Connected Service might compare with the competition, and whether it could deliver
-          <br>advantages by meeting the underserved needs of users in the current market.
-        </li>
-      </ul>
-
-      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-1.png" alt="Smaply personas"
-        title="Image of Smaply personas created for BoilerJuice.">
-      <p class="label-text">Personas created with <a href="https://www.smaply.com/tools/personas"
-          alt="Persona tool web application"
-          title="Persona tool web application used for service design and creating user-centric artifacts.">Smaply</a>.
-      </p>
-
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery.png" alt="UX deliverables"
-        title="Image of UX deliverables such as Lean Canvas, Task Analysis and Empathy Maps.">
-
-
-      <img class="img-xl" src="./images/boilerjuice/user-journey-2.png" alt="UX deliverables - User journey."
-        title="Image of UX deliverables - User journey.">
-
-
-      <p><strong>Tasks and deliverables produced during this phase:</strong></p>
-      <ul>
-        <li>Held initial meetings with BoilerJuice stakeholders to gather their perspectives on potential problems and
-          created a Lean Canvas to document and organise insights.</li>
-        <li>Analysed customer feedback and support tickets to identify common pain points and recurring issues.</li>
-        <li>Ran recurring in-depth interviews with at least 10 customers per week over several months, ensuring
-          consistent feedback, ensuring representation from diverse UK regions including East Midlands, West Midlands,
-          Yorkshire and Humber, North West, North East, Wales, Scotland, and Northern Ireland.</li>
-        <li>Reviewed and extracted Google Analytics data to pinpoint drop-off points in the user experience, mapping
-          them into detailed user flows and breaking the journey down into key micro-interactions.</li>
-        <li>Created empathy maps to visualise user needs (pain points and opportunities), emotions, and behaviours at
-          different stages of the journey.</li>
-        <li>Benchmarked competitor experiences to identify best practices and gaps in the market.</li>
-        <li>Mapped ecosystem diagrams to show how the product interacts with other systems and stakeholders.</li>
-        <li>Conducted a comprehensive as-is audit of the current website, mobile experience, and app, supplemented by a
-          detailed competitive analysis.</li>
-        <li>Facilitated a stakeholder workshop to align on goals, define success criteria, and prioritise key problem
-          areas for design and research focus.</li>
-      </ul>
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-2.png"
-        alt="UX deliverables - Design review" title="Image of UX deliverables - Design review.">
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-3.png"
-        alt="UX deliverables accessibility checks - A" title="Image of UX deliverables - Accessibility checks - A">
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-4.png"
-        alt="UX deliverables accessibility checks - B" title="Image of UX deliverables - Accessibility checks - B.">
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-5.png"
-        alt="UX deliverables accessibility checks - C" title="Image of UX deliverables - Accessibility checks - C.">
-      <img class="img-xl" src="./images/boilerjuice/information-architecture.png"
-        alt="UX deliverables information architecture" title="Image of UX deliverables - information architecture.">
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-6.png"
-        alt="UX deliverables user research" title="Image of UX deliverables - user research.">
-      <img class="img-xl" src="./images/boilerjuice/business-research-and-discovery-7.png"
-        alt="UX deliverables user research data and analytics"
-        title="Image of UX deliverables - user research data and analytics.">
-
-      <h2 class="case-section">2 - Wireframing & Prototyping</h2>
-      <ul>
-        <li>Mapped user flows in Draw.io and Sketch, capturing both ‘happy’ and ‘unhappy’ paths to anticipate <br>and
-          address potential issues early in the design process.</li>
-        <li>Created low- to mid-fidelity interactive wireframes in Axure, Sketch, Figma, and Balsamiq <br>for
-          stakeholder review, ensuring a shared understanding of functionality and flow.</li>
-        <li>Applied consistent iconography and clear, accessible headings to support usability.</li>
-        <li>Redesigned the quote form to provide faster, clearer heating-oil quotes, while also enabling the
-          <br>promotion and sale of a heating-oil subscription service.
-        </li>
-        <li>Focused on improving the end-to-end purchasing experience for heating oil. I redesigned key pages <br>in the
-          checkout journey, including product selection, shopping cart,
-          payment, and the final confirmation page, <br>to ensure a smoother, more transparent, and mobile-friendly
-          process.
-          The goal was to reduce friction, increase <br>trust at each step, and provide clear reassurance after
-          purchase.</li>
-        <li>Refined marketing propositions, placing them more strategically on the page and removing visual clutter to
-          improve clarity and focus.</li>
-        <li>Implemented consistent iconography and clear headings.</li>
-        <li>Added an improved search function for faster access to key documents and data.</li>
-      </ul>
-      <img class="img-xl" src="./images/boilerjuice/wireframing-prototying-1.png" alt="UX deliverables user flow"
-        title="Image of UX deliverables - user flow.">
-      <img class="img-xl" src="./images/boilerjuice/wireframing-prototying-2.png" alt="UX deliverables wireframes and
-prototypes" title="Image of UX deliverables  wireframes and
-prototypes.">
-
-      <img class="img-xl" src="./images/boilerjuice/boilerjuice-ux-deliverable-4.png" alt="..." title="...">
-      <p class="label-text">BoilerJuice homepage wireframe designed using <a href="https://www.axure.com/"
-          alt="Wireframing tool used by UX/UI designers."
-          title="Powerful wireframing, prototyping, and specification tool used by UX/UI designers.">Axure
-          RP</a>.</p>
-      <p class="label-text">Source images: <a href="https://www.boilerjuice.com/uk" alt="BoilerJuice homepage"
-          title="Current homepage of BoilerJuice">Boilerjuice Ltd.</a>
-      </p>
-      <h2 class="case-section">3 - Testing & Iteration with live performance and feedback</h2>
-
-      <img class="img-xl" src="./images/boilerjuice/testing-iteration.png" alt="UX deliverables usability testing"
-        title="Image of UX deliverables usability testing.">
-      <img class="img-xl" src="./images/boilerjuice/testing-iteration-2.png" alt="UX deliverables user journey"
-        title="Image of UX deliverables user journey.">
-      <img class="img-xl" src="./images/boilerjuice/testing-iteration-3.png" alt="UX deliverables analytics"
-        title="Image of UX deliverables analytics.">
-      <img class="img-xl" style="width:1000px; height:auto;" src="./images/boilerjuice/testing-iteration-4.png"
-        alt="UX deliverables acessibility" title="Image of UX deliverables acessibility.">
-
-      <h2 class="case-section">4 - Sign-off and handover</h2>
-
-      <img class="img-xl" src="./images/boilerjuice/sign-off-handover.png" alt="UX deliverables sign-off"
-        title="Image of UX deliverables sign-off.">
-      <img class="img-xl" src="./images/boilerjuice/sign-off-handover-2.png" alt="UX deliverables handover and QA"
-        title="Image of UX deliverables handover and QA.">
-      </ol>
-
-      <h2>Outcome</h2>
-      <p>BoilerJuice was a growing oil marketplace, but customers often found the ordering process clunky, price
-        comparisons confusing, and overall trust low.
-        <br>In winter, heating oil deliveries could take one to two weeks, and many families were left without heating
-        because the time-consuming process of requesting quotes, making payments, and arranging deliveries created
-        delays.
-      </p>
-      <ul>
-        <li>Increase in self-serve ordering; CS calls shifted toward proactive follow-ups rather than winter
-          emergencies.</li>
-        <li>Faster quote-to-order and clearer delivery expectations, improving perceived reliability.</li>
-        <li>Higher repeat usage via alerts and subscription options, strengthening loyalty.</li>
-        <li>Operational resilience during peak demand due to earlier reordering and better transparency.</li>
-      </ul>
-
-      <div class="outcomes">
-        <p>But after UX improvements:</p>
-        <div class="outcomes-card">Simplified the order flow → reduced drop-off.</div>
-        <div class="outcomes-card">Clearer price transparency → increased trust + conversions.</div>
-        <div class="outcomes-card">Seamless uninterrupted journey → allowed customers to have real-time information
-          about heating oil levels within the comfort of their homes.</div>
-        <div class="outcomes-card">Mobile-first redesign → opened up a larger customer segment.</div>
-        <div class="outcomes-card">Personalised journeys (repeat orders, reminders) → boosted retention.</div>
-        <div class="outcomes-card">Redesigned the website to be more accessible and user-friendly → streamlining the
-          customer journey from quote to order.</div>
-        <div class="outcomes-card">Created new quote-generation screens → made pricing clearer and ordering faster,
-          while highlighting potential issues up front, which not only reduced customer stress but also improved the
-          quality of interactions with the support team.</div>
-        <div class="outcomes-card">Collaborated in the creation of a new service, the Connected Service, a
-          subscription-style model that makes buying heating oil feel as effortless as being on mains. → This
-          subscription-style model transformed the experience of buying heating oil into a seamless process.</div>
-        <div class="outcomes-card">Redesigned client dashboards to integrate data from a new tank device → providing
-          customers with automatic usage readings, alerts, and clear guidelines.</div>
-        <div class="outcomes-card">Omnichannel redesign → consistent, uninterrupted experience across devices and
-          platforms.</div>
-        <div class="outcomes-card">Peak-season resilience → support pressure reduced; calls shifted from winter
-          emergencies to proactive follow-ups.</div>
-        <div class="outcomes-card">Retention engine → alerts and subscription options encouraged timely reorders and
-          sustained engagement.</div>
-        <div class="outcomes-card">UX contributions → central in turning BoilerJuice into the UK’s largest online
-          heating oil marketplace.</div>
-      </div>
-
-      <section class="results">
-        <h3 class="case-section">BoilerJuice key results</h3>
-        <div class="badges">
-          <div class="badge"><span class="metric">↓ 20–30%</span><span class="label">Checkout drop-off</span></div>
-          <div class="badge"><span class="metric">↑ 10–15%</span><span class="label">Repeat orders</span></div>
-          <div class="badge"><span class="metric">↓ 25–35%</span><span class="label">Winter support tickets</span></div>
-        </div>
-        <p class="disclaimer">*Indicative ranges shown where exact figures are confidential.</p>
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
       </section>
+    </main>
 
-
-
-
-
-      <h2>BoilerJuice - Key results visualised</h2>
-      <section class="kr-list" role="img" aria-label="Bar chart of key result midpoints for BoilerJuice">
-        <!-- Checkout drop-off -->
-        <article class="kr">
-          <div class="kr-h">
-            <div class="kr-title">Checkout drop-off</div>
-            <div class="kr-range">↓ 20–30% • Midpoint <strong>25%</strong></div>
-          </div>
-          <div class="bar-wrap" aria-hidden="true">
-            <div class="bar" style="--value:25%"></div>
-          </div>
-          <div class="kr-meta"><span>Lower is better</span><span>25%</span></div>
-        </article>
-
-        <!-- Repeat orders -->
-        <article class="kr">
-          <div class="kr-h">
-            <div class="kr-title">Repeat orders</div>
-            <div class="kr-range">↑ 10–15% • Midpoint <strong>12.5%</strong></div>
-          </div>
-          <div class="bar-wrap" aria-hidden="true">
-            <div class="bar" style="--value:12.5%"></div>
-          </div>
-          <div class="kr-meta"><span>Higher is better</span><span>12.5%</span></div>
-        </article>
-
-        <!-- Winter support tickets -->
-        <article class="kr">
-          <div class="kr-h">
-            <div class="kr-title">Winter support tickets</div>
-            <div class="kr-range">↓ 25–35% • Midpoint <strong>30%</strong></div>
-          </div>
-          <div class="bar-wrap" aria-hidden="true">
-            <div class="bar" style="--value:30%"></div>
-          </div>
-          <div class="kr-meta"><span>Lower is better</span><span>30%</span></div>
-        </article>
-      </section>
-
-      <small class="note">Ranges are indicative; exact figures remain confidential.</small>
-
-
-      <h2>My contribution</h2>
-      <ul>
-        <li><strong>Accessible, mobile-first redesign:</strong> Reworked information architecture, forms, error states,
-          and contrast to make the experience clearer and more inclusive across web, mobile, and app.</li>
-        <li><strong>Quote &amp; checkout clarity:</strong> Designed new quote-generation screens and simplified
-          steps/copy to reduce friction and decision fatigue.</li>
-        <li><strong>Connected Service (subscription-style):</strong> Co-created and redesigned the proposition and
-          end-to-end flows so buying oil felt as effortless as a mains connection.</li>
-        <li><strong>IoT-enabled dashboards:</strong> Redesigned account areas to ingest smart-tank readings; introduced
-          low-level alerts, usage trends, refill guidance, and exception handling.</li>
-        <li><strong>Proactive issue surfacing:</strong> Embedded warnings and guidance earlier in the journey, improving
-          first-time resolution and the quality of CS interactions.</li>
-        <li><strong>Omnichannel orchestration:</strong> Established shared patterns and components for a consistent,
-          uninterrupted experience across channels and devices.</li>
-        <li><strong>Evidence-driven iteration:</strong> Led discovery and validation (interviews, journey mapping,
-          analytics, A/B tests), prioritising a roadmap that balanced user value with operational feasibility.</li>
-        <li><strong>Delivery partnership:</strong> Worked closely with engineers on specs, edge cases, and QA/UAT to
-          de-risk implementation and speed up release cycles.</li>
-      </ul>
-
-      <h2>The outcome - new screens</h2>
-      <p>User journey from quote to order confirmation page.</p>
-
-      <h2>Screen 1</h2>
-       <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-1.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 2</h2>
-        <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-2.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 3</h2>
-         <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-3.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 4</h2>
-         <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-4.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 5</h2>
-         <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-5.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 6</h2>
-        <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-1.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 7</h2>
-               <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-2.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 8</h2>
-         <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-6.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 9</h2>
-          <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-7.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 10</h2>
-        <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/step8quote.jpg" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 11</h2>
-    <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quotestep9.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 12</h2>
-          <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/quote-step-10.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 13</h2>
-         <p>Account dashboard screens and help pages.</p>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-1.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 14</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-2.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 15</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-3.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 16</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-4.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 17</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-5.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-      <h2>Screen 18</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-6.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 19</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-7.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 20</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-8.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 21</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-9.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 22</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-10.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 23</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/account-11.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 24</h2>
-            <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/boilerjuice-shop-old.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 25</h2>
-                    <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/boiler-juice-help-layout.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-       <h2>Screen 26</h2>
-                 <img class="img-xl" src="./images/boilerjuice/new-layouts-boilerjuice/boilerjuice-help-2.png" alt="BoilerJuice new screens"
-        title="Image of BoilerJuice new screens">
-        
-        
-
-
-
-
-
-
-
-
-
-      <section>
-
-      <h2>Reflection</h2>
-      <p> Connecting live tank data to the digital journey transformed heating oil buying from a reactive, last-minute
-        scramble into a proactive,
-        <br>planned experience. Real-time levels, clearer quotes, and tracked deliveries increased trust and pushed more
-        customers toward self-serve
-        <br>behaviours. The omnichannel, accessible redesign reduced seasonal pressure on support, shifted conversations
-        from emergencies to follow-ups,
-        <br>and created a foundation for retention through alerts and subscription-style ordering. In short: less panic,
-        more planning—and a service that finally felt as reliable as a utility.
-      </p>
-      <ul>
-        <li>Real-time data &amp; alerts made usage visible and actionable, reducing winter stress and stockouts.</li>
-        <li>Price transparency and a streamlined quote-to-order flow improved confidence and conversion.</li>
-        <li>Omnichannel consistency + accessibility widened reach and simplified repeat ordering.</li>
-        <li>Cross-functional delivery (engineering, CS, suppliers) turned UX changes into service innovation.</li>
-      </ul>
-
-      </section>
-
-
-    </div>
-
-    <section><a href="./case-studies.html">← Back to case studies</a></section>
-
-  </main>
-
-</body>
-
-  <script>
-    function printPage() {
-      window.print();
-    }
-
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
 
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>
