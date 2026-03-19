@@ -6,6 +6,26 @@ body {
 }
 
 html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer-banner {
+  text-align: center;
+  padding: 1rem;
+}
+
+html,
 body,
 div,
 form,
@@ -203,7 +223,9 @@ footer {
   font-size: 0.9em;
 }
 
-/* Navigation start */
+/********************************************** Navigation start ***********************************************/
+/********************************************** Navigation start ***********************************************/
+
 nav {
   display: flex;
   justify-content: center;
@@ -213,11 +235,6 @@ nav {
   padding: 0px;
   position: relative;
   z-index: 1000;
-}
-
-nav .logo {
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 nav .menu {
@@ -234,7 +251,7 @@ nav .menu li a {
   justify-content: center;
   color: #ffffff;
   text-decoration: none;
-  padding: 30px 20px;
+  padding: 20px;
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
@@ -242,6 +259,8 @@ nav .menu li a {
 
 nav .menu li a:hover {
   background-color: #5a2b8c;
+  transform: scale(1.05);
+  text-decoration: none;
 }
 
 .menu li a i,
@@ -255,25 +274,6 @@ nav .menu li a:hover {
   transform: scale(1.1);
 }
 
-nav .menu li a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 30px 20px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-nav .menu li a:hover {
-  background-color: #5a2b8c;
-  transform: scale(1.05);
-  text-decoration: none;
-}
-
-/* Make SVG behave like a proper centered icon */
 nav .menu li a.social-link svg {
   display: block;
   width: 22px;
@@ -287,7 +287,8 @@ nav .hamburger {
   user-select: none;
 }
 
-/* Navigation end */
+/********************************************** Navigation end ***********************************************/
+/********************************************** Navigation end ***********************************************/
 
 .text-only-wider {
   text-align: left;
@@ -465,8 +466,8 @@ body {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(48, 0, 80, 0.85) 0%,
-      rgba(48, 0, 80, 0.6) 40%,
+      rgba(48, 0, 80, 0.9) 100%,
+      rgba(48, 0, 80, 0.6) 50%,
       rgba(48, 0, 80, 0.2) 100%,
       rgba(48, 0, 80, 0) 100%
     ),
@@ -1252,6 +1253,8 @@ ul {
 }
 
 .wrapper {
+  margin: 0px;
+  padding: 0px;
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
@@ -1824,8 +1827,8 @@ footer.footer-banner.drawwilder {
   padding: 60px 0px 0px 0px;
 }
 
-/*************************  Media Queries start *************************/
-/*************************  Media Queries start *************************/
+/***************************************************************************  Media Queries start ***************************************************************************/
+/***************************************************************************  Media Queries start ***************************************************************************/
 
 /* Drawwilder media qieries specific */
 
@@ -1860,6 +1863,86 @@ footer.footer-banner.drawwilder {
 
   .drawwilder-title {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
+  /* likely an iPhone 6, 7, 8, X, 12 mini */
+
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  p,
+  ul li,
+  ol li {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .port-page-internal h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .projectcontent p {
+    text-align: center;
+  }
+}
+
+/*************************************** Phones ***************************************/
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 412px) and (-webkit-device-pixel-ratio: 3) {
+  /* high-res Android devices */
+
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  p,
+  ul li,
+  ol li {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .port-page-internal h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .projectcontent p {
+    text-align: center;
   }
 }
 
@@ -1942,6 +2025,419 @@ footer.footer-banner.drawwilder {
     text-align: center;
   }
 }
+
+/* 📱 Mobile Devices (Up to 768px) */
+@media screen and (max-width: 768px) {
+  .portrait-eg {
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  .cover-alternate-content {
+    width: 90%;
+    padding: 60px;
+  }
+
+  section {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0px;
+  }
+
+  h3 {
+    margin: 0px;
+    text-align: center;
+  }
+
+  p,
+  ul li,
+  ol li {
+    margin: 0px;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  nav .menu li a {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+
+  .projectcontent p {
+    text-align: center;
+  }
+
+  .blog-title {
+    text-align: center;
+  }
+
+  .blog-preview {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .blog-content {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .drawwilder-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/fabric-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
+
+  .avatar-text-intro.specs {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    background-image: url(../images/drawwilder/avatar-flowers/avatar-flowers-detail-horiz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    border-radius: 10px;
+  }
+
+  .drawwilder-text-intro li {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .avatar-text-intro li {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .text-only-wider h2 {
+    width: 60%;
+    padding-left: 80px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .background-slider {
+    height: 400px !important;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 550px) {
+  .drawwilder-right {
+    width: 90%;
+  }
+
+  .text-only-wider {
+    max-width: 60%;
+    position: relative;
+    left: -20px;
+  }
+}
+
+/* 📱 Mobile Devices up to (480px) */
+
+@media only screen and (max-width: 480px) {
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .port-page-internal h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .projectcontent p {
+    text-align: center;
+  }
+}
+
+/* 📱 Mobile Devices (250px - 349px) */
+
+@media (min-width: 250px) and (max-width: 349px) {
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 60% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
+  }
+
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30%;
+    height: auto;
+  }
+
+  .drawwilder-right {
+    width: 90%;
+  }
+
+  .text-only-wider {
+    left: -120px;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+
+  .portrait-eg {
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+}
+
+/* iPhone SE */
+@media (min-width: 320px) and (max-width: 374px) {
+  h1.landingpage-title.eg {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .container-message {
+    width: 70%;
+    margin: 0px auto;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+}
+
+/* iPhone 8 */
+@media (min-width: 375px) and (max-width: 413px) {
+  h1.landingpage-title.eg {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .container-message {
+    width: 70%;
+    margin: 0px auto;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+}
+
+/* 📱 Mobile Devices (300px - 600px) */
+@media (min-width: 300px) and (max-width: 600px) {
+  h1.landingpage-title.eg {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .container-message {
+    width: 70%;
+    margin: 0px auto;
+  }
+
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+
+  /* New page start */
+  .cover-alternate-content {
+    width: 80%;
+    padding: 60px;
+  }
+
+  .cover-alternate-content h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .cover-alternate-content p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 200;
+  }
+
+  /* New page end */
+
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 40% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
+  }
+
+  .drawwilder-right {
+    width: 90%;
+  }
+
+  .portrait-eg {
+    padding: 10px;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .text-container {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  .port-page-internal h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .projectcontent p {
+    text-align: center;
+  }
+
+  .blog-content {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .slider-overlay {
+    width: 90%;
+  }
+
+  .port-page-internal.drawwilder h3 {
+    font-size: 1.5em;
+  }
+
+  .port-page-internal.drawwilder p {
+    font-size: 1em;
+  }
+
+  .main-content.drawwilder h2 {
+    font-size: 1.2em;
+  }
+
+  .art-gallery {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .drawwilder-item-container {
+    margin: 0px 0px;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+
+  .text-only-wider {
+    max-width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .background-slider {
+    height: 400px;
+  }
+
+  #word-cloud {
+    margin: 0 auto !important;
+    width: 100% !important;
+    font-size: 22px !important;
+  }
+
+  .art-gallery {
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .image-container > img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .button-like-eg {
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    margin: 5px 0 !important;
+  }
+
+  .cover-alternate-content.wider.left {
+    float: none !important;
+  }
+}
+
+/* iPhone 8 Plus */
+@media (min-width: 414px) and (max-width: 767px) {
+}
+
+/*************************************** iPads ***************************************/
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   /* styles for iPads/tablets in portrait */
@@ -2076,85 +2572,140 @@ footer.footer-banner.drawwilder {
   }
 }
 
-@media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
-  /* likely an iPhone 6, 7, 8, X, 12 mini */
-
-  .text-only-wider {
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  h2 {
+/* iPad mini (7.9") + iPad (9.7") */
+@media (min-width: 768px) and (max-width: 834px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
     font-size: 2em;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .port-page-internal h3 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .projectcontent p {
+    font-weight: 600;
     text-align: center;
   }
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 412px) and (-webkit-device-pixel-ratio: 3) {
-  /* high-res Android devices */
-
-  .text-only-wider {
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  h2 {
+/* iPad (9.7") vertical */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
     font-size: 2em;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .port-page-internal h3 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .projectcontent p {
+    font-weight: 600;
     text-align: center;
   }
 }
 
-/*************************************************************************** Desktops only sizes start ****************************************************************************/
+/* iPad (9.7") Landscape */
+@media (width: 1024px) and (height: 768px) {
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+/* iPad Pro (10.5") */
+@media (min-width: 835px) and (max-width: 1117px) {
+  h1.landingpage-title.eg {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .container-message {
+    width: 80%;
+    margin: 30px auto;
+  }
+}
+
+/* Ipad Pro (12.9") */
+@media (min-width: 1118px) and (max-width: 2000px) {
+  h1.landingpage-title.eg {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* About page start */
+  .about-estela-image {
+    margin: 10px auto 50px auto;
+    width: 30% !important;
+    height: auto;
+  }
+
+  .cover-alternate-content {
+    margin: 0 auto;
+    background-color: #4a006d;
+    padding: 60px;
+    width: 30%;
+  }
+
+  h1.landingpage-title.eg {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .container-message {
+    width: 50%;
+  }
+
+  /* About page end */
+
+  .main-content {
+    flex: 1;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  :where(img, video, iframe) {
+    display: block;
+    margin-inline: auto;
+    max-width: 100% !important;
+    width: 80% !important;
+    height: auto;
+    padding: 30px 0px 0px 0px !important;
+  }
+
+  .text-only-wider {
+    padding: 0px 0px;
+    max-width: 45%;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .portrait-eg {
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .drawwilder-item-container {
+    max-width: 1000px;
+  }
+
+  .blog-preview {
+    width: 50%;
+    margin: 60px auto;
+  }
+}
+
+/* iPad Pro (12.9") */
+@media (min-width: 1118px) and (max-width: 1366px) {
+}
+
+/*************************************** Desktops ***************************************/
 
 @media (min-width: 2415px) and (max-width: 2435px) {
   .text-only-wider {
@@ -2275,84 +2826,36 @@ footer.footer-banner.drawwilder {
   }
 }
 
-@media (min-width: 1118px) and (max-width: 2000px) {
-  /* About page start */
+/* Large desktop */
+@media (min-width: 1367px) {
+}
 
-  .about-estela-image {
-    margin: 10px auto 50px auto;
-    width: 30% !important;
-    height: auto;
-  }
+/* 💻 Desktops & Tablets (960px) */
+/* Iphone 8 landscape */
 
-  .cover-alternate-content {
-    margin: 0 auto;
-    background-color: #4a006d;
-    padding: 60px;
-    width: 30%;
-  }
-
+@media screen and (max-width: 960px) {
   h1.landingpage-title.eg {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 600;
     text-align: center;
   }
 
-  /* About page end */
-
-  .main-content {
-    flex: 1;
-    padding: 10px;
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  :where(img, video, iframe) {
-    display: block;
-    margin-inline: auto;
-    max-width: 100% !important;
-    width: 80% !important;
-    height: auto;
-    padding: 30px 0px 0px 0px !important;
-  }
-
-  .text-only-wider {
-    padding: 0px 0px;
-    max-width: 45%;
-  }
-
-  h1 {
-    font-size: 3em;
-  }
-
-  .portrait-eg {
-    padding: 10px;
-    width: 20%;
-    margin: 0 auto;
-    border-radius: 50%;
-  }
-
-  .drawwilder-item-container {
-    max-width: 1000px;
-  }
-
-  .blog-preview {
-    width: 50%;
-    margin: 60px auto;
-  }
-}
-
-/*************************************************************************** Desktops only sizes end ****************************************************************************/
-
-/* 💻 Desktops & Tablets (960px) */
-
-@media screen and (max-width: 960px) {
-  /* About page start */
   .container-message {
-    flex-direction: column;
+    width: 80%;
+    margin: 0px 20px;
   }
 
+  .landingpage-title {
+    order: 1;
+  }
+
+  .about-estela-image {
+    order: 2;
+  }
+
+  /* About page start */
   .landingpage-title {
     order: 1;
   }
@@ -2388,15 +2891,12 @@ footer.footer-banner.drawwilder {
     top: 60px;
     left: 0;
     text-align: center;
-    padding: 20px 0;
+    padding: 0px;
   }
 
   nav .menu.active {
     display: flex;
-  }
-
-  nav .menu li {
-    margin: 10px 0;
+    padding: 20px 0px;
   }
 }
 
@@ -2562,7 +3062,7 @@ footer.footer-banner.drawwilder {
   h1.landingpage-title.eg {
     width: 100%;
     margin: 0 auto;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     text-align: center;
   }
@@ -2616,13 +3116,19 @@ footer.footer-banner.drawwilder {
 }
 
 /* 📱 Tablets (768px - 799px) */
+/* iPad Pro (10.5") landscape */
 
 @media (min-width: 768px) and (max-width: 799px) {
   h1.landingpage-title.eg {
     width: 100%;
     margin: 0px auto 0px auto;
     padding: 10px;
-    font-size: 1.8em;
+    font-size: 2.5em !important;
+  }
+
+  .container-message {
+    width: 80%;
+    margin: 30px auto;
   }
 
   h1.landingpage-title {
@@ -2644,387 +3150,8 @@ footer.footer-banner.drawwilder {
   }
 }
 
-/* 📱 Mobile Devices (Up to 768px) */
-@media screen and (max-width: 768px) {
-  .portrait-eg {
-    padding: 10px;
-    width: 20%;
-    margin: 0 auto;
-    border-radius: 50%;
-  }
-  .text-only-wider {
-    max-width: 100%;
-  }
-
-  .cover-alternate-content {
-    width: 90%;
-    padding: 60px;
-  }
-
-  section {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .text-content {
-    width: 100%;
-  }
-
-  h2 {
-    text-align: center;
-    margin: 0px;
-  }
-
-  h3 {
-    margin: 0px;
-    text-align: center;
-  }
-
-  p,
-  ul li,
-  ol li {
-    margin: 0px;
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .projectcontent p {
-    text-align: center;
-  }
-
-  .blog-title {
-    text-align: center;
-  }
-
-  .blog-preview {
-    margin: 0px 0px 20px 0px;
-  }
-
-  .blog-content {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .drawwilder-text-intro.specs {
-    margin: 30px auto;
-    padding: 30px;
-    width: 75%;
-    background-image: url(../images/drawwilder/fabric-2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.85);
-    background-blend-mode: lighten;
-    border-radius: 10px;
-  }
-
-  .avatar-text-intro.specs {
-    margin: 30px auto;
-    padding: 30px;
-    width: 75%;
-    background-image: url(../images/drawwilder/avatar-flowers/avatar-flowers-detail-horiz.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.85);
-    background-blend-mode: lighten;
-    border-radius: 10px;
-  }
-
-  .drawwilder-text-intro li {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .avatar-text-intro li {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  .text-only-wider h2 {
-    width: 60%;
-    padding-left: 80px;
-  }
-
-  .container {
-    max-width: 100%;
-  }
-
-  .background-slider {
-    height: 400px !important;
-  }
-}
-
-@media (min-width: 428px) and (max-width: 550px) {
-  .drawwilder-right {
-    width: 90%;
-  }
-
-  .text-only-wider {
-    max-width: 60%;
-    position: relative;
-    left: -20px;
-  }
-}
-
-/* 📱 Mobile Devices up to (480px) */
-
-@media only screen and (max-width: 480px) {
-  .text-only-wider {
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .port-page-internal h3 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .projectcontent p {
-    text-align: center;
-  }
-}
-
-@media (max-width: 767px) {
-  h1.landingpage-title.eg {
-    width: 100%;
-    margin: 0px auto 0px auto;
-    padding: 10px;
-    font-size: 1.8em;
-  }
-
-  .landingpage-title.eg {
-    padding-top: 230px;
-  }
-}
-
-/* 📱 Mobile Devices up to (768px) */
-@media (max-width: 768px) {
-  /* About page start */
-  .container-message {
-    flex-direction: column;
-  }
-
-  .landingpage-title {
-    order: 1;
-  }
-
-  .about-estela-image {
-    order: 2;
-  }
-  /* About page end */
-}
-
-/* 📱 Mobile Devices (300px - 600px) */
-@media (min-width: 300px) and (max-width: 600px) {
-  nav .menu li a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px !important;
-    transition:
-      background-color 0.2s ease,
-      transform 0.2s ease;
-  }
-
-  nav .menu li a,
-  nav .menu {
-    padding: 10px !important;
-  }
-
-  /* New page start */
-  .cover-alternate-content {
-    width: 80%;
-    padding: 60px;
-  }
-
-  .cover-alternate-content h2 {
-    margin-bottom: 30px;
-    color: #ffffff;
-    font-size: 1.2em;
-    text-align: left;
-  }
-
-  .cover-alternate-content p {
-    color: #ffffff;
-    text-align: left;
-    font-size: 1em;
-    font-weight: 200;
-  }
-
-  /* New page end */
-
-  :where(img, video, iframe) {
-    display: block;
-    margin-inline: auto;
-    max-width: 100% !important;
-    width: 40% !important;
-    height: auto;
-    padding: 30px 0px 0px 0px !important;
-  }
-
-  .drawwilder-right {
-    width: 90%;
-  }
-
-  .portrait-eg {
-    padding: 10px;
-    width: 30%;
-    margin: 0 auto;
-    border-radius: 50%;
-  }
-
-  .text-container {
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  .text-only-wider {
-    max-width: 100%;
-  }
-
-  h1.landingpage-title.eg {
-    width: 100%;
-    margin: 0px auto 0px auto;
-    padding: 10px;
-    font-size: 1.8em;
-  }
-
-  span {
-    font-size: 0.8em;
-  }
-
-  .port-page-internal h3 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .projectcontent p {
-    text-align: center;
-  }
-
-  .blog-content {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .slider-overlay {
-    width: 90%;
-  }
-
-  .port-page-internal.drawwilder h3 {
-    font-size: 1.5em;
-  }
-
-  .port-page-internal.drawwilder p {
-    font-size: 1em;
-  }
-
-  .main-content.drawwilder h2 {
-    font-size: 1.2em;
-  }
-
-  .art-gallery {
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .drawwilder-item-container {
-    margin: 0px 0px;
-  }
-
-  .text-content {
-    width: 100%;
-  }
-
-  .text-only-wider {
-    max-width: 100%;
-  }
-
-  .container {
-    max-width: 100%;
-  }
-
-  .background-slider {
-    height: 400px;
-  }
-
-  #word-cloud {
-    margin: 0 auto !important;
-    width: 100% !important;
-    font-size: 22px !important;
-  }
-
-  .art-gallery {
-    gap: 2rem;
-    justify-content: center;
-  }
-
-  .image-container > img {
-    height: 200px !important;
-    width: 100% !important;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
-
-  .button-like-eg {
-    padding: 10px 20px !important;
-    font-size: 16px !important;
-    margin: 5px 0 !important;
-  }
-
-  .cover-alternate-content.wider.left {
-    float: none !important;
-  }
-}
-
-/* 📱 Mobile Devices (250px - 349px) */
-
-@media (min-width: 250px) and (max-width: 349px) {
-  :where(img, video, iframe) {
-    display: block;
-    margin-inline: auto;
-    max-width: 100% !important;
-    width: 60% !important;
-    height: auto;
-    padding: 30px 0px 0px 0px !important;
-  }
-
-  .about-estela-image {
-    margin: 10px auto 50px auto;
-    width: 30%;
-    height: auto;
-  }
-
-  .drawwilder-right {
-    width: 90%;
-  }
-
-  .text-only-wider {
-    left: -120px;
-  }
-
-  .text-content {
-    width: 100%;
-  }
-
-  .portrait-eg {
-    padding: 10px;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 50%;
-  }
-}
-
-/*************************  Media Queries end *************************/
-/*************************  Media Queries end *************************/
+/***************************************************************************  Media Queries end ***************************************************************************/
+/***************************************************************************  Media Queries end ***************************************************************************/
 
 /* Links page */
 
@@ -3037,9 +3164,4 @@ footer.footer-banner.drawwilder {
 .container-links ul li {
   text-align: left;
   list-style: none;
-}
-
-body {
-  font-family: "Poppins", serif;
-  background-color: #4a006d;
 }
