@@ -1,905 +1,684 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Royal Navy UX Case Study - Enhancing the Defence Learning Environment
+      (DLE) - Estela Gaspar - UX/UI Designer
+    </title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Royal Navy - Enhancing the Defence Learning Environment (DLE). Estela Gaspar - UX/UI Designer CV</title>
-  <style>
-    :root{
-      --container-max: 1120px;
-      --pad: clamp(16px,3vw,32px);
-      --radius: 10px;
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: Arial, sans-serif;
-      margin:0;
-      background-color:#fefefe;
-      line-height:1.6;
-      color:#222;
-    }
-    .container{
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 24px var(--pad) 64px;
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    h1,h2,h3{color:#444; margin:1.2em 0 .5em}
-    h1{font-size:2em; border-bottom:2px solid #eee; padding-bottom:.5rem}
-    h2{margin-top:2rem}
-    ul{padding-left:1.2rem; margin:.6em 0 1.2em}
-    p{margin:.6em 0}
+    <!-- Estela Gaspar favicon -->
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
 
-    .section{margin-bottom:2rem}
+    <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
 
-    .section-title{font-size:1.2em; margin-top:1.5rem; font-weight:bold}
-    .highlight{font-weight:bold; color:#555}
+        --pain-bg: #fde4e3;
+        --outcome-bg: #d5ffd0;
+        --section-bg: #222;
+        --section-text: #fff;
 
-    /* Phase labels */
-    .case-section{
-      font-size:1.25rem;
-      background:#222; color:#fff;
-      padding:.4em .8em;
-      border-radius:6px;
-      margin-top:2em;
-      display:inline-block;
-    }
+        --container: 940px;
+      }
 
-    /* Media helpers */
-    img{max-width:100%; height:auto; display:block}
-    .img-lg{max-width:1100px; height: auto; margin: 40px 0px;}
-    .img-md{max-width:720px}
-    .img-sm{max-width:500px}
-    .center{margin-inline:auto}
+      * {
+        box-sizing: border-box;
+      }
 
-    /* Gallery for runs of images */
-    .media-grid{display:grid; gap:16px; grid-template-columns: repeat(2, minmax(0,1fr))}
-    @media (min-width: 1200px){
-      .media-grid{grid-template-columns: repeat(3, minmax(0,1fr))}
-    }
-    @media (max-width: 900px){
-      .media-grid{grid-template-columns: 1fr}
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    /* Tidy long URLs on narrow screens */
-    a, p, li{overflow-wrap:anywhere}
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
 
-    /* Optional: soften manual <br> on larger screens */
-    @media (min-width: 992px){ br{display:none} }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
 
-    /* --- Key Results badges (BoilerJuice-style) --- */
-    .results { margin-top: 1.5rem; }
-    .badges { display:flex; gap:12px; flex-wrap:wrap; }
-    .badge { padding:12px 16px; border:1px solid #e5e7eb; border-radius:10px; background:#fff; }
-    .metric { display:block; font-weight:700; font-size:1.1rem; }
-    .label { display:block; font-size:0.9rem; opacity:0.85; }
-    .disclaimer { font-size:0.85rem; opacity:0.7; margin-top:8px; }
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
 
-    .glance { margin: .6em 0 1.2em; padding-left: 1.2rem; }
-    .glance li { margin: .25em 0; }
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
 
-    /* Minor text helpers */
-    .muted { opacity: .85; font-size: .95rem; }
-    .label-text { font-size: .9rem; color: #555; margin-top: .25rem; }
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
 
-    /* === UX visuals === */
-    .viz-section { margin-top: 2rem; }
-    .viz-title { font-weight: 700; margin: .5rem 0 1rem; color:#444; }
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
 
-    /* KPI bars */
-    .kpi-bars { display: grid; gap: 10px; }
-    .kpi-bar { display: grid; grid-template-columns: minmax(180px, 260px) 1fr auto; align-items: center; gap: 12px; }
-    .kpi-bar .label { font-size:.95rem; color:#333; }
-    .kpi-bar .track { height: 12px; background:#eef2f5; border-radius: 999px; overflow:hidden; }
-    .kpi-bar .fill { height:100%; width: var(--pct, 50%); background:#222; border-radius:999px; }
-    .kpi-bar .metric { font-weight:700; font-size:.95rem; color:#222; }
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
 
-    /* Journey map */
-    .journey { display:grid; gap:1px; background:#e5e7eb; border:1px solid #e5e7eb; border-radius:8px; overflow:hidden; }
-    .journey .row { display:grid; grid-template-columns: 160px repeat(6, 1fr); background:#fff; }
-    .journey .cell, .journey .head { padding:10px 12px; font-size:.95rem; }
-    .journey .head { background:#f8fafb; font-weight:700; }
-    .journey .lane { background:#f8fafb; font-weight:700; }
-    .dot { display:inline-block; width:10px; height:10px; border-radius:50%; vertical-align:middle; margin-right:6px; }
-    .dot.good { background:#16a34a; }     /* green */
-    .dot.ok { background:#f59e0b; }       /* amber */
-    .dot.bad { background:#dc2626; }      /* red */
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
 
-    /* Service blueprint */
-    .blueprint { display:grid; gap:1px; background:#e5e7eb; border:1px solid #e5e7eb; border-radius:8px; overflow:hidden; margin-top:1rem; }
-    .blueprint .row { display:grid; grid-template-columns: 200px repeat(6, 1fr); background:#fff; }
-    .blueprint .head { background:#f1f5f9; font-weight:700; padding:10px 12px; }
-    .blueprint .cell { padding:10px 12px; font-size:.95rem; }
-    .blueprint .lane { background:#f8fafb; font-weight:700; }
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
 
-    /* User flow (SVG) */
-    .flow-figure { margin-top:1rem; }
-    .flow-caption { font-size:.9rem; color:#555; margin-top:.4rem; }
-
-    /* Improve focus visibility */
-    a:focus-visible { outline: 3px solid #222; outline-offset: 2px; border-radius: 4px; }
-
-    /* Print friendliness */
-    @media print {
-      .kpi-bar .track { background:#ddd; }
-      .kpi-bar .fill { background:#000; }
-      .dot.good, .dot.ok, .dot.bad { outline: 1px solid #000; } /* ensure visible when printed b/w */
-      .journey, .blueprint, .flow-figure, .kpi-bars { break-inside: avoid; page-break-inside: avoid; }
-      .case-section { color:#000; background:#fff; border:2px solid #000; }
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 900px) {
-      .kpi-bar { grid-template-columns: 1fr; }
-      .journey .row, .blueprint .row { grid-template-columns: 120px repeat(6, 1fr); }
-    }
-
-    :root {
-background: rgba(37,99,235,.08);
-border: 1px solid rgba(37,99,235,.18);
-padding: 6px 10px;
-border-radius: 999px;
-}
-
-
-h2 {
-margin: 14px 0 6px;
-font-size: 22px;
-letter-spacing: -0.01em;
-}
-
-
-p { margin: 8px 0 14px; }
-
-
-.list {
-display: grid;
-gap: 10px;
-padding: 0;
-list-style: none;
-}
-.list li {
-display: grid;
-grid-template-columns: 28px 1fr;
-align-items: start;
-gap: 10px;
-background: linear-gradient(0deg, rgba(255,255,255,.45), rgba(255,255,255,.45));
-border: 1px solid var(--line);
-border-radius: 12px;
-padding: 10px 12px;
-}
-.icon {
-font-size: 18px;
-line-height: 1.4;
-display: inline-flex; align-items: center; justify-content: center;
-}
-
-
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 6px; }
-.chip {
-display: inline-flex; align-items: center; gap: 8px;
-font-size: 12px; font-weight: 600;
-padding: 7px 10px; border-radius: 999px;
-border: 1px dashed var(--line);
-background: #fff6; /* subtle */
-}
-.chip b { font-weight: 800; }
-
-
-.hint { font-size: 13px; color: var(--muted); }
-
-
-.flow {
-display: grid; gap: 10px; margin-top: 10px;
-}
-.flow .step {
-background: #fff2; border: 1px dashed var(--line);
-padding: 10px 12px; border-radius: 12px;
-}
-.arrow { text-align: center; color: var(--muted); }
-
-
-.together { margin-top: 18px; }
-
-
-.footer {
-margin-top: 28px; color: var(--muted); font-size: 13px;
-display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
-}
-.tag { background: rgba(16,185,129,.08); color: var(--accent-2); border: 1px solid rgba(16,185,129,.24); padding: 4px 8px; border-radius: 999px; font-weight: 700; font-size: 12px; }
-
-
-/* Utility */
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-
-/* === Your original CSS (shortened here for clarity, but keep full in prod) === */
-    :root{
-      --container-max: 1120px;
-      --pad: clamp(16px,3vw,32px);
-      --radius: 10px;
-      --line: #e5e7eb;
-      --muted: #6b7280;
-      --accent-2: #10b981;
-    }
-    *{box-sizing:border-box}
-    body{font-family: Arial, sans-serif; margin:0; background:#fefefe; line-height:1.6; color:#222;}
-
-    /* … [keep all your existing CSS unchanged] … */
-
-    /* === Microlearning / Mastery CSS additions === */
-    h2 { margin: 14px 0 6px; font-size: 22px; letter-spacing: -0.01em; }
-    .list { display: grid; gap: 10px; padding: 0; list-style: none; }
-    .list li { display: grid; grid-template-columns: 28px 1fr; align-items: start; gap: 10px;
-      background: linear-gradient(0deg, rgba(255,255,255,.45), rgba(255,255,255,.45));
-      border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
-    .icon { font-size: 18px; line-height: 1.4; display: inline-flex; align-items: center; justify-content: center; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 6px; }
-    .chip { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600;
-      padding: 7px 10px; border-radius: 999px; border: 1px dashed var(--line); background: #fff6; }
-    .chip b { font-weight: 800; }
-    .hint { font-size: 13px; color: var(--muted); }
-    .flow { display: grid; gap: 10px; margin-top: 10px; }
-    .flow .step { background: #fff2; border: 1px dashed var(--line); padding: 10px 12px; border-radius: 12px; }
-    .arrow { text-align: center; color: var(--muted); }
-    .together { margin-top: 18px; }
-    .eyebrow { display: inline-block; font-weight: 600; font-size: 13px; letter-spacing: .04em;
-      text-transform: uppercase; margin-bottom: 4px; }
-    .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 1rem; background:#fafafa; }
-    .pair { display: grid; gap: 16px; }
-    @media (min-width: 800px){ .pair{ grid-template-columns: 1fr 1fr; } }
-
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
 
       .ready-print {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 0 24px;
+        padding: 10px 14px;
         font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
       }
-  </style>
-      <link rel="icon" href="./images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
-</head>
 
-<body>
-  <main class="container">
-
-    <div class="back-btn">
-      <a href="javascript:history.back()" style="text-decoration: none"
-        >← Back</a
-      >
-    </div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-      This is a ready-to-print page
-    </h4>
-    <h1>Royal Navy - Enhancing the Defence Learning Environment (DLE).</h1>
-
-    <div class="section">
-      <h2>Overview</h2>
-
-      <p class="muted">
-        This case study is a narrative summary of the work and outcomes. Timings are described in terms of phases/sprints rather than exact dates.
-      </p>
-
-      <p>Enhancing the Defence Learning Environment (DLE), the Royal Navy’s e-learning platform, to
-        improve training accessibility, <br>flexibility, and effectiveness, ensuring cadets receive
-        solid, upfront training that accelerates their preparation for further offline instruction.</p>
-
-      <h3>What did my UX and UI practice look like?</h3>
-      <p>We conducted <strong>research</strong> to understand who our main users were and what problems <strong>they were</strong>
-        facing <strong>regarding access</strong> to e-learning.</p>
-      <p>We discovered that personnel at various stages of their careers (recruits, active service
-        members, and those transitioning to civilian life) access the e-learning platform. <br>To ensure
-        comprehensive insights, we engaged with a wide range of stakeholders, from recruits to
-        officers.</p>
-
-      <img loading="lazy" class="img-lg center"  src="./images/royalnavy-project-2.png"
-           alt="Images of training sessions and marching drills."
-           title="Images of officers and recruits during training sessions and marching drills.">
-      <p class="label-text">Images of officers and recruits during training sessions and marching
-        drills.</p>
-      <p class="label-text">Source images: <a
-          href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-          alt="GP Strategies website"
-          title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-          href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-          alt="Naval Technology website"
-          title="The leading site for news and procurement in the naval defence industry website">
-          www.naval-technology.com</a>,
-        <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-          title="The Royal Navy website">royalnavy.mod.uk</a>, <br><a href="https://www.hsdc.ac.uk"
-          alt="HSDC website"
-          title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-          href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-          (unsplash.com)</a>, <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-          Mourichon
-          (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-          Reyes (unsplash.com)</a>.
-      </p>
-    </div>
-
-    <!-- Phase 1: Discovery / Research -->
-    <h2 class="case-section">1 - Discovery & Research</h2>
-    <p>Research and workshops were conducted to identify the main challenges and explore potential
-      solutions to improve platform accessibility.<br> We performed research on the use of the RN
-      eLearning platform (DLE), its current and potential users, their habits, emotions and
-      frustrations. <br>We then prototyped changes and improvements that were tested in different
-      sprints alongside an implementation culture program to change the mindset and facilitate
-      adoption.</p>
-
-    <p>Following a bespoke Design Thinking method to <strong>accommodate the hierarchical</strong> nature of military
-      life, we served primarily a critical number of users, tested <br>and iterated on solution <strong>hypotheses</strong> by
-      involving the client at each stage through presentations of findings and workshops.</p>
-
-    <img loading="lazy" class="img-lg center" src="./images/royalnavy-project-3.png" alt="UX workshops"
-         title="UX workshops and findings exercise.">
-    <p class="label-text">UX workshops and findings exercise.</p>
-    <p class="label-text">Source images: <a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="GP Strategies website"
-        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="Naval Technology website"
-        title="The leading site for news and procurement in the naval defence industry website">
-        www.naval-technology.com</a>,
-      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-        alt="HSDC website"
-        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-        (unsplash.com)</a>, <br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-        Mourichon
-        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-        Reyes (unsplash.com)</a>.
-    </p>
-
-    <p>During this initial research phase, I visited various Royal Navy establishments throughout
-      the country, such as BRNC Dartmouth, HMS Collingwood,<br> CTCRM Lympstone and HMS Raleigh, and
-      facilitated workshops to assess the platform's current state. Conducted
-      as-is evaluations with recruits and trainers to identify key areas for improvement.</p>
-
-    <img loading="lazy" class="img-lg center"  src="./images/royalnavy-project-4.png" alt="On-site meetings"
-         title="On-site Royal Navy stakeholder meetings">
-    <p class="label-text">UX workshops and findings exercise.</p>
-    <p class="label-text">Source images: <a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="GP Strategies website"
-        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="Naval Technology website"
-        title="The leading site for news and procurement in the naval defence industry website">
-        www.naval-technology.com</a>,
-      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-        alt="HSDC website"
-        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-        (unsplash.com)</a>,<br> <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-        Mourichon
-        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-        Reyes (unsplash.com)</a>.
-    </p>
-
-    <section class="viz-section">
-      <h3 class="viz-title">User Journey (recruit)</h3>
-      <div class="journey" role="table" aria-label="User journey map">
-        <div class="row head" role="row">
-          <div class="cell"></div>
-          <div class="cell">Discover</div>
-          <div class="cell">Enrol / Sign-in</div>
-          <div class="cell">Start</div>
-          <div class="cell">Learn</div>
-          <div class="cell">Assess</div>
-          <div class="cell">Continue</div>
-        </div>
-
-        <div class="row" role="row">
-          <div class="cell lane">Actions</div>
-          <div class="cell">Receives joining info; scans QR</div>
-          <div class="cell">SSO, device check</div>
-          <div class="cell">“Start now” CTA</div>
-          <div class="cell">Micro-units + scenarios</div>
-          <div class="cell">Formative checks</div>
-          <div class="cell">Resume via alerts</div>
-        </div>
-
-        <div class="row" role="row">
-          <div class="cell lane">Pain points</div>
-          <div class="cell"><span class="dot ok"></span> Info scattered</div>
-          <div class="cell"><span class="dot bad"></span> Auth loops, access</div>
-          <div class="cell"><span class="dot ok"></span> Where do I begin?</div>
-          <div class="cell"><span class="dot ok"></span> Long modules</div>
-          <div class="cell"><span class="dot ok"></span> Feedback lag</div>
-          <div class="cell"><span class="dot bad"></span> Hard to remember where I left</div>
-        </div>
-
-        <div class="row" role="row">
-          <div class="cell lane">Opportunities</div>
-          <div class="cell">Central starter page</div>
-          <div class="cell">SSO + access checks</div>
-          <div class="cell">Guided “first lesson”</div>
-          <div class="cell">Microlearning + dual coding</div>
-          <div class="cell">Mastery with remediation</div>
-          <div class="cell">Pathway + reminders</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Phase 2: Synthesis / Definition -->
-    <h2 class="case-section">2 - Synthesis & Definition</h2>
-    <p>We created several deliverables such as business process mapping,<br> impact maps and risk
-      assessments, ecosystem maps, stakeholder maps, persona and empathy mapping, user journeys,
-      user flows, different flowcharts, <br>reports with key findings and advisory solutions based on
-      solid problem solving and UX hypothesis. We also created living prototypes using the legacy
-      system that we tested throughout the project and a custom-made design system.</p>
-
-    <img loading="lazy" class="img-lg center" src="./images/royalnavy-project-6.png" alt="DLE user journey."
-           title="Example of the DLE user journey.">
-
-    <section class="viz-section">
-      <h3 class="viz-title">Service Blueprint (simplified)</h3>
-      <div class="blueprint" role="table" aria-label="Service blueprint table">
-        <div class="row">
-          <div class="head"></div>
-          <div class="head">Discover</div>
-          <div class="head">Enrol</div>
-          <div class="head">Start</div>
-          <div class="head">Learn</div>
-          <div class="head">Assess</div>
-          <div class="head">Continue</div>
-        </div>
-
-        <div class="row">
-          <div class="cell lane">Frontstage (UI)</div>
-          <div class="cell">Starter hub</div>
-          <div class="cell">SSO screen</div>
-          <div class="cell">Welcome / CTA</div>
-          <div class="cell">Lesson player</div>
-          <div class="cell">Check / Quiz</div>
-          <div class="cell">Pathway / Alerts</div>
-        </div>
-
-        <div class="row">
-          <div class="cell lane">Backstage (Logic)</div>
-          <div class="cell">Eligibility rules</div>
-          <div class="cell">AuthN/AuthZ</div>
-          <div class="cell">Progress init</div>
-          <div class="cell">Resume, SCORM/xAPI</div>
-          <div class="cell">Scoring & mastery</div>
-          <div class="cell">Resume & nudges</div>
-        </div>
-
-        <div class="row">
-          <div class="cell lane">Support (Ops)</div>
-          <div class="cell">FAQs/Onboarding</div>
-          <div class="cell">Helpdesk SSO</div>
-          <div class="cell">Champions</div>
-          <div class="cell">Content QA</div>
-          <div class="cell">Assessment policy</div>
-          <div class="cell">Reporting & SLAs</div>
-        </div>
-      </div>
-    </section>
-
-
-      <img loading="lazy" class="img-lg center" src="./images/service-blueprint-rn.png" alt="Service Blueprint RN."
-           title="Example of Service Blueprint RN.">
-
-    <img loading="lazy" class="img-lg center" src="./images/royalnavy-project-7.png" alt="On-site UX workshops."
-           title="Example of on-site UX workshops.">
-    <img loading="lazy" class="img-lg center" src="./images/royalnavy-project-5.png" alt="DLE courses"
-           title="DLE (Defence Learning Environment) website courses page">
-
-    <p class="label-text">DLE assets and examples.</p>
-    <p class="label-text">Source images: <a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="GP Strategies website"
-        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="Naval Technology website"
-        title="The leading site for news and procurement in the naval defence industry website">
-        www.naval-technology.com</a>,
-      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-        alt="HSDC website"
-        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-        (unsplash.com)</a>,<br><a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-        Mourichon
-        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-        Reyes (unsplash.com)</a>.
-    </p>
-
-    <!-- Phase 3: Ideation / Service Design -->
-    <h2 class="case-section">3 - Ideation & Service Design</h2>
-    <p>We made service design recommendations to improve access to e-learning by scoping personas,
-      tasks and goals; mapping user journeys, <br>conducting workshops and interviews face-to-face and
-      remote (using Teams) from different RN <strong>establishments</strong>, <br>and by trying to understand current
-      challenges. We also collaborated with the RN key stakeholders to change the culture,
-      consolidate and incorporate <br>a more agile mindset so we could have effective adoption to the
-      e-learning platform.</p>
-
-    <img loading="lazy" class="img-lg center"  src="./images/royalnavy-project-8.png" alt="Royal Navy establishments."
-         title="Royal Navy establishments. BRNC Dartmouth, HMS Collingwood, CTCRM Lympstone and HMS Raleigh.">
-    <p class="label-text">Royal Navy establishments. BRNC Dartmouth, HMS Collingwood, CTCRM
-      Lympstone and HMS Raleigh.</p>
-    <p class="label-text">Source images: <a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="GP Strategies website"
-        title="GP Strategies World Headquarters website also known as leolearning.com">leolearning.com</a>,<a
-        href="https://www.gpstrategies.com/learning-content-design-development-solutions/"
-        alt="Naval Technology website"
-        title="The leading site for news and procurement in the naval defence industry website">
-        www.naval-technology.com</a>,
-      <a href="https://www.royalnavy.mod.uk" alt="Royal Navy website"
-        title="The Royal Navy website">royalnavy.mod.uk</a>, <a href="https://www.hsdc.ac.uk"
-        alt="HSDC website"
-        title="The South Coast Institute of Technology website">www.hsdc.ac.uk</a>, <a
-        href="https://unsplash.com/@joszczepanska" alt="" title="">Jo Szczepanska
-        (unsplash.com)</a>, <a href="https://unsplash.com/@amayli" alt="" title="">Amelie
-        Mourichon
-        (unsplash.com)</a>, <a href="https://unsplash.com/@alvarordesign" alt="" title="">Alvaro
-        Reyes (unsplash.com)</a>.
-    </p>
-
-    <!-- Phase 4: Prototyping & Testing -->
-    <h2 class="case-section">4 - Prototyping & Testing</h2>
-    <p>We identified and addressed several areas for improvement, including:</p>
-
-    <!-- Valid, minimal restructure of the list -->
-    <ul>
-      <li>
-        <strong>Enhanced accessibility:</strong>
-        <ul>
-          <li>Mobile optimisation. Seamless access across devices, including smartphones and tablets.</li>
-          <li>Offline mode. Downloadable content for remote operations with limited connectivity (e.g., ships).</li>
-          <li>Single sign-on (SSO). Easier login integration with MoD systems.</li>
-          <li>User-friendly interface. Simplified navigation for quick access to courses and materials.</li>
-          <li>Adaptive learning paths. Customisable courses by role, experience, and prior knowledge.</li>
-        </ul>
-      </li>
-
-      <li>
-        <strong>Agile military training:</strong>
-        <ul>
-          <li>Microlearning modules. Short, focused lessons for rapid skill development.</li>
-          <li>Scenario-based simulations & up-front recommended learning. Interactive case studies and guided paths for likely situations.</li>
-        </ul>
-      </li>
-
-      <li>
-        <strong>Improved collaboration & engagement:</strong>
-        <ul>
-          <li>Gamification. Leaderboards, badges, and challenges to boost engagement.</li>
-          <li>Peer learning & forums. Encourage knowledge-sharing and discussions.</li>
-          <li>Cross-branch learning. Standardised training across the Royal Navy, Army, and RAF.</li>
-        </ul>
-      </li>
-    </ul>
-
-    <figure class="flow-figure">
-      <h3 class="viz-title">User Flow (first-time recruit)</h3>
-      <svg viewBox="0 0 1100 220" width="100%" role="img" aria-label="User flow from access email to continue learning">
-        <!-- Boxes -->
-        <g font-family="Arial, sans-serif" font-size="14" fill="#111">
-          <rect x="20"  y="40" width="160" height="50" rx="8" fill="#f8fafb" stroke="#d1d5db"/>
-          <text x="100" y="70" text-anchor="middle">Access email/QR</text>
-
-          <rect x="220" y="40" width="160" height="50" rx="8" fill="#f8fafb" stroke="#d1d5db"/>
-          <text x="300" y="70" text-anchor="middle">SSO sign-in</text>
-
-          <rect x="420" y="40" width="180" height="50" rx="8" fill="#f8fafb" stroke="#d1d5db"/>
-          <text x="510" y="70" text-anchor="middle">Welcome & device check</text>
-
-          <rect x="640" y="40" width="160" height="50" rx="8" fill="#f8fafb" stroke="#d1d5db"/>
-          <text x="720" y="70" text-anchor="middle">Start lesson</text>
-
-          <rect x="820" y="40" width="160" height="50" rx="8" fill="#f8fafb" stroke="#d1d5db"/>
-          <text x="900" y="70" text-anchor="middle">Assessment</text>
-
-          <rect x="1020" y="40" width="60" height="50" rx="8" fill="#f8fafb" stroke="#d1d5db"/>
-          <text x="1050" y="70" text-anchor="middle">→</text>
-
-          <rect x="420" y="140" width="180" height="50" rx="8" fill="#f0fdf4" stroke="#86efac"/>
-          <text x="510" y="170" text-anchor="middle">Microlearning & resume</text>
-
-          <rect x="820" y="140" width="160" height="50" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
-          <text x="900" y="170" text-anchor="middle">Pathway & alerts</text>
-        </g>
-        <!-- Arrows -->
-        <defs>
-          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/>
-          </marker>
-        </defs>
-        <g stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrow)">
-          <line x1="180" y1="65" x2="220" y2="65"/>
-          <line x1="380" y1="65" x2="420" y2="65"/>
-          <line x1="600" y1="65" x2="640" y2="65"/>
-          <line x1="800" y1="65" x2="820" y2="65"/>
-          <line x1="980" y1="65" x2="1020" y2="65"/>
-          <!-- down arrows -->
-          <line x1="720" y1="90" x2="510" y2="140"/>
-          <line x1="900" y1="90" x2="900" y2="140"/>
-        </g>
-      </svg>
-      <figcaption class="flow-caption">First-time flow with resume and nudges reinforcing continuation.</figcaption>
-    </figure>
-
-    <!-- Phase 5: Adoption, Handover & Next Steps -->
-    <h2 class="case-section">5 - Adoption, Handover & Next Steps</h2>
-    <p>
-      We prototyped changes and iterated in short sprints, paired with a culture-change programme to shift mindsets and
-      accelerate adoption. Alongside the prototypes, we prepared a practical handover so instructors and recruits could
-      access training faster and continue learning with fewer blockers.
-    </p>
-
-    <ul>
-      <li><strong>Handover deliverables:</strong> A library of page templates (course landing, lesson, assessment, glossary, resources) and
-        reusable course structures (intro → objectives → content → check-for-understanding → practice → assessment → reflection) to speed up
-        build and ensure consistency.</li>
-
-      <li><strong>Learning design recommendations:</strong>
-        <ul>
-          <li><em>Visual/Example-led</em> (worked examples, annotated screenshots, short demo videos).</li>
-          <li><em>Scenario-based & branching</em> simulations that mirror operational decisions.</li>
-          <li><em>Microlearning</em> (5–10 min units) with <em>spaced repetition</em> and <em>retrieval practice</em>.</li>
-          <li><em>Mastery learning</em> with frequent formative checks and adaptive remediation.</li>
-          <li><em>Project/Problem-based</em> tasks and <em>social learning</em> (peer discussion, reflection).</li>
-          <li><em>Dual coding</em> (concise text + visuals) to improve recall; avoid heavy narration over dense slides.</li>
-          <li>(Optional preferences: <em>VARK</em> — visual, auditory, read/write, kinaesthetic — used as a lens, not a constraint.)</li>
-        </ul>
-      </li>
-
-      <li><strong>Personalisation & gamification:</strong> Role-based dashboards, recommended “next steps”, resume-where-you-left-off,
-        progress bars, points/badges/leaderboards, completion certificates and gentle nudges to sustain momentum.</li>
-
-      <li><strong>Pathways & alerts:</strong> Clear pathway journeys with “continue learning” CTAs, reminder emails/app notifications when a
-        learner pauses, and deadline alerts for mandatory modules.</li>
-
-      <li><strong>Mobile & offline delivery:</strong> Responsive desktop/mobile templates plus offline-capable packages (e.g. SCORM/xAPI) for
-        constrained environments such as ships/submarines, with secure background sync when connectivity returns.</li>
-
-      <li><strong>LMS implementation (DLE):</strong> Guidance and configuration for a Moodle-based LMS (or equivalent), including SSO,
-        access control, WCAG 2.1 AA accessibility essentials (colour contrast, captions, keyboard flow), and analytics dashboards for
-        enrolment, progression and completion.</li>
-
-      <li><strong>Change enablement:</strong> Train-the-trainer sessions, a champions network, weekly office hours, and short “how-to”
-        videos to embed new practices and reduce support load.</li>
-    </ul>
-
-    <p><em>Note:</em> Where the DLE stack differs, these recommendations map 1:1 to other LMSs; references to “Moodle-based”
-      reflect the legacy LMS in use at the time.</p>
-
-    <h2 class="case-section">Example of an implementation checklist and process I would have followed:</h2>
-    <ul>
-      <li><strong>SSO & access</strong> — enable/verify SSO (MoD directory), map roles/permissions, test account provisioning and revocation.</li>
-      <li><strong>Templates live</strong> — publish course landing, lesson, assessment, glossary, and resources page templates; share usage guidelines.</li>
-      <li><strong>Content packaging</strong> — export modules as SCORM/xAPI with offline packages for ships/submarines; verify resume & score tracking.</li>
-      <li><strong>Personalisation</strong> — turn on role-based dashboards, “next steps” recommendations, and resume-where-you-left-off.</li>
-      <li><strong>Gamification</strong> — configure points/badges/leaderboards, set award rules, add completion certificates.</li>
-      <li><strong>Notifications</strong> — schedule reminders/alerts (paused progress, deadlines, mandatory modules) via email/app.</li>
-      <li><strong>Accessibility</strong> — WCAG 2.1 AA: captions/transcripts, keyboard flow, focus order, colour contrast, link semantics.</li>
-      <li><strong>Mobile & offline</strong> — test responsive layouts on RN devices; verify offline play + background sync on reconnect.</li>
-      <li><strong>Analytics</strong> — enable dashboards for enrolment, time-to-first-lesson, completion, device mix, drop-off points.</li>
-      <li><strong>Change enablement</strong> — run train-the-trainer, seed a champions network, publish 2–3min “how-to” clips, hold weekly office hours.</li>
-      <li><strong>Support & risk</strong> — define escalation paths, create FAQs, and rehearse fallback if SSO/LMS is down.</li>
-    </ul>
-
-    <h3>Recommended Learning Styles & Patterns</h3>
-    <ul>
-      <li><strong>Visual/example-led</strong> (worked examples, annotated screenshots, short demos)</li>
-      <li><strong>Scenario-based & branching</strong> (operational decision paths)</li>
-      <li><strong>Microlearning</strong> (5–10 min units) with <em>spaced repetition</em> & <em>retrieval practice</em></li>
-      <li><strong>Mastery learning</strong> (frequent formative checks + adaptive remediation)</li>
-      <li><strong>Project/problem-based</strong> with <strong>social learning</strong> (peer discussion, reflection)</li>
-      <li><strong>Dual coding</strong> (concise text + supportive visuals)</li>
-    </ul>
-
-
-    <a href="#content" class="sr-only">Skip to content</a>
-<div class="wrap" id="content">
-
-
-<header>
-<h1>Microlearning & Mastery Learning</h1>
-<p class="subtitle">Two complementary approaches that make learning <em>lighter</em> and outcomes <em>stronger</em>. Short bursts for memory; checkpoints and support for true understanding.</p>
-</header>
-
-
-<section class="pair" aria-label="Two-column explainer">
-<article class="card" aria-labelledby="micro-h">
-<span class="eyebrow" aria-hidden="true">⚡ Microlearning</span>
-<h2 id="micro-h">Short bites (5–10 min)</h2>
-<p>Teach one idea at a time in compact units. Easier to fit into busy days and kinder on attention.</p>
-
-
-<ul class="list">
-<li><span class="icon" aria-hidden="true">⏱️</span><div><strong>5–10 minutes each</strong><br><span class="hint">Just enough to learn one concept without overload.</span></div></li>
-<li><span class="icon" aria-hidden="true">🔁</span><div><strong>Spaced repetition</strong><br><span class="hint">Revisit key points on a schedule (e.g., Day 0 → Day 2 → Day 7 → Day 21) so knowledge sticks.</span></div></li>
-<li><span class="icon" aria-hidden="true">🧠</span><div><strong>Retrieval practice</strong><br><span class="hint">Quiz, explain, or apply—actively recalling beats re‑reading.</span></div></li>
-</ul>
-
-
-<div class="chips" aria-label="Microlearning quick facts">
-<span class="chip">⏲️ <b>5–10</b> min</span>
-<span class="chip">📆 <b>Spaced</b> reviews</span>
-<span class="chip">✅ <b>Recall</b> > re‑read</span>
-</div>
-</article>
-
-
-<article class="card" aria-labelledby="mastery-h">
-<span class="eyebrow" aria-hidden="true">🎯 Mastery learning</span>
-<h2 id="mastery-h">Progress only after you’ve <em>got it</em></h2>
-<p>Learners advance when they show solid understanding—no one is pushed ahead with shaky basics.</p>
-
-
-<ul class="list">
-<li><span class="icon" aria-hidden="true">🧪</span><div><strong>Frequent formative checks</strong><br><span class="hint">Low‑stakes quizzes, quick exercises, or micro‑projects give timely feedback.</span></div></li>
-<li><span class="icon" aria-hidden="true">🧭</span><div><strong>Adaptive remediation</strong><br><span class="hint">If a check flags a gap, provide targeted practice or another explanation until it’s mastered.</span></div></li>
-</ul>
-
-
-<div class="flow" aria-label="If‑this‑then‑that flow">
-<div class="step"><b>Check</b>: short quiz or task</div>
-<div class="arrow" aria-hidden="true">↓</div>
-<div class="step"><b>If pass</b>: move on confidently</div>
-<div class="arrow" aria-hidden="true">↓</div>
-<div class="step"><b>If miss</b>: targeted support → try again</div>
-</div>
-</article>
-</section>
-
-
-<section class="card together" aria-labelledby="together-h">
-<h2 id="together-h">How they work together</h2>
-<p><strong>Microlearning</strong> delivers focused content you can actually remember. <strong>Mastery learning</strong> ensures you don’t move on until you truly understand. Together: <em>right‑sized lessons + feedback loop = durable learning</em>.</p>
-<ul class="list">
-<li><span class="icon" aria-hidden="true">🧩</span><div><strong>Bite → Check → Support → Next</strong><br><span class="hint">Repeat in small cycles to build momentum and confidence.</span></div></li>
-<li><span class="icon" aria-hidden="true">📈</span><div><strong>Better retention, fewer gaps</strong><br><span class="hint">Memory is reinforced and misunderstandings are caught early.</span></div></li>
-</ul>
-</section>
-
-    <h3>Go-Live Runbook (lite)</h3>
-    <ol>
-      <li><strong>Week 0:</strong> final UAT (desktop/mobile/offline), accessibility spot-check, content freeze.</li>
-      <li><strong>Week 1:</strong> phased rollout to pilot units (e.g., BRNC Dartmouth & HMS Collingwood), enable analytics & alerts.</li>
-      <li><strong>Week 2:</strong> champion feedback loop, fix fast-follows, publish quick-start videos.</li>
-      <li><strong>Week 3:</strong> broader rollout incl. ships/submarines, switch on badges/leaderboards.</li>
-      <li><strong>Week 4:</strong> metrics review (TTFL, completion, mobile starts), adjust pathways and nudges.</li>
-    </ol>
-    <p class="disclaimer"><em>Note:</em> LMS assumed Moodle-based (legacy DLE). Map steps 1:1 if a different LMS is in use.</p>
-
-    <section class="project-glance">
-      <h3 class="case-section">Project at a glance</h3>
-      <ul class="glance">
-        <li><strong>When:</strong> Several quarters, delivered in multiple sprints</li>
-        <li><strong>Ownership:</strong> ~90% UX (discovery → handover)</li>
-        <li><strong>Team:</strong> Product, engineering, training, CS, stakeholders across RN establishments</li>
-        <li><strong>Platforms:</strong> Web & mobile; offline packages for ships/submarines</li>
-        <li><strong>LMS:</strong> Delivered within the DLE’s legacy LMS (Moodle-based at the time)</li>
-      </ul>
-      <p class="disclaimer">*This case study reflects my recollection and <strong>generalised</strong> details for confidentiality.*</p>
-    </section>
-
-    <!-- --- Key Results --- -->
-    <section class="results">
-      <h3 class="case-section">Key Results</h3>
-      <div class="badges">
-        <div class="badge">
-          <span class="metric">↓ 25–40%</span>
-          <span class="label">Access drop-off (sign-in/auth & first steps)</span>
-        </div>
-        <div class="badge">
-          <span class="metric">↑ 15–25%</span>
-          <span class="label">Mobile course starts</span>
-        </div>
-        <div class="badge">
-          <span class="metric">↑ 10–20%</span>
-          <span class="label">Module completion rate (boosted by microlearning & scenarios)</span>
-        </div>
-        <div class="badge">
-          <span class="metric">↓ 30–50%</span>
-          <span class="label">Time to first lesson</span>
-        </div>
-        <div class="badge">
-          <span class="metric">↑ 50–70%</span>
-          <span class="label">SSO adoption across users</span>
-        </div>
-      </div>
-      <p class="disclaimer">*Indicative ranges shown where exact figures are confidential.</p>
-    </section>
-
-    <section class="viz-section">
-      <h3 class="viz-title">Key Results – visualised</h3>
-      <div class="kpi-bars">
-        <div class="kpi-bar" aria-label="Access drop-off reduced">
-          <div class="label">Access drop-off</div>
-          <div class="track"><div class="fill" style="--pct: 35%;"></div></div>
-          <div class="metric">↓ 25–40%</div>
-        </div>
-
-        <div class="kpi-bar" aria-label="Mobile course starts increased">
-          <div class="label">Mobile course starts</div>
-          <div class="track"><div class="fill" style="--pct: 20%;"></div></div>
-          <div class="metric">↑ 15–25%</div>
-        </div>
-
-        <div class="kpi-bar" aria-label="Module completion rate increased">
-          <div class="label">Completion rate</div>
-          <div class="track"><div class="fill" style="--pct: 15%;"></div></div>
-          <div class="metric">↑ 10–20%</div>
-        </div>
-
-        <div class="kpi-bar" aria-label="Time to first lesson reduced">
-          <div class="label">Time to first lesson</div>
-          <div class="track"><div class="fill" style="--pct: 40%;"></div></div>
-          <div class="metric">↓ 30–50%</div>
-        </div>
-
-        <div class="kpi-bar" aria-label="SSO adoption increased">
-          <div class="label">SSO adoption</div>
-          <div class="track"><div class="fill" style="--pct: 60%;"></div></div>
-          <div class="metric">↑ 50–70%</div>
-        </div>
-      </div>
-      <p class="disclaimer">Bars show midpoints of the reported ranges for visual comparison.</p>
-    </section>
-
-    <!-- Reflection & Contribution -->
-    <h2 class="case-section">Reflection</h2>
-    <p>
-      Bringing DLE closer to real Royal Navy contexts meant designing for shipboard constraints,
-      security, and a hierarchical training model—while still delivering modern e-learning patterns.
-      By simplifying access (SSO), supporting low-connectivity scenarios (offline content),
-      and prioritising mobile, we shifted learning from “when I can get to a desktop” to
-      “when the moment allows,” increasing engagement and reducing friction. Service design work
-      (personas, journeys, culture change) ensured the platform aligned with training realities,
-      not just UI best practices.
-    </p>
-    <ul>
-      <li>Clearer pathways from sign-in to first lesson reduced drop-off and time-to-learn.</li>
-      <li>Microlearning and scenario-based modules better fit operational schedules.</li>
-      <li>Governance and handover enabled sustainable iteration inside RN teams.</li>
-    </ul>
-
-    <h3>My Contribution</h3>
-    <ul>
-      <li><strong>User research & discovery:</strong> On-site visits (BRNC Dartmouth, HMS Collingwood, CTCRM Lympstone, HMS Raleigh), interviews, workshops; mapped needs across recruits, active personnel, and leavers.</li>
-      <li><strong>Synthesis & definition:</strong> Personas, empathy maps, stakeholder & ecosystem maps, service blueprints, user journeys and flows; identified access, authentication, and mobile gaps.</li>
-      <li><strong>Interaction & UI design:</strong> Simplified navigation and IA; improved course discovery and start flows; designed for SSO, offline access, and mobile-first usage.</li>
-      <li><strong>Prototyping & testing:</strong> Iterative prototypes validated in sprints with RN stakeholders; refined based on qualitative feedback and usage observations.</li>
-      <li><strong>Adoption & handover:</strong> Supported culture and process changes; documented patterns and recommendations to enable internal teams to iterate confidently.</li>
-    </ul>
-
-    <p class="disclaimer">Outcomes are directional; ranges are illustrative where exact figures are confidential or unavailable.</p>
-
-    <a href="./case-studies.html">← Back to case studies</a>
-
-  </main>
-</body>
-  <script>
-    function printPage() {
-      window.print();
-    }
-
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
       }
-    });
-  </script>
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0px 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .case-section {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .badges {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .badge {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px;
+        background: #f8fafb;
+      }
+
+      .metric {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 4px;
+      }
+
+      .label {
+        display: block;
+      }
+
+      .kpi-bars {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .kpi-bar {
+        display: grid;
+        grid-template-columns: 180px 1fr auto;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .track {
+        height: 12px;
+        background: #eef2f5;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .fill {
+        height: 100%;
+        width: var(--pct, 50%);
+        background: #222;
+        border-radius: 999px;
+      }
+
+      .journey,
+      .blueprint {
+        display: grid;
+        gap: 1px;
+        background: #e5e7eb;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 24px 0;
+      }
+
+      .journey .row {
+        display: grid;
+        grid-template-columns: 160px repeat(6, 1fr);
+        background: #fff;
+      }
+
+      .blueprint .row {
+        display: grid;
+        grid-template-columns: 200px repeat(6, 1fr);
+        background: #fff;
+      }
+
+      .cell,
+      .head {
+        padding: 12px;
+        font-size: 0.95rem;
+      }
+
+      .head {
+        background: #f8fafb;
+        font-weight: 700;
+      }
+
+      .lane {
+        background: #f8fafb;
+        font-weight: 700;
+      }
+
+      .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+
+      .dot.good {
+        background: #16a34a;
+      }
+
+      .dot.ok {
+        background: #f59e0b;
+      }
+
+      .dot.bad {
+        background: #dc2626;
+      }
+
+      .flow-caption {
+        font-size: 0.92rem;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+
+      footer {
+        margin-top: 32px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        .badges {
+          grid-template-columns: 1fr;
+        }
+
+        .kpi-bar {
+          grid-template-columns: 1fr;
+        }
+
+        .journey .row {
+          grid-template-columns: 120px repeat(6, 1fr);
+        }
+
+        .blueprint .row {
+          grid-template-columns: 140px repeat(6, 1fr);
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .case-section {
+          background: #000 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          padding: 4px 10px;
+          border-radius: 8px;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="back-btn">
+        <a href="javascript:history.back()">← Back</a>
+      </div>
+
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
+
+      <h1>Royal Navy</h1>
+
+      <div class="section">
+        <h2>Enhancing the Defence Learning Environment (DLE)</h2>
+
+        <p>
+          The Defence Learning Environment (DLE) is the UK military’s central
+          digital training platform, supporting learning across the Royal Navy,
+          Army, and RAF. Used by personnel at every stage of their careers, the
+          platform must function reliably in complex, high-pressure
+          environments, often with limited connectivity and time. This project
+          focused on transforming the DLE into a more accessible, intuitive, and
+          effective learning experience, aligning digital training with the real
+          conditions of military life.
+        </p>
+
+        <section class="challenge">
+          <h2>The challenge</h2>
+
+          <p>
+            Access to learning was inconsistent, navigation could feel unclear,
+            and usability issues made it harder for users to engage with
+            training effectively.
+          </p>
+
+          <p>
+            Training also had to work within the realities of military life:
+            strict hierarchy, varying technical confidence, multiple
+            establishments, operational constraints, and situations where users
+            might have limited connectivity or only short windows of time to
+            learn.
+          </p>
+
+          <img
+            class="img-xl"
+            src="./images/royal-navy/royalnavy-project-2.png"
+            alt="Images of officers and recruits during training sessions and marching drills"
+            title="Images of officers and recruits during training sessions and marching drills"
+          />
+
+          <p class="label-text">
+            Images of officers and recruits during training sessions and
+            marching drills.
+          </p>
+        </section>
+
+        <h2>My role</h2>
+
+        <p>
+          Conducted research to understand who the main users were and what
+          barriers they were facing when trying to access and use e-learning. We
+          engaged with a wide range of stakeholders, from recruits to officers,
+          to ensure the solution reflected real training needs rather than
+          assumptions.
+        </p>
+
+        <h2 style="margin-top: 30px">Process &amp; Approach</h2>
+
+        <h2 class="case-section">Discovery & Research</h2>
+        <p>
+          Research and workshops were conducted to identify the main challenges
+          and explore potential solutions to improve platform accessibility.
+        </p>
+        <p>
+          During this initial phase, I visited Royal Navy establishments
+          throughout the country, including BRNC Dartmouth, HMS Collingwood,
+          CTCRM Lympstone, and HMS Raleigh, facilitating workshops and assessing
+          the platform’s current state with recruits and trainers.
+        </p>
+        <p>
+          Following a bespoke Design Thinking approach adapted to the
+          hierarchical nature of military life, we tested and iterated on
+          solution hypotheses by involving the client throughout the process via
+          workshops, presentations, and structured feedback.
+        </p>
+        <p>
+          The work included business process mapping, impact maps, ecosystem
+          mapping, stakeholder mapping, personas, empathy maps, user journeys,
+          user flows, reports with key findings, living prototypes, and a custom
+          design system adapted to the legacy environment.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/royal-navy/royalnavy-project-3.png"
+          alt="UX workshops and findings exercise"
+          title="UX workshops and findings exercise"
+        />
+
+        <img
+          class="img-xl"
+          src="./images/royal-navy/royalnavy-project-6.png"
+          alt="DLE user journey"
+          title="Example of the DLE user journey"
+        />
+
+        <p class="label-text">
+          Images from workshops where we gathered behavioural insights (empathy
+          maps) and mapped the user journey
+        </p>
+
+        <h2 class="case-section">Service Design</h2>
+        <p>
+          We made service design recommendations to improve access to e-learning
+          by scoping personas, tasks and goals, mapping user journeys, and
+          conducting workshops and interviews both face-to-face and remotely
+          across different Royal Navy establishments.
+        </p>
+
+        <p>
+          We also collaborated with key stakeholders to help support a more
+          agile mindset and improve adoption of the e-learning platform through
+          culture change, not just interface change.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/royal-navy/service-blueprint-rn.png"
+          alt="DLE service design blueprint"
+          title="Example of the DLE service blueprint user experience"
+        />
+
+        <p class="label-text">
+          Example of the DLE service design blueprint user experience
+        </p>
+
+        <h2 class="case-section">Prototyping and testing</h2>
+
+        <p>
+          Through iterative prototyping and testing on the legacy Moodle
+          platform, we uncovered opportunities to significantly improve
+          accessibility, learning outcomes, and engagement across the DLE. Our
+          work went beyond interface design, rethinking how learning is
+          experienced in real operational contexts.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/royal-navy/royalnavy-moodle.png"
+          alt="DLE service design blueprint"
+          title="Example of the DLE service blueprint user experience"
+        />
+
+        <h2 class="case-section">What we focused on improving</h2>
+
+        <ul style="margin-top: 10px">
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>Improved access and usability</strong><br />
+              <span style="opacity: 0.8">
+                Mobile optimised experience, offline access for low connectivity
+                environments (such as ships), single sign-on (SSO), and
+                simplified navigation to help users quickly find and start
+                learning.
+              </span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>Flexible, role-based learning</strong><br />
+              <span style="opacity: 0.8">
+                Adaptive learning paths tailored to role, experience, and prior
+                knowledge, supported by clearer pathways, “next steps” and
+                "where-you-left-off" functionality.
+              </span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>More effective learning</strong><br />
+              <span style="opacity: 0.8">
+                Introduction of microlearning (short 5–10 minute modules),
+                scenario-based and branching simulations, and mastery learning
+                with frequent checks and targeted support to ensure
+                understanding before progression.
+              </span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>Stronger engagement and collaboration</strong><br />
+              <span style="opacity: 0.8">
+                Gamification features (badges, progress tracking, challenges),
+                peer learning through forums, and opportunities for cross-branch
+                knowledge sharing across the Royal Navy, Army, and RAF.
+              </span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>Content clarity and retention</strong><br />
+              <span style="opacity: 0.8">
+                Visual and example-led learning with problem-based tasks to
+                improve recall and real-world application.
+              </span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>System and delivery improvements</strong><br />
+              <span style="opacity: 0.8">
+                Offline learning packages (SCORM/xAPI), Moodle based LMS
+                configuration, accessibility standards (WCAG 2.1 AA), and
+                suggestion of analytics to track enrolment, progression, and
+                completion.
+              </span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start">
+            <span style="font-size: 18px">→</span>
+            <div>
+              <strong>Adoption and change enablement</strong><br />
+              <span style="opacity: 0.8">
+                "Train-the-trainer" sessions, internal champions, and simple
+                support materials (for instance, short "how-to videos") to help
+                embed new practices and reduce reliance on support teams.
+              </span>
+            </div>
+          </li>
+        </ul>
+
+        <h2 style="margin-top: 30px; margin-bottom: 30px">My contribution</h2>
+        <p>
+          I contributed across discovery, service design, UX strategy,
+          prototyping, testing, and handover, with around 90% ownership of the
+          UX process from early research through to recommendations and delivery
+          support.
+        </p>
+        <p>
+          My core impact was making previously hidden user needs visible. By
+          engaging directly with recruits and visiting Royal Navy
+          establishments, I uncovered critical gaps between how the platform was
+          designed and how it was actually used in real training environments.
+        </p>
+        <p>
+          The existing system reflected a more traditional, hierarchical
+          approach to learning, which, while important culturally, was limiting
+          usability and effectiveness for a new generation of recruits. I helped
+          reframe this by introducing user-centred insights, clearer learning
+          pathways, and more accessible interaction patterns.
+        </p>
+        <p>
+          This work laid the foundation for a shift towards a more modern,
+          flexible, and effective learning experience, and provided the initial
+          structure and direction for ongoing improvements across the DLE.
+        </p>
+      </div>
+
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>
