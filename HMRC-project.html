@@ -1,290 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estela Gaspar – UX/UI Designer - HMRC Government</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background-color: #fefefe;
-            line-height: 1.6;
-            color: #222;
-        }
 
-        h1,
-        h2,
-        h3 {
-            color: #444;
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estela Gaspar favicon -->
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
+    <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .case-section {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
         }
 
         h1 {
-            font-size: 2em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
+          margin-bottom: 20px;
         }
 
         h2 {
-            margin-top: 2rem;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        .contact,
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section-title {
-            font-size: 1.2em;
-            margin-top: 1.5rem;
-            font-weight: bold;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #555;
+          margin-top: 32px;
         }
 
         .ready-print {
-        display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .case-section {
+          background: #000 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          padding: 4px 10px;
+          border-radius: 8px;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
-</head>
+  </head>
 
-<body>
-    <body>
-    <div class="back-btn">
-      <a href="javascript:history.back()" style="text-decoration: none"
-        >← Back</a
-      >
-    </div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-      This is a ready-to-print page
-    </h4>
-        <h1>Make Tax Digital (MTD) for Property Income <br>Tax Submission and Advanced Ruling Service (ARS).</h1>
-        <h3>Client:</h3>
-        <p>His Majesty’s Revenue and Customs (HMRC)</p>
-        <h3>Project(s):</h3>
-        <ul>
-            <li>Make Tax Digital (MTD) for Property Income Tax Submission.</li>
-            <li>ARS - Advanced Ruling Service.</li>
-        </ul>
-        <h3>Role:</h3>
-        <ul>
-            <li>Mostly user interface designer and user experience designer. </li>
-            <li>Some user research and service design.</li>
-        </ul>
-    </div>
-  
-
-
-<!-- Therac-25 -->
-
-    <div class="section">
-        <h2>About the project(s)</h2>
-        <h3>As part of the UK government’s initiative to digitise tax reporting, <br>I contributed to the
-            Make Tax Digital (MTD) for Property Income Tax Submission project. The goal was to
-            streamline <br>the process for landlords and property owners, ensuring a seamless and efficient
-            way to report income tax digitally.</h3>
-
-        <p>The Advanced Ruling Service (ARS) is a key initiative aimed at providing businesses and
-            individuals with clear, binding tax rulings before transactions take place. <br>This service
-            helps taxpayers gain certainty on complex tax matters, minimising risks and ensuring
-            compliance with regulations.</p>
-        <h3>About His Majesty’s Revenue and Customs (HMRC)</h3>
-        <p>His Majesty's Revenue and Customs (HRMC) is a non-ministerial department, supported by two
-            agencies (Valuation Office Agency and The Adjudicator's Office ) and public bodies.
-        </p>
-        <p>HMRC was established by an Act of Parliament in 2005 as a new department, replacing the
-            Inland Revenue and Customs & Excise.</p>
-        <p>Its purpose is to collect money to pay for public services and provide financial support.
-        </p>
-
-        <img  style="width: 500px; height: auto;"  src="./images/HMRC-1.png" alt="About the HMRC"
-            title="An HMRC-themed image illustrating tax concepts, featuring a calculator, coins, a money bag, people, houses, and a hand holding a leaf symbolising growth.">
-        <p class="label-text">An HMRC-themed image illustrating tax concepts. Source background image by
-            <a
-                href="https://unsplash.com/@amstram?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Scott
-                Graham</a> on <a
-                href="https://unsplash.com/photos/man-writing-on-paper-OQMZwNd3ThU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </p>
-
-        <p>HMRC assisted 2.4 million customers in renewing their tax credits in 2021 and supported 10.3
-            million customers in completing their Self Assessment returns.</p>
-        <p>This government organisation also supports more than 12 million children with Child Benefit
-            and 458,000 through Tax-Free Childcare.
-        </p>
-        <p>HMRC puts the focus on prioritising essential customer services and building a modern tax and
-            customs department since this will potentially ensure tax compliance.
-        </p>
-
-        <img  style="width: 500px; height: auto;"  src="./images/HMRC-2.png" alt="HMRC customer statistics"
-            title="HMRC customer statistics about the amount os customers that served in the year of 2021 with tax credits and in the year of 2022 with tax self-assessment.">
-        <p class="label-text">An HMRC-themed image illustrating statistics about tax credits and
-            self-assessment. Source background image by Photo by <a
-                href="https://unsplash.com/@markuswinkler?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus
-                Winkler</a> on <a
-                href="https://unsplash.com/photos/a-close-up-of-a-typewriter-with-a-tax-return-sign-on-it-Ber3q-zEhd4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </p>
-
-        <p>Making Tax Digital for Income Tax (MTD) is part of the government’s Tax Administration
-            Strategy which is trying to reduce the tax gap * by requiring businesses and individuals to:
-        </p>
-        <ul>
-            <li>Keep digital records.
-            </li>
-            <li>Use software that works with Making Tax Digital.</li>
-            <li>Submit updates every quarter, bringing the tax system closer to real-time.
-            </li>
-        </ul>
-        <p>MTD for Income Tax is due to be introduced in April 2026 and will affect self-employed
-            individuals and individuals receiving property income with annual gross income of £30,000 or
-            more.
-        </p>
-
-        <img  style="width: 500px; height: auto;"  src="./images/HRMC-3.png" alt="About the HMRC MTD project"
-            title="An image about the HMRC MTD key facts such as keeping tax digital records from property income of £30,000 or more">
-        <p class="label-text">HMRC MTD key facts. Source background image by
-            <a
-                href="https://unsplash.com/@amstram?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Scott
-                Graham</a> on <a
-                href="https://unsplash.com/photos/man-writing-on-paper-OQMZwNd3ThU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </p>
-
-        <p>Thus, I was invited to the MTD for Income Tax project to work on the income property journey
-            (UK and International for FHL (Furnished Holiday Lettings), Rentals and Rent a room).
-        </p>
-        <p>Self-employed individuals and individuals must inform HMRC of the property income even if
-            they are making a loss from a property and pay tax on the net rental profit only. <br>This
-            applies to all rental income and expenses including lettings on UK and overseas properties.
-        </p>
-        <p>This meant that these journeys were long and complex due to the accounting/tax nature and law
-            requirements, involving a lot of strategic thinking, <br>user interface and content design work.
-            User experience is critical for effective Self Assessment tax returns.
-        </p>
-
-        <img  style="width: 500px; height: auto;"  src="./images/HMRC-4.png" alt="Income from property"
-            title="An image about types of income from property">
-        <p class="label-text">HMRC MTD key facts. Source background image by <a
-                href="https://unsplash.com/@amstram?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Scott
-                Graham</a> on <a
-                href="https://unsplash.com/photos/man-writing-on-paper-OQMZwNd3ThU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </p>
-
-        <h3>What did my UX and UI practice look like?</h3>
-        <p>Digital income tax submission has different dimensions and I was invited to work on the
-            income property journey (UK and International for FHL (Furnished Holiday Lettings), <br>Rentals
-            and Rent a room), where I created and edited pages, linked journeys, looked at background
-            research and performed not just an user interface role but also contributed <br>with my user
-            experience (UX) expertise background by selecting and understanding what GDS components and
-            patterns would be more suitable to serve the user.
-        </p>
-
-        <ol>
-            <li>Setting up the technical environment necessary to code and connect the local changes on
-                my machine to the repository.
-            </li>
-            <li>To create pages (more than 25) and link pages together on my machine and upload them to
-                the GOV MTD Income Tax property template repository on GitHub <br>using Command Prompt
-                (CMD), HMTL and Nunjucks code.
-            </li>
-            <li>Update the content and error messages kept in Confluence in each of the pages.
-            </li>
-            <li>Understand the Business Analyst (BA) user flow maps created in Mural and translate the
-                changes into pages on the prototype.
-            </li>
-            <li>Redesign user flow maps using standards set by the team so they could be understood by
-                everyone.
-            </li>Attend a set number of mandatory meetings, such as:
-            <li>
-                <ul>
-                    <li>UR Community</li>
-                    <li>BA Team Meeting</li>
-                    <li>Monthly Write up</li>
-                    <li>Interaction Design and Content</li>
-                    <li>Show and Tell</li>
-                    <li>Check in Weekly with UR leads</li>
-                    <li>BA community meeting</li>
-            </li>
-            </ul>
-            </li>
-            <li>Due to UX skills, to contribute with strategic thinking for the user experience
-                redesign.
-            </li>
-        </ol>
-
-        <img  style="width: 500px; height: auto;"  src="./images/HMRC-6.jpg" alt="Deliverables from the HMRC project."
-            title="Deliverables from the HMRC project. User flow maps and collaborative boards created in Mural.">
-        <p class="label-text">Deliverables from the HMRC project. User flow maps and collaborative
-            boards created in Mural.</p>
-        <p>My work involved designing and optimising user-friendly digital solutions that aligned with
-            HMRC’s compliance requirements with focus on the people and GDS standards. <br>I analysed user
-            needs, pain points, and regulatory
-            constraints, ensuring the platform provided an intuitive and accessible experience.</p>
-        <p>My role in this project involved mapping the end-to-end user journey, identifying key
-            decision points, and improving the overall user experience.
-        <p>
-            <img  style="width: 500px; height: auto;"  src="./images/HMRC-7.jpg" alt="Deliverables from the HMRC project."
-                title="Deliverables from the HMRC project. User flow diagrams with GOV.UK GDS user flow page patterns.">
-        <p class="label-text">Deliverables from the HMRC project. User flow diagrams with GOV.UK GDS
-            user flow page patterns.</p>
-
-        <p>I collaborated with stakeholders
-            to ensure the system was transparent, responsive, and easy to navigate. <br>The service needed
-            to accommodate diverse user needs, from large enterprises to individual taxpayers, making
-            accessibility and clarity a priority.</p>
-        <ul>
-            <li>Conducted user experience research to identify challenging landing pages, analyse
-                traffic
-                patterns, and understand user behaviour, uncovering opportunities for improvement.</li>
-            <li>Developed user flow diagrams, empathy maps, and page patterns aligned with the UK
-                Government
-                Digital Service (GDS) Design System.</li>
-            <li>Updated online prototypes using the GOV.UK Prototype Kit, GitHub repository, and
-                Nunjucks,
-                ensuring seamless integration of user insights.</li>
-            <li>Worked efficiently with complex GitHub repositories to swiftly implement content and
-                design
-                updates based on user testing workshop findings.</li>
-        </ul>
-        <img  style="width: 500px; height: auto;"  src="./images/HMRC-8.jpg" alt="Deliverables from the HMRC project."
-            title="Deliverables from the HMRC project. Sample prototype pages.">
-
-        <p class="label-text">Deliverables from the HMRC project. Sample prototype pages.</p>
-
+  <body>
+    <main class="container">
+      <div class="back-btn">
+        <a href="javascript:history.back()">← Back</a>
       </div>
 
-    <a href="./case-studies.html">← Back to case studies</a>
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
 
-</body>
-  <script>
-    function printPage() {
-      window.print();
-    }
+      <h1>HMRC (Government)</h1>
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+      <div class="section">
+        <h2>Make Tax Digital (MTD) and Advanced Ruling Service (ARS)</h2>
+        <p>
+          His Majesty’s Revenue and Customs (HMRC) is the UK’s tax authority,
+          established in 2005 to collect revenue for public services and provide
+          financial support. Within this context, services such as Making Tax
+          Digital (MTD) for Property Income Tax Submission and the Advanced
+          Ruling Service (ARS) support the government’s move towards clearer,
+          more efficient tax processes.
+        </p>
+
+        <h2 style="margin-top: 40px">The challenge</h2>
+
+        <p>
+          User journeys were long and complex, shaped by the realities of tax
+          law, accounting rules, and compliance requirements. The challenge was
+          not just technical, but about making complex, often overwhelming
+          information feel clear and manageable for users. With Make Tax Digital
+          (MTD), this meant supporting people through structured digital
+          record-keeping and regular submissions, while the Advanced Ruling
+          Service (ARS) required presenting clear, binding decisions in a way
+          users could understand and trust before taking action.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/HMRC-images/HMRC-1.png"
+          alt="About the HMRC"
+          title="An HMRC-themed image illustrating tax concepts, featuring a calculator, coins, a money bag, people, houses, and a hand holding a leaf symbolising growth."
+        />
+
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          Digital income tax submission covers a range of complex scenarios,
+          from UK to international property income, including Furnished Holiday
+          Lettings, rentals, and Rent a Room. The work focused on shaping the
+          income property journey by creating and refining pages, connecting
+          journeys, and using research to guide decisions. It went beyond
+          interface design, bringing in UX thinking to choose the right GDS
+          components and patterns, making the experience clearer, more
+          consistent, and easier for users to navigate.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/HMRC-images/HMRC-4.png"
+          alt="Income from property image"
+          title="An image about types of income from property"
+        />
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          The work involved setting up and working within a technical
+          prototyping environment, enabling local development and seamless
+          integration with the GOV.UK MTD Income Tax repository. This included
+          creating and iterating on over 25 pages using HTML and Nunjucks,
+          structuring and linking end-to-end journeys, and ensuring consistency
+          across the experience. Content and error messaging were maintained and
+          updated in alignment with documentation in Confluence, while business
+          analyst user flow maps from Mural were translated into functional
+          prototype journeys. User flows were also refined and redesigned using
+          team standards to improve clarity, alignment, and cross-disciplinary
+          understanding.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/HMRC-images/HMRC-5.jpg"
+          alt="Behind-the-scenes view of building and refining tax journeys with GOV.UK prototype kit and GitHub"
+          title="Building and evolving user journeys through GOV.UK prototype kit and GitHub for HMRC services"
+        />
+
+        <p>
+          Collaboration played a key role throughout the process, with regular
+          engagement across multidisciplinary teams including user research,
+          business analysis, and interaction design. Participation in meetings
+          such as UR Community, BA meetings, Show and Tell, and weekly check-ins
+          supported continuous alignment and iteration. Beyond delivery, the
+          role contributed to the strategic shaping of the user experience,
+          applying UX expertise to inform design decisions, improve journey
+          coherence, and ensure solutions were both user-centred and aligned
+          with GDS standards.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/HMRC-images/HMRC-6.jpg"
+          alt="Deliverables from the HMRC project."
+          title="Deliverables from the HMRC project. User flow maps and collaborative boards created in Mural."
+        />
+
+        <img
+          class="img-xl"
+          src="./images/HMRC-images/HMRC-7.jpg"
+          alt="User flow map using GDS page patterns"
+          title="User flow diagram aligned with GOV.UK GDS design patterns"
+        />
+
+        <img
+          class="img-xl"
+          src="./images/HMRC-images/HMRC-8.jpg"
+          alt="Screens from the digital journey showing pages created for users"
+          title="Designing clear and accessible pages for HMRC tax services"
+        />
+        <p class="label-text">Examples of deliverables from the HMRC project</p>
+
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution focused on shaping user-centred digital solutions that
+          balanced HMRC’s regulatory requirements with usability and
+          accessibility. I brought a strong UX perspective to complex tax
+          journeys, analysing user needs, pain points, and legal constraints to
+          translate them into clear, intuitive experiences. By mapping
+          end-to-end journeys and identifying key decision points, I helped
+          simplify complex processes and improve the overall flow, supporting
+          users in completing their tax submissions with greater confidence.
+        </p>
+
+        <p>
+          I worked closely with multidisciplinary stakeholders to ensure the
+          service remained transparent, responsive, and accessible to a wide
+          range of users, from individual taxpayers to larger organisations. My
+          contribution included conducting user research to uncover friction
+          points, developing user flows, empathy maps, and page patterns aligned
+          with GDS standards, and iterating on prototypes using the GOV.UK
+          Prototype Kit, GitHub, and Nunjucks. Through continuous testing and
+          collaboration, I supported the delivery of improvements that made the
+          experience more coherent, efficient, and user-focused.
+        </p>
+      </div>
+
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>
