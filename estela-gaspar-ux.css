@@ -2648,7 +2648,7 @@ footer.footer-banner.drawwilder {
   h1.landingpage-title.eg {
     width: 100%;
     margin: 0 auto;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 600;
     text-align: center;
   }
@@ -2658,6 +2658,15 @@ footer.footer-banner.drawwilder {
   }
 
   /* About page end */
+
+  .about-me {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .about-me img {
+    width: 60%;
+  }
 
   .main-content {
     flex: 1;
@@ -2807,9 +2816,9 @@ footer.footer-banner.drawwilder {
   }
 
   h1.landingpage-title.eg {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 600;
     text-align: center;
   }
@@ -2837,13 +2846,13 @@ footer.footer-banner.drawwilder {
   h1.landingpage-title.eg {
     width: 100%;
     margin: 0 auto;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: 600;
     text-align: center;
   }
 
   .container-message {
-    width: 80%;
+    width: 90%;
     margin: 0px 20px;
   }
 
