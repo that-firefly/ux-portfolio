@@ -1817,16 +1817,6 @@ footer.footer-banner.drawwilder {
   color: #000000;
 }
 
-/* Global default for media (non-card, non-gallery rules can still override) */
-:where(img, video, iframe) {
-  display: block;
-  margin-inline: auto;
-  max-width: 100%;
-  width: 70%;
-  height: auto;
-  padding: 60px 0px 0px 0px;
-}
-
 /***************************************************************************  Media Queries start ***************************************************************************/
 /***************************************************************************  Media Queries start ***************************************************************************/
 
@@ -2179,7 +2169,7 @@ footer.footer-banner.drawwilder {
 /* 📱 Mobile Devices (250px - 349px) */
 
 @media (min-width: 250px) and (max-width: 349px) {
-  :where(img, video, iframe) {
+  :where(img) {
     display: block;
     margin-inline: auto;
     max-width: 100% !important;
@@ -2319,7 +2309,7 @@ footer.footer-banner.drawwilder {
 
   /* New page end */
 
-  :where(img, video, iframe) {
+  :where(img) {
     display: block;
     margin-inline: auto;
     max-width: 100% !important;
@@ -2675,7 +2665,7 @@ footer.footer-banner.drawwilder {
     margin: 0 auto;
   }
 
-  :where(img, video, iframe) {
+  :where(img) {
     display: block;
     margin-inline: auto;
     max-width: 100% !important;
@@ -2825,7 +2815,7 @@ footer.footer-banner.drawwilder {
 
   /* About page end */
 
-  :where(img, video, iframe) {
+  :where(img) {
     display: block;
     margin-inline: auto;
     max-width: 100% !important;
@@ -3161,3 +3151,39 @@ footer.footer-banner.drawwilder {
 
 /***************************************************************************  Media Queries end ***************************************************************************/
 /***************************************************************************  Media Queries end ***************************************************************************/
+
+/* LinkedIn */
+
+.linkedin-card {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.linkedin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.badge-base.LI-profile-badge {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
