@@ -3,261 +3,504 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <meta
+      property="og:title"
+      content="Howden Joinery Group Plc – UX Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Improving accessibility, consistency, and conversion through website updates, design systems, and collaborative digital design."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/howdens/howdens-6.png"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/howden-joinery-group-plc"
+    />
+    <meta property="og:type" content="website" />
+    <title>Estela Gaspar – UX/UI Designer - Howden Joinery Group Plc</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
       }
 
       h1,
       h2,
-      h3 {
-        color: #444;
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
       }
 
       h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
       }
 
       h2 {
-        margin-top: 2rem;
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
       }
 
-      .contact,
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
       .section {
-        margin-bottom: 2rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
       }
 
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
-      }
-
-      .highlight {
-        font-weight: bold;
-        color: #555;
-      }
-      .ready-print {
+      .case-section {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .case-section {
+          background: #000 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          padding: 4px 10px;
+          border-radius: 8px;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div
-      class="section"
-      style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem"
-    >
+    <main class="container">
       <div class="back-btn">
-        <a href="javascript:history.back()" style="text-decoration: none"
-          >← Back</a
-        >
+        <a href="javascript:history.back()">← Back</a>
       </div>
+
       <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
         This is a ready-to-print page
       </h4>
-      <h1>Howden Joinery Group Plc - Improving acessibility and conversion.</h1>
-      <h3>Client:</h3>
-      <p>Howden Joinery Group Plc</p>
-      <h3>Project(s):</h3>
-      <ul>
-        <li>
-          Howden Joinery Group Plc website, design system and marketing
-          materials.
-        </li>
-      </ul>
-      <h3>Role:</h3>
-      <ul>
-        <li>User interface designer (UI)</li>
-        <li>User experience designer (UX)</li>
-        <li>Graphic Designer</li>
-      </ul>
-    </div>
 
-    <div class="section">
-      <h2>About the project(s)</h2>
-      <h3>
-        Updating the Howden Joinery Group Plc website, design system and
-        marketing materials.
-      </h3>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-6.png"
-        alt="Howden Joinery Group Plc website."
-        title="Image of the Howden Joinery Group Plc website."
-      />
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-1.png"
-        alt="Howden Joinery Group Plc website."
-        title="Image of the Howden Joinery Group Plc website."
-      />
-      <p class="label-text">
-        Howden Joinery Group Plc website. Source image:
-        <a href="https://www.howdens.com/">Howden Joinery Group Plc</a>.
-      </p>
-      <p>
-        At Howden Joinery Group Plc UK in Northampton, the focus was on
-        maintenance and continuous improvement to boost visitor traffic <br />on
-        the company’s website and elevate marketing campaigns. Working to high
-        standards, the design process utilised a complex and regularly
-        <br />updated design system, managed through Abstract - a versioning
-        platform that ensured seamless collaboration and consistency.
-      </p>
+      <h1>Howden Joinery Group Plc</h1>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-2.png"
-        alt="Howden Joinery Group Plc website."
-        title="Image of the Howden Joinery Group Plc website."
-      />
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-4.png"
-        alt="Howden Joinery Group Plc website."
-        title="Image of the Howden Joinery Group Plc website."
-      />
-      <p class="label-text">
-        Howden Joinery Group Plc website. Source image:
-        <a href="https://www.howdens.com/">Howden Joinery Group Plc</a>.
-      </p>
-      <p>
-        The design workflow incorporated industry-standard tools such as Sketch,
-        Figma, Anima, and Zeplin, streamlining the design-to-development handoff
-        <br />with accuracy and efficiency. These tools were fundamental in
-        maintaining a polished and professional online presence while
-        consistently <br />updating and enhancing the website to meet evolving
-        user needs.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-2.png"
-        alt="Howden Joinery Group Plc website."
-        title="Image of the Howden Joinery Group Plc website."
-      />
-      <p class="label-text">
-        Howden Joinery Group Plc website. Source image:
-        <a href="https://www.howdens.com/">Howden Joinery Group Plc</a>.
-      </p>
-      <h3>A Passionate and Collaborative Design Team</h3>
-      <p>
-        As part of the Howden Joinery Group Plc digital team, I collaborated
-        with designers, marketing designers, UX designers, <br />UX researchers,
-        and product designers to ensure the website, apps, and trader
-        applications remained accessible, <br />functional, and visually
-        appealing. Our primary focus was on user experience, leveraging research
-        insights to drive design decisions <br />and foster cross-team
-        collaboration.
-      </p>
-      <h3>Design Systems at Howdens</h3>
-      <p>
-        The design systems at Howdens were an essential aspect of maintaining
-        quality and consistency across all digital assets. <br />Regularly
-        updated with Abstract, it served as the backbone of our design process.
-        Working within this system allowed me to gain valuable experience in
-        creating, maintaining, <br />and evolving robust design systems that
-        adapt to changing business and user requirements.
-      </p>
+      <div class="section">
+        <h2>Improving accessibility and conversion</h2>
+        <p>
+          Howden Joinery Group Plc is a well-known UK business specialising in
+          kitchens, joinery products, and home improvement solutions. The work
+          focused on updating the company website, supporting the design system,
+          and contributing to marketing materials that strengthened the digital
+          brand experience. The aim was to improve accessibility, consistency,
+          and performance across digital touchpoints while helping the business
+          attract and support more visitors online.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/abstract-logo.png"
-        alt="Abstract application logo."
-        title="Abstract application logo. Abstract is a powerful version control and collaboration platform specifically designed for design teams."
-      />
-      <p class="label-text">
-        Abstract is a powerful version control and collaboration platform
-        specifically designed for design teams. It streamlines the process of
-        managing design files by integrating <br />seamlessly with tools like
-        Sketch and Figma. Designers can create branches, make changes, and merge
-        updates without overwriting previous versions, ensuring a transparent
-        <br />and organized workflow. Abstract allows teams to collaborate
-        efficiently, review design changes, provide feedback, and maintain a
-        complete version history - all in one place.<br />
-        This approach enhances consistency, reduces errors, and promotes
-        effective collaboration across multidisciplinary teams, making it an
-        essential tool for maintaining complex design systems.
-      </p>
+        <h2 style="margin-top: 40px">The challenge</h2>
 
-      <p class="label-text">
-        <a href="https://www.goabstract.com/"
-          >Abstract application. Version control for Sketch.</a
-        >
-        Design together, in real-time with version control for Sketch.<br />
-        Collaborate in the same file at the same time, without losing the
-        original.powerful version control.
-      </p>
+        <p>
+          The challenge involved maintaining and improving a large-scale digital
+          experience while keeping everything aligned with a complex and
+          regularly updated design system. The website and supporting assets
+          needed to remain visually polished, accessible, and easy to use, while
+          also supporting evolving marketing goals and user needs. This meant
+          balancing design quality, technical handoff, and consistency across
+          multiple teams and outputs.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-3.png"
-        alt="Howden Joinery Group Plc website."
-        title="Image of the Howden Joinery Group Plc website."
-      />
-      <p class="label-text">
-        Abstract application user interface. Source image:
-        <a href="https://www.goabstract.com/"></a>Abstract application. Version
-        control for Sketch.
-      </p>
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-6.png"
+          alt="Howden Joinery Group Plc website"
+          title="Image of the Howden Joinery Group Plc website."
+        />
 
-      <h3>Tools and Technologies</h3>
-      <p>
-        Our main design tool was Sketch, supported by Anima and Zeplin to ensure
-        precise and efficient delivery to the development team.
-        <br />Additionally, we incorporated Figma into our workflow for its
-        collaborative features and flexibility. These tools empowered the team
-        to maintain <br />high standards while delivering practical and
-        user-centered solutions.
-      </p>
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-1.png"
+          alt="Howden Joinery Group Plc website"
+          title="Image of the Howden Joinery Group Plc website."
+        />
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/howdens/howdens-applications.png"
-        alt="Software used at Howdens."
-        title="Image of software used at Howdens: Anima, Zepplin, Figma and Sketch."
-      />
+        <p class="label-text">
+          Howden Joinery Group Plc website. Source image:
+          <a href="https://www.howdens.com/">Howden Joinery Group Plc</a>.
+        </p>
 
-      <p class="label-text">
-        Image of software used at Howdens: Anima, Zepplin, Figma and Sketch.
-      </p>
-    </div>
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          I worked across user interface design, user experience design, and
+          graphic design, supporting updates to the Howden website, design
+          system, and digital marketing materials. The role involved creating
+          and refining digital experiences that were both practical and visually
+          strong, while ensuring accessibility and consistency across the wider
+          ecosystem.
+        </p>
 
-    <a href="./case-studies.html">← Back to case studies</a>
-  </body>
-  <script>
-    function printPage() {
-      window.print();
-    }
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-2.png"
+          alt="Howden Joinery Group Plc website"
+          title="Image of the Howden Joinery Group Plc website."
+        />
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-4.png"
+          alt="Howden Joinery Group Plc website"
+          title="Image of the Howden Joinery Group Plc website."
+        />
+
+        <p class="label-text">
+          Howden Joinery Group Plc website. Source image:
+          <a href="https://www.howdens.com/">Howden Joinery Group Plc</a>.
+        </p>
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          At Howden Joinery Group Plc UK in Northampton, the focus was on
+          maintenance and continuous improvement to boost visitor traffic on the
+          company’s website and elevate marketing campaigns. Working to high
+          standards, the design process used a complex and regularly updated
+          design system, managed through Abstract, a versioning platform that
+          supported collaboration and consistency across design work.
+        </p>
+
+        <p>
+          The workflow incorporated industry-standard tools such as Sketch,
+          Figma, Anima, and Zeplin, helping streamline the design-to-development
+          handoff with clarity and accuracy. These tools supported a polished
+          and professional online presence while enabling continuous updates and
+          enhancements to the website in response to user needs and business
+          priorities.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-2.png"
+          alt="Howden Joinery Group Plc website"
+          title="Image of the Howden Joinery Group Plc website."
+        />
+
+        <p class="label-text">
+          Howden Joinery Group Plc website. Source image:
+          <a href="https://www.howdens.com/">Howden Joinery Group Plc</a>.
+        </p>
+
+        <p>
+          Collaboration played a central role throughout. As part of the digital
+          team, I worked alongside designers, marketing designers, UX designers,
+          UX researchers, and product designers to keep websites, apps, and
+          trader applications accessible, functional, and visually engaging.
+          Research insights helped guide decisions, strengthen cross-team
+          alignment, and ensure the user experience remained at the centre of
+          the work.
+        </p>
+
+        <h3>A passionate and collaborative design team</h3>
+        <p>
+          Being part of the Howdens digital team meant contributing within a
+          multidisciplinary environment where collaboration and research were
+          essential. The work was shaped by shared standards, evolving user
+          needs, and the goal of delivering accessible and effective digital
+          experiences across multiple platforms.
+        </p>
+
+        <h3>Design systems at Howdens</h3>
+        <p>
+          The design system was a core part of maintaining quality and
+          consistency across digital assets. Regularly updated with Abstract, it
+          became the backbone of the design process. Working within this system
+          gave valuable experience in creating, maintaining, and evolving robust
+          design systems that adapt to changing user and business requirements.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/howdens/abstract-logo.png"
+          alt="Abstract application logo"
+          title="Abstract application logo. Abstract is a powerful version control and collaboration platform specifically designed for design teams."
+        />
+
+        <p class="label-text">
+          Abstract is a powerful version control and collaboration platform
+          specifically designed for design teams. It streamlines the process of
+          managing design files by integrating seamlessly with tools like Sketch
+          and Figma. Designers can create branches, make changes, and merge
+          updates without overwriting previous versions, ensuring a transparent
+          and organised workflow. Abstract allows teams to collaborate
+          efficiently, review design changes, provide feedback, and maintain a
+          complete version history in one place.
+        </p>
+
+        <p class="label-text">
+          <a href="https://www.goabstract.com/"
+            >Abstract application. Version control for Sketch.</a
+          >
+          Design together, in real time with version control for Sketch and
+          collaborative workflows.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-3.png"
+          alt="Abstract application user interface"
+          title="Abstract application user interface. Version control for Sketch."
+        />
+
+        <p class="label-text">
+          Abstract application user interface. Source image:
+          <a href="https://www.goabstract.com/"
+            >Abstract application. Version control for Sketch.</a
+          >
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/howdens/howdens-applications.png"
+          alt="Software used at Howdens"
+          title="Image of software used at Howdens: Anima, Zeplin, Figma and Sketch."
+        />
+
+        <p class="label-text">
+          Image of software used at Howdens: Anima, Zeplin, Figma and Sketch.
+        </p>
+
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution focused on improving the quality, consistency, and
+          accessibility of digital experiences across the Howden website and
+          related assets. I supported the evolution of interfaces and design
+          components, helping ensure that outputs remained aligned with the
+          wider design system while also meeting practical business and user
+          needs.
+        </p>
+
+        <p>
+          I worked across UI, UX, and graphic design, using tools such as
+          Sketch, Figma, Anima, and Zeplin to create and refine work that could
+          be handed over clearly to development teams. I also collaborated with
+          multidisciplinary colleagues including designers, UX researchers, and
+          product specialists, contributing to a digital experience that was
+          more accessible, visually cohesive, and effective in supporting both
+          users and the business.
+        </p>
+      </div>
+
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>

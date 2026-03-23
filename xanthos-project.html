@@ -3,275 +3,525 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <meta property="og:title" content="Xanthos Case Study" />
+    <meta
+      property="og:description"
+      content="E-Commerce, marketing, branding, and book cover production"
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/xanthos/xanthos-thumb.png"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/xanthos-case-study"
+    />
+    <meta property="og:type" content="website" />
+    <title>
+      Estela Gaspar – UX/UI Designer - Xanthos Digital Marketing Agency
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
       }
 
       h1,
       h2,
-      h3 {
-        color: #444;
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
       }
 
       h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
       }
 
       h2 {
-        margin-top: 2rem;
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
       }
 
-      .contact,
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
       .section {
-        margin-bottom: 2rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
       }
 
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
-      }
-
-      .highlight {
-        font-weight: bold;
-        color: #555;
-      }
-      .ready-print {
+      .case-section {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .case-section {
+          background: #000 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          padding: 4px 10px;
+          border-radius: 8px;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div
-      class="section"
-      style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem"
-    >
+    <main class="container">
       <div class="back-btn">
-        <a href="javascript:history.back()" style="text-decoration: none"
-          >← Back</a
-        >
+        <a href="javascript:history.back()">← Back</a>
       </div>
+
       <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
         This is a ready-to-print page
       </h4>
-      <h1>Xanthos - E-Commerce, branding, and book cover production.</h1>
-      <h3>Client:</h3>
-      <p>Xanthos Digital Marketing</p>
-      <h3>Project(s):</h3>
-      <ul>
-        <li>
-          Leading a design team in E-Commerce, branding, and book cover
-          production. <br />
-          Leading client meetings to capture project goals and managing a team
-          of designers throughout the entire creative process.
-        </li>
-        <li>
-          E-Commerce. Developing responsive, user-friendly websites using CMS
-          platforms like Kentico and WordPress.
-        </li>
-        <li>
-          Designing book covers for best-selling IT publications, crafting
-          impactful branding and digital print materials for B2B and B2C
-          clients.
-        </li>
-      </ul>
-      <h3>Role:</h3>
-      <ul>
-        <li>Product Designer</li>
-        <li>Senior Designer</li>
-        <li>UX Designer</li>
-        <li>Web Designer</li>
-        <li>Book Cover Designer</li>
-      </ul>
-    </div>
 
-    <div class="section">
-      <h2>About the project(s)</h2>
-      <h3>
-        Leading a design team in E-Commerce, branding, and book cover
-        production.
-      </h3>
+      <h1>Xanthos Digital Marketing agency</h1>
 
-      <p>
-        Xanthos Digital, established in 2002 and based in Ely, Cambridgeshire,
-        is a dedicated digital marketing agency <br />committed to supporting
-        small and medium-sized businesses (SMBs) in achieving measurable growth
-        and maximising return on investment.
-      </p>
-      <p>
-        Their comprehensive range of services includes digital strategy
-        development, SEO, PPC management, email marketing, web design, <br />and
-        E-Commerce solutions. These services are expertly tailored to enhance
-        clients' online presence and drive sustainable success.
-      </p>
+      <div class="section">
+        <p>
+          Xanthos Digital, established in 2002 and based in Ely, Cambridgeshire,
+          is a digital marketing agency focused on helping small and
+          medium-sized businesses grow through strategic and creative digital
+          solutions.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/xanthos/xanthos-3.png"
-        alt="Xanthos Digital Marketing website."
-        title="Image of the Xanthos Digital Marketing website"
-      />
+        <p>
+          Its services include digital strategy, SEO, PPC management, email
+          marketing, web design, branding, and E-Commerce solutions. These
+          services are tailored to strengthen clients’ online presence and
+          support sustainable business growth across both B2B and B2C sectors.
+        </p>
 
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://www.xanthosdigital.com"
-          alt="Xanthos website"
-          title="Link to Xanthos website."
-          >Xanthos Digital Marketing website</a
-        >
-      </p>
+        <p>
+          Working across industries, the agency delivers a mix of E-Commerce,
+          branding, web design, and marketing services. This environment
+          required a balance between creativity and commercial thinking,
+          ensuring that every output not only looked strong but also performed
+          effectively in real-world business contexts.
+        </p>
 
-      <p>
-        During my tenure as a Senior Designer at Xanthos Digital, I was
-        responsible for leading client meetings to understand their unique needs
-        <br />and objectives, translating these into well-defined design briefs.
-        I managed a small team of content and web designers, overseeing the
-        <br />entire design and development process from wireframing and
-        prototyping, using tools like Axure, through to final implementation.
-        <br />Additionally, I gathered post-development feedback to inform sales
-        strategies and ensure continuous improvement.
-      </p>
+        <h2 style="margin-top: 40px">The challenge</h2>
+        <p>
+          The challenge was to deliver high-quality creative work across a wide
+          range of client needs, from E-Commerce platforms and marketing
+          campaigns to branding systems and book cover design.
+        </p>
+        <p>
+          Each project came with different audiences, industries, and
+          objectives, requiring fast adaptation and strong creative direction.
+          The work needed to balance visual impact with usability, ensuring that
+          designs were not only engaging but also clear, functional, and aligned
+          with business goals.
+        </p>
+        <p>
+          At the same time, managing multiple projects and outputs required
+          consistency, efficiency, and the ability to maintain a strong creative
+          standard across everything produced.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/xanthos/xanthos-4.png"
-        alt="Website project STA-LOK Terminals."
-        title="Image of website project I worked on: STA-LOK Terminals Limited website."
-      />
+        <p>
+          In practice, this meant translating varied client objectives into
+          clear and effective digital experiences, managing multiple types of
+          design output, and maintaining consistency across platforms and
+          channels. The work needed to support both strong presentation and
+          practical usability, while helping clients communicate clearly and
+          grow their businesses.
+        </p>
 
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://www.stalok.com"
-          alt="STA-LOK"
-          title="STA-LOK Terminals Limited"
-          >STA-LOK Terminals Limited</a
-        >
-      </p>
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          During my time as a Senior Designer at Xanthos Digital, I led client
+          meetings to understand business goals and project requirements,
+          translating these into structured design briefs and actionable
+          creative direction.
+        </p>
+        <p>
+          I operated at a
+          <strong>creative lead / creative director level</strong>, combining
+          hands-on design with team leadership and client strategy.
+        </p>
+        <p>
+          I led client conversations to uncover goals and translate them into
+          clear creative direction, while managing a small team of designers
+          across multiple projects.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/xanthos/xanthos-5.png"
-        alt="Website project Normans Musical Instruments."
-        title="Image of website project I worked on: Normans Musical Instruments."
-      />
+        <p>My role spanned:</p>
 
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://www.normans.co.uk"
-          alt="Normans"
-          title="Normans Musical Instruments"
-          >Normans Musical Instruments</a
-        >
-      </p>
+        <ul>
+          <li>Creative direction across digital and print</li>
+          <li>UX and UI design for websites and E-Commerce</li>
+          <li>Branding and visual identity development</li>
+          <li>
+            Book cover design and illustration for best-selling IT publications
+          </li>
+          <li>Web design and delivery using CMS platforms</li>
+        </ul>
 
-      <p>
-        A significant aspect of my role involved designing book covers for
-        best-selling IT publications, a task that required distilling complex,
-        <br />abstract technological concepts into captivating visual
-        narratives. Furthermore, I developed branding and digital print
-        materials for both B2B and B2C clients, <br />maintaining consistency
-        across all platforms. My expertise extended to creating responsive
-        websites following usability best practices, utilising<br />
-        content management systems such as Kentico and WordPress to deliver
-        user-friendly experiences.
-      </p>
+        <p>
+          I was responsible for shaping concepts, guiding execution, and
+          ensuring the final output met both creative and commercial
+          expectations.
+        </p>
 
-      <div>
-        <div>
-          <img
-            style="width: 200px; height: auto; padding: 10px 10px 10px 0px"
-            src="./images/xanthos/xanthos-book-cover-8.jpg"
-            alt="Book cover designed at Xanthos Digital Marketing for It Governance."
-            title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
-          />
-          <img
-            style="width: 200px; height: auto; padding: 10px 10px 10px 0px"
-            src="./images/xanthos/xanthos-book-cover-4.jpg"
-            alt="Book cover designed at Xanthos Digital Marketing for It Governance."
-            title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
-          />
-          <img
-            style="width: 200px; height: auto; padding: 10px 10px 10px 0px"
-            src="./images/xanthos/xanthos-book-cover-5.jpg"
-            alt="Book cover designed at Xanthos Digital Marketing for It Governance."
-            title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
-          />
-          <img
-            style="width: 200px; height: auto; padding: 10px 10px 10px 0px"
-            src="./images/xanthos/xanthos-book-cover-6.jpg"
-            alt="Book cover designed at Xanthos Digital Marketing for It Governance."
-            title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
-          />
-        </div>
-        <div>
-          <img
-            style="width: 200px; height: auto; padding: 10px 10px 10px 0px"
-            src="./images/xanthos/xanthos-book-cover-1.jpg"
-            alt="Book cover designed at Xanthos Digital Marketing for It Governance."
-            title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
-          />
+        <img
+          class="img-xl"
+          src="./images/xanthos/sta-lok-website.png"
+          alt="Website project STA-LOK Terminals"
+          title="Image of website project I worked on: STA-LOK Terminals Limited website."
+        />
 
-          <img
-            style="width: 200px; height: auto; padding: 10px 10px 10px 0px"
-            src="./images/xanthos/xanthos-book-cover-7.jpg"
-            alt="Book cover designed at Xanthos Digital Marketing for It Governance."
-            title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
-          />
-        </div>
+        <p class="label-text">
+          Source images:
+          <a
+            href="https://www.stalok.com"
+            alt="STA-LOK"
+            title="STA-LOK Terminals Limited"
+            >STA-LOK Terminals Limited</a
+          >
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/xanthos/normans-website.png"
+          alt="Website project Normans Musical Instruments"
+          title="Image of website project I worked on: Normans Musical Instruments."
+        />
+
+        <p class="label-text">
+          Source images:
+          <a
+            href="https://www.normans.co.uk"
+            alt="Normans"
+            title="Normans Musical Instruments"
+            >Normans Musical Instruments</a
+          >
+        </p>
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          My approach combined
+          <strong>creative thinking, structure, and collaboration.</strong>
+        </p>
+        <p>Each project typically followed a flow:</p>
+        <ul>
+          <li>Understanding client goals and defining the brief</li>
+          <li>Exploring concepts and visual directions</li>
+          <li>Wireframing and prototyping (Axure)</li>
+          <li>Designing and refining visual outputs</li>
+          <li>Supporting development and delivery (WordPress, Kentico)</li>
+        </ul>
+        <p>
+          Alongside digital work, I created book covers that translated complex
+          technical content into strong, engaging visuals, making abstract ideas
+          more accessible and marketable.
+        </p>
+        <p>
+          My process combined strategic thinking, collaboration, and hands-on
+          design delivery. It began with client meetings to define objectives,
+          understand the audience, and shape the design brief. From there, I
+          guided the team through concept development, wireframing, prototyping,
+          visual design, and implementation.
+        </p>
+
+        <p>
+          The work spanned E-Commerce, responsive website design, branding, and
+          digital print materials, using platforms such as Kentico and WordPress
+          to create user-friendly experiences grounded in usability best
+          practices. Alongside digital projects, I also designed book covers for
+          best-selling IT publications, translating complex technological ideas
+          into clear and compelling visual concepts.
+        </p>
+
+        <p>
+          Across all work, the approach focused on clarity, consistency, and
+          effectiveness, ensuring that creative output supported both user needs
+          and client objectives.
+        </p>
+        <p>Across all projects, I focused on:</p>
+        <ul>
+          <li>Clarity and usability</li>
+          <li>Strong visual storytelling</li>
+          <li>Consistency across platforms</li>
+          <li>Delivering work that performs, not just looks good</li>
+        </ul>
+
+        <img
+          class="img-xl"
+          src="./images/xanthos/book-covers.png"
+          alt="Book cover designed at Xanthos Digital Marketing for IT Governance"
+          title="Image of a book cover designed at Xanthos Digital Marketing for IT Governance."
+        />
+
+        <p class="label-text">
+          Selected examples of book cover design work created at Xanthos Digital
+          Marketing for IT Governance.
+        </p>
+
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution was in
+          <strong
+            >elevating the creative quality and strategic thinking across
+            projects</strong
+          >, while also ensuring delivery remained practical and efficient.
+        </p>
+        <p>
+          I led the creative direction and delivery across a diverse portfolio
+          of client projects, shaping websites, E-Commerce experiences, branding
+          systems, and book covers. By combining UX strategy with visual design
+          and hands-on execution, I delivered cohesive, high-quality solutions
+          across multiple formats that supported both user needs and business
+          goals.
+        </p>
+        <p>
+          I brought together UX, branding, and visual design to create work that
+          was both user-focused and commercially effective. By leading projects
+          end-to-end — from concept to execution — I helped clients present
+          their products, services, and ideas more clearly and with greater
+          impact.
+        </p>
+        <p>Beyond execution, I played a key role in:</p>
+        <ul>
+          <li>Guiding creative direction across multiple disciplines</li>
+          <li>Supporting and managing a design team</li>
+          <li>Translating business needs into strong visual solutions</li>
+          <li>
+            Delivering consistent, high-quality outputs across a diverse
+            portfolio
+          </li>
+        </ul>
+
+        <p>
+          I contributed not only through design execution, but also through
+          client communication, team coordination, and design direction. By
+          translating business requirements into effective creative solutions, I
+          supported projects from early concept through to final implementation,
+          helping clients communicate more clearly and present their brands more
+          effectively.
+        </p>
       </div>
-      <div></div>
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://www.itgovernance.co.uk/shop/category/itgp-books"
-          alt="IT Governance Ltd website"
-          title="IT Governance Ltd website shop. One-stop-shop for cyber security and data privacy risk management solutions"
-          >IT Governance</a
-        >
-      </p>
-    </div>
 
-    <a href="./case-studies.html">← Back to case studies</a>
-  </body>
-  <script>
-    function printPage() {
-      window.print();
-    }
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>
