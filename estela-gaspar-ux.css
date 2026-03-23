@@ -2115,6 +2115,10 @@ footer.footer-banner.drawwilder {
     box-shadow: 0 10px 30px rgba(61, 21, 95, 0.15);
   }
 
+  #logo-linkedin-card {
+    width: 30% !important;
+  }
+
   .portrait-eg {
     padding: 10px;
     width: 20%;
@@ -2405,6 +2409,10 @@ footer.footer-banner.drawwilder {
   }
 
   /* New page end */
+
+  #logo-linkedin-card {
+    width: 50% !important;
+  }
 
   :where(img, iframe, video) {
     display: block;
@@ -2809,6 +2817,10 @@ footer.footer-banner.drawwilder {
     padding: 10px;
     width: 50%;
     margin: 0 auto;
+  }
+
+  #logo-linkedin-card {
+    width: 40% !important;
   }
 
   :where(img) {
@@ -3310,11 +3322,6 @@ footer.footer-banner.drawwilder {
   box-shadow: 0 10px 30px rgba(61, 21, 95, 0.15);
 }
 
-.contact-content .linkedin-card img {
-  width: 50%;
-  height: auto;
-}
-
 /* Title */
 .linkedin-card h2 {
   font-size: 18px;
@@ -3382,8 +3389,8 @@ a.linkedin-btn {
 
 /* Contact page start  */
 
-.contact-content > .linkedin-card > .logo-linkedin-card {
-  width: 20% !important;
+#logo-linkedin-card {
+  width: 50%;
 }
 
 .role {
