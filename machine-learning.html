@@ -3,299 +3,487 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Artificial Intelligence – UX Practice and Applied Learning"
+    />
+    <meta
+      property="og:description"
+      content="Using AI tools in UX practice to analyse sentiment, uncover user insights, and support research, storytelling, and product thinking."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/amazon-comprehend-1.png"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/artificial-intelligence"
+    />
+    <meta property="og:type" content="website" />
     <title>Estela Gaspar – UX/UI Designer - Artificial Intelligence</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="./images/machine-learning/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/machine-learning/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/machine-learning/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
       }
 
-      h1,
-      h2,
-      h3 {
-        color: #444;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
       }
 
-      h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      h2 {
-        margin-top: 2rem;
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
       }
 
-      .contact,
-      .section {
-        margin-bottom: 2rem;
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
       }
 
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
+      p,
+      li {
+        overflow-wrap: anywhere;
       }
 
-      .highlight {
-        font-weight: bold;
-        color: #555;
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
       }
 
       .ready-print {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 0 24px;
+        padding: 10px 14px;
         font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
   </head>
+
   <body>
-    <div class="back-btn">
-      <a href="javascript:history.back()" style="text-decoration: none"
-        >← Back</a
-      >
-    </div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-      This is a ready-to-print page
-    </h4>
+    <main class="container">
+      <div class="back-btn">
+        <a href="javascript:history.back()">← Back</a>
+      </div>
 
-    <h1>Artificial Intelligence.</h1>
-    <h3>
-      <ul>
-        <li><strong>Client:</strong></li>
-        <li>Professional and personal growth.</li>
-        <li><strong>Project(s):</strong></li>
-        <li>Gaining skills that I apply in projects as needed.</li>
-        <li><strong>Role:</strong></li>
-        <li>
-          Acquiring and applying skills strategically to enhance project
-          outcomes.
-        </li>
-      </ul>
-    </h3>
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
 
-    <!-- Therac-25 -->
+      <h1>Artificial Intelligence</h1>
 
-    <div class="section">
-      <h2>About the project(s)</h2>
-      <h3>Using AI in my daily UX practice for sentiment analysis.</h3>
-      <p>
-        In my daily UX practice, I utilise tools like
-        <a
-          href="https://aws.amazon.com/getting-started/hands-on/analyze-sentiment-comprehend"
-          >AWS Amazon Comprehend</a
-        >
-        whenever feasible and aligned with business requirements to analyse text
-        in real-time. <br />There are a lot of tools in the market and companies
-        are starting to create similiar ones for internal use too. <br />These
-        tools allow you to extract key phrases, detecting dominant languages,
-        analysing sentiment, and identifying syntax.
-      </p>
+      <div class="section">
+        <h2>Applied learning in AI for UX research and product thinking</h2>
+        <p>
+          This area of work reflects my ongoing professional and personal
+          development in artificial intelligence, with a focus on applying AI
+          tools in practical ways to support UX research, product thinking, and
+          insight generation.
+        </p>
 
-      <p>
-        Amazon Comprehend, powered by AWS, is a Natural Language Processing
-        (NLP) tool that uses machine learning <br />to uncover insights and
-        relationships within text of UTF-8 encoded text documents.
-      </p>
-      <p>
-        For example, starting with an online review, such as one from BT, we can
-        quickly extract key sentiments and insights <br />using Amazon
-        Comprehend, as shown in the several example images.
-      </p>
-      <p>Key insights can be uncovered by:</p>
-      <ul>
-        <li>Extracting key phrases.</li>
-        <li>Analysing entity insights.</li>
-        <li>Identifying key sentiments.</li>
-        <li>Gaining insights from targeted sentiment.</li>
-      </ul>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/amazon-comprehend-1.png"
-        alt="Amazon Comprehend process"
-        title="How Amazon Comprehend works"
-      />
-      <p class="label-text">Picking up an online review.</p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/amazon-comprehend-2.png"
-        alt="Image of the process of analysing an online review"
-        title="Analysing an online review"
-      />
-      <p class="label-text">
-        Analysing an online review by picking up type of analysis.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/amazon-comprehend-3.png"
-        alt="Image of an Amazon Comprehend sentiment analysis"
-        title="Amazon Comprehend sentiment analysis"
-      />
-      <p class="label-text">
-        Picking up on entities insights. specific people, places, brands,
-        products, or concepts mentioned in a text. <br />They are often
-        extracted using Named Entity Recognition (NER) and analyzed to determine
-        sentiment related to them.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/amazon-comprehend-4.png"
-        alt="Image of an Amazon Comprehend sentiment analysis"
-        title="Amazon Comprehend sentiment analysis"
-      />
-      <p class="label-text">Picking up on key phrases.</p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/amazon-comprehend-5.png"
-        alt="Image of an Amazon Comprehend sentiment analysis"
-        title="Amazon Comprehend sentiment analysis"
-      />
-      <p class="label-text">Looking at targeted sentiment.</p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/amazon-comprehend-6.png"
-        alt="Image of an Amazon Comprehend sentiment analysis"
-        title="Amazon Comprehend sentiment analysis"
-      />
-      <p class="label-text">Getting the final sentiment analysis report.</p>
-    </div>
+        <p>
+          Rather than treating AI as a trend, I approach it as a set of tools
+          that can strengthen the design process when used thoughtfully. My
+          interest lies in how AI can help surface patterns in language,
+          identify sentiment, speed up analysis, and support more informed
+          decision-making in user-centred design.
+        </p>
 
-    <div class="section">
-      <h2>How does it work?</h2>
-      <ol>
-        <li>
-          The <strong class="skin-idea">DetectSentiment</strong> operation
-          returns an object that contains the detected sentiment and a
-          <strong class="plum-idea">SentimentScore</strong> object.
-        </li>
-        <li>
-          The <strong class="sky-idea">BatchDetectSentiment</strong> operation
-          returns a list of sentiments and
-          <strong class="earth-idea">SentimentScore</strong> objects, one for
-          each document in the batch.
-        </li>
-        <li>
-          The
-          <strong class="mustard-idea">StartSentimentDetectionJob</strong>
-          operation starts an asynchronous job that produces a file containing a
-          list of sentiment, <br />send
-          <strong class="green-idea">SentimentScore</strong> objects, one for
-          each document in the job.
-        </li>
-        <li>
-          The sentiment determination returns one of the following categories
-          ina report:
-        </li>
+        <h2 style="margin-top: 40px">The challenge</h2>
+
+        <p>
+          The challenge is not simply learning new AI tools, but understanding
+          how to use them responsibly and meaningfully within design practice.
+          AI can process large amounts of text and detect patterns quickly, but
+          the real value comes from knowing how to interpret those outputs,
+          connect them to human behaviour, and turn them into useful design
+          insights.
+        </p>
+
+        <p>
+          In UX work, research often produces large volumes of qualitative data,
+          from reviews and survey comments to interview notes and support
+          feedback. Analysing this manually can be time-consuming. The
+          opportunity with AI is to accelerate parts of that process while still
+          applying human judgement, context, and storytelling to make the
+          findings useful.
+        </p>
+
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          My role in this space is one of active exploration, skill building,
+          and applied experimentation. I use AI tools strategically to support
+          project outcomes, especially in areas such as sentiment analysis,
+          research synthesis, empathy mapping, and early product thinking.
+        </p>
+
+        <p>
+          For example, in my UX practice I use tools such as
+          <a
+            href="https://aws.amazon.com/getting-started/hands-on/analyze-sentiment-comprehend"
+            >AWS Amazon Comprehend</a
+          >
+          when appropriate to analyse text in real time, extract key phrases,
+          detect dominant languages, identify entities, and uncover sentiment
+          patterns. I then use those findings to support empathy maps, journey
+          mapping, and stakeholder communication.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/machine-learning/amazon-comprehend-1.png"
+          alt="Amazon Comprehend process"
+          title="How Amazon Comprehend works"
+        />
+        <p class="label-text">Picking up an online review.</p>
+
+        <img
+          class="img-xl"
+          src="./images/machine-learning/amazon-comprehend-2.png"
+          alt="Image of the process of analysing an online review"
+          title="Analysing an online review"
+        />
+        <p class="label-text">
+          Analysing an online review by selecting the type of analysis.
+        </p>
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          My approach combines machine-assisted analysis with human judgement. I
+          start with real text-based inputs, such as online reviews or user
+          feedback, and use AI tools to surface patterns that may otherwise take
+          longer to identify manually.
+        </p>
+
+        <p>Typical insight areas include:</p>
         <ul>
-          <li>
-            &#128522; <strong>Positive</strong> – The text expresses an overall
-            positive sentiment.
-          </li>
-          <li>
-            &#128544; <strong>Negative</strong> – The text expresses an overall
-            negative sentiment.
-          </li>
-          <li>
-            &#128532; <strong>Mixed</strong> – The text expresses both positive
-            and negative sentiments.
-          </li>
-          <li>
-            &#128529; <strong>Neutral</strong> – The text does not express
-            either positive or negative sentiments.
-          </li>
+          <li>Extracting key phrases</li>
+          <li>Identifying entities such as products, brands, or themes</li>
+          <li>Analysing overall sentiment</li>
+          <li>Reviewing targeted sentiment linked to specific terms</li>
+          <li>Using these outputs to inform empathy maps and user journeys</li>
         </ul>
-        <li>
-          I gather these reports to create empathy maps and communicate insights
-          to the stakeholders.
-        </li>
-      </ol>
 
-      <h2>
-        How do I use these insights into user experience design and product
-        development?
-      </h2>
-      <p>
-        This process allows me to use insights quickly, which otherwise would
-        take longer to extract and, apply them to empathy maps <br />and user
-        journey maps, allowing me to understand user challenge and redefine the
-        problem statement further with background, objective data.
-      </p>
-      <p>
-        I can create UX deliverables such as empathy maps, user journeys and
-        graphs to explain the user experience and tell a story (storytelling)
-        easily <br />to stakeholders with reliable background data. Amazon
-        Comprehend allows you to spot factors, key trends and sentiment very
-        quickly but it is still <br />required a human overview to discern what
-        is important and irrelevant for a particular project, the storytelling
-        and filter necessary to make <br />sense of information a useful piece
-        of work with value for an organisation.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        class="port-images"
-        src="./images/empathy-map.png"
-      />
-      <h2>What am I currently doing?</h2>
-      <p>
-        Creating a chatbot with
-        <a
-          href="https://mistral.ai/"
-          title="Application to build AI-powered apps"
-          aria-label="Go to the Mistral website that provides an AI FREE API"
-          >Mistral</a
-        >! You can see what I have done so far
-        <a
-          href="./that-firefly/chatbot/public/chatbot-estela.html"
-          title="Project with my own built from scratch chatbot"
-          aria-label="View my own built from scratch chatbot here"
-          >here</a
-        >.
-      </p>
-      <p>Learning and practising with AI, ML, Data and Data Visualisation.</p>
-      <p>
-        Stay tuned for updates and enhancements to this portfolio page.<br />
-        I am always exploring, experimenting, and refining my skills through
-        coding, GitHub, and writing about topics such as:
-      </p>
-      <ol>
-        <li>AI product design & UX research for AI models.</li>
-        <li>Conversational UX & voice AI.</li>
-        <li>Explainable AI (XAI) & ethical UX.</li>
-        <li>Data visualization & AI interaction design.</li>
-        <li>Human-AI collaboration & automation.</li>
-      </ol>
-    </div>
+        <p>
+          Amazon Comprehend, for example, uses natural language processing and
+          machine learning to uncover insights within UTF-8 encoded text
+          documents. It can return sentiment categories such as positive,
+          negative, mixed, and neutral, along with supporting scores that help
+          reveal how users feel about specific experiences or topics.
+        </p>
 
-    <a href="./case-studies.html">← Back to case studies</a>
-  </body>
-  <script>
-    function printPage() {
-      window.print();
-    }
+        <img
+          class="img-xl"
+          src="./images/machine-learning/amazon-comprehend-3.png"
+          alt="Image of an Amazon Comprehend sentiment analysis"
+          title="Amazon Comprehend sentiment analysis"
+        />
+        <p class="label-text">
+          Picking up on entity insights: specific people, places, brands,
+          products, or concepts mentioned in a text.
+        </p>
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+        <img
+          class="img-xl"
+          src="./images/machine-learning/amazon-comprehend-4.png"
+          alt="Image of an Amazon Comprehend sentiment analysis"
+          title="Amazon Comprehend sentiment analysis"
+        />
+        <p class="label-text">Picking up on key phrases.</p>
+
+        <img
+          class="img-xl"
+          src="./images/machine-learning/amazon-comprehend-5.png"
+          alt="Image of an Amazon Comprehend sentiment analysis"
+          title="Amazon Comprehend sentiment analysis"
+        />
+        <p class="label-text">Looking at targeted sentiment.</p>
+
+        <img
+          class="img-xl"
+          src="./images/machine-learning/amazon-comprehend-6.png"
+          alt="Image of an Amazon Comprehend sentiment analysis"
+          title="Amazon Comprehend sentiment analysis"
+        />
+        <p class="label-text">Getting the final sentiment analysis report.</p>
+
+        <p>
+          I then translate those findings into UX artefacts and narratives that
+          stakeholders can use. This includes empathy maps, user journeys,
+          insight summaries, and visual storytelling that help teams understand
+          what users are experiencing and where opportunities for improvement
+          exist.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/machine-learning/empathy-map.png"
+          alt="Empathy map example"
+          title="Empathy map example"
+        />
+
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution lies in bridging AI capability with design thinking. I
+          use AI to accelerate parts of the research and synthesis process, but
+          always with a human layer of interpretation, filtering, and judgment.
+          That balance is important: AI can surface patterns quickly, but it
+          still takes design thinking to decide what matters, what is noise, and
+          how the insight should shape the product experience.
+        </p>
+
+        <p>
+          This practice helps me work faster and more strategically when dealing
+          with qualitative data, while also improving how I communicate insights
+          to stakeholders. It strengthens my ability to move from raw text to
+          structured understanding, and from structured understanding to
+          meaningful UX decisions.
+        </p>
+
+        <p>
+          I am also continuing to build in this area through experimentation and
+          prototyping. One example is a chatbot built with
+          <a
+            href="https://mistral.ai/"
+            title="Application to build AI-powered apps"
+            aria-label="Go to the Mistral website that provides an AI FREE API"
+            >Mistral</a
+          >, which you can view
+          <a
+            href="./that-firefly/chatbot/public/chatbot-estela.html"
+            title="Project with my own built from scratch chatbot"
+            aria-label="View my own built from scratch chatbot here"
+            >here</a
+          >.
+        </p>
+
+        <p>
+          Alongside this, I continue learning and practising across AI, machine
+          learning, data, and data visualisation, with a particular interest in:
+        </p>
+
+        <ol>
+          <li>AI product design and UX research for AI models</li>
+          <li>Conversational UX and voice AI</li>
+          <li>Explainable AI and ethical UX</li>
+          <li>Data visualisation and AI interaction design</li>
+          <li>Human-AI collaboration and automation</li>
+        </ol>
+      </div>
+
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>

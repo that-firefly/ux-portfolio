@@ -3,249 +3,473 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <meta property="og:title" content="DEFRA – UX Case Study" />
+    <meta
+      property="og:description"
+      content="Designing user-centred services for Extended Producer Responsibility, Packaging Recovery Notes, and Materials Facilities."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/packaging-defra.png"
+    />
+    <meta property="og:url" content="https://thatfirefly.com/defra-project" />
+    <meta property="og:type" content="website" />
+    <title>Estela Gaspar – UX/UI Designer - DEFRA</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
       }
 
-      h1,
-      h2,
-      h3 {
-        color: #444;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
       }
 
-      h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      h2 {
-        margin-top: 2rem;
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
       }
 
-      .contact,
-      .section {
-        margin-bottom: 2rem;
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
       }
 
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
+      p,
+      li {
+        overflow-wrap: anywhere;
       }
 
-      .highlight {
-        font-weight: bold;
-        color: #555;
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
       }
 
       .ready-print {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 0 24px;
+        padding: 10px 14px;
         font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="back-btn">
-      <a href="javascript:history.back()" style="text-decoration: none"
-        >← Back</a
-      >
-    </div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-      This is a ready-to-print page
-    </h4>
-    <h1>DEFRA projects</h1>
-    <h3>
-      <ul>
-        <li>
-          <strong>Client:</strong>
-        </li>
-        <li>DEFRA</li>
-        <li>
-          <strong>Project(s):</strong>
-        </li>
-        <li>
-          Extended Producer Responsibility for Packaging (EPR) and Packaging
-          Recovery Notes (PRN) and Materials Facilities.
-        </li>
-        <li><strong>Role:</strong></li>
-        <li>
-          Mostly user interface designer and user experience designer. Some user
-          research and service design.
-        </li>
-      </ul>
-    </h3>
+    <main class="container">
+      <div class="back-btn">
+        <a href="javascript:history.back()">← Back</a>
+      </div>
 
-    <!-- Therac-25 -->
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
 
-    <div class="section">
-      <h2>About the project(s)</h2>
-      <h3>
-        The Extended Producer Responsibility (EPR) is a regulatory framework
-        that holds producers accountable<br />
-        for the environmental impact of their packaging throughout its
-        lifecycle. It incentivises sustainable packaging design, <br />waste
-        reduction, and improved recycling processes by holding producers
-        responsible for the amount and type of packaging they introduce into the
-        market.
-      </h3>
+      <h1>DEFRA</h1>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/packaging-defra.png"
-        alt="Image about the DEFRA EPR service with key stages"
-        title="DEFRA EPR service"
-      />
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://assets.publishing.service.gov.uk/media/5a78c38c40f0b62b22cbc9c2/pb13189-full-packaging-strategy-090624.pdf"
-          title="DEFRA - Making the most of packaging"
-          >DEFRA - Making the most of packaging</a
-        >
-      </p>
-      <p>
-        Packaging Recovery Notes (PRNs) are evidence-based certificates that
-        businesses can purchase to prove compliance with packaging recycling
-        obligations, <br />ensuring that a corresponding amount of packaging
-        waste is recycled. Materials Facilities play a crucial role in the
-        recycling chain by sorting, processing, <br />and supplying recyclable
-        materials to manufacturers, promoting a circular economy and reducing
-        landfill waste. <br />Together, these systems drive responsible waste
-        management and sustainability in the packaging industry.
-      </p>
-      <p>
-        I began these projects, as always, by gaining a deep understanding of
-        both the business and user needs, as well as the specific problems to be
-        solved. <br />I drew upon existing research and collaborated with
-        stakeholders, while also taking the initiative to apply my user research
-        skills.<br />
-        Drawing from my previous experience, I conducted a lean, quick
-        self-discovery study to identify key areas of focus.
-      </p>
-      <p>
-        To structure my insights, I created my own lean UX canvas, user task
-        maps, user diaries, and empathy maps. <br />Additionally, I developed
-        discovery user flows and journey maps to pinpoint critical micro-moments
-        in the user experience.
-      </p>
-      <p>
-        Created user flow diagrams, empathy maps, user flows with page patterns
-        as per UK Government Digital Service (GDS) Design System, <br />updated
-        online prototypes using the GOV.UK Prototype Kit, GitHub repository and
-        code (nunjucks).
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/ux/as-is-mapping-example.jpg"
-        alt="Image of UX deliverables"
-        title="An image collection of some of the UX deliverables created"
-      />
-      <p>
-        My goal was to identify the real users of the service, empathise with
-        their daily experiences, and refine the experience to better meet their
-        needs. <br />Mostly I aimed at serving producers and regulators.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/ux/user-interface-scope.jpg"
-        alt="Image of the users, producers and regulators."
-        title="Image of the main users, producers and regulators."
-      />
-      <img
-        style="width: 500px; height: auto"
-        src="./images/ux/as-is-mapping-example-2.jpg"
-        alt="Image about the users, mostly producers and regulators"
-        title="An image of the type of users such as producers and regulators"
-      />
-      <p>
-        Conducted user experience research on platforms such as PowerBI and
-        GOV.UK web pages web applications to understand producers and
-        regulators' behaviour, main objectives, and tasks.
-      </p>
-      <p>
-        I also created user task diagrams and data maps to provide me with a
-        clear visualisation of data flow and its interconnections with user
-        objectives and tasks, ensuring better alignment<br />
-        and understanding. I have used artificial intelligence from Eviden’s
-        internal platform to assist me with this task.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/ux/applications-defra.png"
-        alt="PowerBI and GDS UX flows diagrams"
-        title="Tools that I have used in DEFRA. PowerBI and GDS UX flows diagrams"
-      />
-      <img
-        style="width: 500px; height: auto"
-        src="./images/ux/data-mapping.jpg"
-        alt="Data map example"
-        title="An example of a data map created"
-      />
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://www.figma.com/community/file/1190408343174633432/govuk-design-system-flow-diagrams"
-          title="Figma community GDS flow page patterns diagrams"
-          >GDS flow diagrams - Figma community - MHCLG and Paul Smith</a
-        >,
-        <a
-          href="https://en.wikipedia.org/wiki/Microsoft_Power_BI"
-          title="Wikipedia PowerBI logo"
-          >Wikipedia PowerBI logo</a
-        >, DEFRA CSV file data mapping.
-      </p>
-      <p>
-        I analysed previous documentation, user interviews, and workshops to
-        identify user emotions, challenges, and opportunities for improvement
-        <br />across platforms and standards. My focus was on enhancing the
-        overall user experience by creating a seamless and holistic journey,
-        aligning with an omnichannel objective.
-      </p>
+      <div class="section">
+        <h2>
+          Extended Producer Responsibility (EPR), Packaging Recovery Notes
+          (PRN), and Materials Facilities
+        </h2>
+        <p>
+          The Department for Environment, Food and Rural Affairs (DEFRA) is the
+          UK government department responsible for improving and protecting the
+          environment. Within this context, projects such as Extended Producer
+          Responsibility (EPR), Packaging Recovery Notes (PRN), and Materials
+          Facilities support more sustainable waste management, clearer
+          regulatory processes, and better environmental accountability across
+          the packaging lifecycle.
+        </p>
 
-      <img
-        style="width: 700px; height: auto"
-        src="./images/ux/user-flows.jpg"
-        alt="Image of prototype user flows"
-        title="An image of the EPR prototype user flows"
-      />
-    </div>
+        <p>
+          EPR is a regulatory framework that holds producers responsible for the
+          environmental impact of the packaging they place on the market.
+          Packaging Recovery Notes help demonstrate compliance with recycling
+          obligations, while Materials Facilities play a key role in sorting and
+          processing recyclable materials. Together, these services contribute
+          to a more circular economy and encourage better environmental
+          outcomes.
+        </p>
 
-    <a href="./case-studies.html">← Back to case studies</a>
-  </body>
-  <script>
-    function printPage() {
-      window.print();
-    }
+        <img
+          class="img-xl"
+          src="./images/defra/packaging-defra.png"
+          alt="Image about the DEFRA EPR service with key stages"
+          title="DEFRA EPR service"
+        />
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+        <p class="label-text">
+          Source image:
+          <a
+            href="https://assets.publishing.service.gov.uk/media/5a78c38c40f0b62b22cbc9c2/pb13189-full-packaging-strategy-090624.pdf"
+            title="DEFRA - Making the most of packaging"
+            >DEFRA - Making the most of packaging</a
+          >
+        </p>
+
+        <h2 style="margin-top: 40px">The challenge</h2>
+
+        <p>
+          The challenge was to shape digital services around complex regulatory
+          processes involving environmental compliance, reporting, recycling
+          evidence, and data handling. The users of these services, particularly
+          producers and regulators, often needed to navigate detailed
+          requirements, large amounts of information, and cross-platform tasks
+          that were not always easy to understand or connect.
+        </p>
+
+        <p>
+          This made the work not just about interface design, but about
+          simplifying complexity, identifying real user needs, and designing
+          clearer service journeys around tasks, data, and decision-making. A
+          key part of the challenge was ensuring the experience aligned with GDS
+          standards while also supporting a more seamless, joined-up journey
+          across related systems and touchpoints.
+        </p>
+
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          My role was primarily focused on user interface design and user
+          experience design, with elements of user research and service design.
+          I worked on understanding both business and user needs, shaping
+          journeys, improving clarity, and translating complex regulatory
+          processes into more structured and usable service experiences.
+        </p>
+
+        <p>
+          I created user flow diagrams, empathy maps, task maps, discovery
+          journey maps, and page flows aligned with the UK Government Digital
+          Service (GDS) Design System. I also updated online prototypes using
+          the GOV.UK Prototype Kit, GitHub, and Nunjucks, helping connect
+          research, flows, and interface design into functional prototype
+          journeys.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/defra/as-is-mapping-example.jpg"
+          alt="Image of UX deliverables"
+          title="An image collection of some of the UX deliverables created"
+        />
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          I began by building a strong understanding of the regulatory context,
+          user needs, and the specific problems the service needed to solve.
+          This included reviewing previous research, documentation, user
+          interviews, and workshop outputs, as well as collaborating closely
+          with stakeholders across the project.
+        </p>
+
+        <p>
+          To structure my thinking, I created a lean UX canvas, user task maps,
+          empathy maps, user diaries, and discovery journey flows to identify
+          critical moments in the experience. This helped uncover where users
+          were getting stuck, what they were trying to achieve, and how the
+          service could better support them.
+        </p>
+
+        <p>
+          A core part of the process involved identifying the real users of the
+          service, particularly producers and regulators, and understanding
+          their objectives, behaviours, and pain points across platforms such as
+          GOV.UK services and Power BI environments. I also created user task
+          diagrams and data maps to visualise the relationship between user
+          goals, data flow, and service interactions, helping bring more
+          alignment and clarity to the wider system.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/defra/user-interface-scope.jpg"
+          alt="Image of the users, producers and regulators"
+          title="Image of the main users, producers and regulators"
+        />
+
+        <img
+          class="img-xl"
+          src="./images/defra/as-is-mapping-example-2.jpg"
+          alt="Image about the users, mostly producers and regulators"
+          title="An image of the type of users such as producers and regulators"
+        />
+
+        <p>
+          I analysed service touchpoints holistically, with the aim of improving
+          the overall journey rather than isolated screens. This meant working
+          with an omnichannel perspective, ensuring that flows, content, data,
+          and interface patterns connected more coherently across the service.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/defra/applications-defra.png"
+          alt="PowerBI and GDS UX flows diagrams"
+          title="Tools that I have used in DEFRA. PowerBI and GDS UX flows diagrams"
+        />
+
+        <img
+          class="img-xl"
+          src="./images/defra/data-mapping.jpg"
+          alt="Data map example"
+          title="An example of a data map created"
+        />
+
+        <p class="label-text">
+          Source images:
+          <a
+            href="https://www.figma.com/community/file/1190408343174633432/govuk-design-system-flow-diagrams"
+            title="Figma community GDS flow page patterns diagrams"
+            >GDS flow diagrams - Figma community - MHCLG and Paul Smith</a
+          >,
+          <a
+            href="https://en.wikipedia.org/wiki/Microsoft_Power_BI"
+            title="Wikipedia PowerBI logo"
+            >Wikipedia PowerBI logo</a
+          >, DEFRA CSV file data mapping.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/defra/user-flows.jpg"
+          alt="Image of prototype user flows"
+          title="An image of the EPR prototype user flows"
+        />
+
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution focused on making complex environmental compliance
+          services more understandable, better structured, and more
+          user-centred. By combining UX thinking, interface design, and
+          lightweight research methods, I helped uncover user needs and
+          translate them into clearer journeys, flows, and prototype
+          experiences.
+        </p>
+
+        <p>
+          I brought together research insights, journey mapping, task analysis,
+          page patterns, and prototyping to improve alignment between business
+          objectives, user goals, and service delivery. This included refining
+          flows around producers and regulators, clarifying relationships
+          between tasks and data, and supporting a more cohesive experience
+          across multiple platforms and service touchpoints.
+        </p>
+
+        <p>
+          Overall, my role helped shape a more holistic and usable service
+          direction, balancing regulatory complexity with clarity, usability,
+          and better design thinking across the experience.
+        </p>
+      </div>
+
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -3,237 +3,480 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <meta
+      property="og:title"
+      content="Europa Science Group – Web Design and Marketing Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Designing accessible, standards-compliant websites and email campaigns for a specialist science publishing company."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/europascience/europascience-1.png"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/europa-science-group-case-study"
+    />
+    <meta property="og:type" content="website" />
+    <title>Estela Gaspar – UX/UI Designer - Europa Science Group</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estela Gaspar favicon -->
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
       }
 
       h1,
       h2,
-      h3 {
-        color: #444;
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
       }
 
       h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
       }
 
       h2 {
-        margin-top: 2rem;
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
       }
 
-      .contact,
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
       .section {
-        margin-bottom: 2rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
       }
 
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
-      }
-
-      .highlight {
-        font-weight: bold;
-        color: #555;
-      }
-      .ready-print {
+      .case-section {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .case-section {
+          background: #000 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          padding: 4px 10px;
+          border-radius: 8px;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div
-      class="section"
-      style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem"
-    >
+    <main class="container">
       <div class="back-btn">
-        <a href="javascript:history.back()" style="text-decoration: none"
-          >← Back</a
-        >
+        <a href="javascript:history.back()">← Back</a>
       </div>
+
       <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
         This is a ready-to-print page
       </h4>
-      <h1>Europa Science Group - Web Design and Marketing.</h1>
-      <h3>Client:</h3>
-      <p>Europa Science Group</p>
-      <h3>Project(s):</h3>
-      <ul>
-        <li>
-          Creating and updating ccessible, standards-compliant websites adhering
-          to WC3 guidelines <br />and email campaigns using HTML, CSS, PHP,
-          JavaScript, WordPress, and Drupal.
-        </li>
-      </ul>
-      <h3>Role:</h3>
-      <ul>
-        <li>Web Designer</li>
-        <li>Graphic Designer (email marketing)</li>
-      </ul>
-    </div>
 
-    <div class="section">
-      <h2>About the project(s)</h2>
-      <h3>
-        Creating and updating ccessible, standards-compliant websites adhering
-        <br />to WC3 guidelines and email campaigns using HTML, CSS, PHP,
-        JavaScript, WordPress, and Drupal.
-      </h3>
-      <p>
-        Europa Science is a renowned publishing company specialising in
-        delivering cutting-edge content through a diverse range of magazines.
-        <br />Their publications cover a wide array of scientific and
-        technological topics, providing industry insights, research
-        developments, and expert perspectives.
-      </p>
-      <p>
-        Europa Science Ltd, part of the Europa Science Group, commenced trading
-        in 2003 with the acquisition of Electro Optics and Scientific Computing
-        World. <br />The company subsequently launched several spin-out titles,
-        beginning with Research Information (sold in 2024) and Imaging and
-        Machine Vision Europe in late 2003, <br />followed by Laser Systems
-        Europe in 2008 (merged into Electro Optics in 2024), coinciding with the
-        inaugural Lasys event.
-      </p>
-      <p>
-        In 2009, Europa Science acquired Optics and Laser Europe from the
-        Institute of Physics Publishing, leading to an expansion of Electro
-        Optics to ten issues per year. <br />As part of the same transaction,
-        Fibre Systems was also acquired and subsequently relaunched in 2013.
-      </p>
-      <img
-        style="width: 500px; height: auto"
-        src="./images/europascience/europascience-1.png"
-        alt="Europa Science publishing company website"
-        title="Europa Science publishing company website"
-      />
-      <p class="label-text">Europa Science publishing company website</p>
-      <p class="label-text">
-        Source image:
-        <a
-          href="https://www.europascience.com"
-          title="Visit Europa Science publishing company website"
-          >Europa Science</a
-        >
-      </p>
+      <h1>Europa Science Group</h1>
 
-      <p>
-        Today, Europa Science’s services extend beyond publishing into community
-        building and marketing services across photonics, <br />imaging,
-        scientific computing, and optical communications.
-      </p>
-      <p>
-        During my time at Europa Science, I worked on their websites using
-        Drupal and PHP, handled email campaigns, and primarily performed
-        <br />web design tasks, with some graphic design work focused on email
-        campaigns, expert blogs, and thought leadership articles.
-      </p>
+      <div class="section">
+        <h2>Web design and marketing</h2>
+        <p>
+          Europa Science Group is a specialist publishing company focused on
+          scientific and technological sectors, delivering industry insight,
+          research developments, and expert perspectives through a portfolio of
+          magazines and digital platforms.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/europascience/europascience-applications.png"
-        alt="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress."
-        title="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress to develop and maintain websites, as well as to create and manage email campaigns."
-      />
-      <p class="label-text">
-        Applications utilised at Europa Science: Drupal, PHP, HTML, CSS,
-        JavaScript, and WordPress <br />to develop and maintain websites, as
-        well as to create and manage email campaigns.
-      </p>
-      <p class="label-text">
-        Source images:
-        <a
-          href="https://www.europascience.com"
-          title="Visit Europa Science publishing company website"
-          >Europa Science</a
-        >,
-        <a
-          href="https://en.m.wikipedia.org"
-          alt="Wikimedia Foundation"
-          title="Wikimedia Foundation, a nonprofit organisation that hosts and supports some of the world’s largest collaborative knowledge projects, including Wikipedia, Wikidata, Wikimedia Commons, and other free knowledge initiatives."
-          >Wikipedia</a
-        >
-      </p>
+        <p>
+          Over time, the company expanded through acquisitions and new launches,
+          building a strong presence across photonics, imaging, scientific
+          computing, and optical communications. Alongside publishing, Europa
+          Science also developed broader marketing and community-building
+          services, supporting specialist audiences through content, digital
+          platforms, and targeted communications.
+        </p>
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/europascience/europascience-2.png"
-        alt="Europa Science publishing company website"
-        title="Europa Science publishing company website"
-      />
-      <p class="label-text">Europa Science publishing company website</p>
-      <p class="label-text">
-        Source image:
-        <a
-          href="https://www.europascience.com"
-          title="Visit Europa Science publishing company website"
-          >Europa Science</a
-        >
-      </p>
-      <p>
-        I created accessible, standards-compliant websites adhering to WC3
-        guidelines <br />and developed email campaigns and websites using HTML,
-        CSS, PHP, JavaScript, WordPress, and Drupal.
-      </p>
+        <img
+          class="img-xl"
+          src="./images/europascience/europascience-1.png"
+          alt="Europa Science publishing company website"
+          title="Europa Science publishing company website"
+        />
 
-      <img
-        style="width: 500px; height: auto"
-        src="./images/europascience/europascience-3.png"
-        alt="Europa Science publishing company website"
-        title="Europa Science publishing company website"
-      />
-      <p class="label-text">
-        Europa Science publishing company website and some of the magazines they
-        produce
-      </p>
-      <p class="label-text">
-        Source image:
-        <a
-          href="https://www.europascience.com"
-          title="Visit Europa Science publishing company website"
-          >Europa Science</a
-        >
-      </p>
-    </div>
+        <p class="label-text">Europa Science publishing company website</p>
+        <p class="label-text">
+          Source image:
+          <a
+            href="https://www.europascience.com"
+            title="Visit Europa Science publishing company website"
+            >Europa Science</a
+          >
+        </p>
 
-    <a href="./case-studies.html">← Back to case studies</a>
-  </body>
-  <script>
-    function printPage() {
-      window.print();
-    }
+        <h2 style="margin-top: 40px">The challenge</h2>
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+        <p>
+          The challenge was to maintain and improve digital experiences for a
+          specialist publishing business serving multiple technical industries,
+          while ensuring the websites remained accessible, standards-compliant,
+          and effective in communicating complex content clearly.
+        </p>
+
+        <p>
+          This involved balancing editorial, technical, and marketing needs
+          across websites and campaigns, while working with platforms such as
+          Drupal and WordPress and technologies including HTML, CSS, PHP, and
+          JavaScript. The work also needed to support consistency across digital
+          touchpoints and ensure that communications felt clear, credible, and
+          aligned with the brand.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/europascience/europascience-2.png"
+          alt="Europa Science publishing company website"
+          title="Europa Science publishing company website"
+        />
+
+        <p class="label-text">Europa Science publishing company website</p>
+        <p class="label-text">
+          Source image:
+          <a
+            href="https://www.europascience.com"
+            title="Visit Europa Science publishing company website"
+            >Europa Science</a
+          >
+        </p>
+
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          I worked primarily as a web designer, with additional graphic design
+          responsibilities focused on email marketing, expert blogs, and thought
+          leadership content. My role included creating and updating websites,
+          supporting campaign delivery, and ensuring digital outputs were both
+          visually clear and technically sound.
+        </p>
+
+        <p>
+          I developed accessible, standards-compliant websites aligned with W3C
+          guidelines, using HTML, CSS, PHP, JavaScript, WordPress, and Drupal.
+          Alongside website work, I designed and built email campaigns that
+          supported marketing and editorial objectives while maintaining a
+          strong visual standard across communications.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/europascience/europascience-applications.png"
+          alt="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress."
+          title="Applications utilised at Europa Science: Drupal, PHP, HTML, CSS, JavaScript, and WordPress to develop and maintain websites, as well as to create and manage email campaigns."
+        />
+
+        <p class="label-text">
+          Applications utilised at Europa Science: Drupal, PHP, HTML, CSS,
+          JavaScript, and WordPress to develop and maintain websites, as well as
+          to create and manage email campaigns.
+        </p>
+        <p class="label-text">
+          Source images:
+          <a
+            href="https://www.europascience.com"
+            title="Visit Europa Science publishing company website"
+            >Europa Science</a
+          >,
+          <a
+            href="https://en.m.wikipedia.org"
+            alt="Wikimedia Foundation"
+            title="Wikimedia Foundation, a nonprofit organisation that hosts and supports some of the world’s largest collaborative knowledge projects, including Wikipedia, Wikidata, Wikimedia Commons, and other free knowledge initiatives."
+            >Wikipedia</a
+          >
+        </p>
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          My approach focused on combining design clarity with technical
+          practicality. For web projects, this meant creating and updating pages
+          that were accessible, standards-compliant, and structured to support
+          readability, usability, and clear navigation across specialist
+          content.
+        </p>
+
+        <p>
+          Working with Drupal, WordPress, HTML, CSS, PHP, and JavaScript, I
+          supported the ongoing evolution of the company’s websites while
+          ensuring that layouts, content presentation, and interactions remained
+          functional and user-friendly. At the same time, I created email
+          campaigns and supporting graphic assets that extended the brand across
+          marketing communications and editorial content.
+        </p>
+
+        <p>
+          Because Europa Science operated in technical and content-rich sectors,
+          the work required attention to detail, consistency, and an ability to
+          make specialist information feel more approachable and visually
+          digestible for readers and industry audiences.
+        </p>
+
+        <img
+          class="img-xl"
+          src="./images/europascience/europascience-3.png"
+          alt="Europa Science publishing company website"
+          title="Europa Science publishing company website"
+        />
+
+        <p class="label-text">
+          Europa Science publishing company website and some of the magazines
+          they produce
+        </p>
+        <p class="label-text">
+          Source image:
+          <a
+            href="https://www.europascience.com"
+            title="Visit Europa Science publishing company website"
+            >Europa Science</a
+          >
+        </p>
+
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution focused on improving the clarity, accessibility, and
+          consistency of Europa Science’s digital presence across websites and
+          email communications. I helped create online experiences that were
+          visually clean, technically robust, and aligned with recognised web
+          standards.
+        </p>
+
+        <p>
+          By combining web design with front-end implementation and digital
+          campaign support, I contributed to a more coherent and effective
+          online presence for a specialist publishing brand. My work helped make
+          content easier to navigate, communications more polished, and digital
+          outputs better suited to the needs of both the business and its expert
+          audiences.
+        </p>
+      </div>
+
+      <section class="back-link">
+        <a href="./case-studies.html">← Back to case studies</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>
