@@ -6,7 +6,7 @@
   --text: #ffffff;
   --muted: #171417;
   --border: #ffffff;
-  --shadow: 0 10px 30px rgba(2, 6, 23, .45);
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.45);
   --radius: 18px;
   --max: 1120px;
 }
@@ -18,13 +18,11 @@
   gap: 10px;
 }
 
-
 .title,
 h2,
 p {
   color: #171417;
 }
-
 
 video.responsive-video {
   width: 100%;
@@ -34,7 +32,7 @@ video.responsive-video {
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html,
@@ -43,9 +41,16 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
   font-size: 16px;
-  font-weight: 400
+  font-weight: 400;
 }
 
 a {
@@ -53,18 +58,17 @@ a {
 }
 
 .workwithme-button {
-    margin-top: 20px;
-    background-color: #000;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.5em;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s 
-ease;
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 img {
@@ -75,10 +79,9 @@ img {
 }
 
 .wrap {
-  /* max-width:var(--max);*/
-  max-width: 100%;
+  width: 960px;
   margin: auto;
-  padding: 28px
+  padding: 28px;
 }
 
 header {
@@ -86,43 +89,43 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px
+  gap: 14px;
 }
 
 .logo img {
   width: 44px;
   height: 44px;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
 .title h1 {
   font-size: 40px;
   color: #000000;
   line-height: 1.1;
-  margin: 0
+  margin: 0;
 }
 
 .title p {
   margin: 6px 0 0;
-  color: var(--muted)
+  color: var(--muted);
 }
 
 .hero {
   margin: 28px 0;
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 24px
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
 }
 
 .card {
   border-radius: var(--radius);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .card .inner {
@@ -134,44 +137,58 @@ header {
   display: inline-block;
   color: #000000;
   font-weight: 600;
-  letter-spacing: .02em;
-  font-size: 12px
+  letter-spacing: 0.02em;
+  font-size: 12px;
 }
 
 h2 {
   color: #000000;
-  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
   font-size: 24px;
   margin: 0 0 12px;
   margin-top: 20px;
-  font-weight: 500
+  font-weight: 500;
 }
 
 .lead {
   font-size: 18px;
   font-weight: 400;
   color: var(--muted);
-  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .callout {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 22px;
-  margin: 28px 0
+  margin: 28px 0;
 }
 
 .checklist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px
+  gap: 14px;
 }
 
 @media (max-width: 900px) {
@@ -196,23 +213,23 @@ h2 {
   padding: 16px;
   display: flex;
   gap: 12px;
-  align-items: center
+  align-items: center;
 }
 
 .feature img {
   width: 44px;
   height: 44px;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
 .feature b {
-  display: block
+  display: block;
 }
 
 .cta {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -221,23 +238,21 @@ h2 {
   border-radius: 12px;
   padding: 12px 16px;
   cursor: pointer;
-  font-weight: 700
+  font-weight: 700;
 }
-
 
 .primary {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  background: linear-gradient(135deg,
-      #3d155f 0%,
-      #5b2a8c 40%,
-      #4a90e2 100%);
+  background: linear-gradient(135deg, #3d155f 0%, #5b2a8c 40%, #4a90e2 100%);
   color: #fff;
   padding: 12px 20px;
   border: none;
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .primary:hover {
@@ -245,11 +260,10 @@ h2 {
   box-shadow: 0 8px 20px rgba(61, 21, 95, 0.4);
 }
 
-
 .ghost {
   background: transparent;
   color: #171417;
-  border: 1px solid var(--border)
+  border: 1px solid var(--border);
 }
 
 .back-btn {
@@ -262,48 +276,45 @@ footer {
   margin: 36px 0 8px;
   color: var(--muted);
   font-size: 14px;
-  text-align: center
+  text-align: center;
 }
-
-
 
 @media print {
   body {
     background: #fff;
-    color: #111
+    color: #111;
   }
 
   .card,
   .feature {
     box-shadow: none;
-    border-color: #ddd
+    border-color: #ddd;
   }
 
   a {
     text-decoration: none;
-    color: #111
+    color: #111;
   }
 
   header,
   .cta {
-    page-break-inside: avoid
+    page-break-inside: avoid;
   }
 }
 
-@media (max-width:900px) {
-
+@media (max-width: 900px) {
   .hero,
   .callout {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
 
   header {
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
   }
 }
 
@@ -322,5 +333,5 @@ footer {
 }
 
 footer.footer-banner.drawwilder {
-    color: #000000;
+  color: #000000;
 }
