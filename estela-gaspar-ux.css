@@ -363,6 +363,18 @@ nav .hamburger {
   user-select: none;
 }
 
+#behance-logo {
+  width: 80px;
+}
+
+.social-link {
+  color: white; /* 👈 makes ALL icons white */
+}
+
+.social-link:hover {
+  color: #aaa; /* 👈 subtle hover */
+}
+
 /********************************************** Navigation end ***********************************************/
 /********************************************** Navigation end ***********************************************/
 

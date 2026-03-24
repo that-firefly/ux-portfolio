@@ -1,509 +1,700 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="The Next Stage for Design Thinking Towards Design with Data + AI"
+    />
+    <meta
+      property="og:description"
+      content="An exploration of how design thinking is evolving through systems thinking, data, AI, and the interplay between deterministic and generative models."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/blog-images/hands-creating-harmony-stockcake.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/blog/the-next-stage-for-design-thinking-towards-design-with-data-ai"
+    />
+    <meta property="og:type" content="website" />
+    <title>
+      Estela Gaspar – UX/UI Designer - The Next Stage for Design Thinking
+      Towards Design with Data + AI
+    </title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="An exploration of the evolution from Design Thinking to Design with Data and AI — systems thinking, deterministic vs generative models, and augmented imagination.">
-  <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
-  <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
-  <title>Estela Gaspar – UX/UI Designer - The next stage for Design Thinking towards Design with Data + AI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    :root {
-      --card: #ffffff;
-      --accent: #0f766e;
-      --muted: #666;
-    }
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-16x16.png"
+      sizes="16x16"
+    />
 
+    <style>
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
 
-    body {
-      max-width: 70%;
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: #fefefe;
-      line-height: 1.6;
-      color: #222;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    img {
-      max-width: 30%;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    h1,
-    h2,
-    h3 {
-      color: #444;
-    }
-
-    h1 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 20px;
-      margin-top: 2rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .contact {
-      margin-bottom: 2rem;
-    }
-
-    .section-title {
-      font-size: 1.2em;
-      margin-top: 1.5rem;
-      font-weight: bold;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #555;
-    }
-
-    .back-btn a {
-      color: #808080;
-      margin: 0 0 30px 0;
-      font-size: 14px;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .back-btn a:hover,
-    .back-btn a:active,
-    .back-btn a:focus {
-      color: #666666;
-      /* darker gray */
-    }
-
-    figure {
-      display: block;
-      margin-block-start: 0;
-      margin-block-end: 0;
-      margin-inline-start: 0;
-      margin-inline-end: 0;
-      unicode-bidi: isolate;
-    }
-
-    figcaption {
-      font-size: 0.9em;
-      color: #555;
-      text-align: left;
-      margin-top: 0.5em;
-    }
-
-    blockquote {
-      display: block;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      unicode-bidi: isolate;
-      border-left: 4px solid grey;
-      padding-left: 20px;
-    }
-
-
-
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #555;
-    }
-
-
-    article.interaction-evolution {
-      margin: auto;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 1rem 2rem;
-    }
-
-    table.new-states {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      border: 1px solid #000000;
-      border-radius: 10px;
-    }
-
-    table.new-states th,
-    table.new-states td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
-    }
-
-    table.new-states th {
-      background: #f3f3f3;
-      color: #000;
-      font-weight: 600;
-    }
-
-    table.new-states tr:last-child td {
-      border-bottom: none;
-    }
-
-    table.new-states td strong {
-      color: #000;
-    }
-
-    em {
-      color: #555;
-      font-style: italic;
-    }
-
-    @media (max-width: 700px) {
       body {
-        padding: 1rem;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
       }
 
-      article.interaction-evolution {
-        padding: 2rem 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-
-      table.new-states th,
-      table.new-states td {
-        padding: 0.8rem;
-      }
-    }
-
-    .wrap {
-      max-width: 920px;
-      margin: 36px auto;
-      padding: 20px
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06)
-    }
-
-    h1 {
-      margin: 0 0 6px;
-      font-size: 28px
-    }
-
-    p.lead {
-      margin: 0 0 18px;
-      color: var(--muted)
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px
-    }
-
-    thead th {
-      background: linear-gradient(90deg, rgba(15, 118, 110, 0.06), transparent);
-      text-align: left;
-      padding: 12px;
-      border-bottom: 1px solid #eef2f7
-    }
-
-    td {
-      padding: 12px;
-      border-bottom: 1px solid #f1f5f9;
-      vertical-align: top
-    }
-
-    td:first-child {
-      width: 18%;
-      font-weight: 600
-    }
-
-    ul.reading {
-      padding-left: 18px;
-      margin-top: 14px
-    }
-
-    ul.reading li {
-      margin: 10px 0
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none
-    }
-
-    a:hover {
-      text-decoration: underline
-    }
-
-    .actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 18px
-    }
-
-    button {
-      background: var(--accent);
-      color: #fff;
-      border: 0;
-      padding: 10px 14px;
-      border-radius: 8px;
-      cursor: pointer
-    }
-
-    @media(max-width:720px) {
-      td:first-child {
+      img {
         display: block;
-        width: 100%;
-        font-weight: 700;
-        margin-bottom: 6px
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
       }
 
-      table,
-      thead,
-      tbody,
-      tr,
-      th,
-      td {
-        display: block;
-        width: 100%
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      thead {
-        display: none
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
-    }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li,
+      blockquote,
+      td,
+      th {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
 
       .ready-print {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 0 24px;
+        padding: 10px 14px;
         font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
       }
-  </style>
-</head>
 
-<body>
-  <div class="back-btn">
-    <a href="../blog.html">← Back to main blog</a>
-  </div>
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
 
-   <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .img-medium {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      blockquote {
+        margin: 20px 0;
+        padding: 16px 18px;
+        border-left: 4px solid #d1d5db;
+        background: #fafafa;
+        border-radius: 10px;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        margin: 20px 0 8px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 720px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid #edf0f2;
+      }
+
+      th {
+        width: 250px;
+        background: #f8fafb;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        .table-wrap {
+          overflow: visible;
+        }
+
+        table {
+          min-width: 0;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="back-btn">
+        <a href="../blog.html">← Back to main blog</a>
+      </div>
+
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
         This is a ready-to-print page
-    </h4>
+      </h4>
 
-  <h1>The next stage for Design Thinking towards Design with Data + AI</h1>
+      <div class="section">
+        <h1>
+          The next stage for Design Thinking towards Design with Data and AI
+        </h1>
+        <p>
+          Over the past decade, design thinking has been one of the most
+          influential methodologies for innovation, built around empathy,
+          ideation, and iteration. It helped rebalance problem-solving by
+          centring human needs, imagination, and experimentation rather than
+          relying only on analytical or technical thinking.
+        </p>
+        <p>
+          But the world has evolved. Many of today’s challenges exist inside
+          systems that are highly interconnected, dynamic, data-rich, and fast
+          moving. In that context, linear and purely human-centred processes can
+          struggle to keep pace. This article explores how design thinking may
+          be evolving into a broader design paradigm shaped by data, AI, systems
+          thinking, and what I describe as augmented sentience.
+        </p>
 
-  <figure>
-    <img src="../images/blog-images/hands-creating-harmony-stockcake.jpg"
-      alt="Ethereal hands form a luminous circle of collaboration, blending golden warmth with cool teal in a flowing dance.">
-    <figcaption>Photo by <a href="https://stockcake.com/i/hands-creating-harmony_2058902_1294302"
-        target="_blank">Stockcake</a></figcaption>
-  </figure>
+        <img
+          class="img-medium"
+          src="../images/blog-images/hands-creating-harmony-stockcake.jpg"
+          alt="Ethereal hands form a luminous circle of collaboration, blending golden warmth with cool teal in a flowing dance"
+          title="The next stage for Design Thinking towards Design with Data and AI"
+        />
 
+        <p class="label-text">
+          Photo by
+          <a
+            href="https://stockcake.com/i/hands-creating-harmony_2058902_1294302"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Stockcake</a
+          >
+        </p>
 
+        <h2 style="margin-top: 40px">The challenge</h2>
+        <p>
+          When challenges are tightly constrained, human-centred methods adapt
+          well. But when problems are emergent, uncertain, and volatile, those
+          same design cycles often reveal their limitations. They can become too
+          linear for a world defined by complexity, interdependence, scale, and
+          constant change.
+        </p>
+        <p>
+          We also need to recognise that human behaviour is inherently difficult
+          to predict. Systems built on rigid, binary thinking or overly
+          simplified algorithms will almost certainly fall short. A well-known
+          example comes from the U.S. housing crisis, where mathematical models
+          were used to estimate home values and lending risk based on the
+          assumption that people would behave in stable and rational ways. But
+          human behaviour did not follow the models.
+        </p>
+        <p>
+          Banks approved loans for people who could not realistically afford
+          them, and when the market shifted, many homeowners walked away. The
+          algorithms failed because they treated a complex human system as if it
+          were predictable and linear, while the real world was neither.
+        </p>
+        <p>
+          That wider point is explored further in
+          <a
+            href="../blog-articles/human-behaviour-is-inherently-difficult-to-predict.html"
+            >another related article</a
+          >, but it is also central here: many modern design problems can no
+          longer be handled effectively through simplified, sequential logic
+          alone.
+        </p>
 
-  <h2>Over the past decade, design thinking has been a go-to methodology for innovation: empathy, ideation, iteration.
-    But in a world of complexity, interdependence, scale, and speed it’s starting to show its limits.</h2>
-  <p>When challenges are tightly constrained, human-centered processes shift and adapt well. But when problems are
-    emergent, uncertain, and volatile those same linear cycles often struggle to keep pace.</p>
-  <p>We also need to recognise that human behaviour is inherently difficult to predict. Systems built on rigid, binary
-    thinking or overly simplified algorithms will almost certainly fall short.</p>
-  <p>A well-known example comes from the U.S. housing crisis: some companies used mathematical models to estimate home
-    values and assess lending risk, assuming people would behave in stable, rational ways. But human behaviour didn’t
-    follow the models. Banks approved loans for people who couldn’t realistically afford them, and when the market
-    shifted, many homeowners simply walked away. The algorithms failed because they treated a complex human system as if
-    it were predictable and linear and, the real world isn’t.</p>
-  <p>But that will be the material for a new <a href="../blog-articles/human-behaviour-is-inherently-difficult-to-predict.html">blog post</a>.</p>
-  <h2>So yes, Design thinking revolutionised problem solving by centering empathy, creativity, and iteration, a needed
-    counterbalance to purely analytical methods. But the world has evolved. Many of today’s challenges, from global
-    supply chains to personalisation at scale, are too dynamic, data-rich, and interconnected, and on the ubiquitous age
-    a purely human-centered, linear design process to handle effectively.</h2>
-  <p>That’s where data and AI come in. AI helps us sense patterns, model complex systems, and generate insights or solutions built on top of data and human intuition. In a sense, we are moving from Design Thinking to “design sentience”, blending human empathy with computational foresight.</p>
-  <p>So while design thinking isn’t “dead,” it’s evolving. The next frontier is augmented sentience: using AI and data not to replace human design, but to expand what’s possible, seeing relationships, predicting outcomes, and testing ideas at a scale and speed never before possible.</p>
-  <p>Instead of asking, “What do people need?” we might also ask, “What do the data reveal about unmet needs we can’t yet articulate?” The synergy of human imagination, intuition and experience with machine intelligence is the new design paradigm.</p>
-  <h2>I think the next frontier is <i>augmented sentience</i>: combining human insight with data, AI, and systems
-    thinking.</h2>
-  <ul>
-    <li>Data helps us sense hidden patterns, unearth latent needs, and validate ideas faster than ever.</li>
-    <li>AI can help us simulate futures, prototype at scale, explore design variants, and even suggest directions we
-      hadn’t imagined.</li>
-    <li>Blending design thinking and AI isn’t plug-and-play; you need an intentional architecture of methods, values,
-      collaboration, and tooling.</li>
-    <li>Models such as the <a
-        href="https://medium.com/design-bootcamp/beyond-the-double-diamond-ais-challenge-to-design-thinking-eb11a24a2f7c"
-        target="_blank"><strong>Stingray Model</strong></a>, which breaks from linear sequence and suggests parallel
-      exploration of problem and solution, guided by data/AI signals may start taking over.</li>
-    <li>Interconnection and the intersection of systems thinking and design ethics becomes increasingly important: when
-      we design a product, service, or framework, it always exists inside an interconnected ecosystem. Every decision
-      can ripple outward in ways that are hard to predict, touching “underseen users” (people indirectly affected, but
-      rarely considered) and producing second- or third-order consequences — much like a butterfly effect in complex
-      adaptive systems.</li>
-    <li>The interplay between deterministic and generative responses becomes critical for creating effective products.
-    </li>
-  </ul>
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          My role in this article is to reframe design thinking within a newer
+          landscape shaped by AI, data, and systems awareness. Rather than
+          arguing that design thinking is dead, I see it as evolving. Its core
+          strengths still matter, but they need to be extended by tools and
+          methods that can sense patterns, model complexity, and support design
+          decisions at greater scale and speed.
+        </p>
+        <p>
+          I am interested in the next frontier as a form of
+          <i>augmented sentience</i>: combining human imagination, empathy,
+          intuition, and lived experience with computational insight, pattern
+          recognition, and predictive capability. Instead of asking only “What
+          do people need?”, we may also need to ask, “What do the data reveal
+          about unmet needs we cannot yet articulate?”
+        </p>
 
-  <div class="wrap">
-    <div class="card">
-      <table aria-label="Deterministic versus Generative AI comparison">
-        <thead>
-          <tr>
-            <th>Aspect</th>
-            <th>Deterministic AI</th>
-            <th>Generative AI</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Definition</td>
-            <td>Produces a fixed, predictable output for a given input, the same input always yields the same result.
-            </td>
-            <td>Produces new, variable outputs for the same input, responses are generated probabilistically.</td>
-          </tr>
-          <tr>
-            <td>Example (Simple)</td>
-            <td>A calculator: 5 + 5 always equals 10.</td>
-            <td>A language model asked “Write a poem about the ocean” will create many possible poems, each slightly
-              different.</td>
-          </tr>
-          <tr>
-            <td>Underlying Mechanism</td>
-            <td>Rules-based, algorithmic, or model-driven systems that follow explicit logic trees or trained decision
-              boundaries.</td>
-            <td>Deep learning models (especially large language or diffusion models) that sample from learned
-              probability distributions to “create” text, images, code, etc.</td>
-          </tr>
-          <tr>
-            <td>Behavior</td>
-            <td>Predictable, consistent, explainable.</td>
-            <td>Creative, flexible, context-sensitive but less predictable.</td>
-          </tr>
-          <tr>
-            <td>Best For</td>
-            <td>Tasks requiring precision, repeatability, and verifiability, e.g. accounting, data retrieval, rule-based
-              automation.</td>
-            <td>Tasks requiring creativity, synthesis, or language understanding, e.g. writing, design ideation,
-              conversation, generative design.</td>
-          </tr>
-          <tr>
-            <td>Drawbacks</td>
-            <td>Limited adaptability, can’t handle ambiguity or open-ended inputs.</td>
-            <td>Can “hallucinate” (generate plausible but incorrect outputs), lacks guaranteed accuracy.</td>
-          </tr>
-          <tr>
-            <td>AI Examples</td>
-            <td>
-              <ul>
-                <li>Predictive analytics model that forecasts demand using set parameters.</li>
-                <li>Traditional rule-based chatbot (“if user says X → reply Y”).</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>ChatGPT, Midjourney, DALL·E, Claude, Gemini, etc.</li>
-                <li>Generative design tools that create new layouts, marketing copy, or art.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>Analogy</td>
-            <td>Like following a recipe: exact steps → exact result.</td>
-            <td>Like a chef improvising: draws from experience, tastes, and creativity to make something new each time.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          The process I am describing here is not a replacement for design
+          thinking, but an expansion of it. AI helps us sense patterns, model
+          complex systems, generate possible futures, prototype faster, and
+          explore variants we may not have imagined on our own. Data helps us
+          validate, challenge, and refine ideas with new depth.
+        </p>
+        <p>
+          This evolution requires intentional structure. Blending design
+          thinking and AI is not plug-and-play. It depends on methods, values,
+          collaboration, tooling, and ethics working together.
+        </p>
 
-  <h2>Main conclusions</h2>
-  <p>The interplay between deterministic and generative responses is becoming critical for creating effective products.
-  </p>
-  <p>Increasingly as systems become more asynchronous and distributed, modern products, particularly those powered by AI
-    depend on deterministic and generative processes operating simultaneously.</p>
-  <p>Deterministic systems provide reliability, safety, consistency, and predictable outcomes.<br>
-    Examples: calculations, validation checks, compliance rules, payment flows.</p>
-  <p>Generative systems provide creativity, flexibility, adaptation, and contextual understanding.<br>
-    Examples: recommendations, natural-language interfaces, personalised content.
-  </p>
-  <h3>Why the communication between the two matters?</h3>
-  <p>Products now often require a blend of:</p>
-  <ul>
-    <li>structured logic (deterministic)</li>
-    <li>adaptive reasoning or creation (generative) in real-time</li>
-    <li>and when these two modes inform each other, not operate in isolation, you get systems that are both safe and
-      smart, predictable and adaptive.</li>
-  </ul>
+        <ul>
+          <li>
+            Data helps us sense hidden patterns, uncover latent needs, and
+            validate ideas faster than ever.
+          </li>
+          <li>
+            AI can help us simulate futures, prototype at scale, and explore
+            design directions we may not have reached alone.
+          </li>
+          <li>
+            Models such as the
+            <a
+              href="https://medium.com/design-bootcamp/beyond-the-double-diamond-ais-challenge-to-design-thinking-eb11a24a2f7c"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Stingray Model</strong></a
+            >
+            suggest more parallel exploration of problem and solution, guided by
+            data and AI signals rather than only sequential stages.
+          </li>
+          <li>
+            Systems thinking and design ethics become even more important,
+            because every product exists inside an interconnected ecosystem and
+            every decision can ripple outward in hard-to-predict ways.
+          </li>
+          <li>
+            The interplay between deterministic and generative responses is
+            becoming increasingly important for modern product design.
+          </li>
+        </ul>
 
-  <p>Examples of this interplay in real products:</p>
-  <ul>
-    <li>Chatbots: deterministic rules for safety + generative language for conversation.</li>
-    <li>Recommendation systems: deterministic constraints + generative personalisation.</li>
-    <li>AI-assisted design tools: deterministic UX patterns + generative creativity.</li>
-    <li>Navigation apps: deterministic routing rules + generative traffic predictions.</li>
-  </ul>
+        <h3>Deterministic versus generative AI</h3>
+        <div class="table-wrap">
+          <table aria-label="Deterministic versus Generative AI comparison">
+            <thead>
+              <tr>
+                <th class="thwider">Aspect</th>
+                <th>Deterministic AI</th>
+                <th>Generative AI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Definition</td>
+                <td>
+                  Produces a fixed, predictable output for a given input. The
+                  same input always yields the same result.
+                </td>
+                <td>
+                  Produces new, variable outputs for the same input. Responses
+                  are generated probabilistically.
+                </td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>A calculator: 5 + 5 always equals 10.</td>
+                <td>
+                  A language model asked to write a poem about the ocean can
+                  create many different valid poems.
+                </td>
+              </tr>
+              <tr>
+                <td>Underlying mechanism</td>
+                <td>
+                  Rules-based, algorithmic, or model-driven systems that follow
+                  explicit logic trees or trained decision boundaries.
+                </td>
+                <td>
+                  Deep learning models that sample from learned probability
+                  distributions to create text, images, code, and more.
+                </td>
+              </tr>
+              <tr>
+                <td>Behaviour</td>
+                <td>Predictable, consistent, explainable.</td>
+                <td>
+                  Creative, flexible, context-sensitive, less predictable.
+                </td>
+              </tr>
+              <tr>
+                <td>Best for</td>
+                <td>
+                  Tasks requiring precision, repeatability, and verifiability,
+                  such as accounting, data retrieval, and rule-based automation.
+                </td>
+                <td>
+                  Tasks requiring creativity, synthesis, or language
+                  understanding, such as writing, ideation, conversation, and
+                  generative design.
+                </td>
+              </tr>
+              <tr>
+                <td>Drawbacks</td>
+                <td>
+                  Limited adaptability and difficulty handling ambiguity or
+                  open-ended inputs.
+                </td>
+                <td>
+                  Can hallucinate or produce plausible but incorrect outputs,
+                  without guaranteed accuracy.
+                </td>
+              </tr>
+              <tr>
+                <td>Examples in AI</td>
+                <td>
+                  Predictive analytics models, traditional rule-based chatbots,
+                  validation engines.
+                </td>
+                <td>
+                  ChatGPT, Claude, Gemini, Midjourney, DALL·E, and generative
+                  design tools.
+                </td>
+              </tr>
+              <tr>
+                <td>Analogy</td>
+                <td>Like following a recipe exactly.</td>
+                <td>Like a chef improvising from experience and context.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-  <p>So yes, the relationship and balance between deterministic and generative components is becoming a key design
-    principle in modern product development.</p>
+        <h3>Main conclusions</h3>
+        <p>
+          The interplay between deterministic and generative responses is
+          becoming critical for creating effective products. As systems become
+          more asynchronous and distributed, many products, especially those
+          powered by AI, depend on both deterministic and generative processes
+          operating together.
+        </p>
+        <p>
+          Deterministic systems provide reliability, safety, consistency, and
+          predictable outcomes. Generative systems provide creativity,
+          flexibility, contextual understanding, and adaptation. When these two
+          modes inform each other rather than operating in isolation, we can
+          create systems that are both safe and smart, predictable and adaptive.
+        </p>
 
-  <h2 style="margin-top:20px">Reading list</h2>
-  <p class="lead" style="margin-top:0">Books and papers related to systems thinking, ripple effects, and design &
-    technology.</p>
-  <ul class="reading">
-    <li><a href="https://www.iangoldin.org/books/the-butterfly-defect" target="_blank"><strong>The Butterfly
-          Defect</strong> — Ian Goldin</a></li>
-    <li><a href="https://www.penguin.co.uk/books/56916/butterfly-economics-by-ormerod-paul/9780571277498"
-        target="_blank"><strong>Butterfly Economics</strong> — Paul Ormerod</a></li>
-    <li><a href="https://donellameadows.org/systems-thinking-bookstore/" target="_blank"><strong>Thinking in
-          Systems</strong> — Donella H. Meadows</a></li>
-    <li><a href="https://www.penguinrandomhouse.com/books/25022/the-hidden-connections-by-fritjof-capra/"
-        target="_blank"><strong>The Hidden Connections</strong> — Fritjof Capra</a></li>
-    <li><a href="https://www.chelseagreen.com/product/systems-thinking-for-social-change/"
-        target="_blank"><strong>Systems Thinking for Social Change</strong> — David Peter Stroh</a></li>
-    <li><a href="https://www.penguinrandomhouse.com/books/294387/the-fifth-discipline-by-peter-m-senge/"
-        target="_blank"><strong>The Fifth Discipline</strong> — Peter Senge</a></li>
-    <li><a href="https://mitpress.mit.edu/9780262536050/radical-technologies/" target="_blank"><strong>Radical
-          Technologies</strong> — Adam Greenfield</a></li>
-    <li><a href="https://policy.bristoluniversitypress.co.uk/governance-in-the-climate-emergency"
-        target="_blank"><strong>Governance in a Climate Emergency</strong> — Ray Ison & Ed Straw</a></li>
-    <li><a href="https://rosenfeldmedia.com/books/closing-the-loop/" target="_blank"><strong>Closing the Loop: Systems
-          Thinking for Designers</strong> — Sheryl Cababa</a></li>
-  </ul>
+        <p>Examples of this interplay in real products include:</p>
+        <ul>
+          <li>
+            Chatbots: deterministic safety rules combined with generative
+            language.
+          </li>
+          <li>
+            Recommendation systems: deterministic constraints combined with
+            generative personalisation.
+          </li>
+          <li>
+            AI-assisted design tools: deterministic UX patterns combined with
+            generative creativity.
+          </li>
+          <li>
+            Navigation apps: deterministic routing logic combined with adaptive
+            traffic prediction.
+          </li>
+        </ul>
 
-  <p><a href="../blog.html">← Back to blog</a></p>
-</body>
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution here is to connect design thinking, systems thinking,
+          AI, and design ethics into one evolving perspective. I am interested
+          in how designers can move beyond linear processes without losing the
+          human-centred values that made design thinking meaningful in the first
+          place.
+        </p>
+        <p>
+          This means designing for interconnection, understanding ripple
+          effects, considering underseen users, and building products that can
+          balance precision with adaptability. The next stage is not about
+          replacing human creativity with machines. It is about extending human
+          design capacity through thoughtful collaboration with data and AI.
+        </p>
 
-<script>
-  function printPage() {
-    window.print();
-  }
+        <h3>Reading list</h3>
+        <p class="label-text">
+          Books and papers related to systems thinking, ripple effects, and
+          design and technology.
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.iangoldin.org/books/the-butterfly-defect"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>The Butterfly Defect</strong> — Ian Goldin</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.penguin.co.uk/books/56916/butterfly-economics-by-ormerod-paul/9780571277498"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Butterfly Economics</strong> — Paul Ormerod</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://donellameadows.org/systems-thinking-bookstore/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Thinking in Systems</strong> — Donella H. Meadows</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.penguinrandomhouse.com/books/25022/the-hidden-connections-by-fritjof-capra/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>The Hidden Connections</strong> — Fritjof Capra</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.chelseagreen.com/product/systems-thinking-for-social-change/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Systems Thinking for Social Change</strong> — David Peter
+              Stroh</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.penguinrandomhouse.com/books/294387/the-fifth-discipline-by-peter-m-senge/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>The Fifth Discipline</strong> — Peter Senge</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://mitpress.mit.edu/9780262536050/radical-technologies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Radical Technologies</strong> — Adam Greenfield</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://policy.bristoluniversitypress.co.uk/governance-in-the-climate-emergency"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Governance in a Climate Emergency</strong> — Ray Ison
+              &amp; Ed Straw</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://rosenfeldmedia.com/books/closing-the-loop/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Closing the Loop: Systems Thinking for Designers</strong>
+              — Sheryl Cababa</a
+            >
+          </li>
+        </ul>
+      </div>
 
-  document.addEventListener("keydown", function (e) {
-    if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-      printPage();
-    }
-  });
-</script>
+      <section class="back-link">
+        <a href="../blog.html">← Back to blog</a>
+      </section>
+    </main>
 
+    <script>
+      function printPage() {
+        window.print();
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>

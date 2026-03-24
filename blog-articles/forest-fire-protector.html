@@ -1,234 +1,485 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Forest Guard – Nature-Inspired Mushroom Fire Defense"
+    />
+    <meta
+      property="og:description"
+      content="A nature-inspired concept for an autonomous forest fire detection and suppression system, designed to protect ecosystems through smart, sustainable technology."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/mushroom-defense-system.png"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/blog/forest-guard"
+    />
+    <meta property="og:type" content="website" />
+    <title>Estela Gaspar – UX/UI Designer - Forest Guard</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estela Gaspar – UX/UI Designer CV</title>
-    <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
-    
-    .back-btn a:hover,
-    .back-btn a:active,
-    .back-btn a:focus,
-    .back-btn a:visited {
-    color: #666666; 
-    }
-    
-    body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
-        }
-
-    h1,
-    h2,
-    h3 {
-        color: #444;
-    }
-
-    h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
-    }
-
-        
-    h2 {
-        margin-top: 2rem;
-    }
-
-    ul {
-        padding-left: 1.2rem;
-    }
-
-    .contact,
-    .section {
-        margin-bottom: 2rem;
-    }
-
-    .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
-    }
-
-    .highlight {
-        font-weight: bold;
-        color: #555;
-    }
-
-    .back-btn a {
-        color: #808080;
-        margin: 0 0 30px 0;
-        font-size: 14px;
-        text-decoration: none;
-        transition: color 0.2s ease;
-    }
-
-    
-
-    .ready-print {
-        display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-        <div class="back-btn"><a href="../blog.html">← Back to main blog</a>
-        </div>
-        <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-         This is a ready-to-print page
-        </h4>
+  <body>
+    <main class="container">
+      <div class="back-btn">
+        <a href="../blog.html">← Back to main blog</a>
+      </div>
 
-        <div class="section">
-        <h1>Forest guard: nature-inspired mushroom fire defense.</h1>
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
 
-        <h2>About the project</h2>
-        <h3>An innovative concept for an embedded forest mechanism that monitors and protects natural ecosystems automatically.</h3>
-        <p>One of my favourite things to do is ideate and imagine bold solutions to real-world problems.
-            Recently, I came up with a concept for a device that could be installed in forests and
-            automatically <br>activated when a fire is detected nearby. In the coming months, I’ll be
-            developing this idea as if it were a real product — exploring its design, UX, and potential
-            impact.</p>
-            <p>If the idea sparks something in you, feel free to build on it — I’d genuinely love to see it
-                come to life. I just ask that you bring me along for the journey and consider collaborating.
-                Innovation is always better shared.</p>
-            <p> In the heart of vulnerable forests, a bio-inspired sentinel quietly stands watch — the
-                Mushroom Guard. This unassuming, mushroom-shaped pole blends naturally into the woodland,
-                but it's anything but ordinary. <br>Hidden within its organic silhouette is an advanced fire
-                detection and suppression system.</p>
+      <div class="section">
+        <h1>Forest Guard: nature-inspired mushroom fire defense</h1>
+        <p>
+          Forest Guard is a concept project inspired by nature and designed to
+          respond to one of the most urgent environmental threats of our time:
+          wildfire. The idea explores how eco-technology, product thinking, and
+          user experience design could come together to protect vulnerable
+          forest ecosystems through early detection and fast, localised
+          response.
+        </p>
+        <p>
+          At the centre of the concept is the Mushroom Guard, a mushroom-shaped
+          autonomous unit embedded into forest environments. Designed to blend
+          into the woodland while quietly standing watch, it combines natural
+          inspiration with smart monitoring and suppression capabilities. This
+          project reflects my interest in imagining bold solutions to real-world
+          problems and developing them as if they were real products.
+        </p>
 
-            <p>Equipped with heat sensors and air quality monitors, the Mushroom Guard activates when it
-                detects early signs of fire - such as elevated temperatures or smoke — within a 5-meter
-                radius. <br>Upon detection, it releases a biodegradable, non-toxic fire-retardant foam designed
-                to smother flames before they spread. <br>The foam forms a protective barrier on vegetation,
-                reducing the chance of ignition and buying critical time for emergency response teams.</p>
+        <h2 style="margin-top: 40px">The challenge</h2>
+        <p>
+          Forest fires spread quickly and often begin before human responders
+          can react. The challenge was to imagine a system that could detect
+          early signs of fire, respond immediately in remote environments, and
+          support emergency services before a situation escalates.
+        </p>
+        <p>
+          The idea needed to go beyond a technical object. It had to work as a
+          believable ecosystem: something that could exist physically in nature,
+          communicate with other units, support forest rangers and firefighters,
+          and remain sustainable in both form and function. It also needed to
+          feel calm, clear, and usable for the people responsible for monitoring
+          and maintaining it.
+        </p>
 
-            <p>Silent, sustainable, and smart - the Mushroom Guard represents a new wave of eco-technology
-                where design meets environmental resilience.</p>
-                
-                <img style="width:700px; height:auto;" src="../images/mushroom-defense-system.png"
-                alt="Image concept of the user experience of the Mushroom-Shaped Fire Prevention Unit (M-FPU)">
+        <img
+          class="img-xl"
+          src="../images/blog-images/mushroom-defense-system.png"
+          alt="Image concept of the user experience of the Mushroom-Shaped Fire Prevention Unit"
+          title="Image concept of the user experience of the Mushroom-Shaped Fire Prevention Unit"
+        />
 
-            <h2>Mushroom-Shaped Fire Prevention Unit (M-FPU)</h2>
-            <p>The M-FPU is a passive, autonomous fire suppression device designed for early-stage wildfire
-                mitigation in forested environments. <br>Its structure mimics the form of a large mushroom to
-                blend with natural surroundings while maximizing surface area for sensor arrays and foam
-                dispersion.</p>
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          My role in this concept project was to originate the idea, shape the
+          product vision, and begin defining the user experience around it. This
+          included thinking through the system not only as a speculative device,
+          but as a usable service with clear interactions, practical
+          maintenance, and meaningful value for the people involved.
+        </p>
+        <p>
+          I framed the concept as the Mushroom-Shaped Fire Prevention Unit
+          (M-FPU), a passive and autonomous fire suppression device designed for
+          early-stage wildfire mitigation in forest environments. Its form was
+          intentionally inspired by a mushroom so that it could blend into its
+          natural surroundings while also creating enough surface area for
+          sensors and foam dispersion.
+        </p>
 
-                <section>
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li><strong>Thermal and Gas Sensors:</strong> Monitors for temperature and smoke,
-                            triggering action when fire signs are within 5 meters.</li>
-                        <li><strong>Suppression System:</strong> Releases biodegradable, non-toxic foam to coat
-                            vegetation and prevent fire spread.</li>
-                        <li><strong>Power Source:</strong> Self-powered via hybrid solar and kinetic energy
-                            systems.</li>
-                        <li><strong>Communication:</strong> Mesh networking enables unit-to-unit and central
-                            alert transmission.</li>
-                        <li><strong>Maintenance and Refilling:</strong> Foam canisters are modular and
-                            refillable by rangers or drones.</li>
-                    </ul>
-                </section>
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          The process began with the core concept itself: a bio-inspired
+          sentinel quietly positioned in vulnerable forests, equipped with heat
+          sensors and air-quality monitors capable of identifying early warning
+          signs such as elevated temperature and smoke within a five-metre
+          radius. Once triggered, the unit would release a biodegradable,
+          non-toxic fire-retardant foam to suppress flames, protect nearby
+          vegetation, and buy time for emergency response teams.
+        </p>
+        <p>
+          From there, I started shaping the project through a UX lens by
+          defining users, goals, features, and possible journeys.
+        </p>
 
-                <section>
-                    <h2>UX Design Approach</h2>
-                    <h3>1. Define the Users</h3>
-                    <ul>
-                        <li><strong>Primary:</strong> Forest rangers, Environmental scientists, Firefighters,
-                            Forestry maintenance workers</li>
-                        <li><strong>Secondary:</strong> Conservation organizations, Government fire control
-                            agencies, Drone operators</li>
-                    </ul>
+        <h3>Key features</h3>
+        <ul>
+          <li>
+            <strong>Thermal and gas sensors:</strong> monitors temperature and
+            smoke, triggering action when fire signs are detected nearby.
+          </li>
+          <li>
+            <strong>Suppression system:</strong> releases biodegradable,
+            non-toxic foam to coat vegetation and slow the spread of fire.
+          </li>
+          <li>
+            <strong>Power source:</strong> self-powered through hybrid solar and
+            kinetic energy systems.
+          </li>
+          <li>
+            <strong>Communication:</strong> mesh networking allows unit-to-unit
+            and central alert transmission.
+          </li>
+          <li>
+            <strong>Maintenance and refilling:</strong> modular foam canisters
+            designed to be refilled by rangers or drones.
+          </li>
+        </ul>
 
-                    <h3>2. User Goals</h3>
-                    <ul>
-                        <li>Monitor M-FPU unit status</li>
-                        <li>Receive real-time alerts</li>
-                        <li>View unit location and environmental data</li>
-                        <li>Coordinate fire risk responses</li>
-                        <li>Manage maintenance and refills</li>
-                    </ul>
+        <h3>Defined users</h3>
+        <ul>
+          <li>
+            <strong>Primary users:</strong> forest rangers, environmental
+            scientists, firefighters, and forestry maintenance workers.
+          </li>
+          <li>
+            <strong>Secondary users:</strong> conservation organisations,
+            government fire control agencies, and drone operators.
+          </li>
+        </ul>
 
-                    <h3>3. Key UX Components</h3>
-                    <p>I will be designing these in the following months and gathering your feedback.</p>
-                    <ul>
-                        <li><strong>Dashboard (Web + Mobile):</strong> Map view, environmental data, alerts,
-                            maintenance logs, and network status.</li>
-                        <li><strong>AR Maintenance Interface:</strong> AR overlays with instructions and
-                            diagnostics for field use.</li>
-                        <li><strong>Drone Integration Console:</strong> Plan refills or inspections; receive
-                            video and diagnostics from drones.</li>
-                    </ul>
+        <h3>User goals</h3>
+        <ul>
+          <li>Monitor M-FPU unit status.</li>
+          <li>Receive real-time alerts.</li>
+          <li>View unit location and environmental data.</li>
+          <li>Coordinate fire-risk responses.</li>
+          <li>Manage maintenance and refills.</li>
+        </ul>
 
-                    <h3>4. UX Principles</h3>
-                    <ul>
-                        <li>Clarity and calm design for emergency use</li>
-                        <li>Offline mode support for remote fieldwork</li>
-                        <li>Accessible UI with language and contrast options</li>
-                        <li>Design reflecting sustainability and harmony with nature</li>
-                    </ul>
+        <h3>Key UX components</h3>
+        <p>
+          The concept includes a set of digital tools that I plan to continue
+          designing and refining:
+        </p>
+        <ul>
+          <li>
+            <strong>Dashboard (web and mobile):</strong> map view, environmental
+            data, alerts, maintenance logs, and network status.
+          </li>
+          <li>
+            <strong>AR maintenance interface:</strong> field-based overlays with
+            instructions and diagnostics for inspection and repairs.
+          </li>
+          <li>
+            <strong>Drone integration console:</strong> supports refill
+            planning, inspections, and video or diagnostics from drones.
+          </li>
+        </ul>
 
-                    <h3>5. Journey Example scenario 1</h3>
-                    <p><strong>Scenario:</strong> A forest ranger is alerted to 3 M-FPU units detecting smoke
-                        near Ridge Sector B.</p>
-                    <ul>
-                        <li>Opens app and views heatmap overlay</li>
-                        <li>Taps unit ID to check data and history</li>
-                        <li>Assigns a drone or plans visit</li>
-                        <li>Uses AR in the field to assess and refill canisters</li>
-                    </ul>
+        <h3>UX principles</h3>
+        <ul>
+          <li>Clarity and calm design for emergency situations.</li>
+          <li>Offline mode support for remote fieldwork.</li>
+          <li>Accessible UI with language and contrast options.</li>
+          <li>Design that reflects sustainability and harmony with nature.</li>
+        </ul>
 
-                    <h3>6. Journey Example scenario 2</h3>
-                    <p><strong>Scenario:</strong>A family enjoying a picnic begins to smell smoke. Moments
-                        later, they spot a growing fire nearby, its flames quickly spreading through the trees.
-                    </p>
-                    <ul>
-                        <li>Sends an alert to nearby fire authorities and ranger networks.</li>
-                        <li>Updates the live dashboard with location, intensity, and deployment status.</li>
-                        <li>Triggers nearby Mushroom Guards via mesh network if the fire continues to spread.
-                        </li>
-                    </ul>
-                </section>
+        <h3>Journey example scenario 1</h3>
+        <p>
+          <strong>Scenario:</strong> a forest ranger receives an alert that
+          three M-FPU units have detected smoke near Ridge Sector B.
+        </p>
+        <ul>
+          <li>Opens the app and views a heatmap overlay.</li>
+          <li>Taps the relevant unit ID to check data and history.</li>
+          <li>Assigns a drone or plans an on-site visit.</li>
+          <li>Uses AR in the field to assess and refill canisters.</li>
+        </ul>
 
-    </div>
+        <h3>Journey example scenario 2</h3>
+        <p>
+          <strong>Scenario:</strong> a family enjoying a picnic begins to smell
+          smoke and soon spots a growing fire spreading through nearby trees.
+        </p>
+        <ul>
+          <li>
+            Sends an alert to nearby fire authorities and ranger networks.
+          </li>
+          <li>
+            Updates the live dashboard with location, intensity, and deployment
+            status.
+          </li>
+          <li>
+            Triggers nearby Mushroom Guards through the mesh network if the fire
+            continues to spread.
+          </li>
+        </ul>
 
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution was to create and articulate a product concept that
+          connects environmental resilience with UX thinking. Rather than
+          imagining only the physical object, I considered how the surrounding
+          service experience could work for the humans interacting with it,
+          including monitoring, maintenance, emergency coordination, and field
+          usability.
+        </p>
+        <p>
+          This project also reflects the way I like to work creatively: starting
+          with a strong idea grounded in nature, then expanding it into a wider
+          system of interactions, users, and possibilities. In the coming
+          months, I plan to continue developing the concept as though it were a
+          real product by exploring its interface design, user journeys, and
+          broader impact.
+        </p>
+        <p>
+          If this idea sparks something in others, I would genuinely love to see
+          it grow through collaboration. Innovation is always better shared.
+        </p>
+      </div>
 
-    <a href="../blog.html">← Back to blog</a>
+      <section class="back-link">
+        <a href="../blog.html">← Back to blog</a>
+      </section>
+    </main>
 
-</body>
+    <script>
+      function printPage() {
+        window.print();
+      }
 
-<script>
-  function printPage() {
-    window.print();
-  }
-
-  document.addEventListener("keydown", function (e) {
-    if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-      printPage();
-    }
-  });
-</script>
-
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>

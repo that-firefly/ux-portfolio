@@ -1,322 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <meta property="og:title" content="From Time to Process" />
+    <meta
+      property="og:description"
+      content="Exploring time as a construct and rethinking reality through process, systems, and environmental interaction."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/blog-images/content_STScI-J-2019-20-CosmoRedshift-webb-2000x1344.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/blog/from-time-to-process"
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Estela Gaspar – UX/UI Designer - From Time to Process</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
+
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --container: 940px;
       }
 
-      h1,
-      h2,
-      h3 {
-        color: #444;
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      img {
+        width: 100%;
+        border-radius: 14px;
+        margin: 24px 0;
       }
 
       h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+        font-size: 2.5rem;
+        margin-top: 0px;
+        margin-bottom: 20px;
       }
 
       h2 {
-        margin-top: 2rem;
+        margin-top: 40px;
+      }
+
+      p {
+        margin-bottom: 16px;
       }
 
       ul {
-        padding-left: 1.2rem;
+        margin-left: 1.2rem;
       }
 
-      .contact,
-      .section {
-        margin-bottom: 2rem;
-      }
-
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
-      }
-
-      .highlight {
-        font-weight: bold;
-        color: #555;
-      }
-
-      .back-btn a {
-        color: #808080;
-        margin: 0 0 30px 0;
-        font-size: 14px;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-
-      .back-btn a:hover,
-      .back-btn a:active,
-      .back-btn a:focus {
-        color: #666666; /* darker gray */
-      }
-
-      figure {
-        display: block;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        unicode-bidi: isolate;
-      }
-
-      figcaption {
-        font-size: 0.9em;
-        color: #555;
-        text-align: left;
-        margin-top: 0.5em;
-      }
-      
       blockquote {
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        unicode-bidi: isolate;
-        border-left: 4px solid grey;
-        padding-left: 20px;
+        border-left: 4px solid #ccc;
+        padding-left: 16px;
+        margin: 20px 0;
+        background: #fafafa;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
       }
 
       .ready-print {
-     display: inline-block;
-      padding: 8px 14px;
-      margin: 20px 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #000;
-      background-color: #fff;
-      border: 2px solid #000;
-      border-radius: 4px;
-      box-shadow: 2px 2px 0 #000;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
       }
     </style>
   </head>
 
   <body>
-    <div class="back-btn">
-      <a href="../blog.html">← Back to main blog</a>
-    </div>
+    <main class="container">
+      <div class="back-btn">
+        <a href="../blog.html">← Back to main blog</a>
+      </div>
 
-    <div class="section">
+      <h4 class="ready-print" onclick="printPage()">
+        This is a ready-to-print page
+      </h4>
 
-      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-  This is a ready-to-print page
-</h4>
+      <div class="section">
+        <h1>From time to process</h1>
+        <p>
+          This exploration looks at time not as a fundamental truth, but as a
+          construct, a human-made tool used to organise experience. It questions
+          whether reality is better understood not through time, but through
+          processes, transformations, and the environments in which they unfold.
+        </p>
 
-      <h1>From time to process</h1>
-      <h2>About the Project</h2>
-      <h3>
-        Rethinking data through continuity and ecosystems. Exploratory thoughts on the intersection of physics, philosophy,
-        systems theory, and design.
-      </h3>
-
-      <p>
-        Time is a construct, a conceptual tool humans use to organize tasks,
-        experiences, and life itself. From our perspective, it remains
-        indispensable, yet its true nature is still not fully understood. We
-        often perceive time as something linear and divided into slices, but in
-        reality, it might not exist as an independent entity at all. Rather, it
-        could be a process, an emergent property deeply intertwined with the
-        environment, planetary mass, gravity, and countless other factors we
-        have yet to comprehend.
-      </p>
-
-      <p>
-        Wouldn’t it be more meaningful, then, to describe reality not in terms
-        of “time” but through processes and the evolution of those processes
-        within specific environmental conditions? For example, we age because
-        we are made of particular matter, a cellular fabric whose lifespan
-        evolved to maintain equilibrium with Earth’s environment. In space,
-        however, that same framework might no longer apply, because the
-        underlying conditions that define our “process of aging” would
-        fundamentally change.
-      </p>
-
-      <figure>
         <img
-          style="width: 400px; height: auto"
           src="../images/blog-images/content_STScI-J-2019-20-CosmoRedshift-webb-2000x1344.jpg"
-          alt="NASA image showing how the Webb Telescope observes deep-space redshift phenomena."
+          alt="NASA deep space observation showing redshift"
         />
-        <figcaption>
+
+        <p style="font-size: 0.9rem; color: #666">
           Credit:
           <a
             href="https://science.nasa.gov/mission/webb/science-overview/science-explainers/how-does-webb-see-back-in-time/"
             target="_blank"
-            rel="noopener noreferrer"
-            >NASA</a
-          >, ESA, Leah Hustak (STScI).
-        </figcaption>
-      </figure>
+          >
+            NASA
+          </a>
+        </p>
 
-      <h2>1. Time as a Construct vs. Process as Reality</h2>
-      <ul>
-        <li>
-          <strong>Human time</strong> (seconds, minutes, years) is a
-          <strong>measurement system</strong>, a way to quantify and
-          synchronize experience. It’s a tool, not a truth.
-        </li>
-        <li>
-          <strong>Reality itself</strong> unfolds as
-          <strong>processes of transformation</strong>, the continuous
-          reconfiguration of energy and matter. Life, growth, decay, motion:
-          these are not time-dependent; they’re state- and interaction-dependent.
-        </li>
-      </ul>
+        <h2>The challenge</h2>
+        <p>
+          We tend to describe change through time, but what if time is not the
+          real driver? What if what we are observing is actually transformation
+          driven by interaction, environment, and energy?
+        </p>
+        <p>
+          Our perception of time may simply be a reflection of how processes
+          unfold under specific conditions, particularly here on Earth, where
+          gravity, chemistry, and biology shape what we interpret as “aging” or
+          “progression.”
+        </p>
 
-      <p>
-        So instead of saying “something changes over time,” you could say
-        “something changes <em>through interaction and transformation</em>
-        within its environment.” That’s the essence of process ontology, the
-        philosophical idea that process, not object, is the fundamental unit of
-        reality.
-      </p>
+        <h2>My role</h2>
+        <p>
+          My role in this thinking is to challenge the assumption of time as the
+          primary axis of understanding, and instead explore how design, data,
+          and systems can be reframed around processes and state evolution.
+        </p>
+        <p>
+          I am particularly interested in how this shift can influence the way
+          we visualise data, design systems, and interpret complex environments.
+        </p>
 
-      <h2>2. Implications for Understanding Data and Systems</h2>
-      <p>
-        If we embrace <strong>process-based thinking</strong>, data becomes not
-        a record of static values but a
-        <strong>trace of transformations</strong>:
-      </p>
-      <ul>
-        <li>
-          Each data point isn’t “a measurement in time,” but “a snapshot of an
-          evolving state.”
-        </li>
-        <li>
-          Instead of visualizing time series, we visualize
-          <strong>state trajectories</strong> within
-          <strong>environmental conditions</strong> (gravity, temperature,
-          energy, etc.).
-        </li>
-        <li>
-          Dashboards evolve into <strong>process models</strong>, showing how
-          entities flow, adapt, and reorganize within constraints. This idea
-          came from my ongoing learning into
-          <a
-            href="https://trailhead.salesforce.com/content/learn/modules/lex_implementation_reports_dashboards/lex_implementation_reports_dashboards_visualizing_data?trailmix_creator_id=that-firefly&trailmix_slug=ux-design-ui"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Salesforce Dashboards</a
-          >.
-        </li>
-      </ul>
+        <h2>Process and approach</h2>
+        <p>
+          This perspective is rooted in process thinking, where reality is seen
+          as continuous transformation rather than discrete moments.
+        </p>
 
-      <p>So rather than a “timeline,” we’d have something like:</p>
+        <ul>
+          <li>Data becomes a trace of change, not a fixed measurement.</li>
+          <li>
+            Systems are understood as evolving states, not static snapshots.
+          </li>
+          <li>
+            Visualisation shifts from timelines to relational or environmental
+            models.
+          </li>
+        </ul>
 
-      <blockquote>
-        A <strong>topology of transformations</strong>, showing how one pattern
-        morphs into another depending on conditions.
-      </blockquote>
+        <blockquote>
+          Instead of showing “when something happens,” we explore how and why it
+          changes.
+        </blockquote>
 
-      <h2>3. Context: Time Depends on Environment</h2>
-      <p>Change is not universal, it’s tied to <strong>context</strong>:</p>
-      <ul>
-        <li>
-          On Earth, biological processes evolved under
-          <strong>specific gravity, radiation, and chemical cycles</strong>.
-        </li>
-        <li>
-          In space, for instance, those conditions shift, time dilation
-          (Einstein’s relativity) and altered biological processes show that
-          “aging” itself is context-dependent.
-        </li>
-        <li>
-          So what we perceive as time is actually our
-          <strong>local experience of process within Earth’s physical
-          constants</strong>.
-        </li>
-      </ul>
+        <p>This leads to a different type of representation:</p>
 
-      <p>
-        From that view, “time” is a <strong>shadow of interaction</strong>, not
-        a fundamental axis.
-      </p>
+        <ul>
+          <li>State trajectories instead of time series</li>
+          <li>Environmental influence instead of linear progression</li>
+          <li>Interdependence instead of isolated variables</li>
+        </ul>
 
-      <h2>4. Designing for Process, Not Time</h2>
-      <p>
-        If we apply this to systems design or data visualization:
-      </p>
-      <ul>
-        <li>
-          We stop thinking in <strong>x-axis = time, y-axis = value</strong>,
-          and instead think in
-          <strong>multi-dimensional states evolving through
-          interdependence</strong>.
-        </li>
-        <li>
-          Visuals could represent
-          <strong>how systems self-organize, how feedback loops emerge</strong>,
-          or <strong>how matter-energy reorganizes under constraints</strong>.
-        </li>
-        <li>
-          The new goal: showing <strong>how conditions generate change</strong>,
-          not just when change happens.
-        </li>
-      </ul>
+        <h2>My contribution</h2>
+        <p>
+          My contribution is to bridge philosophy, physics, and design into a
+          unified way of thinking about systems. I see an opportunity to move
+          from time-based thinking into process-based understanding, where
+          everything is relational, contextual, and evolving.
+        </p>
 
-      <blockquote>
-        We move from <strong>time-based dashboards</strong> to
-        <strong>process-based ecologies</strong> of information.
-      </blockquote>
+        <p>
+          As part of this exploration, I am actively experimenting with ways to
+          visualise and interact with this concept through data.
+        </p>
 
-      <h2>5. Philosophical Deep Point</h2>
-      <p>
-        If “time” is just our cognitive shorthand for “the order of changes we
-        can perceive,” then perhaps what we should visualize, and model, is
-        <strong>change itself</strong>, as
-        <strong>a relational field of transformations</strong>, not a line of
-        sequential moments.
-      </p>
+        <p>
+          You can explore this ongoing work here:
+          <a href="../blog-articles/data-time-experimentation.html">
+            Data experimentation: time, process, and transformation →
+          </a>
+        </p>
 
-      <p>
-        That’s how you bridge physics, biology, and data science into one living
-        continuum, an understanding that everything is processual, contextual,
-        and co-evolving.
-      </p>
+        <p>
+          This is an evolving space where I’m learning, testing ideas, and
+          building small experiments to better understand how data can reflect
+          continuous transformation rather than static moments.
+        </p>
+      </div>
 
-      <p>
-        I started visualizing this idea through a conceptual diagram showing how
-        time, process, environment, and transformation interrelate as a unified
-        system of understanding with real data. Explore more by clicking on
-        <a href="../blog-articles/data-time-experimentation.html">this link</a> to see this visual
-        experiment merging concepts of physics, philosophy, systems theory, and
-        design.
-      </p>
-    </div>
+      <div class="back-link">
+        <a href="../blog.html">← Back to blog</a>
+      </div>
+    </main>
 
-    <a href="../blog.html">← Back to blog</a>
+    <script>
+      function printPage() {
+        window.print();
+      }
+    </script>
   </body>
-
-<script>
-  function printPage() {
-    window.print();
-  }
-
-  document.addEventListener("keydown", function (e) {
-    if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-      printPage();
-    }
-  });
-</script>
 </html>

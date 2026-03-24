@@ -1,200 +1,616 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Why Cybersecurity Training is Important for UX?"
+    />
+    <meta
+      property="og:description"
+      content="Why cybersecurity awareness matters in UX design, and how designers can create safer, more trustworthy digital experiences."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/ed-hardie-1C5F88Af9ZU-unsplash.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/blog/cybersecurity-training-ux"
+    />
+    <meta property="og:type" content="website" />
+    <title>
+      Estela Gaspar – UX/UI Designer - Why Cybersecurity Training is Important
+      for UX?
+    </title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estela Gaspar – UX/UI Designer CV</title>
-    <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
-    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background-color: #fefefe;
-            line-height: 1.6;
-            color: #222;
-        }
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
 
-        h1,
-        h2,
-        h3 {
-            color: #444;
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
+      }
+
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
+      }
+
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ready-print {
+        display: inline-block;
+        margin: 0 0 24px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .img-medium {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
         }
 
         h1 {
-            font-size: 2em;
-            padding-bottom: 0.5rem;
+          margin-bottom: 20px;
         }
 
         h2 {
-            margin-top: 2rem;
+          margin-top: 32px;
         }
 
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        .contact,
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section-title {
-            font-size: 1.2em;
-            margin-top: 1.5rem;
-            font-weight: bold;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #555;
-        }
-
-
-        .back-btn a {
-            color: #808080;
-            margin: 0 0 30px 0;
-            font-size: 14px;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .back-btn a:hover,
-        .back-btn a:active,
-        .back-btn a:focus,
-        .back-btn a:visited {
-            color: #666666; /* darker gray */
-        }
-        
         .ready-print {
-            display: inline-block;
-            padding: 8px 14px;
-            margin: 20px 0;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #000;
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 4px;
-            box-shadow: 2px 2px 0 #000;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">
-         <div class="back-btn"><a href="../blog.html">← Back to main blog</a>
-    </div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+  <body>
+    <main class="container">
+      <div class="back-btn">
+        <a href="../blog.html">← Back to main blog</a>
+      </div>
+
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
         This is a ready-to-print page
-    </h4>
-        <h1>Why cybersecurity training is important for UX?</h1>
-    </div>
+      </h4>
 
-    <div class="section">
-        <h2>Cybersecurity training is crucial for UX designers.</h2>
-        
-        <img style="width:300px; height:auto;" src="../images/ed-hardie-1C5F88Af9ZU-unsplash.jpg" alt="Image of user interface with malicious file" title="Image of user interface with malicious file Unplash"><br>
-        Photo by <a href="https://unsplash.com/@edhardie?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ed Hardie</a> on <a href="https://unsplash.com/photos/a-dell-laptop-computer-with-a-red-screen-1C5F88Af9ZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      
-        <h2>Here's why it matters:</h2>
+      <div class="section">
+        <h1>Why Cybersecurity Training is Important for UX?</h1>
+        <p>
+          Cybersecurity training is crucial for UX designers because digital
+          experiences are no longer judged only by how easy or attractive they
+          are, but also by how safe and trustworthy they feel. As designers, we
+          help shape the way people interact with products, accounts,
+          authentication flows, personal data, and consent patterns. That means
+          UX sits close to security, whether we realise it or not.
+        </p>
+        <p>
+          In today’s landscape of AI, decentralisation, and increasingly complex
+          digital systems, designers need a stronger awareness of how their work
+          can either reduce user risk or accidentally introduce it. A secure
+          experience is not separate from good UX. It is part of it.
+        </p>
+
+        <img
+          class="img-medium"
+          src="../images/blog-images/ed-hardie-1C5F88Af9ZU-unsplash.jpg"
+          alt="Image of user interface with malicious file"
+          title="Image of user interface with malicious file"
+        />
+
+        <p class="label-text">
+          Photo by
+          <a
+            href="https://unsplash.com/@edhardie?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Ed Hardie</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/a-dell-laptop-computer-with-a-red-screen-1C5F88Af9ZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Unsplash</a
+          >
+        </p>
+
+        <h2 style="margin-top: 40px">The challenge</h2>
+        <p>
+          One of the biggest challenges in UX is that trust can take a long time
+          to build and only a moment to break. A single security failure can
+          damage a product’s credibility, even when the interface itself is
+          beautifully designed. Designers who are unaware of cybersecurity
+          basics may unintentionally create experiences that expose users to
+          unnecessary risk.
+        </p>
+        <p>
+          UX work often involves handling user data, behavioural insights, login
+          journeys, consent mechanisms, and account recovery flows. Without some
+          security awareness, it becomes easier to design weak password flows,
+          over-collect data, or overlook the broader implications of privacy and
+          access control.
+        </p>
+
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          From a UX perspective, the role is to think beyond usability alone and
+          ask sharper questions about safety, context, and trust. Cybersecurity
+          training helps designers collaborate more effectively with developers,
+          product teams, and stakeholders by understanding the risks behind the
+          interface.
+        </p>
+        <p>
+          It allows us to ask better questions such as whether a cookie policy
+          is GDPR compliant, how users will create and recover accounts, where
+          sensitive actions may introduce friction or vulnerability, and how
+          different devices, environments, and moments of use affect security
+          decisions. This makes the designer not just a visual or interaction
+          contributor, but a more strategic voice within the product team.
+        </p>
+
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          Cybersecurity training strengthens the design process by helping UX
+          professionals think in systems, patterns, and risk reduction. It
+          supports the creation of secure-by-design products, where security is
+          considered early rather than added on later as a technical fix.
+        </p>
+        <p>With this mindset, designers can:</p>
         <ol>
-            <li><strong>User trust translates into UX reputation</strong><br>
-                Good UX builds trust but one security breach destroys it.<br>
-                Understanding cybersecurity helps you design experiences to be safe (think: secure login flows, password handling, consent, etc.).</li>
-            <li><strong>Handling sensitive information</strong><br>
-                    UX often deals with user data, behaviour patterns, and analytics. <br>If you're unaware of security basics, you might unintentionally design vulnerable interfaces or collect too much.</li>
-            <li><strong>Challenges us to ask better questions</strong><br>
-                Knowing security basics allows us to collaborate better with developers and stakeholders: <br>
-               <i>"Is this cookie policy GDPR compliant?"</i> , <i>"How will users log in and create accounts? Where and how will they reset passwords? <br>At what times of day or year might these actions occur? On which devices and, in which contexts, will these interactions take place, <br>especially in today’s always-connected, multi-platform ubiquitous world?</i>". <br>You become a strategic voice.</li>
-            <li><strong>You can design secure-by-design systems</strong><br>
-                Cybersecurity training helps you:
-                <ul>
-                    <li>Avoid dark patterns that lead to risky behavior.</li>
-                    <li>Design for multi-factor authentication without making it painful.</li>
-                    <li>Build with access control and data minimisation in mind.</li>
-                </ul>
-            </li>
-             <li><strong>The current landscape is changing fast</strong><br>
-                AI, data, decentralisation... all come with new attack vectors. As UX evolves, so must your knowledge of digital safety.</li>
+          <li>
+            <strong>User trust translates into UX reputation</strong><br />
+            Good UX builds trust, but one security breach can destroy it.
+            Understanding cybersecurity helps designers create experiences that
+            feel safe and dependable, including secure login flows, password
+            handling, and consent patterns.
+          </li>
+          <li>
+            <strong>Handle sensitive information more responsibly</strong><br />
+            UX often involves user data, analytics, and behavioural patterns.
+            Security awareness helps reduce the risk of designing vulnerable
+            interfaces or collecting more data than is necessary.
+          </li>
+          <li>
+            <strong>Ask better questions</strong><br />
+            Security knowledge improves collaboration with technical teams and
+            stakeholders. It helps designers challenge assumptions and think
+            more critically about compliance, authentication, recovery journeys,
+            timing, context, and cross-platform behaviour.
+          </li>
+          <li>
+            <strong>Design secure-by-design systems</strong><br />
+            Cybersecurity training helps designers avoid dark patterns that may
+            encourage risky behaviour, support multi-factor authentication in a
+            more user-friendly way, and build with data minimisation and access
+            control in mind.
+          </li>
+          <li>
+            <strong>Respond to a changing landscape</strong><br />
+            AI, decentralisation, and data-heavy systems are changing quickly,
+            and each shift introduces new attack vectors. As UX evolves, digital
+            safety awareness must evolve with it.
+          </li>
         </ol>
-        <h3>UX without cybersecurity is like designing a beautiful house and leaving the door unlocked.</h3>
-        <p>Even a little training about threat models, secure design patterns, and how to reduce user risk, helps you protect your users, earn their trust, and build better experiences.</p>      
-        </ol>
-        <section>
-              <h2>Where you can learn more</h2>
-              <h2>Courses and videos</h2>
-              <ul>
-                <li><a href="https://www.linkedin.com/learning/systems-thinking-for-product-designers/applying-systems-thinking-to-product-design" alt="Systems Thinking for Product Designers" title="Systems Thinking for Product Designers online course" target="_blank">
-                    Systems Thinking for Product Designers (LinkedIn Learning)</a><br>
-                    Understand the interconnectedness of product components to help you design more cohesive user experiences.</li>
-                <li>What is insecure design? (Video. LinkedIn Learning).</li>
-                <li>What is threat modeling? (Video. LinkedIn Learning).</li>
-                <li><a href="https://www.linkedin.com/learning/designing-and-implementing-effective-cybersecurity-controls/importance-of-controls" alt="Designing and Implementing Effective Cybersecurity Controls" title="Designing and Implementing Effective Cybersecurity Controls online course" target="_blank">Designing and Implementing Effective Cybersecurity Controls</a>.<br>
-                How to design and implement effective cybersecurity controls, which is essential for ensuring secure user experiences.</li>
-                <li>Introduction to Identity and Access Management</li>
-                <li>Mapping to NIST CSF to design controls (Video. LinkedIn Learning).</li>
-                <li>Introduction to security design patterns (Video. LinkedIn Learning).</li>
-                <li>Cybersecurity Foundations</li>
-                <li>Cybersecurity Fundamentals</li>
-                <li><a href="https://www.linkedin.com/learning/cybersecurity-at-work-22609530/secure-behavior-in-the-workplace" alt="Cybersecurity at Work " title="Cybersecurity at Work online course" target="_blank">
-                       Cybersecurity at Work (LinkedIn Learning)</a></li>
-                <li><a href="https://www.futurelearn.com/courses/human-factors-in-a-cyber-security-environment" alt="" title="" target="_blank">Human Factors in Cybersecurity (FutureLearn).</a><br>
-                    FREE course! Focuses on psychology, user behavior, and secure system design.<br></li>
-                <li><a href="https://www.coursera.org/learn/usable-security" alt="Usable Security (Coursera, University of Maryland)" title="Usable Security (Coursera, University of Maryland) online course" target="_blank">Usable Security (Coursera, University of Maryland).</a>
-                    <br>Teaches how to evaluate and design secure user-facing systems.<br></li>
-                    <li> <a href="https://www.edx.org/course/cybersecurity-awareness" alt="Cybersecurity Awareness (edX, University of Washington)" title="Cybersecurity Awareness (edX, University of Washington) course" target="_blank">Cybersecurity Awareness (edX, University of Washington)</a><br>
-                        Broader overview with design implications.<br></li>
-                </ul>
-                
-                <h2>Books and articles</h2>
-                <p><strong>Must-Read Article:</strong><br>
-                    <a href="https://uxdesign.cc/designing-for-security-what-ux-designers-should-know-about-cybersecurity-bce3ad4c3b3" target="_blank">"Designing for Security" by Irene Pereyra (UX Collective)</a></p>
-                <p><strong>Book:</strong> "Security for Everyone" by Tanya Janca</p>
-                <p>Learn more about her community here: <a href="https://www.wehackpurple.com" target="_blank">We Hack Purple</a></p>
-                
-                <h2>Tools to get familiar with</h2>
-                <ul>
-                    <li><a href="https://1password.com" target="_blank">1Password</a> / <a href="https://bitwarden.com" target="_blank">Bitwarden</a> – Password manager UX</li>
-                    <li><a href="https://authy.com" target="_blank">Authy</a> / <a href="https://support.google.com/accounts/answer/1066447?hl=en" target="_blank">Google Authenticator</a> – 2FA flows</li>
-                    <li><a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned?</a> – See what breached data feels like</li>
-                    <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10</a> – Learn common attack types that affect UX</li>
-                </ul>
-                
-                <h2>YouTube channels and podcasts</h2>
-                <ul>
-                    <li><a href="https://www.youtube.com/c/Techlore" target="_blank">Cybersecurity For Beginners (Techlore)</a></li>
-                    <li><a href="https://darknetdiaries.com" target="_blank">Darknet Diaries</a> – Real security failure stories</li>
-                    <li><a href="https://secureuxpodcast.com" target="_blank">The Secure UX Podcast</a> – Real-world UX + security advice</li>
-                </ul>
-        </section>
 
-    
+        <h3>
+          UX without cybersecurity is like designing a beautiful house and
+          leaving the door unlocked.
+        </h3>
+        <p>
+          Even a small amount of training in threat models, secure design
+          patterns, and user-risk reduction can help designers protect users,
+          strengthen trust, and create better digital experiences.
+        </p>
 
-    </div>
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution here is to advocate for a UX practice that treats
+          security as part of the user experience rather than as a separate
+          technical concern. By bringing awareness of cybersecurity into design
+          thinking, UX professionals can help shape safer, more transparent, and
+          more resilient products.
+        </p>
+        <p>
+          This includes learning from courses, articles, tools, and industry
+          resources that connect usability with security. Some useful places to
+          explore include systems thinking, threat modelling, secure design
+          patterns, identity and access management, and human factors in
+          cybersecurity.
+        </p>
 
+        <h3>Where you can learn more</h3>
 
+        <h4>Courses and videos</h4>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/learning/systems-thinking-for-product-designers/applying-systems-thinking-to-product-design"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Systems Thinking for Product Designers (LinkedIn Learning)</a
+            ><br />
+            Understand the interconnectedness of product components to help
+            design more cohesive user experiences.
+          </li>
+          <li>What is insecure design? (Video. LinkedIn Learning).</li>
+          <li>What is threat modeling? (Video. LinkedIn Learning).</li>
+          <li>
+            <a
+              href="https://www.linkedin.com/learning/designing-and-implementing-effective-cybersecurity-controls/importance-of-controls"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Designing and Implementing Effective Cybersecurity Controls</a
+            ><br />
+            Learn how to design and implement effective cybersecurity controls,
+            which is essential for creating secure user experiences.
+          </li>
+          <li>Introduction to Identity and Access Management.</li>
+          <li>
+            Mapping to NIST CSF to design controls (Video. LinkedIn Learning).
+          </li>
+          <li>
+            Introduction to security design patterns (Video. LinkedIn Learning).
+          </li>
+          <li>Cybersecurity Foundations.</li>
+          <li>Cybersecurity Fundamentals.</li>
+          <li>
+            <a
+              href="https://www.linkedin.com/learning/cybersecurity-at-work-22609530/secure-behavior-in-the-workplace"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cybersecurity at Work (LinkedIn Learning)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.futurelearn.com/courses/human-factors-in-a-cyber-security-environment"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Human Factors in Cybersecurity (FutureLearn)</a
+            ><br />
+            Free course focused on psychology, user behaviour, and secure system
+            design.
+          </li>
+          <li>
+            <a
+              href="https://www.coursera.org/learn/usable-security"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Usable Security (Coursera, University of Maryland)</a
+            ><br />
+            Teaches how to evaluate and design secure user-facing systems.
+          </li>
+          <li>
+            <a
+              href="https://www.edx.org/course/cybersecurity-awareness"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cybersecurity Awareness (edX, University of Washington)</a
+            ><br />
+            Broader overview with design implications.
+          </li>
+        </ul>
 
-    <a href="../blog.html">← Back to blog</a>
+        <h4>Books and articles</h4>
+        <p>
+          <strong>Must-read article:</strong><br />
+          <a
+            href="https://uxdesign.cc/designing-for-security-what-ux-designers-should-know-about-cybersecurity-bce3ad4c3b3"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Designing for Security by Irene Pereyra (UX Collective)</a
+          >
+        </p>
+        <p><strong>Book:</strong> Security for Everyone by Tanya Janca</p>
+        <p>
+          Learn more about her community here:
+          <a
+            href="https://www.wehackpurple.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >We Hack Purple</a
+          >
+        </p>
 
-</body>
+        <h4>Tools to get familiar with</h4>
+        <ul>
+          <li>
+            <a
+              href="https://1password.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >1Password</a
+            >
+            /
+            <a
+              href="https://bitwarden.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Bitwarden</a
+            >
+            – Password manager UX
+          </li>
+          <li>
+            <a
+              href="https://authy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Authy</a
+            >
+            /
+            <a
+              href="https://support.google.com/accounts/answer/1066447?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Google Authenticator</a
+            >
+            – 2FA flows
+          </li>
+          <li>
+            <a
+              href="https://haveibeenpwned.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Have I Been Pwned?</a
+            >
+            – See what breached data feels like
+          </li>
+          <li>
+            <a
+              href="https://owasp.org/www-project-top-ten/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >OWASP Top 10</a
+            >
+            – Learn common attack types that affect UX
+          </li>
+        </ul>
 
-<script>
-  function printPage() {
-    window.print();
-  }
+        <h4>YouTube channels and podcasts</h4>
+        <ul>
+          <li>
+            <a
+              href="https://www.youtube.com/c/Techlore"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cybersecurity For Beginners (Techlore)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://darknetdiaries.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Darknet Diaries</a
+            >
+            – Real security failure stories
+          </li>
+          <li>
+            <a
+              href="https://secureuxpodcast.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >The Secure UX Podcast</a
+            >
+            – Real-world UX and security advice
+          </li>
+        </ul>
+      </div>
 
-  document.addEventListener("keydown", function (e) {
-    if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-      printPage();
-    }
-  });
-</script>
+      <section class="back-link">
+        <a href="../blog.html">← Back to blog</a>
+      </section>
+    </main>
 
+    <script>
+      function printPage() {
+        window.print();
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>

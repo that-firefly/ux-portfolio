@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estela Gaspar – UX/UI Designer CV</title>
+    <meta property="og:title" content="The Living Electric Roadway" />
+    <meta
+      property="og:description"
+      content="A speculative concept for a closed-loop civic energy system where roads behave like living infrastructure, regenerating and redistributing power."
+    />
+    <meta
+      property="og:image"
+      content="https://thatfirefly.com/images/living-road.png"
+    />
+    <meta
+      property="og:url"
+      content="https://thatfirefly.com/blog/the-living-electric-roadway"
+    />
+    <meta property="og:type" content="website" />
+    <title>Estela Gaspar – UX/UI Designer - The Living Electric Roadway</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
     <link
       rel="icon"
@@ -11,205 +31,393 @@
       href="../images/favicon-32x32.png"
       sizes="32x32"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
     <style>
-      .back-btn a:hover,
-      .back-btn a:active,
-      .back-btn a:focus,
-      .back-btn a:visited {
-        color: #666666;
+      :root {
+        --bg: #fcfcfc;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #667085;
+        --border: #e9eaeb;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --container: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fefefe;
-        line-height: 1.6;
-        color: #222;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        background: var(--bg);
+        color: var(--text);
       }
 
-      h1,
-      h2,
-      h3 {
-        color: #444;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
       }
 
-      h1 {
-        font-size: 2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
+      a {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      h2 {
-        margin-top: 2rem;
+      a:active,
+      a:link {
+        color: #1b5e20;
+        overflow-wrap: anywhere;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      a:hover {
+        color: #388e3c;
+        overflow-wrap: anywhere;
       }
 
-      .contact,
-      .section {
-        margin-bottom: 2rem;
+      a:visited {
+        color: #8052b8;
+        overflow-wrap: anywhere;
       }
 
-      .section-title {
-        font-size: 1.2em;
-        margin-top: 1.5rem;
-        font-weight: bold;
+      p,
+      li {
+        overflow-wrap: anywhere;
       }
 
-      .highlight {
-        font-weight: bold;
-        color: #555;
+      main.container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 24px 20px 72px;
       }
 
-      .back-btn a {
-        color: #808080;
-        margin: 0 0 30px 0;
-        font-size: 14px;
+      .back-btn,
+      .back-link {
+        margin: 20px 0px;
+      }
+
+      .back-btn a,
+      .back-link a {
         text-decoration: none;
-        transition: color 0.2s ease;
+        color: var(--muted);
+        font-weight: 500;
       }
 
       .ready-print {
         display: inline-block;
-        padding: 8px 14px;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 0 24px;
+        padding: 10px 14px;
         font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 4px;
-        box-shadow: 2px 2px 0 #000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        color: #111;
+        background: #fff;
+        border: 1.5px solid #111;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .ready-print:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        line-height: 1.2;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 24px 0 10px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .img-xl {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      .img-medium {
+        margin: 24px 0;
+      }
+
+      .label-text,
+      .muted,
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .section {
+          padding: 22px 18px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          margin-top: 32px;
+        }
+
+        .ready-print {
+          width: 100%;
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .section {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+
+        .ready-print,
+        .back-btn,
+        .back-link {
+          display: none;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+          color: #666;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="back-btn"><a href="../blog.html">← Back to main blog</a></div>
-    <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-      This is a ready-to-print page
-    </h4>
+    <main class="container">
+      <div class="back-btn">
+        <a href="../blog.html">← Back to main blog</a>
+      </div>
 
-    <div class="section">
-      <h1>The living electric roadway.</h1>
-      <h2>About the project</h2>
-      <h3>
-        A closed-loop energy system that operates on a fixed energy input and
-        replenishes itself using internal regenerative sources.
-      </h3>
+      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+        This is a ready-to-print page
+      </h4>
 
-      <p>
-        One of my favourite things to do is ideate and imagine bold solutions to
-        real-world problems. When I am in nature or drawing I come up will ideas
-        for things <br />that I observe in real life and stay in my mind waiting
-        for... ideation. If the idea sparks something in you, feel free to build
-        on it — I’d genuinely love to see it come to life. <br />I just ask that
-        you bring me along for the journey and consider collaborating. Projects
-        like these make me feel truly alive - they give purpose to design and
-        turn<br />
-        creativity into something deeply meaningful.
-      </p>
-      <p>
-        Imagine the following... It’s a warm afternoon. People stroll down the
-        park-side pathway, cyclists glide by, and a steady stream of electric<br />
-        cars hum across the nearby road. All of them - unknowingly - are part of
-        a dynamic, intelligent energy ecosystem beneath their feet.
-      </p>
+      <div class="section">
+        <h1>The living electric roadway</h1>
+        <p>
+          The Living Electric Roadway is a speculative concept project exploring
+          how civic infrastructure could behave more like a living system. It
+          imagines roads, pathways, and connected public spaces as active
+          participants in energy generation, storage, and redistribution rather
+          than passive surfaces we simply travel across.
+        </p>
+        <p>
+          The idea comes from observing nature, movement, and the hidden systems
+          that keep living organisms in balance. In this concept, infrastructure
+          becomes responsive, regenerative, and intelligent, quietly supporting
+          the people who use it every day while contributing to a wider energy
+          ecosystem.
+        </p>
 
-      <img
-        style="width: 400px; height: auto"
-        src="../images/living-road-example.png"
-        alt="Image concept of the user experience of a living road concept."
-      />
+        <h2 style="margin-top: 40px">The challenge</h2>
+        <p>
+          The challenge was to imagine a closed-loop energy system that could
+          operate on a fixed input, replenish itself through internal
+          regenerative sources, and respond dynamically when pressure appears
+          elsewhere in the network. Rather than relying on a single static power
+          source, the concept needed to show how infrastructure might
+          continuously gather, store, and redirect energy in a resilient way.
+        </p>
+        <p>
+          It also needed to feel believable from a user-experience perspective.
+          The project was not only about energy engineering, but about how
+          citizens, emergency services, and electric vehicle users might
+          understand and interact with such a system. The challenge was to make
+          something technically ambitious still feel calm, useful, and intuitive
+          in everyday life.
+        </p>
 
-      <img
-        style="width: 400px; height: auto"
-        src="../images/living-road-2.png"
-        alt="Image concept of the user experience of a living road concept."
-      />
+        <img
+          class="img-medium"
+          src="../images/blog-images/living-road-example.png"
+          alt="Image concept of the user experience of a living road concept"
+          title="Concept sketch of the living electric roadway"
+        />
 
-      <p>
-        Suddenly, a power outage occurs in a nearby neighbourhood. But instead
-        of a blackout, the
-        <strong>smart road responds like a living organism</strong>.
-      </p>
+        <img
+          class="img-medium"
+          src="../images/blog-images/living-road-2.png"
+          alt="Image concept of the user experience of a living road concept"
+          title="Concept detail of the living electric roadway"
+        />
 
-      <p>
-        Just like blood redirects to an injured area, the
-        <strong>ElectroFlow Circuit</strong> reroutes stored energy through its
-        <strong>self-regulating microgrid</strong>. <br />The system pulls
-        reserve power from three key sources:
-      </p>
+        <h2 style="margin-top: 40px">My role</h2>
+        <p>
+          My role in this concept project was to originate the idea, define its
+          vision, and begin shaping it as both a system and a user experience. I
+          approached it not just as an invention, but as a service ecosystem
+          connecting infrastructure, mobility, energy flows, and public-facing
+          information.
+        </p>
+        <p>
+          I explored how the project could behave like a living organism. In the
+          scenario, when a power outage affects a nearby neighbourhood, the road
+          responds like a body protecting itself. Energy is rerouted through a
+          self-regulating microgrid, drawing reserve power from multiple
+          internal sources and prioritising the areas that need it most.
+        </p>
 
-      <ul>
-        <li>
-          <strong>Kinetic energy</strong> generated by vehicles and pedestrian
-          movement (via pressure-sensitive tiles and road coils).
-        </li>
-        <li>
-          <strong>Solar panels</strong> embedded in road dividers and rooftops.
-        </li>
-        <li>
-          <strong>Residual charge</strong> from EVs decelerating or braking.
-        </li>
-      </ul>
-      <p>
-        It also only uses an certain amount of energy that doesnt disappear
-        because it gets replaced... its a closed live circuit.
-      </p>
-      <p>
-        Meanwhile, the <strong>user-facing experience</strong> (via app or
-        public display panels) shows:
-      </p>
-      <ul>
-        <li>Live energy levels of each road segment.</li>
-        <li>Areas currently "donating" or "receiving" power.</li>
-        <li>
-          Suggestions for energy-saving routes and optimal times for EV
-          charging.
-        </li>
-      </ul>
+        <h2 style="margin-top: 40px">Process and approach</h2>
+        <p>
+          The process began with a simple but vivid idea: people walking,
+          cycling, and driving along a road without realising that the
+          infrastructure beneath them is participating in a wider intelligent
+          energy system. From there, the concept evolved into a closed live
+          circuit that uses energy, retains value within the system, and
+          replenishes itself through regenerative inputs.
+        </p>
 
-      <p>
-        The road even <strong>communicates with emergency services</strong>,
-        ensuring that vital energy routes are prioritized — just like arteries
-        protecting the heart.
-      </p>
+        <p>
+          In this concept, the ElectroFlow Circuit gathers reserve energy from
+          three key sources:
+        </p>
+        <ul>
+          <li>
+            <strong>Kinetic energy</strong> generated by vehicles and pedestrian
+            movement through pressure-sensitive tiles and road coils.
+          </li>
+          <li>
+            <strong>Solar energy</strong> collected through panels embedded in
+            road dividers and rooftops.
+          </li>
+          <li>
+            <strong>Residual charge</strong> captured from EVs as they
+            decelerate or brake.
+          </li>
+        </ul>
 
-      <p></p>
-      <p>
-        To the average citizen? Everything appears calm, efficient, and
-        uninterrupted. To the designers, engineers, and UX minds behind it?
-        <br />It’s the future of
-        <strong>civic infrastructure as a living system.</strong>
-      </p>
+        <p>
+          The user-facing experience was also an important part of the concept.
+          Through an app or public display panels, people could see:
+        </p>
+        <ul>
+          <li>Live energy levels of each road segment.</li>
+          <li>Areas currently donating or receiving power.</li>
+          <li>Suggestions for energy-saving routes.</li>
+          <li>Optimal times for electric vehicle charging.</li>
+        </ul>
 
-      <img
-        style="width: 700px; height: auto"
-        src="../images/living-road.png"
-        alt="Image concept of the user experience of a living road concept."
-      />
-    </div>
+        <p>
+          The system also communicates with emergency services so that vital
+          energy routes can be prioritised during disruptions. The overall
+          ambition is for the experience to feel smooth and uninterrupted for
+          citizens, while beneath the surface the infrastructure behaves as a
+          responsive, resilient energy organism.
+        </p>
 
-    <a href="../blog.html">← Back to blog</a>
-  </body>
+        <img
+          class="img-xl"
+          src="../images/blog-images/living-road.png"
+          alt="Image concept of the user experience of a living road concept"
+          title="The living electric roadway system concept"
+        />
 
-  <script>
-    function printPage() {
-      window.print();
-    }
+        <h2 style="margin-top: 40px">My contribution</h2>
+        <p>
+          My contribution was to imagine and articulate a future-facing concept
+          where design, technology, and civic infrastructure are treated as one
+          connected system. Rather than focusing only on the physical road, I
+          explored the invisible experience around it: how energy moves, how the
+          system responds under pressure, and how users might understand its
+          behaviour through clear, meaningful interfaces.
+        </p>
+        <p>
+          This project reflects the kind of work that gives purpose to design
+          for me. It turns observation, imagination, and systems thinking into
+          something that could one day have practical social impact. It is also
+          an invitation to collaboration. If the idea sparks something in
+          others, I would love to see it developed further together.
+        </p>
+      </div>
 
-    document.addEventListener("keydown", function (e) {
-      if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-        printPage();
+      <section class="back-link">
+        <a href="../blog.html">← Back to blog</a>
+      </section>
+    </main>
+
+    <script>
+      function printPage() {
+        window.print();
       }
-    });
-  </script>
+
+      document.addEventListener("keydown", function (e) {
+        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+          printPage();
+        }
+      });
+    </script>
+  </body>
 </html>
