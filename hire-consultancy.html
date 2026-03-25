@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultancy Services | That Firefly</title>
+    <meta
+      name="description"
+      content="That Firefly consultancy services by Estela Gaspar: UX/UI, service design, design systems, user research, branding, signage and live prototype design."
+    />
+    <style>
+      :root {
+        --bg: #ceaaed;
+        --paper: #ceaaed;
+        --ink: #171411;
+        --muted: #3d155f;
+        --line: #ceaaed;
+        --accent: #3d155f;
+        --accent-soft: #ceaaed;
+        --shadow: 0 18px 45px rgba(23, 20, 17, 0.08);
+        --radius: 20px;
+        --max: 1160px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: #e6d5f5;
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(calc(100% - 2rem), var(--max));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: #3d155f;
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(217, 208, 196, 0.75);
+      }
+
+      .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .brand strong {
+        color: #ffffff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .brand span {
+        font-size: 0.9rem;
+        color: #ffffff;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        color: var(--muted);
+        color: #ffffff;
+      }
+
+      .btn.btn-primary a {
+        color: #000000;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        padding: 0.95rem 1.25rem;
+        border-radius: 999px;
+        font-weight: 700;
+        border: 1px solid transparent;
+        transition: 0.18s ease;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background-color: #2dd184;
+        color: #000000 !important;
+        box-shadow: 0 10px 22px rgba(23, 20, 17, 0.16);
+      }
+
+      .btn-secondary {
+        background: #ffffff;
+        color: var(--ink);
+        border: 2px solid #2dd184;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 1rem;
+        letter-spacing: 0.14em;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .subtitle {
+        color: #3d155f;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.06;
+        letter-spacing: -0.03em;
+        margin: 0 0 1rem;
+        font-weight: 500;
+      }
+
+      h1 {
+        font-size: clamp(2.9rem, 6vw, 5.2rem);
+        max-width: 10.5ch;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+      }
+
+      h3 {
+        font-size: 1.45rem;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      .hero {
+        padding: 5.8rem 0 3.5rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 1.4rem;
+        align-items: stretch;
+      }
+
+      .hero-copy p {
+        color: #000000 !important;
+        max-width: 60ch;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin: 1.5rem 0;
+      }
+
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .hero-tags li {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 999px;
+        padding: 0.7rem 0.95rem;
+        font-size: 0.92rem;
+      }
+
+      .panel,
+      .service,
+      .step,
+      .contact-card,
+      .quote-card {
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(217, 208, 196, 0.9);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel {
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+      }
+
+      .hero-panel::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+      }
+
+      .hero-panel > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .mini-list {
+        display: grid;
+        gap: 0.9rem;
+        margin-top: 1rem;
+      }
+
+      .mini-item {
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+      }
+
+      .mini-no {
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0 2rem;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        color: var(--accent);
+        display: grid;
+        place-items: center;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      section {
+        padding: 1.25rem 0 4.25rem;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: end;
+        margin-bottom: 1.4rem;
+      }
+
+      .section-head p {
+        max-width: 58ch;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .services-grid,
+      .cred-grid,
+      .contact-grid,
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .service,
+      .panel,
+      .contact-card,
+      .quote-card,
+      .step {
+        padding: 1.45rem;
+      }
+
+      .service {
+        background-color: #3d155f;
+      }
+
+      .service h3,
+      .service p,
+      .service ul li {
+        color: #ffffff !important;
+      }
+
+      .service p,
+      .panel p,
+      .contact-card p,
+      .quote-card p,
+      .step p {
+        color: var(--muted);
+      }
+
+      .service ul,
+      .panel ul,
+      .contact-card ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      .service li + li,
+      .panel li + li,
+      .contact-card li + li {
+        margin-top: 0.5rem;
+      }
+
+      .proof-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .quote-card {
+        background-color: #3d155f;
+      }
+
+      .quote-card blockquote {
+        color: #ffffff;
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.45rem;
+        line-height: 1.35;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .step strong {
+        display: inline-grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        color: var(--accent);
+        margin-bottom: 0.9rem;
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .contact-list a {
+        color: var(--accent);
+        font-weight: 700;
+        word-break: break-word;
+      }
+
+      .contact-list a {
+        text-decoration: none;
+        transition: text-decoration 0.2s ease;
+      }
+
+      .contact-list a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        padding: 1.2rem 0 2.25rem;
+        border-top: 1px solid rgba(217, 208, 196, 0.85);
+      }
+
+      footer p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .icon {
+        width: 20%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .section-head,
+        .services-grid,
+        .cred-grid,
+        .contact-grid,
+        .proof-grid,
+        .steps {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav {
+          min-height: auto;
+          padding: 1rem 0;
+          align-items: flex-start;
+        }
+
+        .hero {
+          padding-top: 4.4rem;
+        }
+        h1 {
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="https://thatfirefly.com">
+          <strong>That Firefly</strong>
+          <span>Meaningful Product Design · Estela Gaspar</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#process">Process</a>
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="subtitle">That Firefly consultancy services</div>
+            <h1>Meaningful design for products, brands and spaces.</h1>
+            <p>
+              I am Estela Gaspar, a lead product designer working across UX/UI,
+              service design, design systems, user research, branding and
+              signage. I help organisations shape experiences that feel clear,
+              useful and visually distinctive.
+            </p>
+            <h2>No middlemen. Just experienced UX Design.</h2>
+            <p>
+              My work spans digital journeys, live prototypes, GOV.UK and
+              GDS-informed flows, interface design, brand identity, and physical
+              communication such as signage and visual systems.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact"
+                >Book a discovery call</a
+              >
+              <a class="btn btn-secondary" href="#services">See services</a>
+            </div>
+            <ul class="hero-tags" aria-label="Highlights">
+              <li>UX / UI Design</li>
+              <li>Service Design</li>
+              <li>Design Systems</li>
+              <li>User Research</li>
+              <li>Branding</li>
+              <li>Signage</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel panel">
+            <div>
+              <div class="subtitle">What I bring</div>
+              <h2>Strategic thinking with a visual and human eye</h2>
+              <p>
+                I combine over a decade of design experience with
+                multidisciplinary practice across government, e-learning,
+                energy, e-commerce, publishing and visual communication.
+              </p>
+              <img src="./images/ux-designer-estela.png" />
+            </div>
+            <div class="mini-list">
+              <div class="mini-item">
+                <div class="mini-no">01</div>
+                <div>
+                  <strong>Digital clarity</strong>
+                  <p>
+                    Complex journeys simplified through UX, content structure,
+                    flows and interaction design.
+                  </p>
+                </div>
+              </div>
+              <div class="mini-item">
+                <div class="mini-no">02</div>
+                <div>
+                  <strong>Prototype experience</strong>
+                  <p>
+                    Hands-on work with live prototype flows, design patterns,
+                    GitHub-based updates and iterative delivery.
+                  </p>
+                </div>
+              </div>
+              <div class="mini-item">
+                <div class="mini-no">03</div>
+                <div>
+                  <strong>Broader design range</strong>
+                  <p>
+                    Branding, signage, web, editorial and visual direction for
+                    businesses that want coherence across touchpoints.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <div class="subtitle">Services</div>
+              <h2>Consultancy services</h2>
+            </div>
+          </div>
+
+          <div class="services-grid">
+            <article class="service">
+              <img
+                class="icon"
+                src="./images/consultancy-images/ux-ui-icon.png"
+              />
+              <h3>UX / UI Design</h3>
+              <p>
+                Clear, accessible and well-structured digital experiences for
+                web products, platforms and services. Deliverables such as
+                wireframes, prototypes and audit reports.
+              </p>
+            </article>
+
+            <article class="service">
+              <img
+                class="icon"
+                src="./images/consultancy-images/service-design-icon.png"
+              />
+              <h3>Service Design & Design Systems</h3>
+              <p>
+                Design support for larger services that need consistency,
+                systems thinking and structured collaboration.
+              </p>
+            </article>
+
+            <article class="service">
+              <img
+                class="icon"
+                src="./images/consultancy-images/prototypes-icon.png"
+              />
+              <h3>Live Prototypes & Delivery Support</h3>
+              <p>
+                Hands-on prototype work for teams that need ideas tested,
+                connected and made tangible. Prototype journeys and clickable
+                flows and GOV.UK Prototype Kit and Nunjucks-based page updates.
+              </p>
+            </article>
+
+            <article class="service">
+              <img
+                class="icon"
+                src="./images/consultancy-images/branding-icon.png"
+              />
+              <h3>Branding, Signage & Visual Design</h3>
+              <p>
+                Distinctive visual communication for businesses, environments
+                and printed or digital materials.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <div class="subtitle">Experience</div>
+              <h2>UX/UI, Government, design and marketing</h2>
+            </div>
+          </div>
+
+          <div class="proof-grid">
+            <div class="panel">
+              <h3>Relevant consultancy strengths</h3>
+              <ul>
+                <li>
+                  Lead Product Designer mindset across UX/UI, service design,
+                  design systems and research
+                </li>
+                <li>
+                  Experience contributing to government service journeys and
+                  GDS-aligned patterns
+                </li>
+                <li>
+                  Hands-on prototype design using GOV.UK Prototype Kit, GitHub
+                  and Nunjucks
+                </li>
+                <li>
+                  Experience shaping flows, page patterns, empathy maps, journey
+                  maps and workshops
+                </li>
+                <li>
+                  Additional experience in branding, signage, web design,
+                  editorial and illustration
+                </li>
+                <li>
+                  Comfortable moving between strategic thinking and detailed
+                  execution
+                </li>
+              </ul>
+            </div>
+
+            <aside class="quote-card">
+              <img class="icon" src="./images/consultancy-images/i-care.png" />
+              <div class="eyebrow">
+                A better fit than "just screens". <br />I care about your
+                business and product
+              </div>
+              <blockquote>
+                I design experiences that work in reality and are meaningful
+                across products, services and serve real key users.
+              </blockquote>
+            </aside>
+          </div>
+
+          <div class="cred-grid" style="margin-top: 1rem">
+            <div class="panel">
+              <h3>Government and service work</h3>
+              <p>
+                I have worked on complex journeys for Government services
+                creating and editing pages, mapping journeys, selecting suitable
+                GDS components and patterns, and updating prototypes linked to
+                repositories and research findings.
+              </p>
+            </div>
+
+            <div class="panel">
+              <h3>Visual communication beyond UX</h3>
+              <p>
+                Alongside digital product work, I also bring experience in
+                branding, signage, web design, print, publishing and
+                illustration.
+              </p>
+              <p>
+                That range is valuable for businesses that want one creative
+                partner who can hold the bigger picture together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="approach">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <div class="subtitle">Approach</div>
+              <h2>Thoughtful, collaborative and practical</h2>
+            </div>
+          </div>
+
+          <div class="cred-grid">
+            <div class="panel">
+              <h3>What clients often need from me</h3>
+              <ul>
+                <li>A fresh but grounded perspective</li>
+                <li>
+                  Someone who can understand complexity without making it more
+                  complicated
+                </li>
+                <li>
+                  Support turning research and ideas into tangible design
+                  decisions
+                </li>
+                <li>Visual quality without losing usability and structure</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Ways of working</h3>
+              <ul>
+                <li>One-off consultancy sessions</li>
+                <li>Focused project-based delivery</li>
+                <li>Ongoing design support</li>
+                <li>
+                  Creative collaboration with agencies, founders or internal
+                  teams
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <div class="subtitle">Process</div>
+              <h2>A clear process, without the fluff</h2>
+            </div>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <strong>1</strong>
+              <h3>Discover</h3>
+              <p>
+                Look at the business context, user needs, current pain points
+                and what success should look like.
+              </p>
+            </div>
+            <div class="step">
+              <strong>2</strong>
+              <h3>Define</h3>
+              <p>
+                Shape the opportunity into a clear direction, whether that is a
+                service problem, interface issue or visual communication need.
+              </p>
+            </div>
+            <div class="step">
+              Consultancy services
+              <strong>3</strong>
+              <h3>Design</h3>
+              <p>
+                Create flows, pages, prototypes, systems or visual concepts that
+                are practical, coherent and distinctive.
+              </p>
+            </div>
+            <div class="step">
+              <strong>4</strong>
+              <h3>Refine</h3>
+              <p>
+                Review, improve and finalise so the work is ready to test,
+                present, hand over or build.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container contact-grid">
+          <div class="contact-card">
+            <div class="subtitle">Contact</div>
+            <h2>
+              Looking for a designer who can think across product, brand and
+              experience?
+            </h2>
+            <p>
+              I would love to hear about your project. Whether you need UX/UI
+              support, live prototype help, service design input, branding or
+              signage concepts, get in touch.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="mailto:uxestela@gmail.com"
+                >Email me</a
+              >
+              <a
+                class="btn btn-secondary"
+                href="https://www.linkedin.com/in/estela-gaspar/"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn profile</a
+              >
+            </div>
+          </div>
+
+          <aside class="contact-card">
+            <h3>Update before publishing</h3>
+            <ul class="contact-list">
+              <li>
+                Email:
+                <a href="mailto:uxestela@gmail.com">uxestela@gmail.com</a>
+              </li>
+              <li>
+                Website:
+                <a
+                  href="https://thatfirefly.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  >thatfirefly.com</a
+                >
+              </li>
+              <li>
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/estela-gaspar/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >linkedin.com/in/estela-gaspar</a
+                >
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="year"></span> That Firefly · Estela Gaspar · Meaningful
+          Product Design
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
