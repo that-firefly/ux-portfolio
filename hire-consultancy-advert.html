@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estela Gaspar - LinkedIn Graphic</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f1ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .linkedin-card {
+        width: 1200px;
+        height: 1200px;
+        background: linear-gradient(180deg, #ffffff 0%, #e6d5f5 100%);
+        color: #1f1f1f;
+        padding: 90px 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .linkedin-card::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      .linkedin-card::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.025);
+      }
+
+      .top {
+        position: relative;
+        z-index: 2;
+      }
+
+      .eyebrow {
+        color: #3d155f;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        opacity: 0.65;
+      }
+
+      h1 {
+        font-size: 76px;
+        line-height: 1.08;
+        margin: 0 0 38px 0;
+        max-width: 880px;
+        font-weight: 700;
+      }
+
+      .intro {
+        font-size: 31px;
+        line-height: 1.45;
+        max-width: 920px;
+        margin: 0 0 30px 0;
+        color: #2d2d2d;
+      }
+
+      .highlight {
+        font-weight: 700;
+      }
+
+      .services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+        max-width: 900px;
+      }
+
+      .tag {
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        border-radius: 999px;
+        padding: 12px 20px;
+        font-size: 22px;
+        background: rgba(255, 255, 255, 0.45);
+      }
+
+      .middle-statement {
+        position: relative;
+        z-index: 2;
+        margin: 50px 0 40px;
+        font-size: 42px;
+        line-height: 1.3;
+        font-weight: 700;
+        max-width: 760px;
+      }
+
+      .bottom {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 35px;
+      }
+
+      .name-block h2 {
+        margin: 0;
+        font-size: 36px;
+        line-height: 1.1;
+      }
+
+      .name-block p {
+        margin: 10px 0 0 0;
+        font-size: 24px;
+        opacity: 0.75;
+      }
+
+      .link {
+        font-size: 24px;
+        line-height: 1.4;
+        text-align: right;
+        max-width: 420px;
+        word-break: break-word;
+      }
+
+      .link a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+        padding-bottom: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="linkedin-card">
+      <div class="top">
+        <div class="eyebrow">Design consultancy</div>
+
+        <h1>Meaningful design for products, brands and spaces.</h1>
+
+        <p class="intro">
+          I’m <span class="highlight">Estela Gaspar</span>, a lead product
+          designer working across UX/UI, service design, design systems, user
+          research, branding and signage.
+        </p>
+
+        <p class="intro">
+          I help organisations shape experiences that feel
+          <span class="highlight">clear, useful and visually distinctive.</span>
+        </p>
+
+        <div class="services">
+          <span class="tag">UX/UI</span>
+          <span class="tag">Service Design</span>
+          <span class="tag">Design Systems</span>
+          <span class="tag">User Research</span>
+          <span class="tag">Brand Identity</span>
+          <span class="tag">Signage</span>
+        </div>
+      </div>
+
+      <div class="middle-statement">
+        No middlemen. Just experienced UX design.
+      </div>
+
+      <div class="bottom">
+        <div class="name-block">
+          <h2>Estela Gaspar</h2>
+          <p>Lead Product Designer</p>
+        </div>
+
+        <div class="link">
+          <a href="https://thatfirefly.com/hire-consultancy">
+            thatfirefly.com/hire-consultancy
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

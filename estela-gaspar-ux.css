@@ -829,7 +829,7 @@ body {
   min-height: 60vh;
   background: url("images/drawwilder/drawwilder-yellow-sofa-ely-cat.jpg")
     center / cover no-repeat;
-  margin: 30px 0px;
+  margin: 60px 0px;
 }
 
 #drawwilder-logo {
@@ -1964,6 +1964,14 @@ footer.footer-banner.drawwilder {
 
 @media only screen and (device-width: 375px) and (-webkit-device-pixel-ratio: 2) {
   /* likely an iPhone 6, 7, 8, X, 12 mini */
+
+  /* Drawilder */
+
+  .art-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   .text-only-wider {
     max-width: 100%;
