@@ -156,6 +156,7 @@ header {
 }
 
 .checklist {
+  margin: 30px 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
