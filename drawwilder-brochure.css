@@ -126,8 +126,11 @@ header {
   font-size: 12px;
 }
 
-h2 {
-  color: #000000;
+.lead {
+  width: 90%;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--muted);
   font-family:
     "Poppins",
     system-ui,
@@ -136,18 +139,6 @@ h2 {
     Roboto,
     Arial,
     sans-serif;
-  font-size: 24px;
-  margin: 0 0 12px;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.lead {
-  width: 90%;
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--muted);
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .gallery {
