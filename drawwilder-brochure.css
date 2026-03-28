@@ -41,14 +41,7 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family:
-    "Poppins",
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Arial,
-    sans-serif;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -93,6 +86,7 @@ header {
 }
 
 .logo {
+  width: 100px;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -106,6 +100,7 @@ header {
 
 .title h1 {
   font-size: 40px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   color: #000000;
   line-height: 1.1;
   margin: 0;
@@ -121,16 +116,6 @@ header {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
-}
-
-.card {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.card .inner {
-  padding: 22px;
-  margin: 30px 0px;
 }
 
 .badge {
@@ -158,17 +143,11 @@ h2 {
 }
 
 .lead {
+  width: 90%;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--muted);
-  font-family:
-    "Poppins",
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Arial,
-    sans-serif;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .gallery {
@@ -273,7 +252,9 @@ h2 {
 }
 
 footer {
-  margin: 36px 0 8px;
+  width: 90%;
+  margin: 0px auto;
+  padding: 20px;
   color: var(--muted);
   font-size: 14px;
   text-align: center;
@@ -334,4 +315,94 @@ footer {
 
 footer.footer-banner.drawwilder {
   color: #000000;
+}
+
+.back-btn a {
+  color: #808080;
+  margin: 0 0 30px 0;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-btn a:hover,
+.back-btn a:active,
+.back-btn a:focus,
+.back-btn a:visited {
+  color: #666666;
+  /* darker gray */
+}
+
+/***************************************************************************
+  Media Queries (Mobile First)
+***************************************************************************/
+
+/***************************************
+  📱 Mobile (Base styles first)
+***************************************/
+
+/* Small phones (250px - 349px) */
+@media (max-width: 349px) {
+  .wrap {
+    width: 360px;
+  }
+}
+
+/* Standard phones (350px - 599px) */
+@media (min-width: 350px) and (max-width: 599px) {
+  .wrap {
+    width: 360px;
+  }
+}
+
+/* Large phones (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+}
+
+/***************************************
+  📱 Tablets
+***************************************/
+
+/* Small tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+}
+
+/* Medium tablets (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+}
+
+/* Large tablets (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+}
+
+/***************************************
+  💻 Desktop
+***************************************/
+
+/* Small desktop (1367px - 1599px) */
+@media (min-width: 1367px) and (max-width: 1599px) {
+}
+
+/* Medium desktop (1600px - 1999px) */
+@media (min-width: 1600px) and (max-width: 1999px) {
+}
+
+/* Large desktop (2000px+) */
+@media (min-width: 2000px) {
+}
+
+/***************************************
+  🎯 Utility Breakpoints (Optional)
+***************************************/
+
+/* Up to tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+}
+
+/* Desktop and above */
+@media (min-width: 1367px) {
 }
