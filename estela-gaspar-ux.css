@@ -337,6 +337,7 @@ nav .menu li a:hover {
   background-color: #5a2b8c;
   transform: scale(1.05);
   text-decoration: none;
+  padding: 19px;
 }
 
 .menu li a i,
