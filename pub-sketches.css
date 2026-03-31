@@ -24,6 +24,10 @@ p {
   color: #171417;
 }
 
+.standout-text-header {
+  font-size: 28px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,7 +49,7 @@ body {
   font-weight: 400;
 }
 a {
-  color: #808080;
+  color: #228b22;
 }
 img {
   width: 100%;
@@ -85,13 +89,36 @@ header {
   line-height: 1.1;
   margin: 0;
 }
+
+.standout-text-info {
+  font-size: 30px;
+  color: #171417;
+}
+
+.standout-guarantee,
+.standout-bookings {
+  font-size: 3em;
+  font-weight: 800;
+}
+
 .title p {
   margin: 6px 0 0;
   color: var(--muted);
 }
 .standout {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 800;
+  color: #ffffff;
+}
+
+.standout-quote {
+  font-size: 3em;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+}
+
+.hero.quote {
+  padding: 0px;
 }
 
 .inner.standout-hero {
@@ -108,6 +135,7 @@ header {
 
 .hero {
   margin: 28px 0;
+  padding: 60px;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
@@ -170,6 +198,37 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+}
+
+.hero.top {
+  margin: 60px 0px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.hero.top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./images/pub-sketches/cheerful-friends-having-fun-while-talking-waiter-cafe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.inner.standout-hero h2 {
+  color: #ffffff;
+}
+
+.inner.standout-hero p {
+  color: #ffffff;
+}
+
+.hero.top > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 900px) {
@@ -302,4 +361,241 @@ footer {
   .pin-mobile {
     display: block;
   }
+}
+
+/***************************************************************************
+  Media Queries (Mobile First)
+***************************************************************************/
+
+/***************************************
+  📱 Mobile (Base styles first)
+***************************************/
+
+/* Small phones (250px - 349px) */
+@media (max-width: 349px) {
+  .wrap {
+    width: 360px;
+  }
+
+  .title h1 {
+    font-size: 50px;
+  }
+
+  .standout {
+    font-size: 2em;
+  }
+
+  .hero {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .inner.standout-hero {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .standout-text {
+    font-size: 20px;
+  }
+
+  .standout-quote {
+    font-size: 2em;
+  }
+
+  .card .inner {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .standout-guarantee,
+  .standout-bookings {
+    font-size: 2em;
+  }
+
+  .standout-text-info {
+    font-size: 20px;
+  }
+}
+
+/* Standard phones (350px - 599px) */
+@media (min-width: 350px) and (max-width: 599px) {
+  .wrap {
+    width: 360px;
+  }
+
+  .title h1 {
+    font-size: 50px;
+  }
+
+  .standout {
+    font-size: 2em;
+  }
+
+  .hero {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .inner.standout-hero {
+    margin: 0px;
+    padding: 0px;
+  }
+  .standout-text {
+    font-size: 20px;
+  }
+
+  .standout-quote {
+    font-size: 2em;
+  }
+
+  .card .inner {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .standout-guarantee,
+  .standout-bookings {
+    font-size: 2em;
+  }
+
+  .standout-text-info {
+    font-size: 20px;
+  }
+}
+
+/* Large phones (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .wrap {
+    width: 360px;
+  }
+
+  .title h1 {
+    font-size: 50px;
+  }
+
+  .standout {
+    font-size: 2em;
+  }
+
+  .hero {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .inner.standout-hero {
+    margin: 0px;
+    padding: 0px;
+  }
+  .standout-text {
+    font-size: 20px;
+  }
+
+  .standout-quote {
+    font-size: 2em;
+  }
+
+  .card .inner {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .standout-guarantee,
+  .standout-bookings {
+    font-size: 2em;
+  }
+
+  .standout-text-info {
+    font-size: 20px;
+  }
+}
+
+/***************************************
+  📱 Tablets
+***************************************/
+
+/* Small tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .wrap {
+    width: 360px;
+  }
+
+  .title h1 {
+    font-size: 50px;
+  }
+
+  .standout {
+    font-size: 2em;
+  }
+
+  .hero {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .inner.standout-hero {
+    margin: 0px;
+    padding: 0px;
+  }
+  .standout-text {
+    font-size: 20px;
+  }
+
+  .standout-quote {
+    font-size: 2em;
+  }
+
+  .card .inner {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .standout-guarantee,
+  .standout-bookings {
+    font-size: 2em;
+  }
+
+  .standout-text-info {
+    font-size: 20px;
+  }
+}
+
+/* Medium tablets (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+}
+
+/* Large tablets (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+}
+
+/***************************************
+  💻 Desktop
+***************************************/
+
+/* Small desktop (1367px - 1599px) */
+@media (min-width: 1367px) and (max-width: 1599px) {
+}
+
+/* Medium desktop (1600px - 1999px) */
+@media (min-width: 1600px) and (max-width: 1999px) {
+}
+
+/* Large desktop (2000px+) */
+@media (min-width: 2000px) {
+}
+
+/***************************************
+  🎯 Utility Breakpoints (Optional)
+***************************************/
+
+/* Up to tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+}
+
+/* Desktop and above */
+@media (min-width: 1367px) {
 }
