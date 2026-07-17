@@ -2,6 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
+import fs from "fs";
+
+const websiteContent = fs.readFileSync("./firefly-content.txt","utf8");
 
 dotenv.config();
 
