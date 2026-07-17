@@ -1,13 +1,20 @@
-Firefly is a user experience consultancy specialising in:
+About Firefly
 
+Firefly is a UX and digital design consultancy.
+
+Services:
 - UX Design
 - User Research
-- Accessibility
+- Accessibility Reviews
 - Service Design
+- Product Strategy
 - Digital Transformation
 
-Contact:
-hello@thatfirefly.com
+Approach:
+Firefly helps organisations create user-centred digital services and experiences.
 
 Website:
 https://thatfirefly.com
+
+Contact:
+https://thatfirefly.com/contact
