@@ -1,9 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
-import fetch from "node-fetch"; // Use "import" instead of "require"
-import dotenv from "dotenv"; // ✅ For storing API keys safely
+import fetch from "node-fetch";
+import dotenv from "dotenv";
 
-dotenv.config(); // ✅ Load environment variables
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -11,70 +11,119 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-// Chatbot Route
 app.post("/chatbot-estela", async (req, res) => {
     try {
-        const userMessage = req.body.message.toLowerCase();
-        console.log("Received message:", userMessage);
+        const userMessage = req.body.message;
 
-        // ✅ Custom predefined responses
+        console.log("User:", userMessage);
+
+        // Optional fast responses
         const customResponses = {
-            "hello": "Hey there! 😊 How can I help you?",
-            "how are you": "I'm just a bot, but I'm feeling great! 🚀",
-            "tell me a joke": "Why don't robots get tired? Because they recharge! 🔋😂",
-            "whats my name": "I do not know but I would like to get to know you!",
-            "whats this name": "I do not know but I would like to get to know you!"
+            "hello": "Hello 👋 How can I help today?",
+            "hi": "Hi there 👋 What would you like to know about Firefly?"
         };
 
-        // ✅ Check for predefined response
-        if (customResponses[userMessage]) {
-            return res.json({ reply: customResponses[userMessage] });
+        const cleanedMessage = userMessage.toLowerCase().trim();
+
+        if (customResponses[cleanedMessage]) {
+            return res.json({
+                reply: customResponses[cleanedMessage]
+            });
         }
 
-        // ✅ If no predefined response, send request to Mistral AI
-        const apiUrl = "https://api.mistral.ai/v1/chat/completions";
-        const apiKey = process.env.MISTRAL_API_KEY; // ✅ Securely load API key from .env
+        const apiKey = process.env.MISTRAL_API_KEY;
 
         if (!apiKey) {
-            throw new Error("Missing API key. Make sure to set MISTRAL_API_KEY in your .env file.");
+            throw new Error(
+                "MISTRAL_API_KEY missing from .env file"
+            );
         }
 
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${apiKey}`, // ✅ Fixed Authorization header
-            },
-            body: JSON.stringify({
-                prompt: `You are Firefly, a friendly chatbot. Keep responses short and positive.
-                         User: ${userMessage} 
-                         Firefly:`,
-                max_tokens: 50 // ✅ Limit response size
-            }),
-        };
+        const response = await fetch(
+            "https://api.mistral.ai/v1/chat/completions",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    model: "mistral-small-latest",
 
-        // ✅ Fetch API response
-        const response = await fetch(apiUrl, options);
-        const text = await response.text(); // Get raw response
-        console.log("Raw API response:", text); // Log it to debug issues
+                    messages: [
+                        {
+                            role: "system",
+                            content: `
+You are Finn, Firefly's virtual UX guide.
 
-        let botMessage = "I'm not sure how to respond.";
-        try {
-            const data = JSON.parse(text); // ✅ Parse JSON safely
-            botMessage = data.reply || (data.response && data.response.message) || botMessage;
-        } catch (error) {
-            console.error("Failed to parse JSON. Response might not be JSON.");
-        }
+About Firefly:
+- Firefly is a UX and digital design consultancy.
+- Services include UX Design.
+- User Research.
+- Accessibility.
+- Service Design.
+- Product Strategy.
+- Digital Transformation.
 
-        res.json({ reply: botMessage });
+Your personality:
+- Friendly.
+- Human.
+- Professional.
+- Helpful.
+- Curious.
+
+Your communication style:
+- Conversational.
+- Clear.
+- Avoid jargon.
+- Do not sound like a support bot.
+- Keep answers under 150 words.
+
+Rules:
+- Never invent services or case studies.
+- If you don't know something, say so.
+- Suggest contacting the Firefly team when appropriate.
+- Focus on helping people understand problems and solutions rather than selling.
+`
+                        },
+                        {
+                            role: "user",
+                            content: userMessage
+                        }
+                    ],
+
+                    temperature: 0.8,
+                    max_tokens: 200
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        console.log(
+            "Mistral Response:",
+            JSON.stringify(data, null, 2)
+        );
+
+        const botMessage =
+            data?.choices?.[0]?.message?.content ||
+            "Sorry, I couldn't generate a response.";
+
+        res.json({
+            reply: botMessage
+        });
 
     } catch (error) {
-        console.error("Error in chatbot API:", error);
-        res.status(500).json({ reply: "Oops! Something went wrong." });
+        console.error("Chatbot Error:", error);
+
+        res.status(500).json({
+            reply: "Sorry, something went wrong."
+        });
     }
 });
 
-// Start the server
 app.listen(port, () => {
-    console.log(`🚀 Server is running on http://localhost:${port}`);
+    console.log(
+        `🚀 Firefly chatbot running at http://localhost:${port}`
+    );
 });
