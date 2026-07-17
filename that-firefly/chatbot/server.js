@@ -31,9 +31,8 @@ app.post("/let-me-in/chatbot-estela", async (req, res) => {
             );
         }
 
-        const response = await fetch(
-            "https://api.mistral.ai/v1/chat/completions",
-            {
+                const response = await fetch(
+  "https://api.mistral.ai/v1/chat/completions", 
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
