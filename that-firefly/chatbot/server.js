@@ -4,9 +4,12 @@ import fetch from "node-fetch";
 import dotenv from "dotenv";
 import fs from "fs";
 
-const websiteContent = fs.readFileSync("./firefly-content.txt","utf8");
-
 dotenv.config();
+
+const websiteContent = fs.readFileSync(
+    "./firefly-content.txt",
+    "utf8"
+);
 
 const app = express();
 const port = 3000;
@@ -20,25 +23,11 @@ app.post("/chatbot-estela", async (req, res) => {
 
         console.log("User:", userMessage);
 
-        // Optional fast responses
-        const customResponses = {
-            "hello": "Hello 👋 How can I help today?",
-            "hi": "Hi there 👋 What would you like to know about Firefly?"
-        };
-
-        const cleanedMessage = userMessage.toLowerCase().trim();
-
-        if (customResponses[cleanedMessage]) {
-            return res.json({
-                reply: customResponses[cleanedMessage]
-            });
-        }
-
         const apiKey = process.env.MISTRAL_API_KEY;
 
         if (!apiKey) {
             throw new Error(
-                "MISTRAL_API_KEY missing from .env file"
+                "MISTRAL_API_KEY not found in .env file"
             );
         }
 
@@ -52,41 +41,36 @@ app.post("/chatbot-estela", async (req, res) => {
                 },
                 body: JSON.stringify({
                     model: "mistral-small-latest",
-
                     messages: [
                         {
                             role: "system",
                             content: `
 You are Finn, Firefly's virtual UX guide.
 
-About Firefly:
-- Firefly is a UX and digital design consultancy.
-- Services include UX Design.
-- User Research.
-- Accessibility.
-- Service Design.
-- Product Strategy.
-- Digital Transformation.
+Use the information below when answering questions.
+
+${websiteContent}
 
 Your personality:
-- Friendly.
-- Human.
-- Professional.
-- Helpful.
-- Curious.
+- Friendly
+- Helpful
+- Professional
+- Human
+- Curious
 
-Your communication style:
-- Conversational.
-- Clear.
-- Avoid jargon.
-- Do not sound like a support bot.
-- Keep answers under 150 words.
+Communication style:
+- Conversational
+- Clear
+- Concise
+- Avoid jargon
+- Never sound robotic
 
 Rules:
-- Never invent services or case studies.
+- Only answer using information provided.
+- Never invent facts.
 - If you don't know something, say so.
-- Suggest contacting the Firefly team when appropriate.
-- Focus on helping people understand problems and solutions rather than selling.
+- Suggest contacting Firefly when appropriate.
+- Keep responses under 150 words.
 `
                         },
                         {
@@ -94,8 +78,7 @@ Rules:
                             content: userMessage
                         }
                     ],
-
-                    temperature: 0.8,
+                    temperature: 0.7,
                     max_tokens: 200
                 })
             }
