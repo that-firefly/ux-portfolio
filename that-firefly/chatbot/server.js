@@ -17,7 +17,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-app.post("/that-firefly/chatbot/public/chatbot-estela", async (req, res) => {
+app.post("/let-me-in/chatbot-estela", async (req, res) => {
     try {
         const userMessage = req.body.message;
 
