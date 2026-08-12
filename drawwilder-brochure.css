@@ -64,6 +64,20 @@ a {
   transition: all 0.3s ease;
 }
 
+.explore-button {
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff !impirtant;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
 img {
   width: 100%;
   height: 100%;
