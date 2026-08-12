@@ -704,6 +704,17 @@ body {
 
 /* Drawwilder website */
 
+
+.drawwilder-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 30vh;
+  flex: 1 1 50%;
+  border-radius: 10px;
+}
+
 .drawwilder-noborder-container {
   width: 40%;
   margin: 60px auto 0px auto;
@@ -743,10 +754,7 @@ body {
   box-sizing: border-box;
 }
 
-.drawwilder-container {
-  max-width: 520px;
-  text-align: left;
-}
+
 
 .drawwilder-title {
   font-size: 2.4rem;
@@ -802,13 +810,7 @@ body {
   }
 }
 
-.drawwilder-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #1a1a1a;
-}
+
 
 .drawwilder-left {
   flex: 1 1 50%;
@@ -820,10 +822,7 @@ body {
   background: #fff;
 }
 
-.drawwilder-container {
-  max-width: 520px;
-  text-align: left;
-}
+
 
 .drawwilder-right {
   flex: 1 1 50%;
@@ -834,17 +833,7 @@ body {
 }
 
 #drawwilder-logo {
-  width: 40% !important;
-}
-
-.drawwilder-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  min-height: 60vh;
-  flex: 1 1 50%;
-  border-radius: 10px;
+  width: 20% !important;
 }
 
 .drawwilder-left {
@@ -858,8 +847,10 @@ body {
 }
 
 .drawwilder-container {
-  width: 90%;
+  width: 100%;
   text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .drawwilder-title {
