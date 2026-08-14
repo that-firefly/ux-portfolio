@@ -704,11 +704,10 @@ body {
 
 /* Drawwilder website */
 
-
 .card-subtitle {
   font-weight: 800;
   font-family: Cormorant Garamond; serif;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .drawwilder-wrapper {
