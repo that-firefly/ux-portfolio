@@ -705,6 +705,12 @@ body {
 /* Drawwilder website */
 
 
+.card-subtitle {
+  font-weight: 800;
+  font-family: Cormorant Garamond; serif;
+  font-size: 2em;
+}
+
 .drawwilder-wrapper {
   display: flex;
   align-items: center;
