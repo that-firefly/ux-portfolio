@@ -1498,8 +1498,8 @@ section {
   font-family: "Cormorant Garamond", serif;
   font-size: 3em;
   font-weight: 900;
-  padding-left: 0px;
-  margin-left: 0px;
+  margin:0px;
+  padding:0px;
 }
 
 .drawwilder-byline {
