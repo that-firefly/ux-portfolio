@@ -837,8 +837,9 @@ body {
   margin: 60px 0px;
 }
 
-#drawwilder-logo {
-  width: 20% !important;
+
+img.logo-drawwilder {
+    width: 8% !important;
 }
 
 .drawwilder-left {
