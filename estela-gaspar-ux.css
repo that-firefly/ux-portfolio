@@ -816,19 +816,6 @@ body {
 }
 
 
-
-.drawwilder-left {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 4rem 3rem;
-  box-sizing: border-box;
-  background: #fff;
-}
-
-
-
 .drawwilder-right {
   flex: 1 1 50%;
   min-height: 60vh;
@@ -858,6 +845,17 @@ img.logo-drawwilder {
   margin: 0px;
   padding: 0px;
 }
+
+.drawwilder-left {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 3rem;
+  box-sizing: border-box;
+}
+
+
 
 .drawwilder-title {
   font-size: 2.4rem;
@@ -1491,7 +1489,7 @@ section {
 }
 
 .port-page-internal.drawwilder {
-  background-color: #ffffff;
+  background-color: #eee;
 }
 
 .main-content.drawwilder h1 {
