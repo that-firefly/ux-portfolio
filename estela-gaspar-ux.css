@@ -1494,7 +1494,8 @@ section {
 }
 
 .main-content.drawwilder h1 {
-  font-size: 2em;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3em;
   font-weight: 900;
   padding-left: 0px;
   margin-left: 0px;
@@ -1659,6 +1660,7 @@ art-gallery {
 
 h2.drawwilder-subtitle {
   font-size: 1em;
+  font-weight: 300;
   padding: 0px;
   margin: 0px;
 }
