@@ -1,378 +1,277 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <title>Estela Gaspar - Case studies</title>
+    <title>Estela Gaspar - UX User Experience Design - Case studies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./estela-gaspar-ux.css" />
     <script src="./estela-ux.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
     <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-32x32.png"
-      sizes="32x32"
-    />
-  </head>
+    <link rel="icon"
+          type="image/png"
+          href="./images/favicon-32x32.png"
+          sizes="32x32" />
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
-      <nav>
-        <span class="hamburger" onclick="toggleMenu()">☰</span>
-        <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./hire-consultancy.html">Hire me!</a></li>
-          <li><a href="./new.html">New</a></li>
-          <li><a href="./case-studies.html">Case Studies</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./links.html">Links</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li>
-            <a
-              href="https://github.com/that-firefly"
-              target="_blank"
-              aria-label="GitHub"
-              class="social-link"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.68 5.4-5.24 5.68.41.35.77 1.04.77 2.1v3.12c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.behance.net/estela-gaspar"
-              target="_blank"
-              aria-label="Behance"
-              class="social-link"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 512 512"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <g>
-                  <path
-                    d="M214.3,266.1c-3.8-1.7-9-2.6-15.8-2.7h-39v42.2H198c6.9,0,12.2-0.9,16-2.8c7-3.5,10.4-10,10.4-19.7C224.4,274.9,221,269.2,214.3,266.1z"
-                  />
-                  <path
-                    d="M344.1,244.5c-4.9-4.2-11-6.3-18.2-6.3c-7.8,0-13.9,2.2-18.3,6.7c-4.3,4.5-7,10.5-8.2,18.1h52.7C351.7,254.9,348.9,248.8,344.1,244.5z"
-                  />
-                  <path
-                    d="M214.8,233.3c4.3-2.6,6.4-7.3,6.4-13.9c0-7.4-2.8-12.2-8.5-14.6c-4.9-1.6-11.1-2.5-18.7-2.5h-34.4v34.9H198C204.9,237.3,210.4,236,214.8,233.3z"
-                  />
-                  <path
-                    d="M0,0v512h512V0L0,0L0,0z M291.6,182.3h67.8V202h-67.8L291.6,182.3L291.6,182.3z M250.7,310.6c-3,4.9-6.7,9.1-11.2,12.4
+        <nav>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <ul class="menu">
+                <li class="logo">Estela Gaspar</li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./case-studies.html">Case Studies</a></li>
+                <li>
+                    <a href="https://github.com/that-firefly"
+                       target="_blank"
+                       aria-label="GitHub"
+                       class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             fill="currentColor"
+                             viewBox="0 0 24 24">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.68 5.4-5.24 5.68.41.35.77 1.04.77 2.1v3.12c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/estela-gaspar/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn"
+                       class="social-link"
+                       title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             viewBox="0 0 24 24"
+                             fill="currentColor"
+                             aria-hidden="true">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/estela-gaspar"
+                       target="_blank"
+                       aria-label="Behance"
+                       class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             viewBox="0 0 512 512"
+                             fill="currentColor"
+                             aria-hidden="true">
+                            <g>
+                                <path d="M214.3,266.1c-3.8-1.7-9-2.6-15.8-2.7h-39v42.2H198c6.9,0,12.2-0.9,16-2.8c7-3.5,10.4-10,10.4-19.7C224.4,274.9,221,269.2,214.3,266.1z" />
+                                <path d="M344.1,244.5c-4.9-4.2-11-6.3-18.2-6.3c-7.8,0-13.9,2.2-18.3,6.7c-4.3,4.5-7,10.5-8.2,18.1h52.7C351.7,254.9,348.9,248.8,344.1,244.5z" />
+                                <path d="M214.8,233.3c4.3-2.6,6.4-7.3,6.4-13.9c0-7.4-2.8-12.2-8.5-14.6c-4.9-1.6-11.1-2.5-18.7-2.5h-34.4v34.9H198C204.9,237.3,210.4,236,214.8,233.3z" />
+                                <path d="M0,0v512h512V0L0,0L0,0z M291.6,182.3h67.8V202h-67.8L291.6,182.3L291.6,182.3z M250.7,310.6c-3,4.9-6.7,9.1-11.2,12.4
         c-5,3.9-11,6.5-17.9,8c-6.9,1.4-14.3,2.1-22.4,2.1H128V174.9h76.5c19.3,0.3,33,5.9,41,16.9c4.8,6.7,7.2,14.8,7.2,24.2
         c0,9.6-2.4,17.4-7.3,23.3c-2.7,3.3-6.8,6.3-12.1,9c8.1,3,14.2,7.6,18.3,14s6.2,14.1,6.2,23.2C257.8,294.7,255.4,303.1,250.7,310.6z
         M384,283.2h-85.2c0.5,11.7,4.5,20,12.2,24.7c4.7,2.9,10.3,4.4,16.9,4.4c6.9,0,12.6-1.8,17-5.4c2.4-1.9,4.5-4.6,6.3-8.1h31.2
         c-0.8,6.9-4.6,14-11.3,21.2c-10.5,11.4-25.1,17.1-44,17.1c-15.6,0-29.3-4.8-41.2-14.4c-11.9-9.6-17.9-25.2-17.9-46.8
         c0-20.3,5.4-35.8,16.1-46.6c10.8-10.8,24.7-16.2,41.8-16.2c10.2,0,19.4,1.8,27.5,5.5c8.2,3.6,14.9,9.4,20.2,17.3
-        c4.8,6.9,7.9,15,9.3,24.2C383.8,265.4,384.1,273.1,384,283.2z"
-                  />
-                </g>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.cambridge-illustrators.co.uk/estela-gaspar-new-ci/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Cambridge Illustrators"
-              class="social-link"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 64 64"
-                fill="none"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="32"
-                  cy="32"
-                  r="30"
-                  stroke="currentColor"
-                  stroke-width="3"
-                />
-                <path
-                  d="M25 20
+        c4.8,6.9,7.9,15,9.3,24.2C383.8,265.4,384.1,273.1,384,283.2z" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.cambridge-illustrators.co.uk/estela-gaspar-new-ci/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Cambridge Illustrators"
+                       class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             viewBox="0 0 64 64"
+                             fill="none"
+                             aria-hidden="true">
+                            <circle cx="32"
+                                    cy="32"
+                                    r="30"
+                                    stroke="currentColor"
+                                    stroke-width="3" />
+                            <path d="M25 20
            C19 20 15 24.5 15 32
            C15 39.5 19 44 25 44
            C28.5 44 31 42.5 33 40"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M41 20V44"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M37 20H45"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M37 44H45"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
+                                  stroke="currentColor"
+                                  stroke-width="4"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                            <path d="M41 20V44"
+                                  stroke="currentColor"
+                                  stroke-width="4"
+                                  stroke-linecap="round" />
+                            <path d="M37 20H45"
+                                  stroke="currentColor"
+                                  stroke-width="4"
+                                  stroke-linecap="round" />
+                            <path d="M37 44H45"
+                                  stroke="currentColor"
+                                  stroke-width="4"
+                                  stroke-linecap="round" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-      <div class="main-content">
-        <h1 class="landingpage-title eg">
-          Case studies <span style="font-weight: 300"></span>
-        </h1>
+        <div class="main-content">
+            <h1 class="landingpage-title eg">
+                Case studies <span style="font-weight: 300"></span>
+            </h1>
 
-        <div class="container-group">
-          <div class="container">
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/blog-images/prototype-sample-1.png"
-                  alt="Prototype samples image"
-                />
-                <h3>Prototype samples</h3>
-                <p>
-                  <a class="read-more-btn" href="./prototype-samples.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+            <div class="container-group">
+                <div class="container">
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/boilerjuice/spotlight-thumb.png"
-                  alt="Project spotlight with BoilerJuice"
-                />
-                <h3>Project spotlight - BoilerJuice</h3>
-                <p>
-                  <a
-                    class="read-more-btn"
-                    href="./boilerjuice-project-spotlight.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/machine-learning/machine-learning-thumb.png"
-                  alt="Artificial intelligence for sentiment analysis"
-                />
-                <h3>Artificial Intelligence</h3>
-                <p>
-                  <a class="read-more-btn" href="./machine-learning.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/boilerjuice/spotlight-thumb.png"
+                                 alt="BoilerJuice heating oil connected service" />
+                            <p>
+                                <a class="read-more-btn"
+                                   href="./boilerjuice-project-spotlight.html">BoilerJuice heating oil connected service</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/HMRC-images/HMRC-thumb.png"
-                  alt="HMRC logo"
-                />
-                <h3>
-                  HMRC <br />
-                  Government
-                </h3>
-                <p>
-                  <a class="read-more-btn" href="./HMRC-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/machine-learning/machine-learning-thumb.png"
+                                 alt="Artificial intelligence for sentiment analysis" />
+                   
+                            <p>
+                                <a class="read-more-btn" href="./machine-learning.html">Artificial Intelligence sentiment analysis</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/boilerjuice/boilerjuice-thumb.png"
-                  alt="BoilerJuice logo"
-                />
-                <h3>Service design, UR and UI for the commodity market</h3>
-                <p>
-                  <a class="read-more-btn" href="./boilerjuice-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/HMRC-images/HMRC-thumb.png"
+                                 alt="HMRC logo" />
+                            <p>
+                                <a class="read-more-btn" href="./HMRC-project.html">HMRC Make Tax Digital</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/infoaware/infoaware-thumb.png"
-                  alt="InfoAware logo"
-                />
-                <h3>E-Learning design</h3>
-                <p>
-                  <a class="read-more-btn" href="./infoaware-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/boilerjuice/boilerjuice-thumb.png"
+                                 alt="BoilerJuice logo" />
+     
+                            <p>
+                                <a class="read-more-btn" href="./boilerjuice-project.html">Service design, UR and UI for the commodity market</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/xanthos/xanthos-thumb.png"
-                  alt="Xanthos logo"
-                />
-                <h3>Creating e-commerce experiences</h3>
-                <p>
-                  <a class="read-more-btn" href="./xanthos-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/infoaware/infoaware-thumb.png"
+                                 alt="InfoAware logo" />
+                            <p>
+                                <a class="read-more-btn" href="./infoaware-project.html">E-Learning design</a>
+                            </p>
+                        </div>
+                    </div>
 
-          <div class="container">
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/ux-cases/ux-cases-thumb.png"
-                  alt="UX lessons"
-                />
-                <h3>UX lessons from real world events</h3>
-                <p>
-                  <a
-                    class="read-more-btn"
-                    href="./relevant-ux-case-studies.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img src="./images/defra/defra-thumb.png" alt="DEFRA logo" />
-                <h3>
-                  DEFRA<br />
-                  Government
-                </h3>
-                <p>
-                  <a class="read-more-btn" href="./defra-projects.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/xanthos/xanthos-thumb.png"
+                                 alt="Xanthos logo" />
+                            <p>
+                                <a class="read-more-btn" href="./xanthos-project.html">Creating e-commerce experiences</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/royal-navy/royal-navy-thumb.jpg"
-                  alt="Royal Navy logo"
-                />
-                <h3>
-                  Royal Navy<br />
-                  Government
-                </h3>
-                <p>
-                  <a class="read-more-btn" href="./royalnavy-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                <div class="container">
+                    
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/defra/defra-thumb.png" alt="DEFRA logo" />
+            
+                            <p>
+                                <a class="read-more-btn" href="./defra-projects.html">DEFRA waste management</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/howdens/howdens-thumb.jpg"
-                  alt="Howdens logo"
-                />
-                <h3>E-commerce and design system development</h3>
-                <p>
-                  <a class="read-more-btn" href="./howdens-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/royal-navy/royal-navy-thumb.jpg"
+                                 alt="Royal Navy logo" />
+                            <p>
+                                <a class="read-more-btn" href="./royalnavy-project.html">E-Learning for the UK military’s central digital training platform</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/europascience/europascience-thumb.png"
-                  alt="Europa Science logo"
-                />
-                <h3>Website design and digital marketing publishing</h3>
-                <p>
-                  <a class="read-more-btn" href="./europascience-project.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-            </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/howdens/howdens-thumb.jpg"
+                                 alt="Howdens logo" />
+                   
+                            <p>
+                                <a class="read-more-btn" href="./howdens-project.html">E-commerce and design system development</a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="card-case-studies">
-              <div class="card-content">
-                <img
-                  src="./images/mix-experiences/diverse-thumb.png"
-                  alt="Experiences abroad thumb"
-                />
-                <h3>Overseas experiences</h3>
-                <p>
-                  <a
-                    class="read-more-btn"
-                    href="./diverse-previous-projects.html"
-                    >Read more</a
-                  >
-                </p>
-              </div>
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/europascience/europascience-thumb.png"
+                                 alt="Europa Science logo" />
+     
+                            <p>
+                                <a class="read-more-btn" href="./europascience-project.html">Website design and digital marketing publishing</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-case-studies">
+                        <div class="card-content">
+                            <img src="./images/mix-experiences/diverse-thumb.png"
+                                 alt="Experiences abroad thumb" />
+                            <p>
+                                <a class="read-more-btn"
+                                   href="./diverse-previous-projects.html">Overseas experiences</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <div class="footer-banner">
-        <footer>Website coded by Estela Gaspar</footer>
-      </div>
+        <div class="footer-banner">
+            <footer>
+                © 2026 Estela Gaspar | Senior GOV.UK Interaction Designer
+                <div>
+                    <a href="https://github.com/that-firefly" target="_blank" rel="noopener noreferrer">GitHub Estela That Firefly</a> -
+                    <a href="https://www.linkedin.com/in/estela-gaspar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </footer>
+        </div>
     </div>
-  </body>
+</body>
 </html>
