@@ -75,6 +75,9 @@ figure.hero-image {
     justify-content: center;
     gap: 24px;
     margin: 0px auto;
+    background-color: #eeeeee;
+    padding: 80px 60px;
+    border-radius: 20px;
 }
 
 .landingpage-title.eg {
@@ -665,7 +668,7 @@ body {
     font-family: "Poppins", serif;
     margin: 0;
     height: 100vh;
-    background-color: #eeeeee;
+    background-color: #fff;
 }
 
 .container-links {
