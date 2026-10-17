@@ -22,8 +22,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -34,8 +38,7 @@
               "RelativeToolTip": "estela-gaspar-ux.css",
               "ViewState": "AgIAADMBAAAAAAAAAAAgwDoBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-17T17:36:05.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-17T17:36:05.376Z"
             },
             {
               "$type": "Document",
@@ -47,8 +50,7 @@
               "RelativeToolTip": "case-studies.html",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-10-17T15:36:10.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-17T15:36:10.546Z"
             },
             {
               "$type": "Document",
@@ -58,14 +60,10 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKMAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-10-17T14:45:28.564Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
