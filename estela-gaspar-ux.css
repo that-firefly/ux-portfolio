@@ -76,7 +76,7 @@ figure.hero-image {
     gap: 24px;
     margin: 0px auto;
     background-color: #eeeeee;
-    padding: 80px 60px;
+    padding: 20px 80px;
     border-radius: 20px;
 }
 
@@ -87,6 +87,29 @@ figure.hero-image {
     border-radius: 50%;
     flex-shrink: 0;
 }
+
+
+
+.portfolio-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 15px 28px;
+    background-color: #3f6b2f;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+    .portfolio-button:hover {
+        background-color: #2f5124;
+        transform: translateY(-2px);
+    }
+
 
 /* Responsive layout for mobile */
 @media (max-width: 600px) {
