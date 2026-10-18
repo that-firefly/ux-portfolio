@@ -80,12 +80,6 @@ figure.hero-image {
     border-radius: 20px;
 }
 
-.landingpage-title.eg {
-    margin: 0;
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.2;
-}
-
 .landingpage-image {
     width: 100px;
     height: 100px;
@@ -150,8 +144,9 @@ p.project-intro, section.project-overview, section.case-section p {
 }
 
 p.spot-tag {
+    color: #008a38;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 2px solid #008a38;
     width: 200px;
 }
 
@@ -188,7 +183,7 @@ header {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 50px 20px 20px 20px;
+    padding: 0px;
     text-align: center;
 }
 
@@ -659,6 +654,7 @@ h2.drawwilder-subtitle {
 h1.landingpage-title.eg {
     width: 60%;
     margin: 0 auto;
+    padding-bottom: 30px;
     font-size: 3em;
     font-weight: 600;
     text-align: center;
@@ -2865,13 +2861,7 @@ footer.footer-banner.drawwilder {
 
 /* Ipad Pro (12.9") */
 @media (min-width: 1118px) and (max-width: 2000px) {
-    h1.landingpage-title.eg {
-        width: 60%;
-        margin: 0 auto;
-        font-size: 3em;
-        font-weight: 600;
-        text-align: center;
-    }
+ 
 
 
 
