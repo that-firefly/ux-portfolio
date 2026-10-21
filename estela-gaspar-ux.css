@@ -698,61 +698,79 @@ body {
     flex-direction: column;
 }
 
-/* About page */
+/****************************************************************************************************************************************/
+/*********************************************************** About page start ************************************************************/
+/****************************************************************************************************************************************/
 
+.left-text p, .left-text h1, .left-text h2 {
+    text-align: left;
+}
 
-.container-message {
-    flex: 1;
+.landingpage-intro {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 60%;
-    margin: 0 auto;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-.cover-alternate-content h2 {
-    margin-bottom: 30px;
-    color: #000;
-    font-size: 2em;
-    text-align: left;
+    .landingpage-intro > div:first-child {
+        flex: 1;
+    }
+
+img#biography {
+    width: 300px;
+    height: auto;
+    display: block;
+    align-self: flex-start;
+    margin-top: 0;
 }
 
-.cover-alternate-content p {
-    color: #000;
-    text-align: left;
-    font-size: 1em;
-    font-weight: 200;
+
+/* Desktop */
+.landingpage-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
-.button-like-eg:hover,
-.button-like-eg:focus {
-    color: #071e55 !important;
+    .landingpage-intro > div:first-child {
+        flex: 1;
+    }
+
+img#biography {
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
 }
 
-.cover-alternate-content {
-    margin: 0 auto;
-    background-color: #4a006d;
-    padding: 60px;
-    width: 60%;
+/* Mobile */
+@media (max-width: 768px) {
+    .landingpage-intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img#biography {
+        order: -1;
+        width: 180px;
+        max-width: 100%;
+        margin: 0 auto 1.5rem;
+    }
+
+    .landingpage-intro > div:first-child {
+        width: 100%;
+    }
 }
 
-.internal-full-width {
-    width: 80%;
-    margin: 0 auto;
+
+.landingpage-intro.bio {
+    padding: 0px 0px 30px 30px;
 }
 
-.cover-alternate-content .bleed-into-container {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    width: 90%;
-}
 
-.cover-alternate-container.two {
-    background-color: #071e55;
-    padding: 60px 0px;
-    margin: 0px;
-}
+/****************************************************************************************************************************************/
+/*********************************************************** About page end ************************************************************/
+/****************************************************************************************************************************************/
+
 
 /* Badges/Labels start */
 
