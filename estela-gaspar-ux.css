@@ -93,13 +93,10 @@ figure.hero-image {
 .portfolio-button {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    margin-top: 24px;
-    padding: 15px 28px;
+    padding: 5px;
     background-color: #3f6b2f;
     color: #ffffff;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 1em;
     text-decoration: none;
     border-radius: 50px;
     transition: background-color 0.25s ease, transform 0.25s ease;
@@ -2528,9 +2525,7 @@ footer.footer-banner.drawwilder {
         display: block;
         margin-inline: auto;
         max-width: 100% !important;
-        width: 40% !important;
         height: auto;
-        padding: 30px 0px 0px 0px !important;
     }
 
     .drawwilder-right {
@@ -3041,17 +3036,30 @@ footer.footer-banner.drawwilder {
 @media (min-width: 1367px) {
 }
 
+.portfolio-button {
+    padding: 10px !important;
+}
+
 /* 💻 Desktops & Tablets (960px) */
 /* Iphone 8 landscape */
 
 @media screen and (max-width: 960px) {
     h1.landingpage-title.eg {
-        width: 100%;
-        margin: 0 auto;
-        font-size: 2em;
+        padding: 10px;
+        font-size: 1em;
         font-weight: 600;
         text-align: center;
     }
+
+    .landingpage-intro {
+        padding: 20px !important;
+    }
+
+    img {
+        width: 100%;
+    }
+
+
 
     .container-message {
         width: 90%;
