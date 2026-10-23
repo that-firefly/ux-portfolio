@@ -55,12 +55,28 @@ figure.hero-image {
 .logo {
     color: #fff;
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     list-style: none;
     white-space: nowrap;
-    padding: 10px;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    /* FIX 1: Overrides baseline alignment to eliminate the bottom font gap */
+    vertical-align: top;
 }
+
+    .logo a {
+        /* FIX 2: Change from inline-block to block inside the parent wrapper */
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        padding: 0px;
+        margin: 0px;
+        /* FIX 3: Collapses any residual invisible text-line box boundaries */
+        line-height: 1;
+    }
+
 
 .landingpage-intro img.estela-gaspar {
     width: 20%;
@@ -102,11 +118,17 @@ figure.hero-image {
     transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-    .portfolio-button:hover {
-        color:#fff;
-        background-color: #2f5124;
-        transform: translateY(-2px);
-    }
+.portfolio-button:hover {
+    color:#fff;
+    background-color: #2f5124;
+    transform: translateY(-2px);
+ }
+.left-text .portfolio-button {
+    margin: 30px 0px 20px 0px;
+    display: table; /* Keeps the button width tight around the text */
+    margin-right: auto; /* Pushes the button to the left */
+    margin-left: 0; /* Forces the left margin to stick to the edge */
+}
 
 
 /* Responsive layout for mobile */
