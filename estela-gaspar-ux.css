@@ -266,21 +266,8 @@ a.read-more-btn {
     font-weight: 600;
 }
 
-.container-group {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 60px;
-    width: min(1200px, 100%);
-    margin: 0 auto;
-}
 
-.container {
-    float: none;
-    max-width: unset;
-    margin: 0;
-    padding-top: 0;
-    display: contents;
-}
+
 
 .card img {
     margin-bottom: 20px;
@@ -802,10 +789,7 @@ h2#expertise-heading {
 
 
 /* Desktop / Base styles */
-.container {
-    display: flex;
-    align-items: center;
-}
+
 
 .estela-gaspar {
     width: 100%; 
@@ -814,12 +798,7 @@ h2#expertise-heading {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
-    }
+
 
     .estela-gaspar {
         width: 30%;
@@ -1524,6 +1503,17 @@ p {
     color: #000;
 }
 
+
+.left-text h2 {
+    color: #64786a;
+    max-width: 750px;
+    margin: 10px 0 0;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 1.2;
+}
+
 p {
     font-size: 1.2em;
 }
@@ -1592,10 +1582,7 @@ body {
     background-color: #fff;
 }
 
-.container-links {
-    width: 80%;
-    margin: 0 auto;
-}
+
 
 .wrapper {
     min-height: 100vh;
@@ -2400,9 +2387,6 @@ section {
     margin: 120px 0px;
 }
 
-.container-eg {
-    margin: 0px 0px 30px 0px;
-}
 
 .cover-alternate-container.one {
     background-color: #541675;
@@ -2765,12 +2749,7 @@ html {
 
 /* Cards start */
 
-.container {
-    padding-top: 60px;
-    float: left;
-    max-width: 45%;
-    margin: 20px 30px 20px 20px;
-}
+
 
 .interna-div {
     display: flex;
@@ -3279,9 +3258,7 @@ footer.footer-banner.drawwilder {
         padding-left: 80px;
     }
 
-    .container {
-        max-width: 100%;
-    }
+
 
     .background-slider {
         height: 400px !important;
@@ -3542,9 +3519,6 @@ footer.footer-banner.drawwilder {
         max-width: 100%;
     }
 
-    .container {
-        max-width: 100%;
-    }
 
     .background-slider {
         height: 400px;
@@ -4221,9 +4195,7 @@ a.portfolio-button {
         float: none !important;
     }
 
-    .container {
-        max-width: 100%;
-    }
+
 
     .text-content {
         width: 90%;
@@ -4256,9 +4228,7 @@ a.portfolio-button {
         height: 400px;
     }
 
-    .container {
-        max-width: 100%;
-    }
+
 
     .text-content {
         width: 100%;
@@ -4374,3 +4344,33 @@ a.linkedin-btn {
 }
 
 /* Contact page end  */
+
+
+
+/* Container cards start  */
+
+
+
+.container-group {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+
+
+.container {
+    float: none;
+    max-width: unset;
+    margin: 0;
+    padding-top: 0;
+    display: contents;
+}
+
+
+
+
+
+/* Container cards end  */
