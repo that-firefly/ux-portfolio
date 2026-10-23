@@ -770,6 +770,71 @@ section#boilerjuice {
     line-height: 1.75;
 }
 
+
+.insight-callout.biography {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 18px;
+    margin: 36px 0;
+    padding: 28px;
+    border-left: 4px solid #86b879;
+    background: #263b31;
+}
+
+
+.insight-callout.biography ul li {
+    color: #fff;
+    text-align: left;
+}
+
+span.section-kicker-biography {
+    text-align: left;
+    color: #b8e6a8;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+h2#expertise-heading {
+    color: #b8e6a8;
+}
+
+
+
+/* Desktop / Base styles */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.estela-gaspar {
+    width: 100%; 
+    height: auto;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .estela-gaspar {
+        width: 30%;
+        height: auto;
+    }
+
+    .bio-text {
+        width: 65%;
+    }
+}
+
+
+
+
+
 /* Project imagery */
 
 .case-figure {
@@ -1115,6 +1180,12 @@ section#boilerjuice {
 }
 
 @media (max-width: 600px) {
+
+    .insight-callout.biography {
+        margin: 0px;
+        padding: 10px;
+    }
+
     .case-study {
         margin-top: 45px;
         padding: 0 18px;
