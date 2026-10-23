@@ -261,6 +261,7 @@ header {
 /* Portfolio case study cards start */
 
 a.read-more-btn {
+    color: #000;
     font-size: 22px;
     font-weight: 600;
 }
@@ -1503,7 +1504,6 @@ h2.drawwilder-subtitle {
 
 
 .landingpage-title.eg {
-    max-width: 900px;
     margin: 0 0 32px;
     color: #000000;
     font-family: "Poppins", sans-serif;
