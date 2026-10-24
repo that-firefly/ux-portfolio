@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\estela-gaspar-ux.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:estela-gaspar-ux.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\drawwilder-styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:drawwilder-styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\blog-articles\\drawwilder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:blog-articles\\drawwilder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\blog-articles\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:blog-articles\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "about.html",
-              "DocumentMoniker": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\about.html",
-              "RelativeDocumentMoniker": "about.html",
-              "ToolTip": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\about.html",
-              "RelativeToolTip": "about.html",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAAALYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-10-21T10:20:03.302Z",
+              "DocumentIndex": 0,
+              "Title": "drawwilder-styles.css",
+              "DocumentMoniker": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\drawwilder-styles.css",
+              "RelativeDocumentMoniker": "drawwilder-styles.css",
+              "ToolTip": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\drawwilder-styles.css",
+              "RelativeToolTip": "drawwilder-styles.css",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAQwJEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-24T09:02:50.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "estela-gaspar-ux.css",
-              "DocumentMoniker": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\estela-gaspar-ux.css",
-              "RelativeDocumentMoniker": "estela-gaspar-ux.css",
-              "ToolTip": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\estela-gaspar-ux.css",
-              "RelativeToolTip": "estela-gaspar-ux.css",
-              "ViewState": "AgIAAAsDAAAAAAAAAAAWwBUDAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-17T17:36:05.376Z",
+              "DocumentIndex": 1,
+              "Title": "drawwilder.html",
+              "DocumentMoniker": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\blog-articles\\drawwilder.html",
+              "RelativeDocumentMoniker": "blog-articles\\drawwilder.html",
+              "ToolTip": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\blog-articles\\drawwilder.html",
+              "RelativeToolTip": "blog-articles\\drawwilder.html",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAK8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-24T08:46:53.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "about.html",
+              "DocumentMoniker": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\blog-articles\\about.html",
+              "RelativeDocumentMoniker": "blog-articles\\about.html",
+              "ToolTip": "C:\\Users\\estel\\OneDrive\\Documents\\portfolio\\ux-portfolio\\blog-articles\\about.html",
+              "RelativeToolTip": "blog-articles\\about.html",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAQwLUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-24T08:46:46.894Z",
               "EditorCaption": ""
             }
           ]
