@@ -2579,12 +2579,7 @@ art-gallery {
     box-sizing: border-box;
 }
 
-.art-item img {
-    width: 100%;
-    padding-top: 50px;
-    height: auto;
-    display: block;
-}
+
 
 .drawwilder-item-container {
     margin: 40px auto;
