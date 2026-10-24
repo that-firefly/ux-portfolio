@@ -99,9 +99,18 @@ img {
     display: block;
 }
 
-    img.m-60 {
-        margin: 60px auto;
-    }
+img.m-60 {
+    margin: 60px auto;
+}
+
+.port-page-internal img {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+
+img.logo-drawwilder {
+    margin: 0 auto;
+}
 
 
 figure.hero-image {
@@ -2443,9 +2452,6 @@ section {
         text-align: center;
     }
 
-.port-page-internal img {
-    width: 100%;
-}
 
 .projectcontent.drawwilder {
     width: 100%;

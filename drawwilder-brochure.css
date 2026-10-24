@@ -24,6 +24,31 @@ p {
   color: #171417;
 }
 
+ul {
+    color: #000;
+    font-weight: 400;
+    color: var(--muted);
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+ul li {
+    color: #000;
+    font-weight: 400;
+    color: var(--muted);
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+span.muted, .feature b {
+    font-size: 18px;
+}
+
+
 video.responsive-video {
   width: 100%;
   height: 100%;
@@ -47,21 +72,22 @@ body {
 }
 
 a {
-  color: #808080;
+    color: #287A74;
+    ;
 }
 
 .workwithme-button {
-  margin-top: 20px;
-  background-color: #000;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.5em;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
+    margin: 20px 0px;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .explore-button {
@@ -113,11 +139,11 @@ header {
 }
 
 .title h1 {
-  font-size: 40px;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  color: #000000;
-  line-height: 1.1;
-  margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3em;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px;
 }
 
 .title p {
@@ -143,7 +169,7 @@ header {
 .lead {
   width: 90%;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--muted);
   font-family:
     "Poppins",
@@ -159,7 +185,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-top: 10px;
+  margin: 20px auto;
 }
 
 .callout {
@@ -202,8 +228,8 @@ header {
 }
 
 .feature img {
-  width: 44px;
-  height: 44px;
+  width: 55px;
+  height: 55px;
   border-radius: 8px;
 }
 
