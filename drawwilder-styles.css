@@ -143,7 +143,7 @@ figure.hero-image {
     justify-content: center;
     gap: 24px;
     margin: 0px auto;
-    background-color: #eeeeee;
+    background-color: #ffffff;
     padding: 20px 80px;
     border-radius: 20px;
 }
@@ -160,7 +160,7 @@ figure.hero-image {
     display: inline-flex;
     align-items: center;
     padding: 5px;
-    background-color: #3f6b2f;
+    background-color: #1C5551;
     color: #ffffff;
     font-size: 1em;
     text-decoration: none;
@@ -168,11 +168,11 @@ figure.hero-image {
     transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-.portfolio-button:hover {
-    color: #fff;
-    background-color: #2f5124;
-    transform: translateY(-2px);
-}
+    .portfolio-button:hover {
+        color: #fff;
+        background-color: #287A74;
+        transform: translateY(-2px);
+    }
 
 .left-text .portfolio-button {
     margin: 30px 0px 20px 0px;
@@ -262,7 +262,7 @@ p.project-intro, section.project-overview, section.case-section p {
 
 .main-content {
     flex: 1;
-    padding: 10px;
+    padding: 0px;
 }
 
 body {
@@ -1542,6 +1542,9 @@ p {
 
 
 .left-text h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3em;
+    font-weight: 900;
     color: #64786a;
     max-width: 750px;
     margin: 10px 0 0;
@@ -1574,7 +1577,11 @@ h2 {
 }
 
 h1.drawwilder-title {
-    color: #000000;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3em;
+    font-weight: 900;
+    margin: 30px;
+    padding: 0px;
 }
 
 h2.drawwilder-subtitle {
