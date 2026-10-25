@@ -90,6 +90,10 @@ a {
     transition: all 0.3s ease;
 }
 
+.short {
+    width: 60%;
+}
+
 .explore-button {
   margin-top: 20px;
   background-color: #000;
@@ -284,13 +288,16 @@ header {
 }
 
 footer {
-  width: 90%;
-  margin: 0px auto;
-  padding: 20px;
-  color: var(--muted);
-  font-size: 14px;
-  text-align: center;
+    width: 90%;
+    margin: 0px auto;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
 }
+
+
 
 @media print {
   body {
