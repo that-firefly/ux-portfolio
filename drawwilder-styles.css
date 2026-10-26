@@ -17,8 +17,6 @@
 
 
 
-
-
 .art-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -4364,3 +4362,42 @@ a.linkedin-btn {
 
 
 /* Container cards end  */
+
+
+.price-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1a1a;
+}
+
+.price-label {
+    font-size: 1em;
+    text-transform: lowercase;
+    color: #666666;
+    font-weight: 400;
+}
+
+.price-amount {
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+
+.buyart {
+    background-color: #287A74;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    margin: 20px auto;
+}
+
+
+.buyart a {
+    color: #fff;
+ }
+
+
+
