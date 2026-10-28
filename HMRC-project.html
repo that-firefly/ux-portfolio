@@ -1,431 +1,723 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:title"
-      content="Make Tax Digital (MTD) – UX Case Study"
-    />
-    <meta
-      property="og:description"
-      content="Improving HMRC digital services through user-centred design, research, and prototyping."
-    />
-    <meta
-      property="og:image"
-      content="https://thatfirefly.com/images/HMRC-images/mtd-preview.jpg"
-    />
-    <meta property="og:url" content="https://thatfirefly.com/hmrc-project" />
+    <meta property="og:title"
+          content="HMRC (Government - MTD and ARS) - Estela Gaspar - UX/UI Designer" />
+    <meta property="og:description"
+          content="HMRC (Government - MTD and ARS) - Estela Gaspar - UX/UI Designer" />
+    <meta property="og:image"
+          content="https://thatfirefly.com/images/MMRC-images/mtd-preview.jpg" />
+    <meta property="og:url"
+          content="https://thatfirefly.com/hmrc-project" />
     <meta property="og:type" content="website" />
-    <title>Estela Gaspar – UX/UI Designer - HMRC Government</title>
+    <title>
+        HMRC (Government - MTD and ARS) - Estela Gaspar - UX/UI Designer
+    </title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet" />
 
     <!-- Estela Gaspar favicon -->
     <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-16x16.png"
-      sizes="16x16"
-    />
+    <link rel="icon"
+          type="image/png"
+          href="./images/favicon-32x32.png"
+          sizes="32x32" />
+    <link rel="icon"
+          type="image/png"
+          href="./images/favicon-16x16.png"
+          sizes="16x16" />
+
 
     <style>
-      :root {
-        --bg: #fcfcfc;
-        --surface: #ffffff;
-        --text: #1a1a1a;
-        --muted: #667085;
-        --border: #e9eaeb;
-        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        --radius: 16px;
-        --container: 940px;
-      }
+        :root {
+            --bg: #fcfcfc;
+            --surface: #ffffff;
+            --text: #1a1a1a;
+            --muted: #667085;
+            --border: #e9eaeb;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            --radius: 16px;
+            --pain-bg: #fde4e3;
+            --outcome-bg: #d5ffd0;
+            --section-bg: #222;
+            --section-text: #fff;
+            --container: 940px;
+        }
 
-      * {
-        box-sizing: border-box;
-      }
+        * {
+            box-sizing: border-box;
+        }
 
-      html {
-        scroll-behavior: smooth;
-      }
+        html {
+            scroll-behavior: smooth;
+        }
 
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        line-height: 1.65;
-        background: var(--bg);
-        color: var(--text);
-      }
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            background: var(--bg);
+            color: var(--text);
+        }
 
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        border-radius: 14px;
-      }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+        }
 
-      a {
-        color: #1b5e20;
-        overflow-wrap: anywhere;
-      }
+        a {
+            color: #1b5e20;
+            overflow-wrap: anywhere;
+        }
 
-      a:active,
-      a:link {
-        color: #1b5e20;
-        overflow-wrap: anywhere;
-      }
+            a:active,
+            a:link {
+                color: #1b5e20;
+                overflow-wrap: anywhere;
+            }
 
-      a:hover {
-        color: #388e3c;
-        overflow-wrap: anywhere;
-      }
+            a:hover {
+                color: #388e3c;
+                overflow-wrap: anywhere;
+            }
 
-      a:visited {
-        color: #8052b8;
-        overflow-wrap: anywhere;
-      }
+            a:visited {
+                color: #8052b8;
+                overflow-wrap: anywhere;
+            }
 
-      p,
-      li {
-        overflow-wrap: anywhere;
-      }
+        p,
+        li {
+            overflow-wrap: anywhere;
+        }
 
-      main.container {
-        max-width: var(--container);
-        margin: 0 auto;
-        padding: 24px 20px 72px;
-      }
+        main.container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 24px 20px 72px;
+        }
 
-      .back-btn,
-      .back-link {
-        margin: 20px 0px;
-      }
+        .back-btn,
+        .back-link {
+            margin: 20px 0px;
+        }
 
-      .back-btn a,
-      .back-link a {
-        text-decoration: none;
-        color: var(--muted);
-        font-weight: 500;
-      }
+            .back-btn a,
+            .back-link a {
+                text-decoration: none;
+                color: var(--muted);
+                font-weight: 500;
+            }
 
-      .ready-print {
-        display: inline-block;
-        margin: 0 0 24px;
-        padding: 10px 14px;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #111;
-        background: #fff;
-        border: 1.5px solid #111;
-        border-radius: 999px;
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
+        .ready-print {
+            display: inline-block;
+            margin: 0 0 24px;
+            padding: 10px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #111;
+            background: #fff;
+            border: 1.5px solid #111;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
 
-      .ready-print:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      }
+            .ready-print:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            }
 
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0;
-        line-height: 1.2;
-        color: #111827;
-      }
-
-      h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin-bottom: 24px;
-      }
-
-      h2 {
-        font-size: clamp(1.35rem, 2vw, 1.8rem);
-        margin: 0 0 14px;
-      }
-
-      h3 {
-        font-size: 1.1rem;
-        margin: 24px 0 10px;
-      }
-
-      h4 {
-        font-size: 1rem;
-        margin: 20px 0 10px;
-      }
-
-      p {
-        margin: 0 0 16px;
-      }
-
-      ul,
-      ol {
-        margin: 0 0 16px 1.2rem;
-        padding: 0;
-      }
-
-      li {
-        margin-bottom: 10px;
-      }
-
-      .section {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 28px;
-        box-shadow: var(--shadow);
-      }
-
-      .case-section {
-        display: inline-block;
-        margin-top: 20px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #000000;
-      }
-
-      .img-xl {
-        width: 100%;
-        margin: 24px 0;
-      }
-
-      .label-text,
-      .muted,
-      .disclaimer {
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      @media (max-width: 900px) {
-        .section {
-          padding: 22px 18px;
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            line-height: 1.2;
+            color: #111827;
         }
 
         h1 {
-          margin-bottom: 20px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 24px;
         }
 
         h2 {
-          margin-top: 32px;
+            font-size: clamp(1.35rem, 2vw, 1.8rem);
+            margin: 0px 0 14px;
         }
 
-        .ready-print {
-          width: 100%;
-          text-align: center;
+        h3 {
+            font-size: 1.1rem;
+            margin: 24px 0 10px;
         }
 
-        br {
-          display: none;
+        p {
+            margin: 0 0 16px;
         }
-      }
 
-      @media print {
-        body {
-          background: #fff;
+        ul,
+        ol {
+            margin: 0 0 16px 1.2rem;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
 
         .section {
-          box-shadow: none;
-          border: none;
-          padding: 0;
-        }
-
-        .ready-print,
-        .back-btn,
-        .back-link {
-          display: none;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: var(--shadow);
         }
 
         .case-section {
-          background: #000 !important;
-          color: #fff !important;
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
-          padding: 4px 10px;
-          border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000000;
         }
 
-        a::after {
-          content: " (" attr(href) ")";
-          font-size: 0.85em;
-          color: #666;
+        .img-xl {
+            width: 100%;
+            margin: 24px 0;
         }
-      }
+
+        .label-text,
+        .muted,
+        .disclaimer {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .badges {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px;
+            background: #f8fafb;
+        }
+
+        .metric {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .label {
+            display: block;
+        }
+
+        .kpi-bars {
+            display: grid;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .kpi-bar {
+            display: grid;
+            grid-template-columns: 180px 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .track {
+            height: 12px;
+            background: #eef2f5;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            width: var(--pct, 50%);
+            background: #222;
+            border-radius: 999px;
+        }
+
+        .journey,
+        .blueprint {
+            display: grid;
+            gap: 1px;
+            background: #e5e7eb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 24px 0;
+        }
+
+            .journey .row {
+                display: grid;
+                grid-template-columns: 160px repeat(6, 1fr);
+                background: #fff;
+            }
+
+            .blueprint .row {
+                display: grid;
+                grid-template-columns: 200px repeat(6, 1fr);
+                background: #fff;
+            }
+
+        .cell,
+        .head {
+            padding: 12px;
+            font-size: 0.95rem;
+        }
+
+        .head {
+            background: #f8fafb;
+            font-weight: 700;
+        }
+
+        .lane {
+            background: #f8fafb;
+            font-weight: 700;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
+            .dot.good {
+                background: #16a34a;
+            }
+
+            .dot.ok {
+                background: #f59e0b;
+            }
+
+            .dot.bad {
+                background: #dc2626;
+            }
+
+        .flow-caption {
+            font-size: 0.92rem;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+        footer {
+            margin-top: 32px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 900px) {
+            .section {
+                padding: 22px 18px;
+            }
+
+            .badges {
+                grid-template-columns: 1fr;
+            }
+
+            .kpi-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .journey .row {
+                grid-template-columns: 120px repeat(6, 1fr);
+            }
+
+            .blueprint .row {
+                grid-template-columns: 140px repeat(6, 1fr);
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                margin-top: 32px;
+            }
+
+            .ready-print {
+                width: 100%;
+                text-align: center;
+            }
+
+            br {
+                display: none;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .section {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+
+            .ready-print,
+            .back-btn,
+            .back-link {
+                display: none;
+            }
+
+            .case-section {
+                background: #000 !important;
+                color: #fff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 4px 10px;
+                border-radius: 8px;
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 0.85em;
+                color: #666;
+            }
+        }
+
+        .smart-section {
+            --navy: #460073;
+            --muted: #586777;
+            --accent: #177c85;
+            --line: #dce5e9;
+            max-width: 1100px;
+            margin: 0 auto;
+            font-family: Inter, Arial, sans-serif;
+            color: var(--navy);
+        }
+
+        .smart-header {
+            max-width: 720px;
+            margin-bottom: 36px;
+        }
+
+        .eyebrow {
+            display: block;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+
+        .smart-header h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            letter-spacing: -0.035em;
+            margin: 0 0 16px;
+        }
+
+        .smart-header p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .smart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .smart-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+            background: radial-gradient(ellipse at 95% 12%,#dfd5ff9c,transparent 54%),radial-gradient(ellipse at 75% 95%,#fbdcd792,transparent 48%),#f8f6ff;
+            border: 1px solid #e8e1f6;
+            border-radius: 12px;
+        }
+
+            .smart-card:nth-child(3) {
+                grid-column: span 2;
+            }
+
+        .smart-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 48px;
+            height: 48px;
+            background: var(--navy);
+            color: white;
+            border-radius: 10px;
+            font-size: 23px;
+            font-weight: 700;
+            background-color: #460073;
+        }
+
+        .smart-card h3 {
+            margin: 2px 0 10px;
+            font-size: 19px;
+        }
+
+        .smart-card p {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+            .smart-card p:last-child {
+                margin-bottom: 0;
+            }
+
+        .smart-outcome {
+            margin-top: 24px;
+            padding: 32px;
+            background: var(--navy);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            background-color: #460073
+        }
+
+            .smart-outcome .eyebrow {
+                color: #8de0da;
+            }
+
+            .smart-outcome p {
+                max-width: 800px;
+                margin: 0;
+                font-size: 19px;
+                line-height: 1.6;
+            }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <main class="container">
-      <div class="back-btn">
-        <a href="javascript:history.back()">← Back</a>
-      </div>
+        <div class="back-btn">
+            <a href="javascript:history.back()">← Back</a>
+        </div>
 
-      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-        This is a ready-to-print page
-      </h4>
+        <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
+            This is a ready-to-print page
+        </h4>
 
-      <div class="section">
-        <h1>HMRC (Government)</h1>
-        <h2>Make Tax Digital (MTD) and Advanced Ruling Service (ARS)</h2>
-        <p>
-          His Majesty’s Revenue and Customs (HMRC) is the UK’s tax authority,
-          established in 2005 to collect revenue for public services and provide
-          financial support. Within this context, services such as Making Tax
-          Digital (MTD) for Property Income Tax Submission and the Advanced
-          Ruling Service (ARS) support the government’s move towards clearer,
-          more efficient tax processes.
-        </p>
+        <div class="section">
+            <h1>HMRC (Government)</h1>
+            <h2>Make Tax Digital (MTD) and Advanced Ruling Service (ARS)</h2>
+            <p>
+                His Majesty’s Revenue and Customs (HMRC) is the UK’s tax authority,
+                established in 2005 to collect revenue for public services and provide
+                financial support. Within this context, services such as Making Tax
+                Digital (MTD) for Property Income Tax Submission and the Advanced
+                Ruling Service (ARS) support the government’s move towards clearer,
+                more efficient tax processes.
+            </p>
 
-        <h2 style="margin-top: 40px">The challenge</h2>
 
-        <p>
-          User journeys were long and complex, shaped by the realities of tax
-          law, accounting rules, and compliance requirements. The challenge was
-          not just technical, but about making complex, often overwhelming
-          information feel clear and manageable for users. With Make Tax Digital
-          (MTD), this meant supporting people through structured digital
-          record-keeping and regular submissions, while the Advanced Ruling
-          Service (ARS) required presenting clear, binding decisions in a way
-          users could understand and trust before taking action.
-        </p>
+            <div class="smart-grid">
+                <article class="smart-card">
+                    <span class="smart-letter">S</span>
+                    <div>
+                        <h3>Specific</h3>
+                        <p>
+                            Simplify complex HMRC digital tax journeys for Making Tax Digital (MTD) and Advanced Ruling Service (ARS), improving clarity, usability and accessibility through user-centred design and GDS standards.
+                        </p>
+                    </div>
+                </article>
 
-        <img
-          class="img-xl"
-          src="./images/HMRC-images/HMRC-1.png"
-          alt="About the HMRC"
-          title="An HMRC-themed image illustrating tax concepts, featuring a calculator, coins, a money bag, people, houses, and a hand holding a leaf symbolising growth."
-        />
+                <article class="smart-card">
+                    <span class="smart-letter">M</span>
+                    <div>
+                        <h3>Measurable</h3>
+                        <p>
+                            Created and iterated on over 25 prototype pages. Defined success through journey completion, reduced user friction, usability feedback and accessibility against GDS standards.
+                        </p>
+                    </div>
+                </article>
 
-        <h2 style="margin-top: 40px">My role</h2>
-        <p>
-          Digital income tax submission covers a range of complex scenarios,
-          from UK to international property income, including Furnished Holiday
-          Lettings, rentals, and Rent a Room. The work focused on shaping the
-          income property journey by creating and refining pages, connecting
-          journeys, and using research to guide decisions. It went beyond
-          interface design, bringing in UX thinking to choose the right GDS
-          components and patterns, making the experience clearer, more
-          consistent, and easier for users to navigate.
-        </p>
+                <article class="smart-card">
+                    <span class="smart-letter">A</span>
+                    <div>
+                        <h3>Achievable</h3>
+                        <p>
+                            Developed connected end-to-end tax journeys using the GOV.UK Prototype Kit, HTML, Nunjucks and GitHub, translating complex business requirements into functional prototypes.
 
-        <img
-          class="img-xl"
-          src="./images/HMRC-images/HMRC-4.png"
-          alt="Income from property image"
-          title="An image about types of income from property"
-        />
+                            Applied reusable GDS components and interaction patterns, refined content and error messaging, and collaborated with researchers, business analysts and designers to improve usability.
+                        </p>
 
-        <h2 style="margin-top: 40px">Process and approach</h2>
-        <p>
-          The work involved setting up and working within a technical
-          prototyping environment, enabling local development and seamless
-          integration with the GOV.UK MTD Income Tax repository. This included
-          creating and iterating on over 25 pages using HTML and Nunjucks,
-          structuring and linking end-to-end journeys, and ensuring consistency
-          across the experience. Content and error messaging were maintained and
-          updated in alignment with documentation in Confluence, while business
-          analyst user flow maps from Mural were translated into functional
-          prototype journeys. User flows were also refined and redesigned using
-          team standards to improve clarity, alignment, and cross-disciplinary
-          understanding.
-        </p>
+                    </div>
+                </article>
 
-        <img
-          class="img-xl"
-          src="./images/HMRC-images/HMRC-5.jpg"
-          alt="Behind-the-scenes view of building and refining tax journeys with GOV.UK prototype kit and GitHub"
-          title="Building and evolving user journeys through GOV.UK prototype kit and GitHub for HMRC services"
-        />
+                <article class="smart-card">
+                    <span class="smart-letter">R</span>
+                    <div>
+                        <h3>Relevant</h3>
+                        <p>
+                            Addressed complex property income scenarios, including UK and international rentals, Furnished Holiday Lettings and Rent a Room, balancing user needs with tax legislation, compliance and accessibility requirements.
+                        </p>
+                    </div>
+                </article>
 
-        <p>
-          Collaboration played a key role throughout the process, with regular
-          engagement across multidisciplinary teams including user research,
-          business analysis, and interaction design. Participation in meetings
-          such as UR Community, BA meetings, Show and Tell, and weekly check-ins
-          supported continuous alignment and iteration. Beyond delivery, the
-          role contributed to the strategic shaping of the user experience,
-          applying UX expertise to inform design decisions, improve journey
-          coherence, and ensure solutions were both user-centred and aligned
-          with GDS standards.
-        </p>
+                <article class="smart-card">
+                    <span class="smart-letter">T</span>
+                    <div>
+                        <h3>Time-bound</h3>
+                        <p>
+                            Delivered iterative improvements through weekly check-ins, user research feedback, multidisciplinary reviews and Show and Tell sessions, supporting continuous refinement throughout the project.
+                        </p>
+                    </div>
+                </article>
+            </div>
 
-        <img
-          class="img-xl"
-          src="./images/HMRC-images/HMRC-6.jpg"
-          alt="Deliverables from the HMRC project."
-          title="Deliverables from the HMRC project. User flow maps and collaborative boards created in Mural."
-        />
+            <div class="smart-outcome">
+                <span class="eyebrow">THE OUTCOME</span>
+                <p>
+                    Delivered over 25 connected prototype pages, clearer end-to-end tax journeys and reusable GDS-aligned interaction patterns, supporting more accessible, consistent and user-centred digital tax services.
+                </p>
+            </div>
+            </section>
 
-        <img
-          class="img-xl"
-          src="./images/HMRC-images/HMRC-7.jpg"
-          alt="User flow map using GDS page patterns"
-          title="User flow diagram aligned with GOV.UK GDS design patterns"
-        />
+            <h2 style="margin-top: 40px">The challenge</h2>
 
-        <img
-          class="img-xl"
-          src="./images/HMRC-images/HMRC-8.jpg"
-          alt="Screens from the digital journey showing pages created for users"
-          title="Designing clear and accessible pages for HMRC tax services"
-        />
-        <p class="label-text">Examples of deliverables from the HMRC project</p>
+            <p>
+                User journeys were long and complex, shaped by the realities of tax
+                law, accounting rules, and compliance requirements. The challenge was
+                not just technical, but about making complex, often overwhelming
+                information feel clear and manageable for users. With Make Tax Digital
+                (MTD), this meant supporting people through structured digital
+                record-keeping and regular submissions, while the Advanced Ruling
+                Service (ARS) required presenting clear, binding decisions in a way
+                users could understand and trust before taking action.
+            </p>
 
-        <h2 style="margin-top: 40px">My contribution</h2>
-        <p>
-          My contribution focused on shaping user-centred digital solutions that
-          balanced HMRC’s regulatory requirements with usability and
-          accessibility. I brought a strong UX perspective to complex tax
-          journeys, analysing user needs, pain points, and legal constraints to
-          translate them into clear, intuitive experiences. By mapping
-          end-to-end journeys and identifying key decision points, I helped
-          simplify complex processes and improve the overall flow, supporting
-          users in completing their tax submissions with greater confidence.
-        </p>
+            <img class="img-xl"
+                 src="./images/HMRC-images/HMRC-1.png"
+                 alt="About the HMRC"
+                 title="An HMRC-themed image illustrating tax concepts, featuring a calculator, coins, a money bag, people, houses, and a hand holding a leaf symbolising growth." />
 
-        <p>
-          I worked closely with multidisciplinary stakeholders to ensure the
-          service remained transparent, responsive, and accessible to a wide
-          range of users, from individual taxpayers to larger organisations. My
-          contribution included conducting user research to uncover friction
-          points, developing user flows, empathy maps, and page patterns aligned
-          with GDS standards, and iterating on prototypes using the GOV.UK
-          Prototype Kit, GitHub, and Nunjucks. Through continuous testing and
-          collaboration, I supported the delivery of improvements that made the
-          experience more coherent, efficient, and user-focused.
-        </p>
-      </div>
+            <h2 style="margin-top: 40px">My role</h2>
+            <p>
+                Digital income tax submission covers a range of complex scenarios,
+                from UK to international property income, including Furnished Holiday
+                Lettings, rentals, and Rent a Room. The work focused on shaping the
+                income property journey by creating and refining pages, connecting
+                journeys, and using research to guide decisions. It went beyond
+                interface design, bringing in UX thinking to choose the right GDS
+                components and patterns, making the experience clearer, more
+                consistent, and easier for users to navigate.
+            </p>
 
-      <section class="back-link">
-        <a href="./case-studies.html">← Back to case studies</a>
-      </section>
+            <img class="img-xl"
+                 src="./images/HMRC-images/HMRC-4.png"
+                 alt="Income from property image"
+                 title="An image about types of income from property" />
+
+            <h2 style="margin-top: 40px">Process and approach</h2>
+            <p>
+                The work involved setting up and working within a technical
+                prototyping environment, enabling local development and seamless
+                integration with the GOV.UK MTD Income Tax repository. This included
+                creating and iterating on over 25 pages using HTML and Nunjucks,
+                structuring and linking end-to-end journeys, and ensuring consistency
+                across the experience. Content and error messaging were maintained and
+                updated in alignment with documentation in Confluence, while business
+                analyst user flow maps from Mural were translated into functional
+                prototype journeys. User flows were also refined and redesigned using
+                team standards to improve clarity, alignment, and cross-disciplinary
+                understanding.
+            </p>
+
+            <img class="img-xl"
+                 src="./images/HMRC-images/HMRC-5.jpg"
+                 alt="Behind-the-scenes view of building and refining tax journeys with GOV.UK prototype kit and GitHub"
+                 title="Building and evolving user journeys through GOV.UK prototype kit and GitHub for HMRC services" />
+
+            <p>
+                Collaboration played a key role throughout the process, with regular
+                engagement across multidisciplinary teams including user research,
+                business analysis, and interaction design. Participation in meetings
+                such as UR Community, BA meetings, Show and Tell, and weekly check-ins
+                supported continuous alignment and iteration. Beyond delivery, the
+                role contributed to the strategic shaping of the user experience,
+                applying UX expertise to inform design decisions, improve journey
+                coherence, and ensure solutions were both user-centred and aligned
+                with GDS standards.
+            </p>
+
+            <img class="img-xl"
+                 src="./images/HMRC-images/HMRC-6.jpg"
+                 alt="Deliverables from the HMRC project."
+                 title="Deliverables from the HMRC project. User flow maps and collaborative boards created in Mural." />
+
+            <img class="img-xl"
+                 src="./images/HMRC-images/HMRC-7.jpg"
+                 alt="User flow map using GDS page patterns"
+                 title="User flow diagram aligned with GOV.UK GDS design patterns" />
+
+            <img class="img-xl"
+                 src="./images/HMRC-images/HMRC-8.jpg"
+                 alt="Screens from the digital journey showing pages created for users"
+                 title="Designing clear and accessible pages for HMRC tax services" />
+            <p class="label-text">Examples of deliverables from the HMRC project</p>
+
+            <h2 style="margin-top: 40px">My contribution</h2>
+            <p>
+                My contribution focused on shaping user-centred digital solutions that
+                balanced HMRC’s regulatory requirements with usability and
+                accessibility. I brought a strong UX perspective to complex tax
+                journeys, analysing user needs, pain points, and legal constraints to
+                translate them into clear, intuitive experiences. By mapping
+                end-to-end journeys and identifying key decision points, I helped
+                simplify complex processes and improve the overall flow, supporting
+                users in completing their tax submissions with greater confidence.
+            </p>
+
+            <p>
+                I worked closely with multidisciplinary stakeholders to ensure the
+                service remained transparent, responsive, and accessible to a wide
+                range of users, from individual taxpayers to larger organisations. My
+                contribution included conducting user research to uncover friction
+                points, developing user flows, empathy maps, and page patterns aligned
+                with GDS standards, and iterating on prototypes using the GOV.UK
+                Prototype Kit, GitHub, and Nunjucks. Through continuous testing and
+                collaboration, I supported the delivery of improvements that made the
+                experience more coherent, efficient, and user-focused.
+            </p>
+        </div>
+
+        <section class="back-link">
+            <a href="./case-studies.html">← Back to case studies</a>
+        </section>
     </main>
 
     <script>
-      function printPage() {
-        window.print();
-      }
+              function printPage() {
+                window.print();
+              }
 
-      document.addEventListener("keydown", function (e) {
-        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-          printPage();
-        }
-      });
+              document.addEventListener("keydown", function (e) {
+                if (e.target.classList.contains("ready-print") && e.key === "Enter") {
+                  printPage();
+                }
+              });
     </script>
-  </body>
+</body>
 </html>

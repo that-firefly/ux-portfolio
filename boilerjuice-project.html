@@ -44,7 +44,6 @@
             --section-bg: #222;
             --section-text: #fff;
             --container: 940px;
-            --accent: #1b5e20;
         }
 
         * {
@@ -72,19 +71,24 @@
         }
 
         a {
-            color: var(--accent);
+            color: #1b5e20;
             overflow-wrap: anywhere;
         }
 
-            a:hover {
-                color: #388e3c;
+            a:active,
+            a:link {
+                color: #1b5e20;
+                overflow-wrap: anywhere;
             }
 
-            a:focus-visible,
-            button:focus-visible,
-            [role="button"]:focus-visible {
-                outline: 3px solid #388e3c;
-                outline-offset: 4px;
+            a:hover {
+                color: #388e3c;
+                overflow-wrap: anywhere;
+            }
+
+            a:visited {
+                color: #8052b8;
+                overflow-wrap: anywhere;
             }
 
         p,
@@ -100,7 +104,7 @@
 
         .back-btn,
         .back-link {
-            margin: 20px 0;
+            margin: 20px 0px;
         }
 
             .back-btn a,
@@ -114,7 +118,6 @@
             display: inline-block;
             margin: 0 0 24px;
             padding: 10px 14px;
-            font-family: inherit;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.08em;
@@ -137,18 +140,18 @@
         h3,
         h4 {
             margin: 0;
-            line-height: 1.25;
+            line-height: 1.2;
             color: #111827;
         }
 
         h1 {
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 18px;
+            margin-bottom: 24px;
         }
 
         h2 {
             font-size: clamp(1.35rem, 2vw, 1.8rem);
-            margin: 36px 0 14px;
+            margin: 0px 0 14px;
         }
 
         h3 {
@@ -158,17 +161,16 @@
 
         p {
             margin: 0 0 16px;
-            color: #344054;
         }
 
-        ul {
-            margin: 0 0 20px 1.2rem;
+        ul,
+        ol {
+            margin: 0 0 16px 1.2rem;
             padding: 0;
         }
 
         li {
             margin-bottom: 10px;
-            color: #344054;
         }
 
         .section {
@@ -179,168 +181,144 @@
             box-shadow: var(--shadow);
         }
 
-        .case-subtitle {
-            margin: 0 0 24px;
-            font-size: clamp(1.15rem, 2vw, 1.45rem);
-            font-weight: 500;
-            color: #475467;
-        }
-
-        .case-intro {
-            font-size: 1.05rem;
-        }
-
         .case-section {
             display: inline-block;
             margin-top: 20px;
             font-size: 1.2rem;
             font-weight: 600;
-            color: #000;
-        }
-
-        .project-meta {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
-            padding: 20px;
-            margin: 28px 0;
-            background: #f8fafb;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-        }
-
-            .project-meta p {
-                margin: 0;
-                font-size: 0.92rem;
-            }
-
-            .project-meta strong {
-                display: block;
-                margin-bottom: 4px;
-                color: #111827;
-            }
-
-        .pain-points,
-        .outcomes,
-        .role,
-        .media-grid {
-            display: grid;
-            gap: 20px;
-            margin-top: 24px;
-        }
-
-        .pain-points,
-        .outcomes {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .role,
-        .media-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .pain-points > p {
-            grid-column: 1 / -1;
-            margin-bottom: 0;
-            font-weight: 600;
-            color: #111827;
-        }
-
-        .card,
-        .pain-points-card,
-        .outcomes-card {
-            min-width: 0;
-            min-height: 190px;
-            padding: 20px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
-            background: #f8fafb;
-            font-size: 0.95rem;
-        }
-
-        .pain-points-card {
-            background: var(--pain-bg);
-        }
-
-        .outcomes-card {
-            background: var(--outcome-bg);
-        }
-
-        .principles {
-            display: grid;
-            gap: 18px;
-            margin: 24px 0;
-        }
-
-        .principle {
-            padding: 20px;
-            border-left: 4px solid var(--accent);
-            background: #f8fafb;
-            border-radius: 0 12px 12px 0;
-        }
-
-            .principle h3 {
-                margin: 0 0 8px;
-            }
-
-            .principle p {
-                margin-bottom: 0;
-            }
-
-        .decision-label {
-            display: block;
-            margin-top: 12px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: #344054;
+            color: #000000;
         }
 
         .img-xl {
             width: 100%;
-            height: auto;
             margin: 24px 0;
         }
 
-        .image-caption {
-            margin-top: -12px;
-            margin-bottom: 24px;
-            font-size: 0.88rem;
+        .label-text,
+        .muted,
+        .disclaimer {
+            font-size: 0.95rem;
             color: var(--muted);
         }
 
-        .reflection {
-            padding: 24px;
-            margin-top: 28px;
-            border-radius: 16px;
-            background: #f8fafb;
+        .badges {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .badge {
             border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px;
+            background: #f8fafb;
         }
 
-            .reflection h2 {
-                margin-top: 0;
+        .metric {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .label {
+            display: block;
+        }
+
+        .kpi-bars {
+            display: grid;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .kpi-bar {
+            display: grid;
+            grid-template-columns: 180px 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .track {
+            height: 12px;
+            background: #eef2f5;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            width: var(--pct, 50%);
+            background: #222;
+            border-radius: 999px;
+        }
+
+        .journey,
+        .blueprint {
+            display: grid;
+            gap: 1px;
+            background: #e5e7eb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 24px 0;
+        }
+
+            .journey .row {
+                display: grid;
+                grid-template-columns: 160px repeat(6, 1fr);
+                background: #fff;
             }
 
-        .visit-link {
+            .blueprint .row {
+                display: grid;
+                grid-template-columns: 200px repeat(6, 1fr);
+                background: #fff;
+            }
+
+        .cell,
+        .head {
+            padding: 12px;
+            font-size: 0.95rem;
+        }
+
+        .head {
+            background: #f8fafb;
+            font-weight: 700;
+        }
+
+        .lane {
+            background: #f8fafb;
+            font-weight: 700;
+        }
+
+        .dot {
             display: inline-block;
-            margin-top: 24px;
-            padding: 12px 18px;
-            color: #fff;
-            background: var(--accent);
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 6px;
         }
 
-            .visit-link:link,
-            .visit-link:visited {
-                color: #fff;
+            .dot.good {
+                background: #16a34a;
             }
 
-            .visit-link:hover {
-                color: #fff;
-                background: #164b1a;
+            .dot.ok {
+                background: #f59e0b;
             }
+
+            .dot.bad {
+                background: #dc2626;
+            }
+
+        .flow-caption {
+            font-size: 0.92rem;
+            color: var(--muted);
+            margin-top: 8px;
+        }
 
         footer {
             margin-top: 32px;
@@ -348,22 +326,33 @@
             color: var(--muted);
         }
 
-        @media (max-width: 700px) {
-            main.container {
-                padding: 16px 14px 48px;
-            }
-
+        @media (max-width: 900px) {
             .section {
                 padding: 22px 18px;
-                border-radius: 18px;
             }
 
-            .project-meta,
-            .pain-points,
-            .outcomes,
-            .role,
-            .media-grid {
+            .badges {
                 grid-template-columns: 1fr;
+            }
+
+            .kpi-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .journey .row {
+                grid-template-columns: 120px repeat(6, 1fr);
+            }
+
+            .blueprint .row {
+                grid-template-columns: 140px repeat(6, 1fr);
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                margin-top: 32px;
             }
 
             .ready-print {
@@ -371,42 +360,14 @@
                 text-align: center;
             }
 
-            .project-meta {
-                gap: 14px;
-            }
-
-            h2 {
-                margin-top: 30px;
-            }
-
-            .img-xl {
-                margin: 20px 0;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                transition-duration: 0.01ms !important;
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
+            br {
+                display: none;
             }
         }
 
         @media print {
             body {
                 background: #fff;
-                font-size: 11pt;
-            }
-
-            main.container {
-                max-width: none;
-                padding: 0;
             }
 
             .section {
@@ -417,37 +378,133 @@
 
             .ready-print,
             .back-btn,
-            .back-link,
-            .visit-link {
+            .back-link {
                 display: none;
             }
 
-            .principle,
-            .reflection,
-            .project-meta,
-            .pain-points-card,
-            .outcomes-card {
-                break-inside: avoid;
+            .case-section {
+                background: #000 !important;
+                color: #fff !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
+                padding: 4px 10px;
+                border-radius: 8px;
             }
 
-            img {
-                max-height: 600px;
-                object-fit: contain;
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 0.85em;
+                color: #666;
             }
-
-            a {
-                color: #111;
-            }
-
-                a::after {
-                    content: " (" attr(href) ")";
-                    font-size: 0.85em;
-                    color: #666;
-                    overflow-wrap: anywhere;
-                }
         }
+
+        .smart-section {
+            --navy: #460073;
+            --muted: #586777;
+            --accent: #177c85;
+            --line: #dce5e9;
+            max-width: 1100px;
+            margin: 0 auto;
+            font-family: Inter, Arial, sans-serif;
+            color: var(--navy);
+        }
+
+        .smart-header {
+            max-width: 720px;
+            margin-bottom: 36px;
+        }
+
+        .eyebrow {
+            display: block;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+
+        .smart-header h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            letter-spacing: -0.035em;
+            margin: 0 0 16px;
+        }
+
+        .smart-header p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .smart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .smart-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+            background: radial-gradient(ellipse at 95% 12%,#dfd5ff9c,transparent 54%),radial-gradient(ellipse at 75% 95%,#fbdcd792,transparent 48%),#f8f6ff;
+            border: 1px solid #e8e1f6;
+            border-radius: 12px;
+        }
+
+            .smart-card:nth-child(3) {
+                grid-column: span 2;
+            }
+
+        .smart-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 48px;
+            height: 48px;
+            background: var(--navy);
+            color: white;
+            border-radius: 10px;
+            font-size: 23px;
+            font-weight: 700;
+            background-color: #460073;
+        }
+
+        .smart-card h3 {
+            margin: 2px 0 10px;
+            font-size: 19px;
+        }
+
+        .smart-card p {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+            .smart-card p:last-child {
+                margin-bottom: 0;
+            }
+
+        .smart-outcome {
+            margin-top: 24px;
+            padding: 32px;
+            background: var(--navy);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            background-color: #460073
+        }
+
+            .smart-outcome .eyebrow {
+                color: #8de0da;
+            }
+
+            .smart-outcome p {
+                max-width: 800px;
+                margin: 0;
+                font-size: 19px;
+                line-height: 1.6;
+            }
     </style>
 </head>
 
@@ -491,8 +548,69 @@
                     greater confidence.
                 </p>
 
- 
+
             </header>
+
+
+            <div class="smart-grid">
+                <article class="smart-card">
+                    <span class="smart-letter">S</span>
+                    <div>
+                        <h3>Specific</h3>
+                        <p>
+                            Simplify the heating oil ordering experience through user-centred research, service design and improved digital journeys, focusing on clarity, reassurance and ease of use.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="smart-card">
+                    <span class="smart-letter">M</span>
+                    <div>
+                        <h3>Measurable</h3>
+                        <p>
+                            Evaluate success through checkout completion, reduced journey abandonment, System Usability Scale (SUS) scores, customer support enquiries and subscription uptake.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="smart-card">
+                    <span class="smart-letter">A</span>
+                    <div>
+                        <h3>Achievable</h3>
+                        <p>
+                            Led approximately 80% of the UX process over 18 months, conducting user research, usability testing, accessibility audits, journey mapping, wireframing and iterative prototyping.
+                        </p>
+                        <p>Redesigned the quote form, checkout journey, search functionality and subscription experience across web and mobile, collaborating with product owners, developers and customer service teams.</p>
+                    </div>
+                </article>
+
+                <article class="smart-card">
+                    <span class="smart-letter">R</span>
+                    <div>
+                        <h3>Relevant</h3>
+                        <p>
+                            Addressed customer uncertainty around heating oil availability, delivery times and complex ordering processes, particularly during peak winter demand, while supporting business efficiency and customer independence.
+                        </p></div>
+                </article>
+
+                <article class="smart-card">
+                    <span class="smart-letter">T</span>
+                    <div>
+                        <h3>Time-bound</h3>
+                        <p>
+                            Delivered iterative UX and UI improvements over an 18-month period through agile development cycles, stakeholder reviews, usability testing, developer handover and quality assurance.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="smart-outcome">
+                <span class="eyebrow">THE OUTCOME</span>
+                <p>
+                    Contributed to a clearer, more transparent and user-friendly heating oil ordering experience, supporting more independent purchasing, improved customer confidence, repeat ordering and reduced reliance on emergency customer support.
+                </p>
+            </div>
+            </section>
 
             <section class="challenge">
                 <h2>The challenge</h2>
