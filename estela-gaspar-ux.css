@@ -87,6 +87,11 @@ figure.hero-image {
     color: #DA70D6;
 }
 
+    .menu .logo a:hover {
+        color: #fff;
+        background: linear-gradient(to bottom, #460073 50%, #000000 100%);
+    }
+
 .logo a {
     display: block;
     color: inherit;
@@ -113,6 +118,7 @@ figure.hero-image {
     background-color: #460073;
     padding: 20px 80px;
     border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .landingpage-image {
@@ -184,9 +190,8 @@ article.principle-card p, article.principle-card h4 {
 .project-tags li {
     display: inline-block;
     padding: 6px 14px;
-    border: 1px solid #d5dce2;
     border-radius: 4px;
-    background-color: #6F2DA8;
+    background-color: #000;
     color: #fff;
     font-family: "Poppins", sans-serif;
     font-size: 12px;
@@ -608,6 +613,7 @@ section.reflection-section p {
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
     .case-cta:hover {
@@ -938,6 +944,7 @@ h2#expertise-heading {
     padding: 30px 24px;
     border-radius: 6px;
     background: #DA70D6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -996,6 +1003,7 @@ h2#expertise-heading {
         padding: 25px;
         border-radius: 5px;
         background: #460073;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     }
 
 .research-icon {
@@ -1130,7 +1138,8 @@ h2#expertise-heading {
     padding: clamp(32px, 6vw, 72px);
     border-radius: 6px;
     background: #460073;
-    color: white;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
     .reflection-section .section-kicker {
