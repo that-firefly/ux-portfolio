@@ -414,6 +414,112 @@
           color: #666;
         }
       }
+
+        .smart-section {
+            --navy: #142b40;
+            --muted: #586777;
+            --accent: #177c85;
+            --line: #dce5e9;
+            max-width: 1100px;
+            margin: 0 auto;
+            font-family: Inter, Arial, sans-serif;
+            color: var(--navy);
+        }
+
+        .smart-header {
+            max-width: 720px;
+            margin-bottom: 36px;
+        }
+
+        .eyebrow {
+            display: block;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+
+        .smart-header h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            letter-spacing: -0.035em;
+            margin: 0 0 16px;
+        }
+
+        .smart-header p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .smart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .smart-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+            background: #f6f9fa;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+            .smart-card:nth-child(3) {
+                grid-column: span 2;
+            }
+
+        .smart-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 48px;
+            height: 48px;
+            background: var(--navy);
+            color: white;
+            border-radius: 10px;
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        .smart-card h3 {
+            margin: 2px 0 10px;
+            font-size: 19px;
+        }
+
+        .smart-card p {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+            .smart-card p:last-child {
+                margin-bottom: 0;
+            }
+
+        .smart-outcome {
+            margin-top: 24px;
+            padding: 32px;
+            background: var(--navy);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+            .smart-outcome .eyebrow {
+                color: #8de0da;
+            }
+
+            .smart-outcome p {
+                max-width: 800px;
+                margin: 0;
+                font-size: 19px;
+                line-height: 1.6;
+            }
     </style>
   </head>
 
@@ -428,256 +534,343 @@
       </h4>
 
       <div class="section">
-        <h1>Royal Navy (Government)</h1>
-        <h2>Enhancing the Defence Learning Environment (DLE)</h2>
-
-        <p>
-          The Defence Learning Environment (DLE) is the UK military’s central
-          digital training platform, supporting learning across the Royal Navy,
-          Army, and RAF. Used by personnel at every stage of their careers, the
-          platform must function reliably in complex, high-pressure
-          environments, often with limited connectivity and time. This project
-          focused on transforming the DLE into a more accessible, intuitive, and
-          effective learning experience, aligning digital training with the real
-          conditions of military life.
-        </p>
-
-        <section class="challenge">
-          <h2>The challenge</h2>
+          <h1>Royal Navy (Government)</h1>
+          <h2>Enhancing the Defence Learning Environment (DLE)</h2>
 
           <p>
-            Access to learning was inconsistent, navigation could feel unclear,
-            and usability issues made it harder for users to engage with
-            training effectively.
+              The Defence Learning Environment (DLE) is the UK military’s central
+              digital training platform, supporting learning across the Royal Navy,
+              Army, and RAF. Used by personnel at every stage of their careers, the
+              platform must function reliably in complex, high-pressure
+              environments, often with limited connectivity and time. This project
+              focused on transforming the DLE into a more accessible, intuitive, and
+              effective learning experience, aligning digital training with the real
+              conditions of military life.
           </p>
+
+
+
+          <section class="smart-section">
+              <div class="smart-header">
+                  <h2>Project approach & impact</h2>
+                  <p>
+                      Enhancing the Defence Learning Environment
+                      through user-centred research, service design
+                      and accessible learning experiences.
+                  </p>
+              </div>
+
+              <div class="smart-grid">
+                  <article class="smart-card">
+                      <span class="smart-letter">S</span>
+                      <div>
+                          <h3>Specific</h3>
+                          <p>
+                              Improve accessibility, usability and
+                              engagement across the Royal Navy's digital
+                              learning platform through user-centred
+                              research and service design.
+                          </p>
+                      </div>
+                  </article>
+
+                  <article class="smart-card">
+                      <span class="smart-letter">M</span>
+                      <div>
+                          <h3>Measurable</h3>
+                          <p>
+                              Define success through training completion
+                              rates, learner engagement, task efficiency
+                              and WCAG 2.1 AA accessibility compliance.
+                          </p>
+                      </div>
+                  </article>
+
+                  <article class="smart-card">
+                      <span class="smart-letter">A</span>
+                      <div>
+                          <h3>Achievable</h3>
+                          <p>
+                              Conducted research across four Royal Navy
+                              establishments, facilitating workshops,
+                              mapping journeys, prototyping and testing
+                              solutions on Moodle.
+                          </p>
+                          <p>
+                              Created reusable learning templates for
+                              visual, interactive, scenario-based and
+                              bite-sized learning, supporting different
+                              roles, abilities and operational needs.
+                          </p>
+                      </div>
+                  </article>
+
+                  <article class="smart-card">
+                      <span class="smart-letter">R</span>
+                      <div>
+                          <h3>Relevant</h3>
+                          <p>
+                              Addressed operational challenges including
+                              limited connectivity, complex navigation,
+                              varying digital confidence and role-specific
+                              training needs.
+                          </p>
+                      </div>
+                  </article>
+
+                  <article class="smart-card">
+                      <span class="smart-letter">T</span>
+                      <div>
+                          <h3>Time-bound</h3>
+                          <p>
+                              Established a prioritised roadmap for phased
+                              improvements, from discovery and prototyping
+                              to implementation recommendations and handover.
+                          </p>
+                      </div>
+                  </article>
+              </div>
+
+              <div class="smart-outcome">
+                  <span class="eyebrow">THE OUTCOME</span>
+                  <p>
+                      Delivered actionable UX and service design
+                      recommendations, laying the foundation for a
+                      more accessible, flexible and effective
+                      military learning experience.
+                  </p>
+              </div>
+          </section>
+
+          
+
+
+          <section class="challenge">
+              <h2>The challenge</h2>
+
+              <p>
+                  Access to learning was inconsistent, navigation could feel unclear,
+                  and usability issues made it harder for users to engage with
+                  training effectively.
+              </p>
+
+              <p>
+                  Training also had to work within the realities of military life:
+                  strict hierarchy, varying technical confidence, multiple
+                  establishments, operational constraints, and situations where users
+                  might have limited connectivity or only short windows of time to
+                  learn.
+              </p>
+
+              <img class="img-xl"
+                   src="./images/royal-navy/royalnavy-project-2.png"
+                   alt="Images of officers and recruits during training sessions and marching drills"
+                   title="Images of officers and recruits during training sessions and marching drills" />
+
+              <p class="label-text">
+                  Images of officers and recruits during training sessions and
+                  marching drills.
+              </p>
+          </section>
+
+          <h2>My role</h2>
 
           <p>
-            Training also had to work within the realities of military life:
-            strict hierarchy, varying technical confidence, multiple
-            establishments, operational constraints, and situations where users
-            might have limited connectivity or only short windows of time to
-            learn.
+              Conducted research to understand who the main users were and what
+              barriers they were facing when trying to access and use e-learning. We
+              engaged with a wide range of stakeholders, from recruits to officers,
+              to ensure the solution reflected real training needs rather than
+              assumptions.
           </p>
 
-          <img
-            class="img-xl"
-            src="./images/royal-navy/royalnavy-project-2.png"
-            alt="Images of officers and recruits during training sessions and marching drills"
-            title="Images of officers and recruits during training sessions and marching drills"
-          />
+          <h2 style="margin-top: 30px">Process and approach</h2>
+
+          <h2 class="case-section">Discovery and research</h2>
+          <p>
+              Research and workshops were conducted to identify the main challenges
+              and explore potential solutions to improve platform accessibility.
+          </p>
+          <p>
+              During this initial phase, I visited Royal Navy establishments
+              throughout the country, including BRNC Dartmouth, HMS Collingwood,
+              CTCRM Lympstone, and HMS Raleigh, facilitating workshops and assessing
+              the platform’s current state with recruits and trainers.
+          </p>
+          <p>
+              Following a bespoke Design Thinking approach adapted to the
+              hierarchical nature of military life, we tested and iterated on
+              solution hypotheses by involving the client throughout the process via
+              workshops, presentations, and structured feedback.
+          </p>
+          <p>
+              The work included business process mapping, impact maps, ecosystem
+              mapping, stakeholder mapping, personas, empathy maps, user journeys,
+              user flows, reports with key findings, living prototypes, and a custom
+              design system adapted to the legacy environment.
+          </p>
+
+          <img class="img-xl"
+               src="./images/royal-navy/royalnavy-project-3.png"
+               alt="UX workshops and findings exercise"
+               title="UX workshops and findings exercise" />
+
+          <img class="img-xl"
+               src="./images/royal-navy/royalnavy-project-6.png"
+               alt="DLE user journey"
+               title="Example of the DLE user journey" />
 
           <p class="label-text">
-            Images of officers and recruits during training sessions and
-            marching drills.
+              Images from workshops where we gathered behavioural insights (empathy
+              maps) and mapped the user journey
           </p>
-        </section>
 
-        <h2>My role</h2>
+          <h2 class="case-section">Service Design</h2>
+          <p>
+              We made service design recommendations to improve access to e-learning
+              by scoping personas, tasks and goals, mapping user journeys, and
+              conducting workshops and interviews both face-to-face and remotely
+              across different Royal Navy establishments.
+          </p>
 
-        <p>
-          Conducted research to understand who the main users were and what
-          barriers they were facing when trying to access and use e-learning. We
-          engaged with a wide range of stakeholders, from recruits to officers,
-          to ensure the solution reflected real training needs rather than
-          assumptions.
-        </p>
+          <p>
+              We also collaborated with key stakeholders to help support a more
+              agile mindset and improve adoption of the e-learning platform through
+              culture change, not just interface change.
+          </p>
 
-        <h2 style="margin-top: 30px">Process and approach</h2>
+          <img class="img-xl"
+               src="./images/royal-navy/service-blueprint-rn.png"
+               alt="DLE service design blueprint"
+               title="Example of the DLE service blueprint user experience" />
 
-        <h2 class="case-section">Discovery and research</h2>
-        <p>
-          Research and workshops were conducted to identify the main challenges
-          and explore potential solutions to improve platform accessibility.
-        </p>
-        <p>
-          During this initial phase, I visited Royal Navy establishments
-          throughout the country, including BRNC Dartmouth, HMS Collingwood,
-          CTCRM Lympstone, and HMS Raleigh, facilitating workshops and assessing
-          the platform’s current state with recruits and trainers.
-        </p>
-        <p>
-          Following a bespoke Design Thinking approach adapted to the
-          hierarchical nature of military life, we tested and iterated on
-          solution hypotheses by involving the client throughout the process via
-          workshops, presentations, and structured feedback.
-        </p>
-        <p>
-          The work included business process mapping, impact maps, ecosystem
-          mapping, stakeholder mapping, personas, empathy maps, user journeys,
-          user flows, reports with key findings, living prototypes, and a custom
-          design system adapted to the legacy environment.
-        </p>
+          <p class="label-text">
+              Example of the DLE service design blueprint user experience
+          </p>
 
-        <img
-          class="img-xl"
-          src="./images/royal-navy/royalnavy-project-3.png"
-          alt="UX workshops and findings exercise"
-          title="UX workshops and findings exercise"
-        />
+          <h2 class="case-section">Prototyping and testing</h2>
 
-        <img
-          class="img-xl"
-          src="./images/royal-navy/royalnavy-project-6.png"
-          alt="DLE user journey"
-          title="Example of the DLE user journey"
-        />
+          <p>
+              Through iterative prototyping and testing on the legacy Moodle
+              platform, we uncovered opportunities to significantly improve
+              accessibility, learning outcomes, and engagement across the DLE. Our
+              work went beyond interface design, rethinking how learning is
+              experienced in real operational contexts.
+          </p>
 
-        <p class="label-text">
-          Images from workshops where we gathered behavioural insights (empathy
-          maps) and mapped the user journey
-        </p>
+          <img class="img-xl"
+               src="./images/royal-navy/royalnavy-moodle.png"
+               alt="DLE service design blueprint"
+               title="Example of the DLE service blueprint user experience" />
 
-        <h2 class="case-section">Service Design</h2>
-        <p>
-          We made service design recommendations to improve access to e-learning
-          by scoping personas, tasks and goals, mapping user journeys, and
-          conducting workshops and interviews both face-to-face and remotely
-          across different Royal Navy establishments.
-        </p>
+          <h2 class="case-section">What we focused on improving</h2>
 
-        <p>
-          We also collaborated with key stakeholders to help support a more
-          agile mindset and improve adoption of the e-learning platform through
-          culture change, not just interface change.
-        </p>
+          <ul style="margin-top: 10px">
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>Improved access and usability</strong><br />
+                      <span style="opacity: 0.8">
+                          Mobile optimised experience, offline access for low connectivity
+                          environments (such as ships), single sign-on (SSO), and
+                          simplified navigation to help users quickly find and start
+                          learning.
+                      </span>
+                  </div>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>Flexible, role-based learning</strong><br />
+                      <span style="opacity: 0.8">
+                          Adaptive learning paths tailored to role, experience, and prior
+                          knowledge, supported by clearer pathways, “next steps” and
+                          "where-you-left-off" functionality.
+                      </span>
+                  </div>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>More effective learning</strong><br />
+                      <span style="opacity: 0.8">
+                          Introduction of microlearning (short 5–10 minute modules),
+                          scenario-based and branching simulations, and mastery learning
+                          with frequent checks and targeted support to ensure
+                          understanding before progression.
+                      </span>
+                  </div>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>Stronger engagement and collaboration</strong><br />
+                      <span style="opacity: 0.8">
+                          Gamification features (badges, progress tracking, challenges),
+                          peer learning through forums, and opportunities for cross-branch
+                          knowledge sharing across the Royal Navy, Army, and RAF.
+                      </span>
+                  </div>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>Content clarity and retention</strong><br />
+                      <span style="opacity: 0.8">
+                          Visual and example-led learning with problem-based tasks to
+                          improve recall and real-world application.
+                      </span>
+                  </div>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>System and delivery improvements</strong><br />
+                      <span style="opacity: 0.8">
+                          Offline learning packages (SCORM/xAPI), Moodle based LMS
+                          configuration, accessibility standards (WCAG 2.1 AA), and
+                          suggestion of analytics to track enrolment, progression, and
+                          completion.
+                      </span>
+                  </div>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start">
+                  <span style="font-size: 18px">→</span>
+                  <div>
+                      <strong>Adoption and change enablement</strong><br />
+                      <span style="opacity: 0.8">
+                          "Train-the-trainer" sessions, internal champions, and simple
+                          support materials (for instance, short "how-to videos") to help
+                          embed new practices and reduce reliance on support teams.
+                      </span>
+                  </div>
+              </li>
+          </ul>
 
-        <img
-          class="img-xl"
-          src="./images/royal-navy/service-blueprint-rn.png"
-          alt="DLE service design blueprint"
-          title="Example of the DLE service blueprint user experience"
-        />
-
-        <p class="label-text">
-          Example of the DLE service design blueprint user experience
-        </p>
-
-        <h2 class="case-section">Prototyping and testing</h2>
-
-        <p>
-          Through iterative prototyping and testing on the legacy Moodle
-          platform, we uncovered opportunities to significantly improve
-          accessibility, learning outcomes, and engagement across the DLE. Our
-          work went beyond interface design, rethinking how learning is
-          experienced in real operational contexts.
-        </p>
-
-        <img
-          class="img-xl"
-          src="./images/royal-navy/royalnavy-moodle.png"
-          alt="DLE service design blueprint"
-          title="Example of the DLE service blueprint user experience"
-        />
-
-        <h2 class="case-section">What we focused on improving</h2>
-
-        <ul style="margin-top: 10px">
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>Improved access and usability</strong><br />
-              <span style="opacity: 0.8">
-                Mobile optimised experience, offline access for low connectivity
-                environments (such as ships), single sign-on (SSO), and
-                simplified navigation to help users quickly find and start
-                learning.
-              </span>
-            </div>
-          </li>
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>Flexible, role-based learning</strong><br />
-              <span style="opacity: 0.8">
-                Adaptive learning paths tailored to role, experience, and prior
-                knowledge, supported by clearer pathways, “next steps” and
-                "where-you-left-off" functionality.
-              </span>
-            </div>
-          </li>
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>More effective learning</strong><br />
-              <span style="opacity: 0.8">
-                Introduction of microlearning (short 5–10 minute modules),
-                scenario-based and branching simulations, and mastery learning
-                with frequent checks and targeted support to ensure
-                understanding before progression.
-              </span>
-            </div>
-          </li>
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>Stronger engagement and collaboration</strong><br />
-              <span style="opacity: 0.8">
-                Gamification features (badges, progress tracking, challenges),
-                peer learning through forums, and opportunities for cross-branch
-                knowledge sharing across the Royal Navy, Army, and RAF.
-              </span>
-            </div>
-          </li>
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>Content clarity and retention</strong><br />
-              <span style="opacity: 0.8">
-                Visual and example-led learning with problem-based tasks to
-                improve recall and real-world application.
-              </span>
-            </div>
-          </li>
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>System and delivery improvements</strong><br />
-              <span style="opacity: 0.8">
-                Offline learning packages (SCORM/xAPI), Moodle based LMS
-                configuration, accessibility standards (WCAG 2.1 AA), and
-                suggestion of analytics to track enrolment, progression, and
-                completion.
-              </span>
-            </div>
-          </li>
-          <li style="display: flex; gap: 10px; align-items: flex-start">
-            <span style="font-size: 18px">→</span>
-            <div>
-              <strong>Adoption and change enablement</strong><br />
-              <span style="opacity: 0.8">
-                "Train-the-trainer" sessions, internal champions, and simple
-                support materials (for instance, short "how-to videos") to help
-                embed new practices and reduce reliance on support teams.
-              </span>
-            </div>
-          </li>
-        </ul>
-
-        <h2 style="margin-top: 30px; margin-bottom: 30px">My contribution</h2>
-        <p>
-          I contributed across discovery, service design, UX strategy,
-          prototyping, testing, and handover, with around 90% ownership of the
-          UX process from early research through to recommendations and delivery
-          support.
-        </p>
-        <p>
-          My core impact was making previously hidden user needs visible. By
-          engaging directly with recruits and visiting Royal Navy
-          establishments, I uncovered critical gaps between how the platform was
-          designed and how it was actually used in real training environments.
-        </p>
-        <p>
-          The existing system reflected a more traditional, hierarchical
-          approach to learning, which, while important culturally, was limiting
-          usability and effectiveness for a new generation of recruits. I helped
-          reframe this by introducing user-centred insights, clearer learning
-          pathways, and more accessible interaction patterns.
-        </p>
-        <p>
-          This work laid the foundation for a shift towards a more modern,
-          flexible, and effective learning experience, and provided the initial
-          structure and direction for ongoing improvements across the DLE.
-        </p>
+          <h2 style="margin-top: 30px; margin-bottom: 30px">My contribution</h2>
+          <p>
+              I contributed across discovery, service design, UX strategy,
+              prototyping, testing, and handover, with around 90% ownership of the
+              UX process from early research through to recommendations and delivery
+              support.
+          </p>
+          <p>
+              My core impact was making previously hidden user needs visible. By
+              engaging directly with recruits and visiting Royal Navy
+              establishments, I uncovered critical gaps between how the platform was
+              designed and how it was actually used in real training environments.
+          </p>
+          <p>
+              The existing system reflected a more traditional, hierarchical
+              approach to learning, which, while important culturally, was limiting
+              usability and effectiveness for a new generation of recruits. I helped
+              reframe this by introducing user-centred insights, clearer learning
+              pathways, and more accessible interaction patterns.
+          </p>
+          <p>
+              This work laid the foundation for a shift towards a more modern,
+              flexible, and effective learning experience, and provided the initial
+              structure and direction for ongoing improvements across the DLE.
+          </p>
       </div>
 
       <section class="back-link">
