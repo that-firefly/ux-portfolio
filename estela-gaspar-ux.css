@@ -292,7 +292,7 @@ header {
     }
 
 img.img-xl {
-    width: 60%;
+    width: 100%;
     padding: 0px;
     margin: 20px 0px;
 }
@@ -3170,6 +3170,10 @@ footer.footer-banner.drawwilder {
         padding: 20px;
     }
 
+    .content {
+        max-width: 100%;
+    }
+
     h3 {
         text-align: center;
     }
@@ -4478,3 +4482,10 @@ a.linkedin-btn {
 
 
 /* Container cards end  */
+
+
+section.back-link {
+    width: 30%;
+    margin: 30px auto;
+    text-align: center;
+}
