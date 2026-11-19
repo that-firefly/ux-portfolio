@@ -1676,11 +1676,15 @@ img#biography {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    background-image: url(./images/banner-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-    .landingpage-intro > div:first-child {
-        flex: 1;
-    }
+.landingpage-intro > div:first-child {
+    flex: 1;
+}
 
 img#biography {
     width: 500px;
@@ -1713,6 +1717,7 @@ img#biography {
 
 .landingpage-intro.bio {
     padding: 0px 0px 30px 30px;
+    background-image:none;
 }
 
 
