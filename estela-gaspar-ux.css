@@ -272,15 +272,50 @@ header {
     height: 400px;
 }
 
-/* Portfolio case study cards start */
 
+.case-studies {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 60px;
+}
+
+.case-studies h2, .case-studies h3, .case-studies p {
+    text-align: left;
+}
+
+    .case-studies h2 {
+        font-size: 2.5em;
+        font-weight: 600;
+        border-bottom: 4px solid #000;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+
+img.img-xl {
+    width: 60%;
+    padding: 0px;
+    margin: 20px 0px;
+}
+
+.case-studies h3 {
+    padding-left: 0px;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 0px;
+}
+
+.content-cs {
+    width: 70%;
+    margin-bottom: 3em;
+}
+
+
+/* Portfolio case study cards start */
 a.read-more-btn {
     color: #000;
     font-size: 22px;
     font-weight: 600;
 }
-
-
 
 
 .card img {
@@ -3114,6 +3149,27 @@ footer.footer-banner.drawwilder {
         text-align: center;
     }
 
+    .case-studies h2 {
+        font-size: 1.5em;
+    }
+
+    .case-studies h3 {
+        font-size: 1em;
+    }
+
+    .content-cs {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    img.img-xl {
+        width: 100%;
+    }
+
+    .case-studies {
+        padding: 20px;
+    }
+
     h3 {
         text-align: center;
     }
@@ -4021,7 +4077,7 @@ footer.footer-banner.drawwilder {
 @media screen and (max-width: 960px) {
     h1.landingpage-title.eg {
         padding: 10px;
-        font-size: 1em;
+        font-size: 2em;
         font-weight: 600;
         text-align: center;
     }
