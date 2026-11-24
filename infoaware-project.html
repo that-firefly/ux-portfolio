@@ -1,571 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:title"
-      content="InfoAware – E-learning and Digital Design Case Study"
-    />
-    <meta
-      property="og:description"
-      content="Designing engaging E-learning courses and refreshing digital experiences through visual design, illustration, and iconography."
-    />
-    <meta
-      property="og:image"
-      content="https://thatfirefly.com/images/infoaware/infoaware-1.png"
-    />
-    <meta
-      property="og:url"
-      content="https://thatfirefly.com/infoaware-case-study"
-    />
-    <meta property="og:type" content="website" />
-    <title>Estela Gaspar – UX/UI Designer - InfoAware</title>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Estela Gaspar favicon -->
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-16x16.png"
-      sizes="16x16"
-    />
-
-    <style>
-      :root {
-        --bg: #fcfcfc;
-        --surface: #ffffff;
-        --text: #1a1a1a;
-        --muted: #667085;
-        --border: #e9eaeb;
-        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        --radius: 16px;
-        --container: 940px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        line-height: 1.65;
-        background: var(--bg);
-        color: var(--text);
-      }
-
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        border-radius: 14px;
-      }
-
-      a {
-        color: #1b5e20;
-        overflow-wrap: anywhere;
-      }
-
-      a:active,
-      a:link {
-        color: #1b5e20;
-        overflow-wrap: anywhere;
-      }
-
-      a:hover {
-        color: #388e3c;
-        overflow-wrap: anywhere;
-      }
-
-      a:visited {
-        color: #8052b8;
-        overflow-wrap: anywhere;
-      }
-
-      p,
-      li {
-        overflow-wrap: anywhere;
-      }
-
-      main.container {
-        max-width: var(--container);
-        margin: 0 auto;
-        padding: 24px 20px 72px;
-      }
-
-      .back-btn,
-      .back-link {
-        margin: 20px 0px;
-      }
-
-      .back-btn a,
-      .back-link a {
-        text-decoration: none;
-        color: var(--muted);
-        font-weight: 500;
-      }
-
-      .ready-print {
-        display: inline-block;
-        margin: 0 0 24px;
-        padding: 10px 14px;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #111;
-        background: #fff;
-        border: 1.5px solid #111;
-        border-radius: 999px;
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
-
-      .ready-print:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0;
-        line-height: 1.2;
-        color: #111827;
-      }
-
-      h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin-bottom: 24px;
-      }
-
-      h2 {
-        font-size: clamp(1.35rem, 2vw, 1.8rem);
-        margin: 0 0 14px;
-      }
-
-      h3 {
-        font-size: 1.1rem;
-        margin: 24px 0 10px;
-      }
-
-      h4 {
-        font-size: 1rem;
-        margin: 20px 0 10px;
-      }
-
-      p {
-        margin: 0 0 16px;
-      }
-
-      ul,
-      ol {
-        margin: 0 0 16px 1.2rem;
-        padding: 0;
-      }
-
-      li {
-        margin-bottom: 10px;
-      }
-
-      .section {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 28px;
-        box-shadow: var(--shadow);
-      }
-
-      .case-section {
-        display: inline-block;
-        margin-top: 20px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #000000;
-      }
-
-      .img-xl {
-        width: 100%;
-        margin: 24px 0;
-      }
-
-      .label-text,
-      .muted,
-      .disclaimer {
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      .img-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin: 24px 0;
-      }
-
-      .img-grid img {
-        width: calc(50% - 8px);
-      }
-
-      .icon-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin: 24px 0;
-      }
-
-      .icon-grid img {
-        width: 200px;
-        height: auto;
-      }
-
-      @media (max-width: 900px) {
-        .section {
-          padding: 22px 18px;
-        }
-
-        h1 {
-          margin-bottom: 20px;
-        }
-
-        h2 {
-          margin-top: 32px;
-        }
-
-        .ready-print {
-          width: 100%;
-          text-align: center;
-        }
-
-        .img-grid img,
-        .icon-grid img {
-          width: 100%;
-        }
-
-        br {
-          display: none;
-        }
-      }
-
-      @media print {
-        body {
-          background: #fff;
-        }
-
-        .section {
-          box-shadow: none;
-          border: none;
-          padding: 0;
-        }
-
-        .ready-print,
-        .back-btn,
-        .back-link {
-          display: none;
-        }
-
-        .case-section {
-          background: #000 !important;
-          color: #fff !important;
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
-          padding: 4px 10px;
-          border-radius: 8px;
-        }
-
-        a::after {
-          content: " (" attr(href) ")";
-          font-size: 0.85em;
-          color: #666;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <main class="container">
-      <div class="back-btn">
-        <a href="javascript:history.back()">← Back</a>
-      </div>
-
-      <h4 class="ready-print" onclick="printPage()" tabindex="0" role="button">
-        This is a ready-to-print page
-      </h4>
-
-      <div class="section">
-        <h1>InfoAware</h1>
-        <h2>E-learning design and visual refresh</h2>
-        <p>
-          InfoAware is a learning and development company focused on delivering
-          digital training, compliance solutions, and consultancy services that
-          help organisations improve performance and engagement. Operating under
-          Sphere International Limited, the company combines off-the-shelf and
-          bespoke learning products with a centralised Learning Management
-          System (LMS), giving clients a practical way to manage training,
-          compliance, and progress in one place.
-        </p>
-
-        <p>
-          During my time working with InfoAware, I contributed to both the
-          learning experience and the visual quality of the brand’s digital
-          presence. The work spanned E-learning course creation, illustration,
-          iconography, and visual refinement across the website and educational
-          materials.
-        </p>
-
-        <div class="img-grid">
-          <img
-            src="./images/infoaware/infoaware-1.png"
-            alt="InfoAware website and E-learning courses"
-            title="Image of InfoAware website and E-learning courses"
-          />
-          <img
-            src="./images/infoaware/infoaware-2.png"
-            alt="InfoAware website and E-learning courses"
-            title="Image of InfoAware website and E-learning courses"
-          />
+<head>
+    <meta charset="utf-8" />
+    <title>InfoAware – E-learning and Digital Design Case Study</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./estela-gaspar-ux.css" rel="stylesheet" />
+    <script src="./estela-ux.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+    <link href="./images/favicon-16x16.png" rel="icon" type="image/png" />
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <meta content="InfoAware – E-learning and Digital Design Case Study" property="og:title" />
+    <meta content="Designing engaging E-learning courses and refreshing digital experiences through visual design, illustration, and iconography." property="og:description" />
+    <meta content="https://thatfirefly.com/images/infoaware/infoaware-1.png" property="og:image" />
+    <meta content="https://thatfirefly.com/infoaware-case-study" property="og:url" />
+    <meta content="website" property="og:type" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <span class="hamburger" onclick="toggleMenu()">
+                ☰
+            </span>
+            <ul class="menu">
+                <li class="logo">
+                    <a href="./about.html">
+                        Estela Gaspar - that Firefly
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="./case-studies.html">
+                        Case Studies
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="GitHub" class="social-link" href="https://github.com/that-firefly" rel="noopener noreferrer" target="_blank">
+                        <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.68 5.4-5.24 5.68.41.35.77 1.04.77 2.1v3.12c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="LinkedIn" class="social-link" href="https://www.linkedin.com/in/estela-gaspar/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+                        <svg aria-hidden="true" fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="content">
+                <h1 class="landingpage-title eg">InfoAware e-learning</h1>
+                <div class="container-group">
+                    <div class="container">
+                        <!-- Block 2 start -->
+                        <div class="case-studies">
+                            <div class="section">
+                                <div class="content-cs">
+                                    <div class="text-content">
+                                        <h2>
+                                            What was my role?
+                                        </h2><h3>Creating e-learning experiences and refreshing the digital brand.</h3><p>I worked as an <strong>e-learning and graphic designer</strong>, creating interactive training courses, bespoke illustrations and iconography while improving the visual identity of the website and learning materials.</p>
+                                    </div>
+                                    <div class="image-stack">
+                                   <img alt="" class="img-xl" loading="lazy" src="./images/infoaware/E-learning-course.png" />
+                               </div>
+                                </div>
+                                <!-- Block 1 end -->
+                                <!-- Block 2 start -->
+                                <div class="content-cs">
+                                    <div class="text-content">
+                                        <h2>
+                                            How did I achieve this?
+                                        </h2><h3>Designed interactive learning experiences.</h3><p>Used <strong>Adobe Captivate and Articulate Storyline</strong> to create accessible courses that made complex information easier to understand.</p><h3>Developed illustrations and iconography.</h3><p>Produced bespoke visual assets using <strong>Adobe Illustrator and InDesign</strong>, making educational content clearer and more visually engaging.</p><h3>Refreshed the digital experience.</h3><p>Improved the website’s visual appearance with a consistent brand identity across marketing and learning materials.</p>
+                                    </div>
+                                    <div class="image-stack">
+                                    <img alt="Image with Adobe Captivate and Articulate Storyline logos" class="img-xl" loading="lazy" src="./images/infoaware/infoaware-courses.png" title="Image with Adobe Captivate and Articulate Storyline logos and an E-learning person using a course." />
+                                    
+                                    <img alt="Iconography, utilising Adobe InDesign and Adobe Illustrator" class="img-xl" loading="lazy" src="./images/infoaware/infoaware-design.png" title="Image with iconography, utilising Adobe InDesign and Adobe Illustrator and their logos." /></div>
+                                </div>
+                                <!-- Block 2 end -->
+                                <!-- Block 3 start -->
+                                <div class="content-cs">
+                                    <div class="text-content">
+                                        <h2>
+                                            How things improved?
+                                        </h2><h3>Clearer and more accessible learning experiences.</h3><p>Structured educational content into manageable sections with intuitive interactions, making courses easier to navigate and understand.</p><h3>Stronger visual identity.</h3><p>Introduced a more modern, cohesive visual language through custom illustrations and iconography.</p><h3>Compelling educational content.</h3><p>Combined instructional design with visual storytelling to make digital training more approachable, practical and captivating.</p>
+                                    </div>
+                                    <div class="image-stack">
+                                        <img alt="" class="img-xl" loading="lazy" src="./images/infoaware/e-learning-process.png" />
+                                        <img alt="InfoAware website and E-learning courses" class="img-xl" loading="lazy" src="./images/infoaware/infoaware-3.png" title="Image of InfoAware website and E-learning courses" />
+                                    </div>
+                                </div>
+                                <!-- Block 3 end -->
+                            </div>
+                            <p class="sourceinfo">
+                                <small>
+                               
+                                    Source images:
+                                    <a alt="InfoAware website and all rights reserved." href="https://www.infoaware.com" title="InfoAware. A Sphere International Ltd website.">InfoAware</a>
+                                </small>, <small><a href="https://unsplash.com/@samsunguk?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Samsung UK</a>
+                                    on <a href="https://unsplash.com/photos/a-woman-and-a-man-sitting-on-a-couch-ylU-b7pcgpY?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a>
+                                </small>, <small>Adobe Captivate logo. Know more about
+                                    <a href="https://www.adobe.com/uk/products/captivate.html">Adobe Captivate</a>.
+                                    <a href="https://www.articulate.com/360/storyline/">Articulate Storyline</a>.
+                                    <a href="https://unsplash.com/@comparefibre?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">
+                                        Compare Fibre
+                                    </a>
+                                    on
+                                    <a href="https://unsplash.com/photos/person-in-red-shirt-wearing-black-and-gray-headphones-Y8TiLvKnLeg?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a>
+                                </small><small> and <a alt="Wikimedia Foundation" href="https://en.m.wikipedia.org" title="Wikimedia Foundation, a nonprofit organisation that hosts and supports collaborative knowledge projects.">Wikipedia</a>.</small>
+                           
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="back-link">
+                <a href="./case-studies.html">
+                    ← Back to case studies
+                </a>
+            </section>
         </div>
-
-        <p class="label-text">
-          Source image:
-          <a
-            href="https://www.infoaware.com"
-            alt="InfoAware website and all rights reserved."
-            title="InfoAware. A Sphere International Ltd website."
-            >InfoAware</a
-          >
-        </p>
-
-        <h2 style="margin-top: 40px">The challenge</h2>
-
-        <p>
-          The challenge was to create digital learning experiences that were not
-          only informative, but genuinely engaging and easy to use. E-learning
-          content often risks feeling heavy, static, or difficult to absorb, so
-          the work needed to balance educational clarity with visual interest,
-          accessibility, and intuitive interaction.
-        </p>
-
-        <p>
-          At the same time, the wider digital experience needed a more cohesive
-          and modern visual language. This meant refreshing the website’s
-          appearance, creating bespoke iconography and illustrations, and
-          ensuring the brand felt clear, friendly, and consistent across both
-          marketing and learning environments.
-        </p>
-
-        <div class="img-grid">
-          <img
-            src="./images/infoaware/infoaware-3.png"
-            alt="InfoAware website and E-learning courses"
-            title="Image of InfoAware website and E-learning courses"
-          />
-          <img
-            src="./images/infoaware/infoaware-4.jpg"
-            alt="People communicating in a learning environment"
-            title="Image representing communication and learning"
-          />
+        <div class="footer-banner">
+            <footer>
+                © 2026 Estela Gaspar | Senior GOV.UK Interaction Designer
+                <div>
+                    <a href="https://github.com/that-firefly" rel="noopener noreferrer" target="_blank">
+                        GitHub Estela That Firefly
+                    </a>
+                    -
+                    <a href="https://www.linkedin.com/in/estela-gaspar/" rel="noopener noreferrer" target="_blank">
+                        LinkedIn
+                    </a>
+                </div>
+            </footer>
         </div>
-
-        <p class="label-text">
-          Source image:
-          <a
-            href="https://www.infoaware.com"
-            alt="InfoAware website and all rights reserved."
-            title="InfoAware. A Sphere International Ltd website."
-            >InfoAware</a
-          >
-        </p>
-
-        <p class="label-text">
-          Source image:
-          <a
-            href="https://unsplash.com/@samsunguk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Samsung UK</a
-          >
-          on
-          <a
-            href="https://unsplash.com/photos/a-woman-and-a-man-sitting-on-a-couch-ylU-b7pcgpY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          >
-        </p>
-
-        <h2 style="margin-top: 40px">My role</h2>
-        <p>
-          I worked as an E-learning designer and graphic designer, creating
-          engaging digital training experiences while also contributing to the
-          visual refinement of the website and brand assets. My role sat between
-          instructional design and visual communication, requiring both clarity
-          of thinking and strong creative execution.
-        </p>
-
-        <p>
-          Using Adobe Captivate and Articulate Storyline, I designed and built
-          E-learning courses that helped users move through content in a clear,
-          structured, and intuitive way. Alongside this, I developed bespoke
-          illustrations and iconography using Adobe Illustrator and InDesign,
-          helping modernise the platform and strengthen the overall visual
-          identity.
-        </p>
-
-        <div class="img-grid">
-          <img
-            src="./images/infoaware/infoaware-courses.png"
-            alt="Image with Adobe Captivate and Articulate Storyline logos"
-            title="Image with Adobe Captivate and Articulate Storyline logos and an E-learning person using a course."
-          />
-          <img
-            src="./images/infoaware/infoaware-design.png"
-            alt="Iconography, utilising Adobe InDesign and Adobe Illustrator"
-            title="Image with iconography, utilising Adobe InDesign and Adobe Illustrator and their logos."
-          />
-        </div>
-
-        <p class="label-text">
-          Source images: Adobe Captivate logo. Know more about
-          <a href="https://www.adobe.com/uk/products/captivate.html"
-            >Adobe Captivate</a
-          >. Articulate Storyline logo. Know more about
-          <a href="https://www.articulate.com/360/storyline/"
-            >Articulate Storyline</a
-          >.
-          <a
-            href="https://unsplash.com/@comparefibre?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-          >
-            Compare Fibre</a
-          >
-          on
-          <a
-            href="https://unsplash.com/photos/person-in-red-shirt-wearing-black-and-gray-headphones-Y8TiLvKnLeg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          >
-        </p>
-
-        <h2 style="margin-top: 40px">Process and approach</h2>
-        <p>
-          My approach focused on making learning content feel clear, supportive,
-          and visually engaging. For the E-learning courses, this meant
-          organising information into digestible sections, designing intuitive
-          interactions, and creating experiences that supported understanding
-          rather than overwhelming the user.
-        </p>
-
-        <p>
-          I used Adobe Captivate and Articulate Storyline to develop interactive
-          course journeys that balanced structure with accessibility, ensuring
-          that learners could move through content with confidence. Each module
-          needed to communicate information effectively while maintaining a
-          sense of engagement, rhythm, and ease of use.
-        </p>
-
-        <p>
-          In parallel, I refreshed elements of the digital brand through custom
-          illustration and iconography. This helped create a more cohesive and
-          recognisable visual system, strengthening the connection between the
-          educational content and the wider platform experience.
-        </p>
-
-        <div class="icon-grid">
-          <img
-            src="./images/infoaware/infoaware-icon1.gif"
-            alt="Gif example of iconography created for InfoAware"
-            title="Real gif of iconography created for InfoAware."
-          />
-          <img
-            src="./images/infoaware/infoaware-icon2.gif"
-            alt="Gif example of iconography created for InfoAware"
-            title="Real gif of iconography created for InfoAware."
-          />
-          <img
-            src="./images/infoaware/infoaware-icon3.gif"
-            alt="Gif example of iconography created for InfoAware"
-            title="Real gif of iconography created for InfoAware."
-          />
-          <img
-            src="./images/infoaware/infoaware-icon4.gif"
-            alt="Gif example of iconography created for InfoAware"
-            title="Real gif of iconography created for InfoAware."
-          />
-        </div>
-
-        <p class="label-text">
-          Iconography, utilising Adobe InDesign and Adobe Illustrator.
-        </p>
-
-        <p class="label-text">
-          Source images:
-          <a
-            href="https://www.infoaware.com"
-            alt="InfoAware website and all rights reserved."
-            title="InfoAware. A Sphere International Ltd website."
-            >InfoAware</a
-          >,
-          <a
-            href="https://en.m.wikipedia.org"
-            alt="Wikimedia Foundation"
-            title="Wikimedia Foundation, a nonprofit organisation that hosts and supports collaborative knowledge projects."
-            >Wikipedia</a
-          >
-        </p>
-
-        <h2 style="margin-top: 40px">My contribution</h2>
-        <p>
-          My contribution focused on improving both the effectiveness of the
-          learning experience and the overall visual quality of the digital
-          platform. I created E-learning content that made information easier to
-          absorb and navigate, while also strengthening the brand’s visual
-          communication through illustration and iconography.
-        </p>
-
-        <p>
-          By combining instructional thinking with graphic design, I helped
-          create a more cohesive and user-friendly experience across learning
-          and web touchpoints. The result was content that felt more engaging,
-          more accessible, and more aligned with InfoAware’s goal of delivering
-          practical, impactful digital learning solutions.
-        </p>
-
-        <p>
-          My work supported InfoAware’s wider mission by making educational
-          resources feel not only functional, but approachable, polished, and
-          visually engaging — because nobody wants training that feels like a
-          punishment disguised as a PDF.
-        </p>
-      </div>
-
-      <section class="back-link">
-        <a href="./case-studies.html">← Back to case studies</a>
-      </section>
-    </main>
-
-    <script>
-      function printPage() {
-        window.print();
-      }
-
-      document.addEventListener("keydown", function (e) {
-        if (e.target.classList.contains("ready-print") && e.key === "Enter") {
-          printPage();
-        }
-      });
-    </script>
-  </body>
+    </div>
+</body>
 </html>
