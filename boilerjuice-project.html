@@ -1,951 +1,119 @@
+<!DOCTYPE html>
 
-<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta property="og:title" content="BoilerJuice – UX Case Study" />
-    <meta property="og:description"
-          content="Service design, user research and UI design for the heating oil market." />
-    <meta property="og:image"
-          content="https://thatfirefly.com/images/boilerjuice/boilerjuice-preview.jpg" />
-    <meta property="og:url"
-          content="https://thatfirefly.com/boilerjuice-project" />
-    <meta property="og:type" content="website" />
-
-    <meta name="description"
-          content="A UX case study by Estela Gaspar exploring service design, user research and UI improvements for BoilerJuice." />
-
-    <title>
-        BoilerJuice UX Case Study – Estela Gaspar – UX/UI Designer
-    </title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-          rel="stylesheet" />
-
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
-    <link rel="icon"
-          type="image/png"
-          href="./images/favicon-32x32.png"
-          sizes="32x32" />
-
-    <style>
-        :root {
-            --bg: #fcfcfc;
-            --surface: #ffffff;
-            --text: #1a1a1a;
-            --muted: #667085;
-            --border: #e9eaeb;
-            --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            --radius: 16px;
-            --pain-bg: #fde4e3;
-            --outcome-bg: #d5ffd0;
-            --section-bg: #222;
-            --section-text: #fff;
-            --container: 940px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            font-size: 16px;
-            line-height: 1.65;
-            background: var(--bg);
-            color: var(--text);
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            border-radius: 14px;
-        }
-
-        a {
-            color: #1b5e20;
-            overflow-wrap: anywhere;
-        }
-
-            a:active,
-            a:link {
-                color: #1b5e20;
-                overflow-wrap: anywhere;
-            }
-
-            a:hover {
-                color: #388e3c;
-                overflow-wrap: anywhere;
-            }
-
-            a:visited {
-                color: #8052b8;
-                overflow-wrap: anywhere;
-            }
-
-        p,
-        li {
-            overflow-wrap: anywhere;
-        }
-
-        main.container {
-            max-width: var(--container);
-            margin: 0 auto;
-            padding: 24px 20px 72px;
-        }
-
-        .back-btn,
-        .back-link {
-            margin: 20px 0px;
-        }
-
-            .back-btn a,
-            .back-link a {
-                text-decoration: none;
-                color: var(--muted);
-                font-weight: 500;
-            }
-
-        .ready-print {
-            display: inline-block;
-            margin: 0 0 24px;
-            padding: 10px 14px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #111;
-            background: #fff;
-            border: 1.5px solid #111;
-            border-radius: 999px;
-            cursor: pointer;
-            transition: 0.2s ease;
-        }
-
-            .ready-print:hover {
-                transform: translateY(-1px);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-            }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin: 0;
-            line-height: 1.2;
-            color: #111827;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 24px;
-        }
-
-        h2 {
-            font-size: clamp(1.35rem, 2vw, 1.8rem);
-            margin: 0px 0 14px;
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            margin: 24px 0 10px;
-        }
-
-        p {
-            margin: 0 0 16px;
-        }
-
-        ul,
-        ol {
-            margin: 0 0 16px 1.2rem;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .section {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 28px;
-            box-shadow: var(--shadow);
-        }
-
-        .case-section {
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #000000;
-        }
-
-        .img-xl {
-            width: 100%;
-            margin: 24px 0;
-        }
-
-        .label-text,
-        .muted,
-        .disclaimer {
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        .badges {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 16px;
-            margin-top: 20px;
-        }
-
-        .badge {
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 18px;
-            background: #f8fafb;
-        }
-
-        .metric {
-            display: block;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 4px;
-        }
-
-        .label {
-            display: block;
-        }
-
-        .kpi-bars {
-            display: grid;
-            gap: 16px;
-            margin-top: 20px;
-        }
-
-        .kpi-bar {
-            display: grid;
-            grid-template-columns: 180px 1fr auto;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .track {
-            height: 12px;
-            background: #eef2f5;
-            border-radius: 999px;
-            overflow: hidden;
-        }
-
-        .fill {
-            height: 100%;
-            width: var(--pct, 50%);
-            background: #222;
-            border-radius: 999px;
-        }
-
-        .journey,
-        .blueprint {
-            display: grid;
-            gap: 1px;
-            background: #e5e7eb;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            overflow: hidden;
-            margin: 24px 0;
-        }
-
-            .journey .row {
-                display: grid;
-                grid-template-columns: 160px repeat(6, 1fr);
-                background: #fff;
-            }
-
-            .blueprint .row {
-                display: grid;
-                grid-template-columns: 200px repeat(6, 1fr);
-                background: #fff;
-            }
-
-        .cell,
-        .head {
-            padding: 12px;
-            font-size: 0.95rem;
-        }
-
-        .head {
-            background: #f8fafb;
-            font-weight: 700;
-        }
-
-        .lane {
-            background: #f8fafb;
-            font-weight: 700;
-        }
-
-        .dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            vertical-align: middle;
-            margin-right: 6px;
-        }
-
-            .dot.good {
-                background: #16a34a;
-            }
-
-            .dot.ok {
-                background: #f59e0b;
-            }
-
-            .dot.bad {
-                background: #dc2626;
-            }
-
-        .flow-caption {
-            font-size: 0.92rem;
-            color: var(--muted);
-            margin-top: 8px;
-        }
-
-        footer {
-            margin-top: 32px;
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-
-        @media (max-width: 900px) {
-            .section {
-                padding: 22px 18px;
-            }
-
-            .badges {
-                grid-template-columns: 1fr;
-            }
-
-            .kpi-bar {
-                grid-template-columns: 1fr;
-            }
-
-            .journey .row {
-                grid-template-columns: 120px repeat(6, 1fr);
-            }
-
-            .blueprint .row {
-                grid-template-columns: 140px repeat(6, 1fr);
-            }
-
-            h1 {
-                margin-bottom: 20px;
-            }
-
-            h2 {
-                margin-top: 32px;
-            }
-
-            .ready-print {
-                width: 100%;
-                text-align: center;
-            }
-
-            br {
-                display: none;
-            }
-        }
-
-        @media print {
-            body {
-                background: #fff;
-            }
-
-            .section {
-                box-shadow: none;
-                border: none;
-                padding: 0;
-            }
-
-            .ready-print,
-            .back-btn,
-            .back-link {
-                display: none;
-            }
-
-            .case-section {
-                background: #000 !important;
-                color: #fff !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                padding: 4px 10px;
-                border-radius: 8px;
-            }
-
-            a::after {
-                content: " (" attr(href) ")";
-                font-size: 0.85em;
-                color: #666;
-            }
-        }
-
-        .smart-section {
-            --navy: #460073;
-            --muted: #586777;
-            --accent: #177c85;
-            --line: #dce5e9;
-            max-width: 1100px;
-            margin: 0 auto;
-            font-family: Inter, Arial, sans-serif;
-            color: var(--navy);
-        }
-
-        .smart-header {
-            max-width: 720px;
-            margin-bottom: 36px;
-        }
-
-        .eyebrow {
-            display: block;
-            color: var(--accent);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            margin-bottom: 12px;
-        }
-
-        .smart-header h2 {
-            font-size: clamp(28px, 4vw, 42px);
-            letter-spacing: -0.035em;
-            margin: 0 0 16px;
-        }
-
-        .smart-header p {
-            color: var(--muted);
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        .smart-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 16px;
-        }
-
-        .smart-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 28px;
-            background: radial-gradient(ellipse at 95% 12%,#dfd5ff9c,transparent 54%),radial-gradient(ellipse at 75% 95%,#fbdcd792,transparent 48%),#f8f6ff;
-            border: 1px solid #e8e1f6;
-            border-radius: 12px;
-        }
-
-            .smart-card:nth-child(3) {
-                grid-column: span 2;
-            }
-
-        .smart-letter {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 48px;
-            height: 48px;
-            background: var(--navy);
-            color: white;
-            border-radius: 10px;
-            font-size: 23px;
-            font-weight: 700;
-            background-color: #460073;
-        }
-
-        .smart-card h3 {
-            margin: 2px 0 10px;
-            font-size: 19px;
-        }
-
-        .smart-card p {
-            margin: 0 0 12px;
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-            .smart-card p:last-child {
-                margin-bottom: 0;
-            }
-
-        .smart-outcome {
-            margin-top: 24px;
-            padding: 32px;
-            background: var(--navy);
-            color: white;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            background-color: #460073
-        }
-
-            .smart-outcome .eyebrow {
-                color: #8de0da;
-            }
-
-            .smart-outcome p {
-                max-width: 800px;
-                margin: 0;
-                font-size: 19px;
-                line-height: 1.6;
-            }
-    </style>
+    <meta charset="utf-8" />
+    <title>BoilerJuice – UX/UI Case Study</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./estela-gaspar-ux.css" rel="stylesheet" />
+    <script src="./estela-ux.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+    <link href="./images/favicon-16x16.png" rel="icon" type="image/png">
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    </link>
 </head>
-
 <body>
-    <main class="container">
-        <div class="back-btn">
-            <a href="javascript:history.back()">← Back</a>
+    <div class="wrapper">
+        <nav>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <ul class="menu">
+                <li class="logo"><a href="./about.html">Estela Gaspar - that Firefly</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./case-studies.html">Case Studies</a></li>
+                <li>
+                    <a aria-label="GitHub" class="social-link" href="https://github.com/that-firefly" target="_blank">
+                        <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.68 5.4-5.24 5.68.41.35.77 1.04.77 2.1v3.12c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="LinkedIn" class="social-link" href="https://www.linkedin.com/in/estela-gaspar/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+                        <svg aria-hidden="true" fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="content">
+                <h1 class="landingpage-title eg">BoilerJuice</h1>
+                <div class="container-group">
+                    <div class="container">
+                        <!-- Block 2 start -->
+                        <div class="case-studies">
+                            <div class="section">
+                                <div class="content-cs">
+                                    <div class="text-content"><h2>What was my role?</h2>
+                                    <h3>Simplifying heating oil ordering and reducing customer anxiety.</h3>
+                                    <p>Over 18 months, I held approximately <strong>80% UX ownership</strong>, collaborating with product owners, developers and customer service teams. I helped design and launch the <strong>Connected Service</strong>, making heating oil easier to compare, order and manage across web and mobile.</p></div>
+
+                                    <img alt="Empathy mapping of customer needs and pain points" class="img-xl" loading="lazy" src="./images/boilerjuice/boilerjuice-empathy-mapping.png" />
+                                </div>
+                                <!-- Block 1 end -->
+                                <!-- Block 2 start -->
+                                <div class="content-cs">
+                                    <div class="text-content"><h2>How did I achieve this?</h2><h3>Turned research into design priorities.</h3><p>Used interviews, analytics, usability testing, SUS, accessibility audits and service mapping to identify friction and understand customer needs.</p><h3>Redesigned key purchasing journeys.</h3><p>Created user flows, wireframes and prototypes to simplify the quote form, checkout, search and subscription experience, with a focus on clarity, reassurance and ease of use.</p><h3>Collaborated through agile delivery.</h3><p>Worked with stakeholders and developers to refine designs, provide handover documentation and maintain quality through QA.</p></div>
+
+                                    <div class="image-stack"><img alt="User research and service design artefacts" class="img-xl" loading="lazy" src="./images/boilerjuice/UR-images.jpg" /><img alt="User flows, wireframes and interface design" class="img-xl" loading="lazy" src="./images/boilerjuice/user-interface.jpg" /></div>
+                                </div>
+                                <!-- Block 2 end -->
+                                <!-- Block 3 start -->
+                                <div class="content-cs">
+                                    <div class="text-content">
+                                        <h2>How things improved?</h2>
+                                        <h3>Greater confidence and independent ordering.</h3>
+                                        <p>Clearer pricing, delivery expectations and purchasing steps helped customers order with less reliance on support.</p><h3>Reduced reliance on emergency support.</h3><p>Customer service calls shifted towards follow-ups rather than winter emergencies. Alerts and subscriptions supported earlier reordering and repeat use during peak demand.</p>
+                                      <h3>Increased business and revenue.</h3>
+                                     <p>Backed by <a href="https://www.dccenergy.com/" target="_blank" rel="noopener noreferrer">DCC Energy</a>, BoilerJuice has <strong>scaled its digital platform and UK supplier network since August 2018, driving annual turnover to £18.4 million</strong> and cementing its market leadership.</p>
+                           
+                                    </div>
+                                    <div class="image-stack">
+                                        <img alt="Connected service image" class="img-xl" loading="lazy" src="./images/boilerjuice/boiler-juice-connected-2.jpg" />
+                                    </div>
+                                </div>
+                                <!-- Block 3 end -->
+
+                            </div>
+
+                            <p>
+                                <a class="visit-link"
+                                   href="https://www.boilerjuice.com"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Visit the BoilerJuice website ↗
+                                </a>
+                            </p>
+
+
+                            <p class="sourceinfo"><small>Some source images are the copyright of BoilerJuice Ltd.</small></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="back-link">
+                <a href="./case-studies.html">← Back to case studies</a>
+            </section>
         </div>
-
-        <button class="ready-print"
-                type="button"
-                onclick="printPage()">
-            Print this case study
-        </button>
-
-        <article class="section">
-            <header>
-                <h1>BoilerJuice</h1>
-
-                <p class="case-intro">
-                    BoilerJuice is a UK heating oil price comparison service that
-                    helps customers find local deals. <strong>
-                        Unlike a mains-connected
-                        heating service, ordering heating oil requires customers to
-                        anticipate their needs, compare options and understand when
-                        their delivery will arrive
-                    </strong>.
-                </p>
-
-                <p>
-                    <strong>
-                        The design challenge was to make this process feel
-                        straightforward
-                    </strong>, transparent and dependable, while supporting
-                    customers who may be ordering under pressure during colder months.
-                </p>
-            </header>
-
-            <div class="smart-header">
-                <h2>Project approach & impact</h2>
-                <p>
-                 Forecasting fuel needs, comparing local prices, and track deliveries with a new design 
-                    to eliminate customer anxiety and giving users the clarity and confidence 
-                    they need to manage their energy decisions effortlessly, even during the coldest months.
-                </p>
-            </div>
-
-
-            <div class="smart-grid">
-                <article class="smart-card">
-                    <span class="smart-letter">S</span>
-                    <div>
-                        <h3>Specific</h3>
-                        <p>
-                            Simplify the heating oil ordering experience through user-centred research, service design and improved digital journeys, focusing on clarity, reassurance and ease of use.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="smart-card">
-                    <span class="smart-letter">M</span>
-                    <div>
-                        <h3>Measurable</h3>
-                        <p>
-                            Evaluate success through checkout completion, reduced journey abandonment, System Usability Scale (SUS) scores, customer support enquiries and subscription uptake.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="smart-card">
-                    <span class="smart-letter">A</span>
-                    <div>
-                        <h3>Achievable</h3>
-                        <p>
-                            Led approximately 80% of the UX process over 18 months, conducting user research, usability testing, accessibility audits, journey mapping, wireframing and iterative prototyping.
-                        </p>
-                        <p>Redesigned the quote form, checkout journey, search functionality and subscription experience across web and mobile, collaborating with product owners, developers and customer service teams.</p>
-                    </div>
-                </article>
-
-                <article class="smart-card">
-                    <span class="smart-letter">R</span>
-                    <div>
-                        <h3>Relevant</h3>
-                        <p>
-                            Addressed customer uncertainty around heating oil availability, delivery times and complex ordering processes, particularly during peak winter demand, while supporting business efficiency and customer independence.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="smart-card">
-                    <span class="smart-letter">T</span>
-                    <div>
-                        <h3>Time-bound</h3>
-                        <p>
-                            Delivered iterative UX and UI improvements over an 18-month period through agile development cycles, stakeholder reviews, usability testing, developer handover and quality assurance.
-                        </p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="smart-outcome">
-                <span class="eyebrow">THE OUTCOME</span>
-                <p>
-                    Contributed to a clearer, more transparent and user-friendly heating oil ordering experience, supporting more independent purchasing, improved customer confidence, repeat ordering and reduced reliance on emergency customer support.
-                </p>
-            </div>
-            </section>
-
-            <section class="challenge">
-                <h2>The challenge</h2>
-
-                <p>
-                    Customers in remote locations often discovered low heating
-                    oil levels too late, causing severe winter delivery anxiety
-                    due to an outdated phone and basic online form system. To resolve this as demand grew, the service was re-engineered beyond a simple interface update to create a highly efficient, transparent digital service that reduces stress throughout the heating oil purchase and delivery process.
-                </p>
-
-              
-
-                <img class="img-xl"
-                     src="./images/boilerjuice/boilerjuice-empathy-mapping.png"
-                     alt="BoilerJuice empathy mapping showing customer pain points and opportunities"
-                     title="Empathy mapping used to explore customer challenges and service opportunities"
-                     loading="lazy" />
-                <p class="image-caption">
-                    Empathy mapping helped frame customer needs and opportunities for improvement.
-                </p>
-            </section>
-
-            <section>
-                <h2>My role and collaboration</h2>
-
-                <p>
-                    Over 18 months, I held approximately 80% UX ownership within a
-                    cross-functional team of around 300 people. I collaborated with
-                    product owners, engineers, customer service specialists, heating
-                    oil partners and marketing professionals.
-                </p>
-
-                <p>
-                    I contributed to the design and launch of a new service intended
-                    to make buying heating oil feel as effortless as being connected
-                    to a mains supply. My work covered new user journeys, legacy page
-                    redesigns and content for the Connected Service across the public
-                    website and mobile app.
-                </p>
-
-                <p>
-                    I inherited parts of the original app design from another
-                    designer. While some elements evolved from that foundation,
-                    the current structure and layouts largely reflect my work.
-                </p>
-            </section>
-
-            <section>
-                <h2>Translating the service promise into design decisions</h2>
-
-                <p>
-                    I approached the experience around three principles:
-                    <strong>clarity, reassurance and ease of use.</strong> These
-                    were design principles I used to address customer needs and
-                    service challenges, rather than formal brand guidelines.
-                </p>
-
-                <div class="principles">
-                    <article class="principle">
-                        <h3>01. Clarity. Help customers understand their options</h3>
-
-                        <p>
-                            Heating oil is a considered purchase, so customers need to
-                            understand their choices before committing. I redesigned the
-                            quote form to make obtaining a quote clearer and faster, and
-                            improved access to important information through an enhanced
-                            search function.
-                        </p>
-
-                        <span class="decision-label">
-                            Design focus: clearer forms, information hierarchy and access to information.
-                        </span>
-                    </article>
-
-                    <article class="principle">
-                        <h3>02. Reassurance. Reduce uncertainty</h3>
-
-                        <p>
-                            When customers depend on a delivery to keep their homes warm,
-                            uncertainty can undermine confidence. I redesigned key
-                            checkout pages and improved the presentation of delivery
-                            expectations, aiming to make the process feel more transparent
-                            and trustworthy.
-                        </p>
-
-                        <span class="decision-label">
-                            Design focus: checkout clarity, delivery information and visible next steps.
-                        </span>
-                    </article>
-
-                    <article class="principle">
-                        <h3>03. Ease of use. Make the next step obvious</h3>
-
-                        <p>
-                            I reviewed the end-to-end purchasing journey, including
-                            mobile use, to reduce unnecessary friction. Clearer flows,
-                            improved page layouts and subscription options supported both
-                            immediate ordering and ongoing customer needs.
-                        </p>
-
-                        <span class="decision-label">
-                            Design focus: streamlined user flows, responsive layouts and repeat-use options.
-                        </span>
-                    </article>
+        <div class="footer-banner">
+            <footer>
+                © 2026 Estela Gaspar | Senior GOV.UK Interaction Designer
+                <div>
+                    <a href="https://github.com/that-firefly" rel="noopener noreferrer" target="_blank">GitHub Estela That Firefly</a> -
+                    <a href="https://www.linkedin.com/in/estela-gaspar/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
                 </div>
-
-                <p>
-                    Together, these decisions connected the practical needs of the
-                    service with the experience it needed to deliver: a straightforward
-                    way to compare, order and manage heating oil.
-                </p>
-            </section>
-
-            <section>
-                <h2>Process and approach</h2>
-
-                <h3>User research</h3>
-
-                <p>
-                    I worked with the Product Manager on discovery, defining core
-                    problem statements and identifying opportunities through user
-                    feedback, research and iterative testing. The aim was to understand
-                    customer needs and turn those insights into clear design priorities.
-                </p>
-
-                <p>My research and analysis included:</p>
-
-                <ul>
-                    <li>
-                        User interviews and ongoing feedback to understand customer
-                        needs, behaviours and pain points.
-                    </li>
-                    <li>
-                        Google Analytics and behavioural analysis to investigate how
-                        people used the existing experience.
-                    </li>
-                    <li>
-                        System Usability Scale (SUS) research to assess perceived usability.
-                    </li>
-                    <li>
-                        Card sorting and information architecture mapping to improve
-                        how information was organised.
-                    </li>
-                    <li>
-                        Accessibility audits to identify barriers and inform more
-                        inclusive design decisions.
-                    </li>
-                    <li>
-                        Ecosystem maps, service blueprints, lean canvases, user flows
-                        and UX diaries to connect individual interactions with the
-                        wider service.
-                    </li>
-                </ul>
-
-                <p>
-                    I used these methods to build an understanding of the wider
-                    service, identify potential pain points and help the team make
-                    informed decisions about what to improve.
-                </p>
-
-                <img class="img-xl"
-                     src="./images/boilerjuice/UR-images.jpg"
-                     alt="BoilerJuice user research artifacts, including personas, journeys and behavioural insights"
-                     title="User research deliverables used to inform design decisions"
-                     loading="lazy" />
-                <p class="image-caption">
-                    Research and service design artifacts used to explore customer needs and the wider journey.
-                </p>
-            </section>
-
-            <section>
-                <h2>UI design: turning insights into interactions</h2>
-
-                <p>
-                    I mapped user flows in Draw.io and Sketch, considering both
-                    successful and unsuccessful paths to identify potential issues
-                    before implementation. I created low- to mid-fidelity wireframes
-                    in Axure, Sketch, Figma and Balsamiq to explore layouts, clarify
-                    functionality and align stakeholders.
-                </p>
-
-                <img class="img-xl"
-                     src="./images/boilerjuice/user-interface.jpg"
-                     alt="BoilerJuice UI and UX work including user flows, analytics, heatmaps, accessibility checks and wireframes"
-                     title="UI and UX deliverables created for the BoilerJuice platform"
-                     loading="lazy" />
-
-                <h3>Quote form and subscription service</h3>
-
-                <p>
-                    I redesigned the quote form to support a faster, clearer quoting
-                    experience and the subscription service. The focus was on making
-                    the process easier to follow and helping customers understand
-                    what information was required at each step.
-                </p>
-
-                <h3>Checkout and purchasing journey</h3>
-
-                <p>
-                    I redesigned key checkout pages to reduce friction, improve
-                    transparency and create a more mobile-friendly purchasing journey.
-                    The design intent was to help customers move from comparing prices
-                    to completing an order with a clearer understanding of the process.
-                </p>
-
-                <h3>Search and information access</h3>
-
-                <p>
-                    I also introduced an improved search function to make important
-                    documents and information easier to find, helping customers access
-                    relevant content without unnecessary effort.
-                </p>
-
-                <p>
-                    My focus was not simply to modernise the interface. It was to
-                    make each step easier to understand, help customers make informed
-                    decisions and maintain confidence throughout the ordering journey.
-                </p>
-            </section>
-
-            <section>
-                <h2>Design handover and delivery</h2>
-
-                <p>
-                    I partnered closely with developers to translate approved designs
-                    into the delivered experience. I provided guidelines, assets and
-                    documentation, and worked through regular check-ins and QA sessions
-                    to identify discrepancies and maintain design quality.
-                </p>
-
-                <p>
-                    I also engaged stakeholders early, using research and testing
-                    to explain design decisions, agree priorities and balance user
-                    needs with business goals within an agile delivery process.
-                </p>
-            </section>
-
-            <section>
-                <h2>My contribution and outcomes</h2>
-
-                <p>
-                    The work contributed to a more straightforward and transparent
-                    ordering experience.
-                </p>
-
-                <div class="outcomes">
-                    <article class="outcomes-card">
-                        <h3>Greater customer confidence</h3>
-                        <p>
-                            Clearer information and delivery expectations helped customers
-                            understand the process and feel more reassured when ordering.
-                        </p>
-                    </article>
-
-                    <article class="outcomes-card">
-                        <h3>More independent ordering</h3>
-                        <p>
-                            Customers were better able to complete orders with little
-                            or no support.
-                        </p>
-                    </article>
-
-                    <article class="outcomes-card">
-                        <h3>Customer service shift</h3>
-                        <p>
-                            Customer service calls shifted towards follow-ups rather than
-                            winter emergencies.
-                        </p>
-                    </article>
-
-                    <article class="outcomes-card">
-                        <h3>Support for repeat use</h3>
-                        <p>
-                            Alerts and subscription options gave customers more ways
-                            to manage their ongoing heating oil needs.
-                        </p>
-                    </article>
-
-                    <article class="outcomes-card">
-                        <h3>Operational resilience</h3>
-                        <p>
-                            Earlier reordering and clearer service information supported
-                            the business during periods of peak winter demand.
-                        </p>
-                    </article>
-                </div>
-
-                <p style="margin-top: 24px">
-                    These outcomes reflect the qualitative impact described by the
-                    project. Where available, quantitative measures such as checkout
-                    completion, journey abandonment, support-call volume and
-                    subscription uptake would help demonstrate the scale of improvement.
-                </p>
-            </section>
-
-            <section class="reflection">
-                <h2>Reflection</h2>
-
-                <p>
-                    This project reinforced the importance of treating UX and UI as
-                    part of the service experience, rather than as a layer of visual
-                    polish. For BoilerJuice, the design needed to do more than look
-                    consistent: it needed to communicate clearly, reduce uncertainty
-                    and help customers complete an important household purchase
-                    with confidence.
-                </p>
-
-                <p>
-                    By connecting research, service design and interface decisions,
-                    I helped shape an experience that addressed both customer needs
-                    and operational challenges.
-                </p>
-            </section>
-
-            <p>
-                <a class="visit-link"
-                   href="https://www.boilerjuice.com"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Visit the BoilerJuice website ↗
-                </a>
-            </p>
-        </article>
-
-        <footer class="back-link">
-            <a href="./case-studies.html">← Back to case studies</a>
-        </footer>
-    </main>
-
-    <script>
-              function printPage() {
-                window.print();
-              }
-    </script>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>

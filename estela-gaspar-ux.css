@@ -4546,3 +4546,11 @@ img.img-xl.border {
     padding: 10px;
 }
 
+
+.case-studies a {
+    color: #000;
+}
+
+p.sourceinfo {
+    margin: 30px 0px 0px 0px;
+}
