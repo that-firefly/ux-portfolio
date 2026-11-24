@@ -304,11 +304,6 @@ img.img-xl {
     margin-left: 0px;
 }
 
-.content-cs {
-    width: 70%;
-    margin-bottom: 3em;
-}
-
 
 /* Portfolio case study cards start */
 a.read-more-btn {
@@ -4489,3 +4484,57 @@ section.back-link {
     margin: 30px auto;
     text-align: center;
 }
+
+
+/* Images on the right */
+.content-cs {
+    width: 100%;
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+    .content-cs .text-content {
+        flex: 1;
+    }
+
+    .content-cs > img {
+        max-width: 30%;
+        height: auto;
+        display: block;
+        border-radius: 5%;
+    }
+
+
+.image-stack {
+    flex: 1.2;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+    .image-stack img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 5%;
+    }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .content-cs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .content-cs > img,
+        .image-stack {
+            max-width: 100%;
+            width: 100%;
+        }
+}
+
