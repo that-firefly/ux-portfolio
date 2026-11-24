@@ -1,287 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8" />
-
-  <head>
-    <title>Estela Gaspar - UX User Experience Design</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./estela-gaspar-ux.css" />
+<head>
+    <meta charset="utf-8" />
+    <title>
+        BoilerJuice Design Process Case Study
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./estela-gaspar-ux.css" rel="stylesheet" />
     <script src="./estela-ux.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&amp;display=swap" rel="stylesheet" />
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon-16x16.png"
-      sizes="16x16"
-    />
-
-    <style>
-      .back-btn,
-      .back-link {
-        margin: 20px 0px;
-        color: #ffffff;
-      }
-
-      .back-btn a,
-      .back-link a {
-        text-decoration: none;
-        color: var(--muted);
-        font-weight: 500;
-      }
-
-      @media (max-width: 900px) {
-        .section {
-          padding: 22px 18px;
-        }
-
-        .badges {
-          grid-template-columns: 1fr;
-        }
-
-        .kpi-bar {
-          grid-template-columns: 1fr;
-        }
-
-        .journey .row {
-          grid-template-columns: 120px repeat(6, 1fr);
-        }
-
-        .blueprint .row {
-          grid-template-columns: 140px repeat(6, 1fr);
-        }
-
-        h1 {
-          margin-bottom: 20px;
-        }
-
-        h2 {
-          margin-top: 32px;
-        }
-
-        .ready-print {
-          width: 100%;
-          text-align: center;
-        }
-
-        br {
-          display: none;
-        }
-      }
-
-      @media print {
-        body {
-          background: #fff;
-        }
-
-        .section {
-          box-shadow: none;
-          border: none;
-          padding: 0;
-        }
-
-        .ready-print,
-        .back-btn,
-        .back-link {
-          display: none;
-        }
-
-        .case-section {
-          background: #000 !important;
-          color: #fff !important;
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
-          padding: 4px 10px;
-          border-radius: 8px;
-        }
-
-        a::after {
-          content: " (" attr(href) ")";
-          font-size: 0.85em;
-          color: #666;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
+    <link href="./images/favicon-16x16.png" rel="icon" type="image/png" />
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <meta content="Europa Science Group – Web Design and Marketing Case Study" property="og:title" />
+    <meta content="Designing accessible, standards-compliant websites and email campaigns for a specialist science publishing company." property="og:description" />
+    <meta content="https://thatfirefly.com/images/europascience/europascience-1.png" property="og:image" />
+    <meta content="https://thatfirefly.com/europa-science-group-case-study" property="og:url" />
+    <meta content="website" property="og:type" />
+</head>
+<body>
     <div class="wrapper">
-      <nav>
-        <span class="hamburger" onclick="toggleMenu()">☰</span>
-        <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./new.html">New</a></li>
-          <li><a href="./case-studies.html">Case Studies</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./links.html">Links</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li>
-            <a
-              href="https://github.com/that-firefly"
-              target="_blank"
-              aria-label="GitHub"
-              class="social-link"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.68 5.4-5.24 5.68.41.35.77 1.04.77 2.1v3.12c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+            <span class="hamburger" onclick="toggleMenu()">
+                ☰
+            </span>
+            <ul class="menu">
+                <li class="logo">
+                    <a href="./about.html">
+                        Estela Gaspar - that Firefly
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="./case-studies.html">
+                        Case Studies
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="GitHub" class="social-link" href="https://github.com/that-firefly" rel="noopener noreferrer" target="_blank">
+                        <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.85 1.18 3.11 0 4.43-2.68 5.4-5.24 5.68.41.35.77 1.04.77 2.1v3.12c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="LinkedIn" class="social-link" href="https://www.linkedin.com/in/estela-gaspar/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+                        <svg aria-hidden="true" fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="content">
+                <h1 class="landingpage-title eg">
+                    BoilerJuice Design Process Case Study
+                </h1>
+                <div class="container-group">
+                    <div class="container">
+                        <!-- Block 2 start -->
+                        <div class="case-studies">
 
-      <div class="main-content">
-        <h1>Project spotlight - BoilerJuice</h1>
-        <div class="port-page-internal">
-          <div class="text-content">
-            <div class="projectcontent">
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-1.png"
-                alt="Overview of BoilerJuice connected service."
-                title="Introduction to BoilerJuice and the Connected service."
-              />
+                      
+                             
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-1.png"
+                                                 alt="Overview of BoilerJuice connected service."
+                                                 title="Introduction to BoilerJuice and the Connected service." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-2.png"
-                alt="Business research presentation slide."
-                title="Business research overview, including stakeholder meetings and workshops."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-2.png"
+                                                 alt="Business research presentation slide."
+                                                 title="Business research overview, including stakeholder meetings and workshops." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-3.png"
-                alt="Task analysis presentation slide."
-                title="Task analysis process, mapping user goals with visual diagrams."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-3.png"
+                                                 alt="Task analysis presentation slide."
+                                                 title="Task analysis process, mapping user goals with visual diagrams." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-4.png"
-                alt="Design review and analysis slide."
-                title="Design review phase with an as-is analysis of successes and challenges."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-4.png"
+                                                 alt="Design review and analysis slide."
+                                                 title="Design review phase with an as-is analysis of successes and challenges." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-5.png"
-                alt="Accessibility checks - Type A slide."
-                title="Slide demonstrating Type A accessibility checks."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-5.png"
+                                                 alt="Accessibility checks - Type A slide."
+                                                 title="Slide demonstrating Type A accessibility checks." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-6.png"
-                alt="Accessibility checks - Type B slide."
-                title="Slide demonstrating Type B accessibility checks."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-6.png"
+                                                 alt="Accessibility checks - Type B slide."
+                                                 title="Slide demonstrating Type B accessibility checks." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-7.png"
-                alt="Accessibility checks - Type C slide."
-                title="Slide demonstrating Type C accessibility checks."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-7.png"
+                                                 alt="Accessibility checks - Type C slide."
+                                                 title="Slide demonstrating Type C accessibility checks." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-8.png"
-                alt="User research phase presentation slide."
-                title="User research phase, profiling average users and validating business hypotheses."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-8.png"
+                                                 alt="User research phase presentation slide."
+                                                 title="User research phase, profiling average users and validating business hypotheses." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-9.png"
-                alt="Slide not described."
-                title="Description not available."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-9.png"
+                                                 alt="Slide not described."
+                                                 title="Description not available." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-10.png"
-                alt="Information architecture research slide."
-                title="Research on information architecture to enhance usability."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-10.png"
+                                                 alt="Information architecture research slide."
+                                                 title="Research on information architecture to enhance usability." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-11.png"
-                alt="User journey analysis slide."
-                title="Understanding user journeys, behaviors, and pain points."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-11.png"
+                                                 alt="User journey analysis slide."
+                                                 title="Understanding user journeys, behaviors, and pain points." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-12.png"
-                alt="User flow analysis slide."
-                title="User flow phase: mapping steps needed to complete user objectives."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-12.png"
+                                                 alt="User flow analysis slide."
+                                                 title="User flow phase: mapping steps needed to complete user objectives." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-13.png"
-                alt="Wireframes and prototypes presentation slide."
-                title="Creating initial wireframes and prototypes to represent the MVP."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-13.png"
+                                                 alt="Wireframes and prototypes presentation slide."
+                                                 title="Creating initial wireframes and prototypes to represent the MVP." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-14.png"
-                alt="Accessibility phase slide."
-                title="Ensuring universal design accessibility for all users."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-14.png"
+                                                 alt="Accessibility phase slide."
+                                                 title="Ensuring universal design accessibility for all users." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-15.png"
-                alt="Usability testing phase slide."
-                title="Validating design assumptions through comprehensive usability testing."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-15.png"
+                                                 alt="Usability testing phase slide."
+                                                 title="Validating design assumptions through comprehensive usability testing." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-16.png"
-                alt="A/B testing process slide."
-                title="A/B testing to identify the best performing design variant."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-16.png"
+                                                 alt="A/B testing process slide."
+                                                 title="A/B testing to identify the best performing design variant." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-17.png"
-                alt="Business sign-off phase slide."
-                title="Final approval from business and stakeholders during the sign-off phase."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-17.png"
+                                                 alt="Business sign-off phase slide."
+                                                 title="Final approval from business and stakeholders during the sign-off phase." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-18.png"
-                alt="Design handover and QA slide."
-                title="Ensuring high-quality implementation through continuous collaboration with the development team."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-18.png"
+                                                 alt="Design handover and QA slide."
+                                                 title="Ensuring high-quality implementation through continuous collaboration with the development team." />
 
-              <img
-                src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-19.png"
-                alt="User behavior analytics slide."
-                title="Collecting user behavior analytics from the live application to optimize performance."
-              />
+                                            <img src="./images/boilerjuice/project-spotlight/boilerjuice-spotlight-19.png"
+                                                 alt="User behavior analytics slide."
+                                                 title="Collecting user behavior analytics from the live application to optimize performance." />
+                          
+
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <section class="back-link">
+                <a href="./case-studies.html">
+                    ← Back to case studies
+                </a>
+            </section>
         </div>
-      </div>
-      <div class="footer-banner">
-        <div>
-          <a class="back-link" href="./case-studies.html"
-            >← Back to case studies</a
-          >
+        <div class="footer-banner">
+            <footer>
+                © 2026 Estela Gaspar | Senior GOV.UK Interaction Designer
+                <div>
+                    <a href="https://github.com/that-firefly" rel="noopener noreferrer" target="_blank">
+                        GitHub Estela That Firefly
+                    </a>
+                    -
+                    <a href="https://www.linkedin.com/in/estela-gaspar/" rel="noopener noreferrer" target="_blank">
+                        LinkedIn
+                    </a>
+                </div>
+            </footer>
         </div>
-        <footer>Website coded by Estela Gaspar</footer>
-      </div>
     </div>
-  </body>
+</body>
 </html>
