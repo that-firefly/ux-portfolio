@@ -4552,5 +4552,6 @@ img.img-xl.border {
 }
 
 p.sourceinfo {
+    max-width: 60%;
     margin: 30px 0px 0px 0px;
 }
