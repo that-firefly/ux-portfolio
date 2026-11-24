@@ -4505,6 +4505,7 @@ section.back-link {
         height: auto;
         display: block;
         border-radius: 5%;
+
     }
 
 
@@ -4514,6 +4515,7 @@ section.back-link {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
 }
 
     .image-stack img {
@@ -4536,5 +4538,11 @@ section.back-link {
             max-width: 100%;
             width: 100%;
         }
+}
+
+
+img.img-xl.border {
+    border: 1px solid #eee;
+    padding: 10px;
 }
 
